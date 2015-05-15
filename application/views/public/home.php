@@ -8,7 +8,7 @@
                     <div class="swiper-wrapper">
                         <!--=============== 1 ===============-->	
                         <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images/bg/1.jpg)"></div>
+                            <div class="bg" style="background-image:url(/assets/public/images_example/LIPPO_91-051348-8R.jpg)"></div>
                             <div class="overlay"></div>
                             <div class="slide-title-holder">
                                 <div class="slide-title">
@@ -19,7 +19,7 @@
                         </div>
                         <!--=============== 2 ===============-->	
                         <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images/bg/1.jpg)"></div>
+                            <div class="bg" style="background-image:url(/assets/public/images_example/LIPPO_91-051348-8R.jpg)"></div>
                             <div class="overlay"></div>									
                             <div class="slide-title-holder">
                                 <div class="slide-title">
@@ -30,7 +30,7 @@
                         </div>
                         <!--=============== 3 ===============-->	
                         <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images/bg/1.jpg)"></div>
+                            <div class="bg" style="background-image:url(/assets/public/images_example/PONDOK_INDAH-059885-8R.jpg)"></div>
                             <div class="overlay"></div>
                             <div class="slide-title-holder">
                                 <div class="slide-title">
@@ -41,7 +41,18 @@
                         </div>
                         <!--=============== 4 ===============-->	
                         <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images/bg/1.jpg)"></div>
+                            <div class="bg" style="background-image:url(/assets/public/images_example/PONDOK_INDAH-060194-8R.jpg)"></div>
+                            <div class="overlay"></div>
+                            <div class="slide-title-holder">
+                                <div class="slide-title">
+                                    <h3 class="transition">  <a class="ajax transition2" href="portfolio-single.html">Libero bibendum</a>  </h3>
+                                    <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!--=============== 5 ===============-->    
+                        <div class="swiper-slide">
+                            <div class="bg" style="background-image:url(/assets/public/images_example/SETRADUTA_L19-052709-8R.jpg)"></div>
                             <div class="overlay"></div>
                             <div class="slide-title-holder">
                                 <div class="slide-title">

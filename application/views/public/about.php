@@ -105,7 +105,7 @@
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
                                             </ul>
-                                            <img src="images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
+                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
                                         </div>
                                         <div class="team-info">
                                             <h3>David Gray</h3>
@@ -143,7 +143,7 @@
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
                                             </ul>
-                                            <img src="images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
+                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
                                         </div>
                                         <div class="team-info">
                                             <h3>Taylor Roberts</h3>
