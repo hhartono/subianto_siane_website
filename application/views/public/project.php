@@ -135,6 +135,51 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 9 -->
+                                    <div class="gallery-item   houses">
+                                        <div class="grid-item-holder">
+                                            <div class="box-item">
+                                                <a href="portfolio-single.html" class="ajax">
+                                                <span class="overlay"></span> 
+                                                <img  src="/assets/public/images_example/KSTUBUN-015313-8R.jpg"   alt="">
+                                                </a>
+                                            </div>
+                                            <div class="grid-item ">
+                                                <h3><a href="portfolio-single.html" class="ajax">Proin accumsan</a></h3>
+                                                <span>Hoses Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 10 -->
+                                    <div class="gallery-item   houses">
+                                        <div class="grid-item-holder">
+                                            <div class="box-item">
+                                                <a href="portfolio-single.html" class="ajax">
+                                                <span class="overlay"></span> 
+                                                <img  src="/assets/public/images_example/KSTUBUN-015424-8R.jpg"   alt="">
+                                                </a>
+                                            </div>
+                                            <div class="grid-item ">
+                                                <h3><a href="portfolio-single.html" class="ajax">Duis egestas</a></h3>
+                                                <span>Hoses Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 11 -->
+                                    <div class="gallery-item   interior ">
+                                        <div class="grid-item-holder">
+                                            <div class="box-item">
+                                                <a href="portfolio-single.html" class="ajax">
+                                                <span class="overlay"></span> 
+                                                <img  src="/assets/public/images_example/KYAILUHUR-5045394-8R.jpg"   alt="">
+                                                </a>
+                                            </div>
+                                            <div class="grid-item">
+                                                <h3><a href="portfolio-single.html" class="ajax">Aliquam mattis</a></h3>
+                                                <span>Hoses Design</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- end gallery items -->                  
                             </section>

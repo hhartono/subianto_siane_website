@@ -28,7 +28,7 @@
                                     <div class="full-width owl-carousel">
                                         <!-- 1 -->
                                         <div class="item">
-                                            <img src="/assets/public/images/folio/slider/1.jpg" class="respimg" alt="">
+                                            <img src="/assets/public/images_example/KSTUBUN-015424-8R.jpg" class="respimg" alt="">
                                         </div>
                                         <!-- 2 -->
                                         <!-- <div class="item">
