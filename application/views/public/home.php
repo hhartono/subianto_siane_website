@@ -19,7 +19,7 @@
                         </div>
                         <!--=============== 2 ===============-->	
                         <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images_example/LIPPO_91-051348-8R.jpg)"></div>
+                            <div class="bg" style="background-image:url(/assets/public/images_example/LIPPO_91-051356-8R.jpg)"></div>
                             <div class="overlay"></div>									
                             <div class="slide-title-holder">
                                 <div class="slide-title">

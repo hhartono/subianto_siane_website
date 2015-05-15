@@ -6,7 +6,7 @@ class Contact extends CI_Controller {
 	{
 		$data = array(
 				'title' => 'Subianto Siane Architecture - Contact',
-				'contactactlink' => 'act link'
+				'contactactlink' => 'act-link'
 			);
 		$this->load->view('public/contact', $data);
 	}

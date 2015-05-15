@@ -21,23 +21,23 @@
                         <section class="no-border">
                             <div class="full-width-holder">
                                 <div class="fullwidth-slider-holder">
-                                    <div class="customNavigation">
+                                    <!-- <div class="customNavigation">
                                         <a class="next-slide transition"><i class="fa fa-long-arrow-right"></i></a>
                                         <a class="prev-slide transition"><i class="fa fa-long-arrow-left"></i></a>
-                                    </div>
+                                    </div> -->
                                     <div class="full-width owl-carousel">
                                         <!-- 1 -->
                                         <div class="item">
                                             <img src="/assets/public/images/folio/slider/1.jpg" class="respimg" alt="">
                                         </div>
                                         <!-- 2 -->
-                                        <div class="item">
+                                        <!-- <div class="item">
                                             <img src="/assets/public/images/folio/slider/1.jpg" class="respimg" alt="">
-                                        </div>
+                                        </div> -->
                                         <!-- 3 -->
-                                        <div class="item">
+                                        <!-- <div class="item">
                                             <img src="/assets/public/images/folio/slider/1.jpg" class="respimg" alt="">
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -52,42 +52,44 @@
                             </div>
                         </section>
                         <!-- about text end -->
-                        <section>
-                            <div class="row">
-                                <div class="col-md-4"></div>
-                                <div class="col-md-8">
-                                    <div class="inline-facts-holder row">
-                                        <!-- 1 -->
-                                        <div class="inline-facts col-md-4 ">
-                                            <div class="milestone-counter">
-                                                <div class="stats animaper">
-                                                    <div class="num" data-content="461" data-num="461">0</div>
-                                                </div>
-                                            </div>
-                                            <h6>Finished projects</h6>
-                                        </div>
-                                        <!-- 3 -->
-                                        <div class="inline-facts col-md-4 ">
-                                            <div class="milestone-counter">
-                                                <div class="stats animaper">
-                                                    <div class="num" data-content="168" data-num="168">0</div>
-                                                </div>
-                                            </div>
-                                            <h6>Happy customers</h6>
-                                        </div>
-                                        <!-- 3 -->
-                                        <div class="inline-facts col-md-4 ">
-                                            <div class="milestone-counter">
-                                                <div class="stats animaper">
-                                                    <div class="num" data-content="222" data-num="222">0</div>
-                                                </div>
-                                            </div>
-                                            <h6>Working hours</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        <!-- 
+                         <section>
+                             <div class="row">
+                                 <div class="col-md-4"></div>
+                                 <div class="col-md-8">
+                                     <div class="inline-facts-holder row">
+                                         1
+                                         <div class="inline-facts col-md-4 ">
+                                             <div class="milestone-counter">
+                                                 <div class="stats animaper">
+                                                     <div class="num" data-content="461" data-num="461">0</div>
+                                                 </div>
+                                             </div>
+                                             <h6>Finished projects</h6>
+                                         </div>
+                                         3
+                                         <div class="inline-facts col-md-4 ">
+                                             <div class="milestone-counter">
+                                                 <div class="stats animaper">
+                                                     <div class="num" data-content="168" data-num="168">0</div>
+                                                 </div>
+                                             </div>
+                                             <h6>Happy customers</h6>
+                                         </div>
+                                         3
+                                         <div class="inline-facts col-md-4 ">
+                                             <div class="milestone-counter">
+                                                 <div class="stats animaper">
+                                                     <div class="num" data-content="222" data-num="222">0</div>
+                                                 </div>
+                                             </div>
+                                             <h6>Working hours</h6>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </section>
+                          --> 
                         <!-- team -->
                         <section id="sec2">
                             <div class="section-title">
@@ -192,13 +194,15 @@
                             </ul>
                         </section>
                         <!-- team end   -->
+
                         <!-- story / resume   -->
+                        <!-- 
                         <section id="sec3" class="no-border">
                             <div class="section-title">
                                 <h3>Our story</h3>
                             </div>
                             <div class="resume-holder">
-                                <!-- 1 -->
+                                1
                                 <div class="resume-item">
                                     <div class="resume-head">
                                         <h3>2015</h3>
@@ -250,7 +254,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 2 -->
+                                2
                                 <div class="resume-item">
                                     <div class="resume-head">
                                         <h3>2012</h3>
@@ -265,7 +269,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- 3 -->
+                                3
                                 <div class="resume-item">
                                     <div class="resume-head">
                                         <h3>2010</h3>
@@ -288,7 +292,9 @@
                                 </div>
                             </div>
                         </section>
+                         -->
                         <!-- resume / story end -->
+                        
                         <!-- services  -->
                         <section id="sec4">
                             <div class="section-title">
@@ -355,47 +361,11 @@
                     </div>
                 </div>
                 <!-- wrapper inner end   -->
-                <!-- parallax column   -->
-                <div class="img-wrap">
-                    <div class="bg" style="background-image: url(/assets/public/images/bg/long/1.jpg)"  data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
-                </div>
-                <!-- parallax column end   -->
-                <!--to top    -->
-                <div class="to-top">
-                    <i class="fa fa-long-arrow-up"></i>
-                </div>
-                <!-- to top  end -->
-                <!--=============== footer ===============-->
-                <div class="height-emulator"></div>
-                <footer>
-                    <div class="footer-inner">
-                        <div class="row">
-                            <div class="col-md-5">
-                                <a class="footer-logo ajax" href="index.html"><img src="/assets/public/images/footer-logo.png" alt=""></a>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="footer-adress">
-                                    <span>USA 27TH BROOKLYN NY</span>
-                                    <a href="" target="_blank">View on map</a>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <ul class="footer-contact">
-                                    <li>+7(111)123456789</li>
-                                    <li><a href="#">yourmail@domain.com</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7">
-                                <p> &#169; Domik   2015.  All rights reserved.  </p>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="footer-decor"></span>
-                </footer>
-                <!-- footer end    -->
+                
+                <?php $this->load->view('public/templates/parallax_column');?>
+
+                <?php $this->load->view('public/templates/footer_block');?>
+
             </div>
             <!-- content  end  -->
         </div>

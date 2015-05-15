@@ -21,7 +21,7 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/LIPPO_91-051348-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item ">
@@ -36,7 +36,7 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/PONDOK_INDAH-059885-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item ">
@@ -51,7 +51,7 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/PONDOK_INDAH-060194-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item">
@@ -61,12 +61,12 @@
                                         </div>
                                     </div>
                                     <!-- 4 -->
-                                    <div class="gallery-item gallery-item-second  interior ">
+                                    <div class="gallery-item interior ">
                                         <div class="grid-item-holder">
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/SETRADUTA_L19-052709-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item">
@@ -81,7 +81,7 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/PONDOK_INDAH-060194-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item ">
@@ -96,7 +96,7 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/SETRADUTA_L19-052709-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item ">
@@ -111,7 +111,7 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/LIPPO_91-051348-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item ">
@@ -126,146 +126,11 @@
                                             <div class="box-item">
                                                 <a href="portfolio-single.html" class="ajax">
                                                 <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
+                                                <img  src="/assets/public/images_example/PONDOK_INDAH-059885-8R.jpg"   alt="">
                                                 </a>
                                             </div>
                                             <div class="grid-item ">
                                                 <h3><a href="portfolio-single.html" class="ajax">Duis egestas</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 9 -->
-                                    <div class="gallery-item   interior houses">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Quisque</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 10 -->
-                                    <div class="gallery-item   houses industrial">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Cras vitae</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 11 -->
-                                    <div class="gallery-item   industrial interior">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Quisque</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 12 -->
-                                    <div class="gallery-item   houses industrial">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Ligula a sapien</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 13 -->
-                                    <div class="gallery-item   interior industrial">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Class aptent</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 14 -->
-                                    <div class="gallery-item gallery-item-second  houses">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Nec libero </a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 15 -->
-                                    <div class="gallery-item  interior  industrial">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Phasellus scelerisque</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 16 -->
-                                    <div class="gallery-item   interior industrial">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/3.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Quisque</a></h3>
-                                                <span>Hoses Design</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 17 -->
-                                    <div class="gallery-item   houses">
-                                        <div class="grid-item-holder">
-                                            <div class="box-item">
-                                                <a href="portfolio-single.html" class="ajax">
-                                                <span class="overlay"></span> 
-                                                <img  src="/assets/public/images/folio/thumbs/1.jpg"   alt="">
-                                                </a>
-                                            </div>
-                                            <div class="grid-item ">
-                                                <h3><a href="portfolio-single.html" class="ajax">Nec libero </a></h3>
                                                 <span>Hoses Design</span>
                                             </div>
                                         </div>
