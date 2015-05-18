@@ -5,7 +5,7 @@ class About extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-				'title' => 'Subianto Siane Architecture - About',
+				'title' => 'Subianto & Siane Architecture - About',
 				'aboutactlink' => 'act-link'
 			);
 		$this->load->view('public/about', $data);

@@ -5,7 +5,7 @@ class Contact extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-				'title' => 'Subianto Siane Architecture - Contact',
+				'title' => 'Subianto & Siane Architecture - Contact',
 				'contactactlink' => 'act-link'
 			);
 		$this->load->view('public/contact', $data);
