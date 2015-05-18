@@ -15,7 +15,8 @@ class Administrator extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-				'title' => 'Subianto Siane Architecture - Administrator'
+				'title' => 'Subianto Siane Architecture - Administrator',
+				'username' => $this->tank_auth->get_username()
 			);
 		$this->load->view('admin/dashboard', $data);
 	}
