@@ -1,12 +1,12 @@
       <!--footer start-->
-      <footer class="site-footer">
+      <<!-- footer class="site-footer">
           <div class="text-center">
               2013 &copy; FlatLab by VectorLab.
               <a href="#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
           </div>
-      </footer>
+      </footer -->>
       <!--footer end-->
     </section>
 
@@ -22,37 +22,15 @@
     <script src="/assets/admin/js/owl.carousel.js" ></script>
     <script src="/assets/admin/js/jquery.customSelect.min.js" ></script>
     <script src="/assets/admin/js/respond.min.js" ></script>
-
+    
     <!--common script for all pages-->
     <script src="/assets/admin/js/common-scripts.js"></script>
 
-    <!--script for this page-->
-    <script src="/assets/admin/js/sparkline-chart.js"></script>
-    <script src="/assets/admin/js/easy-pie-chart.js"></script>
-    <script src="/assets/admin/js/count.js"></script>
-
-  <script>
-
-      //owl carousel
-
-      $(document).ready(function() {
-          $("#owl-demo").owlCarousel({
-              navigation : true,
-              slideSpeed : 300,
-              paginationSpeed : 400,
-              singleItem : true,
-			  autoPlay:true
-
-          });
-      });
-
-      //custom select box
-
-      $(function(){
-          $('select.styled').customSelect();
-      });
-
-  </script>
-
+    <!--script for form page (project add)-->
+    <!--script src="/assets/admin/js/form-component.js"></script-->
+    <script src="/assets/admin/js/advanced-form-components.js"></script> 
+    <script type="text/javascript" src="/assets/admin/assets/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="/assets/admin/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    
   </body>
 </html>

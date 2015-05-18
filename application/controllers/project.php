@@ -5,7 +5,7 @@ class Project extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-				'title' => 'Subianto Siane Architecture - Project',
+				'title' => 'Subianto & Siane Architecture - Project',
 				'projectactlink' => 'act-link'
 			);
 		$this->load->view('public/project', $data);

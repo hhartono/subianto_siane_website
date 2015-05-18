@@ -9,15 +9,16 @@ class Administrator extends CI_Controller {
 		$this->load->helper(array('email', 'url'));
 		$this->load->library(array('form_validation','email', 'tank_auth', 'session'));
 		$this->is_logged_in();
-		$this->load->model(array());
 		$this->load->model('modelcategory');
+		$this->load->model('modelproject');
 	}
 
 	public function index()
 	{
 		$data = array(
-				'title' => 'Subianto & Siane Architecture - Administrator',
-				'username' => $this->tank_auth->get_username()
+				'title' => 'Dashboard | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'dashboardactive' => 'active'
 			);
 		$this->load->view('admin/dashboard', $data);
 	}
@@ -115,6 +116,36 @@ class Administrator extends CI_Controller {
 			die($output);
 		}
 	}
+	/*
+	 * project controller
+	 */
+	public function project()
+	{
+		$data = array(
+				'title' => 'Project | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectactive' => 'active'
+			);
+		$this->load->view('admin/project', $data);
+	}
+
+	/* 
+	 * project add controller
+	 */
+	public function projectadd()
+	{
+		$data = array(
+				'title' => 'Project Add | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectaddactive' => 'active',
+				'categoryall' => $this->modelproject->categoryAllLoad()
+			);
+		$this->load->view('admin/projectadd', $data);
+	}
+
+	/*
+	 * project add submit
+	 */
 
 
 	// public function tosha1()
