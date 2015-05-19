@@ -2,7 +2,7 @@
 
 class Modelproject extends CI_Model {
 
-	public function categoryAllLoad()
+	public function loadAllProjectCategory()
 	{
 		$query = $this->db->query("
 				SELECT pc.*
@@ -15,6 +15,22 @@ class Modelproject extends CI_Model {
 			}
 			return $data;
 		}
+	}
+
+	public function insertProject($title, $description, $category, $projectstory, $date, $client, $status, $location, $projecturi)
+	{
+		$field = array(
+				'title' => $title,
+				'description' => $description,
+				'project_story' => $projectstory,
+				'id_category' => $category,
+				'project_detail_date' => $date,
+				'project_detail_client' => $client,
+				'project_detail_status' => $status,
+				'project_detail_location' => $location,
+				'project_uri' => $projecturi
+			);
+		$this->db->insert('project', $field);
 	}
 	
 }
