@@ -11,7 +11,7 @@
     </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="/assets/admin/js/jquery.js"></script>
+    <!--script src="/assets/admin/js/jquery.js"></script-->
     <script src="/assets/admin/js/jquery-1.8.3.min.js"></script>
     <script src="/assets/admin/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="/assets/admin/js/jquery.dcjqaccordion.2.7.js"></script>
@@ -29,8 +29,8 @@
     <!--script for form page (project add)-->
     <!--script src="/assets/admin/js/form-component.js"></script-->
     <script src="/assets/admin/js/advanced-form-components.js"></script> 
-    <script type="text/javascript" src="/assets/admin/assets/ckeditor/ckeditor.js"></script>
-    <script type="text/javascript" src="/assets/admin/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
     
+    <script type="text/javascript" src="/assets/admin/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/assets/admin/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
   </body>
 </html>
