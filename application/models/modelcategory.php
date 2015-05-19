@@ -25,6 +25,20 @@ class Modelcategory extends CI_Model {
 		$this->db->insert('project_category', $data);
 	}
 
+	public function loadCategory($field, $condition)
+	{
+		$this->db->where($field, $condition);
+		$query = $this->db->get('project_category');
+		if($query->num_rows()>0){
+			$data = $query->row();
+			return $data;
+		}
+	}
+
+	public function deleteCategory($id){
+		return $this->db->delete('project_category', array('id'=>$id));
+	}
+
 	public function updateCategory($id, $nama)
 	{
 		$field = array(

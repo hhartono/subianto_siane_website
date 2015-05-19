@@ -4,7 +4,7 @@
 ?>
       <section id="main-content">
           	<section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> All CAtegory</h3>
+          	<h3><i class="fa fa-angle-right"></i> All Category</h3>
 		  		
 		  	<div class="row mt">
               <div class="col-lg-12">
@@ -30,32 +30,27 @@
                               <table id="tablecategory" class="table table-striped cf display">
                                   <thead>
                                     <!-- <th>No.</th> -->
-                                    <th>Category Name</th>
+                                    <th>Category</th>
                                     <th>Action</th>
                                   </thead>
                                   <tbody>
                           <?php
-                                // $no=1;
                                 foreach ($loadAllCategory as $lab) {
                           ?>
                                     <tr>
-                                        <!-- <td data-title="No"><?php// echo $no;?></td> -->
-                                        <td data-title="Kategori"><?php echo $lab->category_name;?></td>
+                                        <td data-title="Category"><?php echo $lab->category_name;?></td>
                                         <td data-title="Action">
-                                            <div class="btn-group btn-group-sm">
-                                                <button class="btn btn-primary" data-toggle="modal" data-target="#viewModal" data-kategori="<?php echo $lab->category_name;?>">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                                <button class="btn btn-success" data-toggle="modal" data-target="#editModal"  data-kategori="<?php echo $lab->category_name;?>" data-id="<?php echo $lab->id;?>">
+                                            <div class="btn-group btn-group-sm">                                                
+                                                <button class="btn btn-success" data-toggle="modal" data-target="#editModal" data-category="<?php echo $lab->category_name;?>" data-id="<?php echo $lab->id;?>">
                                                     <i class="fa fa-edit"></i>
                                                 </button>
-                                                <button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-kategori="<?php echo $lab->category_name;?>" data-id="<?php echo $lab->id;?>">
+                                                <button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-category="<?php echo $lab->category_name;?>" data-id="<?php echo $lab->id;?>">
                                                     <i class="fa fa-trash-o"></i>
                                                 </button>
+                                            </div>
                                         </td>
                                     </tr>
                           <?php
-                                    // $no++;
                                 }
                           ?>
                                   </tbody>
@@ -65,7 +60,6 @@
                           ?>
                               <table id="tablecategory" class="table table-striped cf display">
                                     <thead>
-                                        <!-- <th>No.</th> -->
                                         <th>Category Name</th>
                                         <th>Action</th>
                                     </thead>
@@ -77,7 +71,6 @@
                           ?>
                           </section>
 
-                     <!-- MODAL FOR EDIT -->
                     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -88,14 +81,15 @@
 
                                 <form method="POST" class="form-horizontal style-form">
                                     <div class="modal-body">
-                                    <div id="message_result_edit"></div>
+                                        <div id="message_result_edit"></div>
                                         <input type="hidden" name="id" id="id" value="">
                                         <div class="form-group">
                                             <label class="col-sm-2 col-sm-2 control-label">Category Name</label>
                                               <div class="col-sm-10">
-                                                 <input type="text" name="nama" id="nama" class="form-control">
+                                                 <input type="text" name="category" id="category" class="form-control">
                                               </div>
                                         </div>
+                                    </div>
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                       <button type="submit" id="submitupdatecategory" class="btn btn-primary">Save changes</button>
@@ -137,29 +131,25 @@
         <script src="/assets/admin/js/jquery.js"></script>
         <script type="text/javascript">
         $(document).ready(function(){
-          
-            $('#tablecategory').DataTable();
-
-        });
-
         function submitUpdateCategory(){
             $('#submitupdatecategory').click(function(){
                 var output = "";
                 var id = $('input[name=id]').val();
-                var nama = $('input[name=nama]').val();
+                var category = $('input[name=category]').val();
                 var proceed = true;
-                if(nama == ""){
-                    $('input[name=nama]').css('border-color', '#e41919').addClass('form-error-focus');
+                if(category == ""){
+                    $('input[name=category]').css('border-color', '#e41919').addClass('form-error-focus');
                     proceed = false;
                     output = '<div class="alert alert-danger">Form harus diisi, tidak boleh kosong!</div>';
                 }
+                
                 $("input.form-error-focus:first").focus().removeClass('form-error-focus');
                 $("#message_result_edit").hide().html(output).slideDown();
                 if(proceed){
                     $.ajax({
                         type: "POST",
                         url: "categoryupdatesubmit",
-                        data: {id:id, nama: nama},
+                        data: {id:id, category: category},
                         dataType: "json",
                         success: function(response){
                             if(response.type=='error'){
@@ -178,43 +168,43 @@
                 }
                 return false;
             })
-            $("input#nama").keyup(function(){
-                $("input#nama").css('border-color', '');
+            $("input#category").keyup(function(){
+                $("input#category").css('border-color', '');
                 $("#message_result_edit").slideUp();
-            });
+            })
         }
-
         /*
-         * modals for edit product
+         * modals for edit category
          */
         $('#editModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)// Button that triggered the modal
             var id = button.data('id')
-            var nama = button.data('nama')
+            console.log(id)
+            var category = button.data('category')
             var modal = $(this)
-            modal.find('.modal-title').text('Edit ' + nama )
+            modal.find('.modal-title').text('Edit ' + category)
             modal.find('.modal-body input#id').val(id)
-            modal.find('.modal-body div.form-group div input#nama').val(nama)
+            modal.find('.modal-body div.form-group div input#category').val(category)
             submitUpdateCategory();
         });
         
         $('#editModal').on('hidden.bs.modal',function(){
             location.reload();
-        })
-      
+        });
+
         /*
          * modal for delete product
          */
         $('#deleteModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)// Button that triggered the modal
-            var kode = button.data('kode')
-            var barang = button.data('barang')
-            var idbarang = button.data('idbarang')
+            var category = button.data('category')
+            var id = button.data('id')
             var modal = $(this)
-            modal.find('.modal-title').text(kode + ' - ' +barang)
-            modal.find('.modal-body h2#h2alert').text('Hapus  ' +barang+' ( kode: '+kode+' ) ?')
-            modal.find('.modal-footer a#deletelink').attr("href", 'productdelete/'+idbarang)
+            modal.find('.modal-title').text(category)
+            modal.find('.modal-body h2#h2alert').text('Hapus  ' +category+'?')
+            modal.find('.modal-footer a#deletelink').attr("href", 'categorydelete/'+id)
         });
+        })
         </script>
 
 <?php

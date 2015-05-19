@@ -28,8 +28,8 @@
                     <span>Category</span>
                 </a>
                 <ul class="sub">
-                    <li class="<?php echo (isset($categoryaddactive))? $categoryaddactive: '' ;?>"><a href="">Add New Category</a></li>
-                    <li class="<?php echo (isset($categoryactive))? $categoryactive: '' ;?>"><a href="">All Category</a></li>
+                    <li class="<?php echo (isset($categoryaddactive))? $categoryaddactive: '' ;?>"><a href="/administrator/categoryadd">Add New Category</a></li>
+                    <li class="<?php echo (isset($categoryactive))? $categoryactive: '' ;?>"><a href="/administrator/category">All Category</a></li>
                 </ul>
             </li>
 

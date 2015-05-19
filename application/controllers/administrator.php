@@ -90,14 +90,24 @@ class Administrator extends CI_Controller {
 		}
 	}
 
+	public function categorydelete($id)
+	{
+		$idcat = $id;
+		$tableCategory = $this->modelcategory->loadCategory('id', $idcat);
+		$category = $tableCategory->category_name;
+		$this->modelcategory->deleteCategory($idcat);
+		$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($category).' telah berhasil dihapus!</div>');
+		redirect('administrator/category');
+	}
+
 	public function categoryupdatesubmit()
 	{
 		// configuration form validation
-		$this->form_validation->set_rules('nama', 'Category Name', 'required');
+		$this->form_validation->set_rules('category', 'Category Name', 'required');
 		if($this->form_validation->run() == FALSE){
 			// form validation false
 			$formerror = array(
-				'nama' => form_error('nama'),
+				'category' => form_error('category'),
 			);
 			$output = json_encode(
 							array(
@@ -109,13 +119,17 @@ class Administrator extends CI_Controller {
 			die($output);
 		}else{
 			$id = $this->input->post('id');
-			$nama = $this->input->post('nama');
+			$nama = $this->input->post('category');
 			
 			$this->modelcategory->updateCategory($id, $nama);
-			$output = json_encode(array('type'=> 'message', 'text' => ucwords($nama).'telah diubah dan tersimpan'));
+			$output = json_encode(array('type'=> 'message', 'text' => ucwords($nama).' telah diubah dan tersimpan'));
 			die($output);
 		}
 	}
+	/*
+		end of category
+	*/
+
 	/*
 	 * project controller
 	 */
