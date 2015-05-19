@@ -187,7 +187,7 @@ class Administrator extends CI_Controller {
 			$output = json_encode(
 					array(
 						'type' => 'message',
-						'text' => ucwords($title).' telah disimpan ',
+						'text' => ucwords($title).' telah disimpan',
 						'lastid' => $id
 					)
 				);

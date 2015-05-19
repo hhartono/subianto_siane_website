@@ -8,6 +8,9 @@
         $('.default-date-picker').datepicker({
             format: 'mm-dd-yyyy'
         });
+        // $('.dateform-date-picker').datepicker({
+        //     format: 'yyyy-mm-dd'
+        // });
         $('.dpYears').datepicker();
         $('.dpMonths').datepicker();
 

@@ -3576,12 +3576,13 @@ table.sliders tr td {
 .add-on {
     float: right;
     margin-top: -37px;
+    /*margin-top: -39px;*/
     padding: 3px;
     text-align: center;
 }
 
 .add-on .btn {
-    padding: 9px;
+    padding: 8px;
 }
 
 .daterangepicker .ranges .range_inputs > div:nth-child(2) {

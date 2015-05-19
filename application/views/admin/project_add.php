@@ -77,8 +77,15 @@
                                 <div class="form-group">
                                 	<label for="date" class="control-label col-md-2">Date</label>
                                 	<div class="col-md-4 col-xs-12">
-                                      	<input  name="date" id="date" class="form-control form-control-inline input-medium default-date-picker"  size="16" type="text" placeholder="Date" value=""/>
-                                      	<span class="help-block">Select date</span>
+                                      	<!-- <input name="date" id="date" class="form-control form-control-inline input-medium dateform-date-picker"  size="16" type="text" placeholder="Date" value=""/>
+                                      	<span class="help-block">Select date</span> -->
+                                      	<div data-date-viewmode="years" data-date-format="yyyy-mm-dd" data-date="<?php echo date('Y-m-d');?>"  class="input-append date dpYears">
+                                            <input name="date" id="date" type="text" value="<?php echo date('Y-m-d');?>" size="16" class="form-control">
+                                            <span class="input-group-btn add-on">
+                                            	<button class="btn btn-danger" type="button"><i class="fa fa-calendar"></i></button>
+                                            </span>
+                                        </div>
+                                        <!-- <span class="help-block">Select date</span> -->
                                   	</div>
                                 </div>
                                 <div class="form-group">
@@ -186,7 +193,7 @@
                             $("input.form-error-focus:first").focus();
                             $("input.form-error-focus").removeClass('form-error-focus');
 						}else{
-							output = '<div class="alert alert-block alert-success fade in">'+ response.text +' Berikutnya <a href="projectuploadphoto/'+response.lastid+'">Unggah Foto Project</a></div>';
+							output = '<div class="alert alert-block alert-success fade in">'+ response.text +'. Langkah berikutnya <a href="projectuploadphoto/'+response.lastid+'">Unggah Foto Project</a></div>';
 							$('#title').val('');
 							$('#description').val('');
 							$('#category').val('');
