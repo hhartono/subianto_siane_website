@@ -5,7 +5,10 @@
 <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
-          	<h3><i class="fa fa-angle-right"></i> <?php echo $title_page;?></h3>
+            <section class="panel">
+          	<header class="panel-heading">
+                <?php echo $title_page;?>
+            </header>
           	
           	<!-- BASIC FORM ELELEMNTS -->
           	<div class="row mt">
@@ -22,16 +25,13 @@
                                     <input type="text" id="nama" name="nama" class="form-control">
                                 </div>
                             </div>
-                          	<div class="form-group">
-                          		<div class="showback">
-								<input id="submitcategory" type="submit" value="Add Category" class="btn btn-primary">
-								</div>
-                          	</div>
-
+								<input id="submitcategory" type="submit" value="Add Category" class="finish btn btn-danger">
+							</div>
                       </form>
                   </div>
           		</div><!-- col-lg-12-->      	
           	</div><!-- /row -->
+            </section>
             </section><! --/wrapper -->
         </section><!-- /MAIN CONTENT -->
 
