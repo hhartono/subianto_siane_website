@@ -19,6 +19,7 @@
     <link href="/assets/admin/css/style.css" rel="stylesheet">
     <link href="/assets/admin/css/style-responsive.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/assets/admin/assets/bootstrap-datepicker/css/datepicker.css" />
+    <link href="/assets/admin/assets/dropzone/css/dropzone.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
