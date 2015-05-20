@@ -4,6 +4,7 @@
 ?>
       <section id="main-content">
           	<section class="wrapper">
+            <section class="panel">
           	<h3><i class="fa fa-angle-right"></i> All Category</h3>
 		  		
 		  	<div class="row mt">
@@ -123,7 +124,7 @@
                   </div><!-- /content-panel -->
                 </div><!-- /col-lg-12 -->
             </div><!-- /row -->
-
+            </section>
 			</section><! --/wrapper -->
         </section><!-- /MAIN CONTENT -->
         <!--main content end-->

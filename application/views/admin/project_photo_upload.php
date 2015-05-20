@@ -33,7 +33,7 @@
 	                        	<input type="hidden" name="idproject" name="idproject" value="<?php echo $idproject;?>">
 	                        </form>	
 	                    </fieldset>
-	                    <a href="projectphotofinish/<?php echo $idproject;?>" class="finish btn btn-danger" >Next</a>
+	                    <a href="/administrator/projectphotofinish/<?php echo $idproject;?>" class="finish btn btn-danger" >Next</a>
                 </section>
             </div>
         </div>

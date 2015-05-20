@@ -60,6 +60,21 @@ class Modelproject extends CI_Model {
 		}
 	}
 
+	public function loadAllProjectAlbum()
+	{
+		$query = $this->db->query("
+				SELECT *
+				FROM project_album
+				ORDER BY id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
 	public function loadOneProject($projecturi)
 	{
 		$query = $this->db->query("
@@ -88,6 +103,42 @@ class Modelproject extends CI_Model {
 			}
 			return $data;
 		}
+
+	}
+
+	public function insertProjectAlbum($idproject, $id, $cover, $sidebar)
+	{
+		$this->db->trans_begin();
+		$field = array(
+				'status_cover_project' => '0',
+				'status_sidebar_project' => '0'
+			);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		$field = array(
+				'status_cover_project' => '1'
+			);
+		$this->db->where('id', $cover);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		$field = array(
+				'status_sidebar_project' => '1'
+			);
+		$this->db->where('id', $sidebar);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		// complete database transaction
+        $this->db->trans_complete();
+
+        // return false if something went wrong
+        if ($this->db->trans_status() === FALSE){
+            return FALSE;
+        }else{
+            return TRUE;
+        }
 	}
 	
 }
