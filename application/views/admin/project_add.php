@@ -193,7 +193,7 @@
                             $("input.form-error-focus:first").focus();
                             $("input.form-error-focus").removeClass('form-error-focus');
 						}else{
-							output = '<div class="alert alert-block alert-success fade in">'+ response.text +'. Langkah berikutnya <a href="projectuploadphoto/'+response.lastid+'">Unggah Foto Project</a></div>';
+							output = '<div class="alert alert-block alert-success fade in">'+ response.text +'. Langkah berikutnya <a href="projectphotoupload/'+response.lastid+'">Unggah Foto Project</a></div>';
 							$('#title').val('');
 							$('#description').val('');
 							$('#category').val('');

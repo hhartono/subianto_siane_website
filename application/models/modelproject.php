@@ -32,6 +32,15 @@ class Modelproject extends CI_Model {
 			);
 		$this->db->insert('project', $field);
 	}
+
+	public function uploadProjectPhoto($idproject, $file)
+	{
+		$field = array(
+				'photo' => $file,
+				'id_project' => $idproject
+			);
+		$this->db->insert('project_album', $field);
+	}
 	
 }
 

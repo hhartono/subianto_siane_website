@@ -213,6 +213,46 @@ class Administrator extends CI_Controller {
 	   $slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
 	   return $slug;
 	}
+
+	public function projectphotoupload()
+	{
+		$uri3 = $this->uri->segment(3);
+		if($uri3 == ''){
+			redirect('administrator/projectadd');
+		}else{
+			$data = array(
+				'title' => 'Project Photo Upload | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectaddactive' => 'active',
+				'idproject' => $uri3
+			);
+			$this->load->view('admin/project_photo_upload', $data);	
+		}
+		
+	}
+
+	public function projectphotouploadsubmit()
+	{
+		$config = array(
+				'upload_path' => 'uploads/project/',
+				'allowed_types' => 'gif|jpg|jpeg|png',
+				'max_size' => '1024',
+				'max_width' => '1920',
+				'max_height' => '1920'
+			);
+		$this->load->library('upload', $config);
+		$idproject = $this->input->post('idproject');
+		$file = $this->input->post('file');
+		if (!$this->upload->do_upload('file')){
+			$output = json_encode(array('error' => $this->upload->display_errors(), 'file'=> $file));
+		}else{
+			$filename = $this->upload->data();
+			$this->modelproject->uploadProjectPhoto($idproject, $filename['file_name']);
+			$output = json_encode(array('upload_data' => $this->upload->data()));
+		}
+		die($output);
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');
