@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Administrator extends CI_Controller {
+class Administrator extends CI_Controller{
 
 	function __construct()
 	{
@@ -57,10 +57,10 @@ class Administrator extends CI_Controller {
 	public function categoryadd()
 	{
 		$data = array(
-			'title' => 'Subianto & Siane Architecture - Category',
-			'title_page' => 'Add Category',
-			'username' => $this->tank_auth->get_username(),
-			'loadCategory' => $this->modelcategory->loadAllCategory()
+				'title' => 'Subianto & Siane Architecture - Category',
+				'title_page' => 'Add Category',
+				'username' => $this->tank_auth->get_username(),
+				'loadCategory' => $this->modelcategory->loadAllCategory()
 		);
 		$this->load->view('admin/category_add', $data);
 	}
@@ -79,7 +79,7 @@ class Administrator extends CI_Controller {
 							'validation_errors' => validation_errors(), 
 							'formerror' => $formerror
 							)
-						);
+					);
 			die($output);
 		}else{
 			$nama = $this->input->post('nama');
@@ -138,7 +138,8 @@ class Administrator extends CI_Controller {
 		$data = array(
 				'title' => 'Project | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
-				'projectactive' => 'active'
+				'projectactive' => 'active',
+				'loadallproject' => $this->modelproject->loadAllProject()
 			);
 		$this->load->view('admin/project', $data);
 	}
@@ -209,8 +210,9 @@ class Administrator extends CI_Controller {
 		}
 	}
 
-	public function create_slug($string){
-	   $slug=preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
+	public function create_slug($string)
+	{
+	   $slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
 	   return $slug;
 	}
 
@@ -228,7 +230,6 @@ class Administrator extends CI_Controller {
 			);
 			$this->load->view('admin/project_photo_upload', $data);	
 		}
-		
 	}
 
 	public function projectphotouploadsubmit()
@@ -243,7 +244,7 @@ class Administrator extends CI_Controller {
 		$this->load->library('upload', $config);
 		$idproject = $this->input->post('idproject');
 		$file = $this->input->post('file');
-		if (!$this->upload->do_upload('file')){
+		if(!$this->upload->do_upload('file')){
 			$output = json_encode(array('error' => $this->upload->display_errors(), 'file'=> $file));
 		}else{
 			$filename = $this->upload->data();
@@ -253,32 +254,35 @@ class Administrator extends CI_Controller {
 		die($output);
 	}
 
-	public function projectphotofinish()
-	{
-		$uri3 = $this->uri->segment(3);
-		if($uri3 == ''){
-			redirect('administrator/projectadd');
-		}else{
-		$data = array(
-				'title' => 'Project Finish | Subianto & Siane Architecture',
-				'username' => $this->tank_auth->get_username(),
-				'projectaddactive' => 'active',
-				'idproject' => $uri3,
-				'projectalbum' => $this->modelproject->loadAllProjectAlbum()
-		);
-		$this->load->view('admin/project_photo_finish', $data);
-		}
-	}
+	// public function projectphotofinish()
+	// {
+	// 	$uri3 = $this->uri->segment(3);
+	// 	if($uri3 == ''){
+	// 		redirect('administrator/projectadd');
+	// 	}else{
+	// 		$data = array(
+	// 				'title' => 'Project Finish | Subianto & Siane Architecture',
+	// 				'username' => $this->tank_auth->get_username(),
+	// 				'projectaddactive' => 'active',
+	// 				'idproject' => $uri3,
+	// 				'projectalbum' => $this->modelproject->loadAllProjectAlbum()
+	// 		);
+	// 		$this->load->view('admin/project_photo_finish', $data);
+	// 	}
+	// }
 
 	public function projectphotofinishsubmit()
-	{		
-		if(!empty($this->input->post('cover')) && !empty($this->input->post('sidebar'))){
+	{	
+		$cov = $this->input->post('cover');
+		$side = $this->input->post('sidebar');
+		if(!empty($cov) && !empty($side))
+		// if(!empty($this->input->post('cover')) && !empty($this->input->post('sidebar')))
+		{
 			$idproject = $this->input->post('idproject');
 			$id = $this->input->post('id');
 			$cover = $this->input->post('cover');
 			$sidebar = $this->input->post('sidebar');
 			$this->modelproject->insertProjectAlbum($idproject, $id, $cover, $sidebar);
-			
 			redirect('administrator/project');	
 		}
 	}
