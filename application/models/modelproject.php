@@ -41,6 +41,54 @@ class Modelproject extends CI_Model {
 			);
 		$this->db->insert('project_album', $field);
 	}
+
+	public function loadAllProject()
+	{
+		$query = $this->db->query("
+				SELECT p.title, p.project_uri, pc.category_name, 
+				    (SELECT pa.photo
+				        FROM project_album pa 
+				         WHERE p.id = pa.id_project AND pa.status_cover_project = 1 limit 0,1) as photo
+				FROM project p, project_category pc
+				WHERE p.id_category = pc.id
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function loadOneProject($projecturi)
+	{
+		$query = $this->db->query("
+				SELECT p.title, p.description, p.project_story, 
+				p.project_detail_date, p.project_detail_client, p.project_detail_status, p.project_detail_location
+				FROM project p
+				WHERE p.project_uri = '$projecturi'
+			");
+		if($query->num_rows()>0){
+			$data = $query->row();
+			return $data;
+		}
+	}
+
+	public function loadAllPhotosDetailProject($projecturi)
+	{
+		$query = $this->db->query("
+				SELECT pa.photo
+				FROM project_album pa, project p
+				WHERE p.project_uri = '$projecturi'
+				AND pa.id_project = p.id
+			");
+		if($query->num_rows() > 0){
+			foreach($query->result() as $row){
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
 	
 }
 

@@ -23,7 +23,7 @@
             <header>
                 <div class="header-inner">
                     <div class="logo-holder">
-                        <a href="/" class="ajax"><img src="/assets/public/images/logo.png" alt=""></a>
+                        <a href="/" class="ajax"><img src="/assets/public/images/logo37x30.png" alt=""></a>
                     </div>
                     <div class="nav-button-holder">
                         <div class="nav-button vis-m"><span></span><span></span><span></span></div>

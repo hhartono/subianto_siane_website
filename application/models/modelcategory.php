@@ -47,4 +47,22 @@ class Modelcategory extends CI_Model {
 		$this->db->where('id', $id);
 		$this->db->update('project_category', $field);
 	}
+
+	public function loadCategoryCount()
+	{
+		$query = $this->db->query("
+			SELECT pc.category_name, 
+			 (SELECT COUNT(p.id)
+			      FROM project p
+			        WHERE p.id_category = pc.id
+			    ) as count_category
+			FROM project_category pc
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
 }
