@@ -299,7 +299,8 @@ class Administrator extends CI_Controller{
 
 	public function projectphotoaboutsubmit()
 	{		
-		if(!empty($this->input->post('about'))){
+		$about = $this->input->post('about');
+		if(!empty($about)){
 			$about = $this->input->post('about');
 			$this->modelproject->insertProjectAbout($about);
 			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Data berhasil diupdate</div>"); 
