@@ -88,14 +88,14 @@
                         <!-- wrapper inner end   -->
                         
                     <?php 
+                        $sidebar = array(
+                            'sidebarphoto' => $loadoneproject->sidebarphoto,
+                            'statussidebar' => $loadoneproject->statussidebar
+                        );
+                        $this->load->view('public/templates/parallax_column', $sidebar);
+                   ?>
 
-                    $sidebar = array(
-                    	'sidebarphoto' => $loadoneproject->sidebarphoto,
-                    	'statussidebar' => $loadoneproject->statussidebar
-                    	);
-                    $this->load->view('public/templates/parallax_column', $sidebar);?>
-
-    		        <?php $this->load->view('public/templates/footer_block');?>
+                    <?php $this->load->view('public/templates/footer_block');?>
 	
 
                     </div>

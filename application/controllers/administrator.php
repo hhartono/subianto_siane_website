@@ -290,7 +290,7 @@ class Administrator extends CI_Controller{
 	public function projectphotoabout()
 	{
 		$data = array(
-				'title' => 'Project Home | Subianto & Siane Architecture',
+				'title' => 'Project About | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
 				'projectabout' => $this->modelproject->loadAllProjectAbout()
 		);
@@ -303,8 +303,31 @@ class Administrator extends CI_Controller{
 		if(!empty($about)){
 			$about = $this->input->post('about');
 			$this->modelproject->insertProjectAbout($about);
-			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Data berhasil diupdate</div>"); 
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo about berhasil ditambah</div>"); 
 			redirect('administrator/projectphotoabout');	
+		}else{
+			echo "";
+		}
+	}
+
+	public function projectphotosidebar()
+	{
+		$data = array(
+				'title' => 'Project Sidebar Random | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectsidebar' => $this->modelproject->loadAllProjectSidebar()
+		);
+		$this->load->view('admin/project_photo_sidebar', $data);
+	}
+
+	public function projectphotosidebarsubmit()
+	{		
+		$sidebar = $this->input->post('sidebar');
+		if(!empty($sidebar)){
+			$sidebar = $this->input->post('sidebar');
+			$this->modelproject->insertProjectSidebar($sidebar);
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo sidebar berhasil ditambah</div>"); 
+			redirect('administrator/projectphotosidebar');	
 		}else{
 			echo "";
 		}

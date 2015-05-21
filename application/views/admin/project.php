@@ -17,11 +17,12 @@
 	                            <table  class="display table table-bordered table-striped" id="dataproject">
 	                              <thead>
 	                              <tr>
-	                                  <th>Rendering engine</th>
-	                                  <th>Browser</th>
-	                                  <th>Platform(s)</th>
-	                                  <th class="hidden-phone">Engine version</th>
-	                                  <th class="hidden-phone">CSS grade</th>
+	                                  <th>No</th>
+                                      <th>Title</th>
+                                      <th>Category</th>
+                                      <th>Description</th>
+                                      <th>Project Story</th>
+                                      <th>Action</th> 
 	                              </tr>
 	                              </thead>
 	                              <tbody>
@@ -36,6 +37,7 @@
 		                                  <td><?php echo $lap->category_name;?></td>
 		                                  <td><?php echo $lap->description;?></td>
 		                                  <td><?php echo $lap->project_story;?></td>
+		                                  <td>                                          </td>
 		                              </tr>
 	                            <?php
 	                            		$no++;	
@@ -48,11 +50,12 @@
 	                              	</tbody>
 	                              <tfoot>
 	                              <tr>
-	                                  <th>Rendering engine</th>
-	                                  <th>Browser</th>
-	                                  <th>Platform(s)</th>
-	                                  <th>Engine version</th>
-	                                  <th>CSS grade</th>
+	                                  <th>No</th>
+                                      <th>Title</th>
+                                      <th>Category</th>
+                                      <th>Description</th>
+                                      <th>Project Story</th>
+                                      <th>Action</th> 
 	                              </tr>
 	                              </tfoot>
 	                  			</table>
