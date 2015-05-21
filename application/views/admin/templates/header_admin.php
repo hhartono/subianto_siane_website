@@ -21,6 +21,10 @@
     <link rel="stylesheet" type="text/css" href="/assets/admin/assets/bootstrap-datepicker/css/datepicker.css" />
     <link href="/assets/admin/assets/dropzone/css/dropzone.css" rel="stylesheet"/>
 
+    <link href="/assets/admin/assets/advanced-datatable/media/css/demo_page.css" rel="stylesheet" />
+    <link href="/assets/admin/assets/advanced-datatable/media/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/admin/assets/data-tables/DT_bootstrap.css" />
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>

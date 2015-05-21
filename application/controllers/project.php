@@ -32,7 +32,6 @@ class Project extends CI_Controller {
 				'projectactlink' => 'act-link',
 				'loadoneproject' => $this->modelproject->loadOneProject($projecturi),
 				'loadallphotosdetailproject' => $this->modelproject->loadAllPhotosDetailProject($projecturi)
-
 			);
 			$this->load->view('public/project_detail', $data);	
 		}

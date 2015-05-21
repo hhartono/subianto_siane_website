@@ -50,7 +50,7 @@
                                     <div class="row">
                                         <div class="col-md-10">
                                             <div class="project-details">
-												<h3><span>Internet tend to repeat predefined chunks as necessary, making this the first true</span></h3>
+												<!-- <h3><span>Internet tend to repeat predefined chunks as necessary, making this the first true</span></h3> -->
                                                 <p><?php echo $loadoneproject->project_story;?></p>
                                                 <ul class="descr">
                                                     <li><span>Date :</span> <?php echo $loadoneproject->project_detail_date;?> </li>
@@ -80,14 +80,20 @@
                                         <li><a href="portfolio-single3.html" class="ajax"><i class="fa fa-long-arrow-right"></i></a></li>
                                     </ul>
                                     <div class="p-all">
-                                        <a href="portfolio.html" class="ajax"><i class="fa fa-th-large"></i></a>
+                                        <a href="/project" class="ajax"><i class="fa fa-th-large"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- wrapper inner end   -->
                         
-                    <?php $this->load->view('public/templates/parallax_column');?>
+                    <?php 
+
+                    $sidebar = array(
+                    	'sidebarphoto' => $loadoneproject->sidebarphoto,
+                    	'statussidebar' => $loadoneproject->statussidebar
+                    	);
+                    $this->load->view('public/templates/parallax_column', $sidebar);?>
 
     		        <?php $this->load->view('public/templates/footer_block');?>
 	

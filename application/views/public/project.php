@@ -38,7 +38,7 @@
                                                 <a href="project/detail/<?php echo $lap->project_uri;?>" class="ajax">
                                                 <span class="overlay"></span> 
                                             <?php
-                                                if($lap->photo == ""){
+                                                if($lap->photo == "" || $lap->photo == '0'){
                                             ?>
                                                     <img  src="/assets/public/images/default.jpg"   alt="">
                                             <?php
@@ -52,7 +52,7 @@
                                             </div>
                                             <div class="grid-item ">
                                                 <h3><a href="project/detail/<?php echo $lap->project_uri;?>" class="ajax portfolio-link"><?php echo $lap->title;?></a></h3>
-                                                <span>Hoses Design</span>
+                                                <!-- <span>Hoses Design</span> -->
                                             </div>
                                         </div>
                                     </div>

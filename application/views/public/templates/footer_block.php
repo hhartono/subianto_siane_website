@@ -9,7 +9,7 @@
     <div class="footer-inner">
         <div class="row">
             <div class="col-md-5">
-                <a class="footer-logo ajax" href="index.html"><img src="/assets/public/images/footer-logo.png" alt=""></a>
+                <a class="footer-logo ajax" href="index.html"><img src="/assets/public/images/logo37x30.png" alt=""></a>
             </div>
             <div class="col-md-3">
                 <div class="footer-adress">
