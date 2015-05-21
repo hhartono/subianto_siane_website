@@ -51,6 +51,7 @@ class Modelproject extends CI_Model {
 				         WHERE p.id = pa.id_project AND pa.status_cover_project = 1 limit 0,1) as photo
 				FROM project p, project_category pc
 				WHERE p.id_category = pc.id
+				ORDER BY p.id DESC
 			");
 		if($query->num_rows() > 0){
 			foreach ($query->result() as $row) {
@@ -60,12 +61,12 @@ class Modelproject extends CI_Model {
 		}
 	}
 
-	public function loadAllProjectAlbum()
+	public function loadAllProjectAlbum($uri3)
 	{
 		$query = $this->db->query("
 				SELECT *
 				FROM project_album
-				ORDER BY id ASC
+				WHERE id_project = '$uri3' ORDER BY id ASC
 			");
 		if($query->num_rows() > 0){
 			foreach ($query->result() as $row) {
@@ -79,11 +80,34 @@ class Modelproject extends CI_Model {
 	{
 		$query = $this->db->query("
 				SELECT p.title, p.description, p.project_story, 
-				p.project_detail_date, p.project_detail_client, p.project_detail_status, p.project_detail_location
+				p.project_detail_date, p.project_detail_client, p.project_detail_status, p.project_detail_location,
+				(SELECT pa.photo
+					FROM project_album pa
+					WHERE p.id = pa.id_project
+	                AND pa.status_sidebar_project = 1) as sidebarphoto,
+				(SELECT pa.status_sidebar_project
+					FROM project_album pa
+					WHERE p.id = pa.id_project 
+	                AND pa.status_sidebar_project = 1) as statussidebar
 				FROM project p
 				WHERE p.project_uri = '$projecturi'
 			");
 		if($query->num_rows()>0){
+			$data = $query->row();
+			return $data;
+		}
+	}
+
+	public function loadSidebarProject($projecturi)
+	{
+		$query = $this->db->query("
+				SELECT pa.photo, pa.status_sidebar_project
+				FROM project_album pa, project p
+				WHERE p.project_uri = '$projecturi'
+				AND pa.id_project = p.id
+				LIMIT 0,1
+			");
+		if($query -> num_rows() > 0){
 			$data = $query->row();
 			return $data;
 		}
@@ -96,6 +120,7 @@ class Modelproject extends CI_Model {
 				FROM project_album pa, project p
 				WHERE p.project_uri = '$projecturi'
 				AND pa.id_project = p.id
+				ORDER BY pa.id ASC
 			");
 		if($query->num_rows() > 0){
 			foreach($query->result() as $row){

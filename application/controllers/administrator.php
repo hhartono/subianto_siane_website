@@ -254,22 +254,22 @@ class Administrator extends CI_Controller{
 		die($output);
 	}
 
-	// public function projectphotofinish()
-	// {
-	// 	$uri3 = $this->uri->segment(3);
-	// 	if($uri3 == ''){
-	// 		redirect('administrator/projectadd');
-	// 	}else{
-	// 		$data = array(
-	// 				'title' => 'Project Finish | Subianto & Siane Architecture',
-	// 				'username' => $this->tank_auth->get_username(),
-	// 				'projectaddactive' => 'active',
-	// 				'idproject' => $uri3,
-	// 				'projectalbum' => $this->modelproject->loadAllProjectAlbum()
-	// 		);
-	// 		$this->load->view('admin/project_photo_finish', $data);
-	// 	}
-	// }
+	public function projectphotofinish()
+	{
+		$uri3 = $this->uri->segment(3);
+		if($uri3 == ''){
+			redirect('administrator/projectadd');
+		}else{
+			$data = array(
+					'title' => 'Project Finish | Subianto & Siane Architecture',
+					'username' => $this->tank_auth->get_username(),
+					'projectaddactive' => 'active',
+					'idproject' => $uri3,
+					'projectalbum' => $this->modelproject->loadAllProjectAlbum($uri3)
+			);
+			$this->load->view('admin/project_photo_finish', $data);
+		}
+	}
 
 	public function projectphotofinishsubmit()
 	{	

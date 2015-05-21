@@ -43,5 +43,8 @@
           });
     </script>
     
+    <script type="text/javascript" src="/assets/admin/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/assets/admin/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    
   </body>
 </html>

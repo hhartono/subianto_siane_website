@@ -120,8 +120,6 @@
 
 <script src="/assets/admin/js/jquery.js"></script>
 <script type="text/javascript" src="/assets/admin/assets/ckeditor/ckeditor.js"></script>
-<script type="text/javascript" src="/assets/admin/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="/assets/admin/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		submitProject();
