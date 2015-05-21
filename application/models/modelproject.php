@@ -166,7 +166,33 @@ class Modelproject extends CI_Model {
         }
 	}
 
-	
+	public function loadAllProjectAbout()
+	{
+		$query = $this->db->query("
+				SELECT *
+				FROM project_album
+				ORDER BY id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function insertProjectAbout($about)
+	{
+		foreach($about as $ab)
+		{
+			$field = array(
+				'status_about' => '1'
+			);
+
+		$this->db->where('id', $ab);
+		$this->db->update('project_album', $field);
+		}
+	}
 }
 
 /* End of file modelcontact.php */

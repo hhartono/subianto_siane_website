@@ -287,6 +287,28 @@ class Administrator extends CI_Controller{
 		}
 	}
 
+	public function projectphotoabout()
+	{
+		$data = array(
+				'title' => 'Project Home | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectabout' => $this->modelproject->loadAllProjectAbout()
+		);
+		$this->load->view('admin/project_photo_about', $data);
+	}
+
+	public function projectphotoaboutsubmit()
+	{		
+		if(!empty($this->input->post('about'))){
+			$about = $this->input->post('about');
+			$this->modelproject->insertProjectAbout($about);
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Data berhasil diupdate</div>"); 
+			redirect('administrator/projectphotoabout');	
+		}else{
+			echo "";
+		}
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');
