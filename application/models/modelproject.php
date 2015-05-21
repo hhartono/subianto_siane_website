@@ -60,12 +60,12 @@ class Modelproject extends CI_Model {
 		}
 	}
 
-	public function loadAllProjectAlbum()
+	public function loadAllProjectAlbum($uri3)
 	{
 		$query = $this->db->query("
 				SELECT *
 				FROM project_album
-				ORDER BY id ASC
+				WHERE id_project = '$uri3' ORDER BY id ASC
 			");
 		if($query->num_rows() > 0){
 			foreach ($query->result() as $row) {
@@ -139,6 +139,34 @@ class Modelproject extends CI_Model {
         }else{
             return TRUE;
         }
+	}
+
+	public function loadAllProjectAbout()
+	{
+		$query = $this->db->query("
+				SELECT *
+				FROM project_album
+				ORDER BY id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function insertProjectAbout($about)
+	{
+		foreach($about as $ab)
+		{
+			$field = array(
+				'status_about' => '1'
+			);
+
+		$this->db->where('id', $ab);
+		$this->db->update('project_album', $field);
+		}
 	}
 	
 }

@@ -11,35 +11,24 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Project Photo Finish
+                        Project Photo About
                     </header>
                     <div class="panel-body">
-	                  	<div class="stepy-tab">
-	                        <ul id="default-titles" class="stepy-titles clearfix">
-	                            <li id="default-title-0">
-	                                <div>Add Project</div>
-	                            </li>
-	                            <li id="default-title-1" class="">
-	                                <div>Upload</div>
-	                            </li>
-	                            <li id="default-title-2" class="current-step">
-	                                <div>Finish</div>
-	                            </li>
-	                        </ul>
-	                    </div>
-	                   
+                    <p><?=$this->session->flashdata('message')?> </p>
 	                    <fieldset title="Step: finish photos of project" class="step" id="default-step-0">
 	                   			
-	                        <form action="/administrator/projectphotofinishsubmit" method="POST">
-	                        	<input type="hidden" name="idproject" value="<?php echo $idproject;?>">
+	                        <form action="/administrator/projectphotoaboutsubmit" method="POST">
 	                        	<?php 
-	                        		foreach ($projectalbum as $project){ 
+	                        		foreach ($projectabout as $project){ 
 	                        	?>
 	                        		<div class="col-lg-3">
 	                        		<section class="panel">
 	                        			<img src="/uploads/project/<?php echo $project->photo; ?>" width="250" ></br>
-	                        			<input type="radio" name="cover" value="<?php echo $project->id;?>" checked> Cover<br/>
-	                        			<input type="radio" name="sidebar" value="<?php echo $project->id;?>" checked> Sidebar<br/>  
+	                        			<?php if($project->status_about == 0) { ?>
+	                        			<input type="checkbox" id ="about" name="about[]" value="<?php echo $project->id;?>"> Pilih Untuk Tampilan About<br/>  
+	                        			<?php }else{ ?>
+	                        			<input type="checkbox" id ="about" name="about[]" value="<?php echo $project->id;?>" checked> Pilih Untuk Tampilan About<br/>
+	                        			<?php } ?>
 	                        		</section>
 	                        		</div>
 	                        		
