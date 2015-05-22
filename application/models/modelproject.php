@@ -209,17 +209,75 @@ class Modelproject extends CI_Model {
 		}
 	}
 
-	public function insertProjectSidebar($about)
+	public function insertProjectSidebar($sidebar)
 	{
-		foreach($about as $ab)
+		foreach($sidebar as $sb)
 		{
 			$field = array(
 				'status_sidebar_random' => '1'
 			);
 
-		$this->db->where('id', $ab);
+		$this->db->where('id', $sb);
 		$this->db->update('project_album', $field);
 		}
+	}
+
+	public function loadAllProjectHome()
+	{
+		$query = $this->db->query("
+				SELECT project_album.*,  project.title as title
+				from project_album, project 
+				where project.id = project_album.id_project 
+				group by project_album.id_project
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function loadAllPhotoHome($id)
+	{
+		$query = $this->db->query("
+				SELECT project_album.*,  project.title as title
+				from project_album, project 
+				where project.id = project_album.id_project AND project_album.id_project = '$id'
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function insertProjectHome($home, $id, $idproject)
+	{
+		$this->db->trans_begin();
+		$field = array(
+				'status_feature_home' => '0',
+			);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		$field = array(
+				'status_feature_home' => '1'
+			);
+		$this->db->where('id', $home);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		// complete database transaction
+        $this->db->trans_complete();
+
+        // return false if something went wrong
+        if ($this->db->trans_status() === FALSE){
+            return FALSE;
+        }else{
+            return TRUE;
+        }
 	}
 }
 

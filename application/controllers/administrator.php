@@ -333,6 +333,42 @@ class Administrator extends CI_Controller{
 		}
 	}
 
+	public function projectphotohome()
+	{
+		$data = array(
+				'title' => 'Project Home | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projecthome' => $this->modelproject->loadAllProjectHome()
+		);
+		$this->load->view('admin/project_photo_home', $data);
+	}
+
+	public function projectphotohomeview($id)
+	{
+		$data = array(
+				'title' => 'Project Home | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projecthome' => $this->modelproject->loadAllPhotoHome($id)
+		);
+		$this->load->view('admin/project_photo_home_view', $data);
+	}
+
+	public function projectphotohomesubmit()
+	{		
+		$home = $this->input->post('home');
+		$title = $this->input->post('title');
+		if(!empty($home)){
+			$home = $this->input->post('home');
+			$id = $this->input->post('id');
+			$idproject = $this->input->post('idproject');
+			$this->modelproject->insertProjectHome($home, $id, $idproject);
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil ditambah</div>"); 
+			redirect('administrator/projectphotohome');	
+		}else{
+			echo "";
+		}
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');

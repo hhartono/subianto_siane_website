@@ -11,24 +11,27 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Project Photo About
+                        Project Photo Home
                     </header>
                     <div class="panel-body">
                     <p><?=$this->session->flashdata('message')?> </p>
 	                    <fieldset title="Step: finish photos of project" class="step" id="default-step-0">
 	                   			
-	                        <form action="/administrator/projectphotosidebarsubmit" method="POST">
+	                        <form action="/administrator/projectphotohomesubmit" method="POST">
 	                        	<?php 
-	                        		foreach ($projectsidebar as $project){ 
+	                        		foreach ($projecthome as $project){ 
 	                        	?>
 	                        		<div class="col-lg-3">
 	                        		<section class="panel">
 	                        			<img src="/uploads/project/<?php echo $project->photo; ?>" width="250" ></br>
-	                        			<?php if($project->status_sidebar_random == 0) { ?>
-	                        			<input type="checkbox" name="sidebar[]" value="<?php echo $project->id;?>"> Pilih Untuk Tampilan Sidebar<br/>  
+	                        			<?php if($project->status_feature_home == 0) { ?>
+	                        			<input type="radio" name="home" value="<?php echo $project->id;?>"> Pilih Untuk Tampilan Home<br/>
 	                        			<?php }else{ ?>
-	                        			<input type="checkbox" name="sidebar[]" value="<?php echo $project->id;?>" checked> Pilih Untuk Tampilan Sidebar<br/>
+	                        			<input type="radio" name="home" value="<?php echo $project->id;?>" checked> Pilih Untuk Tampilan Home<br/>
 	                        			<?php } ?>
+	                        			<input type="hidden" name="id" value="<?php echo $project->id;?>">
+	                        			<input type="hidden" name="idproject" value="<?php echo $project->id_project;?>">
+	                        			<input type="hidden" name="title" value="<?php echo $project->title;?>">
 	                        		</section>
 	                        		</div>
 	                        		
