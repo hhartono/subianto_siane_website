@@ -314,6 +314,21 @@ class Modelproject extends CI_Model {
     		return $data;
     	}
 	}
+
+	public function loadFeaturedHome(){
+		$query = $this->db->query("
+			SELECT pa.photo, p.project_uri, p.title
+			FROM project_album pa, project p
+			WHERE pa.id_project = p.id
+			AND pa.status_feature_home='1'
+			");
+		if($query->num_rows()> 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
 }
 
 /* End of file modelcontact.php */

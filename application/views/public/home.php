@@ -6,7 +6,24 @@
             <div class="content full-height">
                 <div class="swiper-container" id="horizontal-slider" data-mwc="1">
                     <div class="swiper-wrapper">
-                        <!--=============== 1 ===============-->	
+                    <?php
+                    if(isset($loadfeaturedhome)){
+                        foreach ($loadfeaturedhome as $lfh){
+                    ?>
+                        <div class="swiper-slide">
+                            <div class="bg" style="background-image:url(/uploads/project/<?php echo $lfh->photo;?>)"></div>
+                            <div class="overlay"></div>
+                            <div class="slide-title-holder">
+                                <div class="slide-title">
+                                    <h3 class="transition">  <a class="ajax transition2" href="project/detail/<?php echo $lfh->project_uri;?>"><?php echo ucwords($lfh->title);?></a>  </h3>
+                                    <!-- <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4> -->
+                                </div>
+                            </div>
+                        </div>
+                    <?php        
+                        }
+                    }else{
+                    ?>
                         <div class="swiper-slide">
                             <div class="bg" style="background-image:url(/assets/public/images_example/LIPPO_91-051348-8R.jpg)"></div>
                             <div class="overlay"></div>
@@ -17,10 +34,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!--=============== 2 ===============-->	
+
                         <div class="swiper-slide">
                             <div class="bg" style="background-image:url(/assets/public/images_example/LIPPO_91-051356-8R.jpg)"></div>
-                            <div class="overlay"></div>									
+                            <div class="overlay"></div>                                 
                             <div class="slide-title-holder">
                                 <div class="slide-title">
                                     <h3 class="transition">  <a class="ajax transition2" href="portfolio-single.html">In tortor neque</a>  </h3>
@@ -28,39 +45,10 @@
                                 </div>
                             </div>
                         </div>
-                        <!--=============== 3 ===============-->	
-                        <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images_example/PONDOK_INDAH-059885-8R.jpg)"></div>
-                            <div class="overlay"></div>
-                            <div class="slide-title-holder">
-                                <div class="slide-title">
-                                    <h3 class="transition">  <a class="ajax transition2" href="portfolio-single.html">Vestibulum tincidunt</a>  </h3>
-                                    <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=============== 4 ===============-->	
-                        <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images_example/PONDOK_INDAH-060194-8R.jpg)"></div>
-                            <div class="overlay"></div>
-                            <div class="slide-title-holder">
-                                <div class="slide-title">
-                                    <h3 class="transition">  <a class="ajax transition2" href="portfolio-single.html">Libero bibendum</a>  </h3>
-                                    <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=============== 5 ===============-->    
-                        <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/assets/public/images_example/SETRADUTA_L19-052709-8R.jpg)"></div>
-                            <div class="overlay"></div>
-                            <div class="slide-title-holder">
-                                <div class="slide-title">
-                                    <h3 class="transition">  <a class="ajax transition2" href="portfolio-single.html">Libero bibendum</a>  </h3>
-                                    <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4>
-                                </div>
-                            </div>
-                        </div>
+                    <?php
+                    }
+                    ?>
+                        
                     </div>
                     <div class="swiper-nav-holder hor">
                         <a class="swiper-nav arrow-left transition " href="#"><i class="fa fa-long-arrow-left"></i></a>
