@@ -27,9 +27,21 @@
                                     </div> -->
                                     <div class="full-width owl-carousel">
                                         <!-- 1 -->
+                                    <?php
+                                        if(isset($loadphotoabout)){
+                                    ?>
+                                        <div class="item">
+                                            <img src="/uploads/project/<?php echo $loadphotoabout->photo;?>" class="respimg" alt="">
+                                        </div>
+                                    <?php
+                                        }else{
+                                    ?>
                                         <div class="item">
                                             <img src="/assets/public/images_example/KSTUBUN-015424-8R.jpg" class="respimg" alt="">
                                         </div>
+                                    <?php
+                                        }
+                                    ?>
                                         <!-- 2 -->
                                         <!-- <div class="item">
                                             <img src="/assets/public/images/folio/slider/1.jpg" class="respimg" alt="">
@@ -362,7 +374,12 @@
                 </div>
                 <!-- wrapper inner end   -->
                 
-                <?php $this->load->view('public/templates/parallax_column');?>
+                <?php 
+                $sidebar = array(
+                    'sidebarphoto' => $loadrandomphoto->photo,
+                    'statussidebar' => $loadrandomphoto->status_sidebar_random
+                );
+                $this->load->view('public/templates/parallax_column', $sidebar);?>
 
                 <?php $this->load->view('public/templates/footer_block');?>
 

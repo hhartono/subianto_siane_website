@@ -67,7 +67,12 @@
                 </div>
                 <!-- wrapper inner end   -->
                 
-                <?php $this->load->view('public/templates/parallax_column');?>
+                <?php 
+                $sidebar = array(
+                    'sidebarphoto' => $loadrandomphoto->photo,
+                    'statussidebar' => $loadrandomphoto->status_sidebar_random
+                );
+                $this->load->view('public/templates/parallax_column', $sidebar);?>
 
                 <?php $this->load->view('public/templates/footer_block');?>
             </div>
