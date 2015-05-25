@@ -13,36 +13,25 @@
 	                      Dynamic Table
 	                  </header>
 	                  <div class="panel-body">
+	                   <p><?=$this->session->flashdata('message')?> </p>
 	                        <div class="adv-table">
 	                            <table  class="display table table-bordered table-striped" id="dataproject">
 	                              <thead>
 	                              <tr>
-	                                  <th>No</th>
-                                      <th>Title</th>
-                                      <th>Category</th>
-                                      <th>Description</th>
-                                      <th>Project Story</th>
+	                                  <th>Project</th>
                                       <th>Action</th> 
 	                              </tr>
 	                              </thead>
 	                              <tbody>
 	                            <?php
-	                            if(isset($loadallproject)){
-	                            	$no=1;
-	                            	foreach ($loadallproject as $lap) {
+	                            if(isset($projecthome)){
+	                            	foreach ($projecthome as $project) {
 	                            ?>
 		                              <tr class="">
-		                                  <td><?php echo $no;?></td>
-		                                  <td><?php echo $lap->title;?> </td>
-		                                  <td><?php echo $lap->category_name;?></td>
-		                                  <td><?php echo $lap->description;?></td>
-		                                  <td><?php echo $lap->project_story;?></td>
-		                                  <td>
-
-		                                  </td>
+		                                  <td><?php echo $project->title;?></td>
+		                                  <td><a href="/administrator/projectphotohomeview/<?php echo $project->id_project; ?>" class="btn btn-danger">Pilih Photo</a>                                          </td>
 		                              </tr>
-	                            <?php
-	                            		$no++;	
+	                            <?php	                            	
 	                            	}
 	                            }else{
 	                            	// echo nothing
@@ -52,12 +41,8 @@
 	                              	</tbody>
 	                              <tfoot>
 	                              <tr>
-	                                  <th>No</th>
-	                                  <th>Title</th>
-	                                  <th>Category</th>
-	                                  <th>Description</th>
-	                                  <th>Project Story</th>
-	                                  <th>Action</th>
+	                                  <th>Project</th>
+                                      <th>Action</th> 
 	                              </tr>
 	                              </tfoot>
 	                  			</table>

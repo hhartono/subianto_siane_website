@@ -290,7 +290,7 @@ class Administrator extends CI_Controller{
 	public function projectphotoabout()
 	{
 		$data = array(
-				'title' => 'Project Home | Subianto & Siane Architecture',
+				'title' => 'Project About | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
 				'projectabout' => $this->modelproject->loadAllProjectAbout()
 		);
@@ -303,8 +303,67 @@ class Administrator extends CI_Controller{
 		if(!empty($about)){
 			$about = $this->input->post('about');
 			$this->modelproject->insertProjectAbout($about);
-			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Data berhasil diupdate</div>"); 
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo about berhasil ditambah</div>"); 
 			redirect('administrator/projectphotoabout');	
+		}else{
+			echo "";
+		}
+	}
+
+	public function projectphotosidebar()
+	{
+		$data = array(
+				'title' => 'Project Sidebar Random | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectsidebar' => $this->modelproject->loadAllProjectSidebar()
+		);
+		$this->load->view('admin/project_photo_sidebar', $data);
+	}
+
+	public function projectphotosidebarsubmit()
+	{		
+		$sidebar = $this->input->post('sidebar');
+		if(!empty($sidebar)){
+			$sidebar = $this->input->post('sidebar');
+			$this->modelproject->insertProjectSidebar($sidebar);
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo sidebar berhasil ditambah</div>"); 
+			redirect('administrator/projectphotosidebar');	
+		}else{
+			echo "";
+		}
+	}
+
+	public function projectphotohome()
+	{
+		$data = array(
+				'title' => 'Project Home | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projecthome' => $this->modelproject->loadAllProjectHome()
+		);
+		$this->load->view('admin/project_photo_home', $data);
+	}
+
+	public function projectphotohomeview($id)
+	{
+		$data = array(
+				'title' => 'Project Home | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projecthome' => $this->modelproject->loadAllPhotoHome($id)
+		);
+		$this->load->view('admin/project_photo_home_view', $data);
+	}
+
+	public function projectphotohomesubmit()
+	{		
+		$home = $this->input->post('home');
+		$title = $this->input->post('title');
+		if(!empty($home)){
+			$home = $this->input->post('home');
+			$id = $this->input->post('id');
+			$idproject = $this->input->post('idproject');
+			$this->modelproject->insertProjectHome($home, $id, $idproject);
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil ditambah</div>"); 
+			redirect('administrator/projectphotohome');	
 		}else{
 			echo "";
 		}

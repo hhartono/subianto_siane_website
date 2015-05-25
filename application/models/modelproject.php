@@ -79,18 +79,18 @@ class Modelproject extends CI_Model {
 	public function loadOneProject($projecturi)
 	{
 		$query = $this->db->query("
-				SELECT p.title, p.description, p.project_story, 
-				p.project_detail_date, p.project_detail_client, p.project_detail_status, p.project_detail_location,
-				(SELECT pa.photo
-					FROM project_album pa
-					WHERE p.id = pa.id_project
-	                AND pa.status_sidebar_project = 1) as sidebarphoto,
-				(SELECT pa.status_sidebar_project
-					FROM project_album pa
-					WHERE p.id = pa.id_project 
-	                AND pa.status_sidebar_project = 1) as statussidebar
-				FROM project p
-				WHERE p.project_uri = '$projecturi'
+				SELECT p.title, p.description, p.project_story,
+                p.project_detail_date, p.project_detail_client, p.project_detail_status, p.project_detail_location,
+                (SELECT pa.photo
+                    FROM project_album pa
+                    WHERE p.id = pa.id_project
+                    AND pa.status_sidebar_project = 1) as sidebarphoto,
+                (SELECT pa.status_sidebar_project
+                    FROM project_album pa
+                    WHERE p.id = pa.id_project
+                    AND pa.status_sidebar_project = 1) as statussidebar
+                FROM project p
+                WHERE p.project_uri = '$projecturi' 
 			");
 		if($query->num_rows()>0){
 			$data = $query->row();
@@ -192,6 +192,92 @@ class Modelproject extends CI_Model {
 		$this->db->where('id', $ab);
 		$this->db->update('project_album', $field);
 		}
+	}
+
+	public function loadAllProjectSidebar()
+	{
+		$query = $this->db->query("
+				SELECT *
+				FROM project_album
+				ORDER BY id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function insertProjectSidebar($sidebar)
+	{
+		foreach($sidebar as $sb)
+		{
+			$field = array(
+				'status_sidebar_random' => '1'
+			);
+
+		$this->db->where('id', $sb);
+		$this->db->update('project_album', $field);
+		}
+	}
+
+	public function loadAllProjectHome()
+	{
+		$query = $this->db->query("
+				SELECT project_album.*,  project.title as title
+				from project_album, project 
+				where project.id = project_album.id_project 
+				group by project_album.id_project
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function loadAllPhotoHome($id)
+	{
+		$query = $this->db->query("
+				SELECT project_album.*,  project.title as title
+				from project_album, project 
+				where project.id = project_album.id_project AND project_album.id_project = '$id'
+			");
+		if($query->num_rows() > 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function insertProjectHome($home, $id, $idproject)
+	{
+		$this->db->trans_begin();
+		$field = array(
+				'status_feature_home' => '0',
+			);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		$field = array(
+				'status_feature_home' => '1'
+			);
+		$this->db->where('id', $home);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+
+		// complete database transaction
+        $this->db->trans_complete();
+
+        // return false if something went wrong
+        if ($this->db->trans_status() === FALSE){
+            return FALSE;
+        }else{
+            return TRUE;
+        }
 	}
 }
 
