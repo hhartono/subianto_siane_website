@@ -33,6 +33,23 @@
                 </ul>
             </li>
 
+            <li>
+                <a class="<?php echo (isset($dashboardactive))? $dashboardactive: '' ;?>" href="/administrator/about">
+                    <i class="fa fa-user"></i>
+                    <span>About</span>
+                </a>
+            </li>
+
+            <li class="sub-menu">
+                <a href="javascript:;" >
+                    <i class=" fa fa-photo"></i>
+                    <span>Photo</span>
+                </a>
+                <ul class="sub">
+                    <li><a href="messagecenter">Inbox</a></li>
+                    <li><a href="">Inbox Details</a></li>
+                </ul>
+            </li>
 
             <li class="sub-menu">
                 <a href="javascript:;" >
@@ -44,7 +61,8 @@
                     <li><a href="">Inbox Details</a></li>
                 </ul>
             </li>
-
+                
+            
 
         </ul>
         <!-- sidebar menu end-->

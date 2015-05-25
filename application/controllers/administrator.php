@@ -41,6 +41,7 @@ class Administrator extends CI_Controller{
 		$data = array(
 				'title' => 'Subianto & Siane Architecture - Category',
 				'title_page' => 'Add Category',
+				'categoryactive' => 'active',
 				'username' => $this->tank_auth->get_username(),
 				'loadAllCategory' => $this->modelcategory->loadAllCategory() 
 			);
@@ -59,6 +60,7 @@ class Administrator extends CI_Controller{
 		$data = array(
 				'title' => 'Subianto & Siane Architecture - Category',
 				'title_page' => 'Add Category',
+				'categoryaddactive' => 'active',
 				'username' => $this->tank_auth->get_username(),
 				'loadCategory' => $this->modelcategory->loadAllCategory()
 		);
@@ -196,7 +198,8 @@ class Administrator extends CI_Controller{
 			$client = $this->input->post('client');
 			$status = $this->input->post('status');
 			$location = $this->input->post('location');
-			$projecturi = $this->create_slug($title);
+			// $projecturi = $this->create_slug($title);
+			$projecturi = $this->sluggify($title);
 			$this->modelproject->insertProject($title, $description, $category, $projectstory, $date, $client, $status, $location, $projecturi);
 			$id = mysql_insert_id();
 			$output = json_encode(
@@ -214,6 +217,26 @@ class Administrator extends CI_Controller{
 	{
 	   $slug = preg_replace('/[^A-Za-z0-9-]+/', '-', $string);
 	   return $slug;
+	}
+
+	public function sluggify($url){
+		# Prep string with some basic normalization
+		$url = strtolower($url);
+		$url = strip_tags($url);
+		$url = stripslashes($url);
+		$url = html_entity_decode($url);
+
+		# Remove quotes (can't, etc.)
+		$url = str_replace('\'', '', $url);
+
+		# Replace non-alpha numeric with hyphens
+		$match = '/[^a-z0-9]+/';
+		$replace = '-';
+		$url = preg_replace($match, $replace, $url);
+
+		$url = trim($url, '-');
+
+		return $url;
 	}
 
 	public function projectphotoupload()
