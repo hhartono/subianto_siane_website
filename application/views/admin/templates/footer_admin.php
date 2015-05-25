@@ -38,7 +38,7 @@
     <script type="text/javascript" charset="utf-8">
           $(document).ready(function() {
               $('#dataproject').dataTable( {
-                  "aaSorting": [[ 4, "desc" ]]
+                  "aaSorting": [[ 0, "asc" ]]
               } );
           });
     </script>

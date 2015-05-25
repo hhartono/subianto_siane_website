@@ -5,7 +5,7 @@ if($statussidebar=='' || $statussidebar=='0'){
 	// set default sidebar background project
 ?>
 	<div class="bg" style="background-image: url(/assets/public/images_example/KSTUBUN-015313-8R.jpg)"  data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>
-<?
+<?php
 }else{
 ?>
 	<div class="bg" style="background-image: url(/uploads/project/<?php echo $sidebarphoto;?>)"  data-top-bottom="transform: translateY(300px);" data-bottom-top="transform: translateY(-300px);"></div>	
