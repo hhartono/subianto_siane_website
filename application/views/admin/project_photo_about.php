@@ -11,7 +11,7 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Project Photo About
+                        Photo About
                     </header>
                     <div class="panel-body">
                     <p><?=$this->session->flashdata('message')?> </p>
@@ -25,9 +25,9 @@
 	                        		<section class="panel">
 	                        			<img src="/uploads/project/<?php echo $project->photo; ?>" width="250" ></br>
 	                        			<?php if($project->status_about == 0) { ?>
-	                        			<input type="checkbox" id ="about" name="about[]" value="<?php echo $project->id;?>"> Pilih Untuk Tampilan About<br/>  
+	                        			<input type="radio" id ="about" name="about" value="<?php echo $project->id;?>"> Pilih Untuk Tampilan About<br/>  
 	                        			<?php }else{ ?>
-	                        			<input type="checkbox" id ="about" name="about[]" value="<?php echo $project->id;?>" checked> Pilih Untuk Tampilan About<br/>
+	                        			<input type="radio" id ="about" name="about" value="<?php echo $project->id;?>" checked> Pilih Untuk Tampilan About<br/>
 	                        			<?php } ?>
 	                        		</section>
 	                        		</div>

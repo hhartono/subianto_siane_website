@@ -183,15 +183,27 @@ class Modelproject extends CI_Model {
 
 	public function insertProjectAbout($about)
 	{
-		foreach($about as $ab)
-		{
-			$field = array(
+		$this->db->trans_begin();
+		$field = array(
+				'status_about' => '0',
+			);
+		$this->db->update('project_album', $field);
+
+		$field = array(
 				'status_about' => '1'
 			);
-
-		$this->db->where('id', $ab);
+		$this->db->where('id', $about);
 		$this->db->update('project_album', $field);
-		}
+
+		// complete database transaction
+        $this->db->trans_complete();
+
+        // return false if something went wrong
+        if ($this->db->trans_status() === FALSE){
+            return FALSE;
+        }else{
+            return TRUE;
+        }
 	}
 
 	public function loadAllProjectSidebar()

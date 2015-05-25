@@ -310,7 +310,7 @@ class Administrator extends CI_Controller{
 		}
 	}
 
-	public function projectphotoabout()
+	public function about()
 	{
 		$data = array(
 				'title' => 'Project About | Subianto & Siane Architecture',
@@ -327,7 +327,7 @@ class Administrator extends CI_Controller{
 			$about = $this->input->post('about');
 			$this->modelproject->insertProjectAbout($about);
 			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo about berhasil ditambah</div>"); 
-			redirect('administrator/projectphotoabout');	
+			redirect('administrator/about');	
 		}else{
 			echo "";
 		}
