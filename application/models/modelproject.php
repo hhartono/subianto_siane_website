@@ -291,6 +291,44 @@ class Modelproject extends CI_Model {
             return TRUE;
         }
 	}
+
+	public function loadPhotoAbout(){
+		$query = $this->db->query("
+			SELECT pa.photo, pa.status_about
+			FROM project_album pa
+			WHERE pa.status_about = '1'
+			");
+		if($query->num_rows() > 0) {
+			$data = $query->row();
+			return $data;
+		}
+	}
+
+	public function loadRandomPhoto(){
+		$this->db->order_by('id', 'RANDOM');
+    	$this->db->limit(1);
+    	$this->db->where('status_sidebar_random', '1');
+    	$query = $this->db->get('project_album');
+    	if($query->num_rows() > 0){
+    		$data = $query->row();
+    		return $data;
+    	}
+	}
+
+	public function loadFeaturedHome(){
+		$query = $this->db->query("
+			SELECT pa.photo, p.project_uri, p.title
+			FROM project_album pa, project p
+			WHERE pa.id_project = p.id
+			AND pa.status_feature_home='1'
+			");
+		if($query->num_rows()> 0){
+			foreach ($query->result() as $row) {
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
 }
 
 /* End of file modelcontact.php */

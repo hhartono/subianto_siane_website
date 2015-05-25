@@ -2,11 +2,19 @@
 
 class Home extends CI_Controller {
 
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->database();
+		$this->load->model('modelproject');
+	}
+
 	public function index()
 	{
 		$data = array(
 				'title' => 'Subianto & Siane Architecture - Home',
-				'homeactlink' => 'act-link'
+				'homeactlink' => 'act-link',
+				'loadfeaturedhome' => $this->modelproject->loadFeaturedHome()
 			);
 		$this->load->view('public/home', $data);
 	}

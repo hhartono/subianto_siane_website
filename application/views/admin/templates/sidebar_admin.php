@@ -42,11 +42,11 @@
 
             <li class="sub-menu">
                 <a href="javascript:;" >
-                    <i class=" fa fa-photo"></i>
+                    <i class=" fa fa-picture-o"></i>
                     <span>Photo</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="messagecenter">Inbox</a></li>
+                    <li><a href="/">Random Sidebar</a></li>
                     <li><a href="">Inbox Details</a></li>
                 </ul>
             </li>
