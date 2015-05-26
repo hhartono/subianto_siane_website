@@ -45,7 +45,7 @@ class Modelproject extends CI_Model {
 	public function loadAllProject()
 	{
 		$query = $this->db->query("
-				SELECT p.title, p.project_uri, p.description, p.project_story, pc.category_name, 
+				SELECT p.title, p.project_uri, p.description, p.project_story, p.id, pc.category_name, 
 				    (SELECT pa.photo
 				        FROM project_album pa 
 				         WHERE p.id = pa.id_project AND pa.status_cover_project = 1 limit 0,1) as photo
@@ -329,6 +329,15 @@ class Modelproject extends CI_Model {
 			return $data;
 		}
 	}
+
+	public function resetProjectHome($idproject)
+	{
+		$field = array(
+				'status_feature_home' => '0',
+			);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+	}	
 }
 
 /* End of file modelcontact.php */

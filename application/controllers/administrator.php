@@ -385,8 +385,23 @@ class Administrator extends CI_Controller{
 			$id = $this->input->post('id');
 			$idproject = $this->input->post('idproject');
 			$this->modelproject->insertProjectHome($home, $id, $idproject);
-			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil ditambah</div>"); 
-			redirect('administrator/projectphotohome');	
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil dipasang</div>"); 
+			redirect('administrator/project');	
+		}else{
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." gagal dipasang. Photo harus dipilih.</div>");
+			redirect('administrator/project');
+		}
+	}
+
+	public function projectphotohomereset()
+	{		
+		$idproject = $this->input->post('idproject');
+		if(!empty($idproject)){
+			$idproject = $this->input->post('idproject');
+			$title = $this->input->post('title');
+			$this->modelproject->resetProjectHome($idproject);
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil direset</div>"); 
+			redirect('administrator/project');	
 		}else{
 			echo "";
 		}

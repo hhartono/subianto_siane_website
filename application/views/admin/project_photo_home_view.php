@@ -33,13 +33,25 @@
 	                        			<input type="hidden" name="idproject" value="<?php echo $project->id_project;?>">
 	                        			<input type="hidden" name="title" value="<?php echo $project->title;?>">
 	                        		</section>
-	                        		</div>
-	                        		
+	                        		</div>	                        	
 	                        	<?php
 	                        		}
 	                        	?>
-	                        	<div class="col-lg-12">
+	                        	<div class="col-lg-11">
 	         	               		<input type="submit" class="finish btn btn-danger" value="Finish">
+	         	               	</div>
+	                        </form>
+	                        <form action="/administrator/projectphotohomereset" method="post">
+	                        	<?php 
+	                        		foreach ($projecthome as $projects){ 
+	                        	?>
+	                        		<input type="hidden" name="idproject" value="<?php echo $projects->id_project;?>">
+	                        		<input type="hidden" name="title" value="<?php echo $projects->title;?>">
+	                        	<?php
+	                        		}
+	                        	?>
+	                        	<div class="col-lg-1">
+	         	               		<input type="submit" class="finish btn btn-warning" value="Reset">
 	         	               	</div>
 	                        </form>	
 	                    </fieldset>

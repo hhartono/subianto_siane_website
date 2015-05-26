@@ -13,6 +13,7 @@
 	                      Dynamic Table
 	                  </header>
 	                  <div class="panel-body">
+	                  <p><?=$this->session->flashdata('message')?> </p>
 	                        <div class="adv-table">
 	                            <table  class="display table table-bordered table-striped" id="dataproject">
 	                              <thead>
@@ -38,7 +39,7 @@
 		                                  <td><?php echo $lap->description;?></td>
 		                                  <td><?php echo $lap->project_story;?></td>
 		                                  <td>
-
+		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Pilih Photo</a>
 		                                  </td>
 		                              </tr>
 	                            <?php
