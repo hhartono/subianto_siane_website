@@ -53,10 +53,10 @@
                             <div class="contact-form-holder">
                                 <div id="contact-form">
                                     <div id="message"></div>
-                                    <form method="post" action="php/contact.php" name="contactform" id="contactform">
-                                        <input name="name" type="text" id="name"  onClick="this.select()" value="Name" >
-                                        <input name="email" type="text" id="email" onClick="this.select()" value="E-mail" >            
-                                        <textarea name="comments"  id="comments" onClick="this.select()" >Message</textarea>  
+                                    <form method="post" name="contactform" id="contactform">
+                                        <input name="name" type="text" id="name" placeholder="Name" >
+                                        <input name="email" type="text" id="email" placeholder="E-mail" >            
+                                        <textarea name="comments"  id="comments" placeholder="Message"></textarea>  
                                         <button type="submit"  id="submit"><span>Send </span> <i class="fa fa-long-arrow-right"></i></button>                                                                                                   
                                     </form>
                                 </div>

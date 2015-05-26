@@ -363,7 +363,7 @@ function initDomik() {
         } ]
     });
 // contact form ------------------
-    $("#contactform").submit(function() {
+    /*$("#contactform").submit(function() {
         var a = $(this).attr("action");
         $("#message").slideUp(750, function() {
             $("#message").hide();
@@ -383,7 +383,7 @@ function initDomik() {
     });
     $("#contactform input, #contactform textarea").keyup(function() {
         $("#message").slideUp(1500);
-    });
+    });*/
 	// IMPORTANT   INIT YOUR FUNCTIONS HERE ------------------
 	
 	

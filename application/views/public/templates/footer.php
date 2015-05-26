@@ -7,5 +7,74 @@
         <script type="text/javascript" src="/assets/public/js/plugins.js"></script>
         <script type="text/javascript" src="/assets/public/js/core.js"></script>
         <script type="text/javascript" src="/assets/public/js/scripts.js"></script>
+        <script>
+        $(document).ready(function(){
+            // contact form
+
+            $("#submit").click(function(){
+        
+                //get input field values
+                var name = $('input[name=name]').val();
+                var email = $('input[name=email]').val();
+                var comments = $('textarea[name=comments]').val();
+                
+                //simple validation at client's end
+                //we simply change border color to red if empty field using .css()
+                var proceed = true;
+                if (name == "") {
+                    $('input[name=name]').css('border-color', '#000');
+                    proceed = false;
+                }
+                if (email == "") {
+                    $('input[name=email]').css('border-color', '#000');
+                    proceed = false;
+                }
+                
+                if (comments == "") {
+                    $('textarea[name=comments]').css('border-color', '#000');
+                    proceed = false;
+                }
+                
+                //everything looks good! proceed...
+                if (proceed) {  
+                    //data to be sent to server
+                    post_data = {
+                        'name': name,
+                        'email': email,
+                        'comments': comments
+                    };
+                    
+                    //Ajax post data to server
+                    //$.post('contact_me.php', post_data, function(response){
+                    $.post('contact/submitmessage', post_data, function(response){
+                    
+                        //load json data from server and output message     
+                        if (response.type == 'error') {
+                            output = '<div class="error">' + response.text + '</div>';
+                        }
+                        else {
+                        
+                            output = '<div class="success">' + response.text + '</div>';
+                            
+                            //reset values in all input fields
+                            $('#contactform input').val('');
+                            $('#contactform textarea').val('');
+                        }
+                        
+                        $("#message").hide().html(output).slideDown();
+                    }, 'json');
+                    
+                }
+                
+                return false;
+            });
+        
+            //reset previously set border colors and hide all message on .keyup()
+            $("#contactform input, #contactform textarea").keyup(function(){
+                $("#contactform input, #contactform textarea").css('border-color', '');
+                $("#message").slideUp();
+            });
+        });
+        </script>
     </body>
 </html>
