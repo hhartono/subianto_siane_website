@@ -356,14 +356,14 @@ function initDomik() {
             html: s,
             popup: false,
             icon: {
-                image: "images/marker.png",
+                image: "assets/public/images/marker_ss.png",
                 iconsize: [ 40, 40 ],
                 iconanchor: [ 40, 40 ]
             }
         } ]
     });
 // contact form ------------------
-    /*$("#contactform").submit(function() {
+    $("#contactform").submit(function() {
         var a = $(this).attr("action");
         $("#message").slideUp(750, function() {
             $("#message").hide();
@@ -383,7 +383,7 @@ function initDomik() {
     });
     $("#contactform input, #contactform textarea").keyup(function() {
         $("#message").slideUp(1500);
-    });*/
+    });
 	// IMPORTANT   INIT YOUR FUNCTIONS HERE ------------------
 	
 	

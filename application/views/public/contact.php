@@ -16,7 +16,7 @@
                         <!-- map  -->
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" class="map" data-latitude="40.7688628" data-longitude="-73.9688209" data-location="27th Brooklyn New York, NY 10065">
+                                <div id="map_addresses" class="map" data-latitude="-6.900160" data-longitude="107.603317" data-location="27th Brooklyn New York, NY 10065">
                                 </div>
                             </div>
                         </section>
@@ -53,11 +53,11 @@
                             <div class="contact-form-holder">
                                 <div id="contact-form">
                                     <div id="message"></div>
-                                    <form method="post" name="contactform" id="contactform">
+                                    <form method="post" action="contact/submitmessage2" name="contactform" id="contactform">
                                         <input name="name" type="text" id="name" placeholder="Name" >
                                         <input name="email" type="text" id="email" placeholder="E-mail" >            
                                         <textarea name="comments"  id="comments" placeholder="Message"></textarea>  
-                                        <button type="submit"  id="submit"><span>Send </span> <i class="fa fa-long-arrow-right"></i></button>                                                                                                   
+                                        <button id="submit"><span>Send </span> <i class="fa fa-long-arrow-right"></i></button>                                                                                                   
                                     </form>
                                 </div>
                             </div>
