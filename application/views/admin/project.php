@@ -39,7 +39,8 @@
 		                                  <td><?php echo $lap->description;?></td>
 		                                  <td><?php echo $lap->project_story;?></td>
 		                                  <td>
-		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Pilih Photo</a>
+		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Feature Home</a>
+		                                  	<a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
 		                                  </td>
 		                              </tr>
 	                            <?php
