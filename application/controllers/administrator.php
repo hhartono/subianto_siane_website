@@ -141,7 +141,8 @@ class Administrator extends CI_Controller{
 				'title' => 'Project | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
 				'projectactive' => 'active',
-				'loadallproject' => $this->modelproject->loadAllProject()
+				'loadallproject' => $this->modelproject->loadAllProject(),
+				'categoryall' => $this->modelproject->loadAllProjectCategory()
 			);
 		$this->load->view('admin/project', $data);
 	}
@@ -329,7 +330,8 @@ class Administrator extends CI_Controller{
 			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo about berhasil ditambah</div>"); 
 			redirect('administrator/about');	
 		}else{
-			echo "";
+			$this->session->set_flashdata("message", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-remove\"></i> Project photo about gagal dipasang. Photo harus dipilih.</div>"); 
+			redirect('administrator/about');
 		}
 	}
 
@@ -352,7 +354,8 @@ class Administrator extends CI_Controller{
 			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo sidebar berhasil ditambah</div>"); 
 			redirect('administrator/projectphotosidebar');	
 		}else{
-			echo "";
+			$this->session->set_flashdata("message", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-remove\"></i> Project photo sidebar gagal dipasang. Photo harus dipilih.</div>"); 
+			redirect('administrator/projectphotosidebar');
 		}
 	}
 
@@ -385,10 +388,10 @@ class Administrator extends CI_Controller{
 			$id = $this->input->post('id');
 			$idproject = $this->input->post('idproject');
 			$this->modelproject->insertProjectHome($home, $id, $idproject);
-			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil dipasang</div>"); 
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Feature home ". $title ." berhasil dipasang</div>"); 
 			redirect('administrator/project');	
 		}else{
-			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." gagal dipasang. Photo harus dipilih.</div>");
+			$this->session->set_flashdata("message", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-remove\"></i> Feature home ". $title ." gagal dipasang. Photo harus dipilih.</div>");
 			redirect('administrator/project');
 		}
 	}
@@ -400,10 +403,73 @@ class Administrator extends CI_Controller{
 			$idproject = $this->input->post('idproject');
 			$title = $this->input->post('title');
 			$this->modelproject->resetProjectHome($idproject);
-			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i>Photo home ". $title ." berhasil direset</div>"); 
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Feature home ". $title ." berhasil direset</div>"); 
 			redirect('administrator/project');	
 		}else{
 			echo "";
+		}
+	}
+
+	public function projectupdate()
+	{
+		$uri3 = $this->uri->segment(3);
+		if($uri3 == ''){
+			redirect('administrator/project');
+		}else{
+			$data = array(
+				'title' => 'Project Update | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectactive' => 'active',
+				'idproject' => $uri3,
+				'loadallproject' => $this->modelproject->loadAllProjectUpdate($uri3),
+				'categoryall' => $this->modelproject->loadAllProjectCategory()
+			);
+		$this->load->view('admin/project_update', $data);
+		}	
+	}
+
+	public function projectupdatesubmit()
+	{
+		$this->form_validation->set_rules('title','Project Title','required');
+		$this->form_validation->set_rules('description','Project description','required');
+		$this->form_validation->set_rules('category','Project Category','required');
+		$this->form_validation->set_rules('date','Date','required');
+		//$this->form_validation->set_rules('client','Client','required');
+		$this->form_validation->set_rules('location','Location','required');
+
+		if($this->form_validation->run() == FALSE){
+			$formerror = array(
+				'title' => form_error('title'),
+				'description' => form_error('description'),
+				'category' => form_error('category'),
+				'date' => form_error('date'),
+				//'client' => form_error('client'),
+				'location' => form_error('location')
+				);
+			$output = json_encode(
+					array(
+						'type'=>'error', 
+						'validation_errors' => validation_errors(),
+						'formerror' => $formerror
+					)
+				);
+			die($output);
+		}else{	
+			$ids = $this->input->post('id');
+			$title = $this->input->post('title');
+			$description = $this->input->post('description');
+			$category = $this->input->post('category');
+			$projectstory = $this->input->post('projectstory');
+			$date = $this->input->post('date');
+			$client = $this->input->post('client');
+			$status = $this->input->post('status');
+			$location = $this->input->post('location');
+			// $projecturi = $this->create_slug($title);
+			$projecturi = $this->sluggify($title);
+			$this->modelproject->updateProject($ids, $title, $description, $category, $projectstory, $date, $client, $status, $location, $projecturi);
+			//$id = mysql_insert_id();
+			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project ". $title ." berhasil diubah</div>"); 
+			redirect('administrator/project');
 		}
 	}
 
