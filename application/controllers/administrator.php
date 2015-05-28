@@ -473,6 +473,36 @@ class Administrator extends CI_Controller{
 		}
 	}
 
+	public function projectdelete($id)
+	{
+		$idproject = $id;
+		$tableProject = $this->modelproject->loadProject('id', $idproject);
+		if(!empty($tableProject)){
+			$detailproject = $this->modelproject->loadPhotoDetail($id);
+			if(isset($detailproject)){
+				foreach($detailproject as $dp){
+					if($dp->photo != "" || $dp->photo != NULL){
+						if(file_exists('./uploads/project/' . $dp->photo)){
+							$do = unlink('./uploads/project/' . $dp->photo);
+						}
+					}
+				}
+				$this->modelproject->deleteProjectDetail($id);
+				$this->modelproject->deleteProject($id);
+				$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' telah berhasil dihapus!</div>');
+				redirect('administrator/project');
+			}else{
+				$this->modelproject->deleteProject($id);
+				$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' telah berhasil dihapus!</div>');
+				redirect('administrator/project');
+			}
+			
+		}else{
+			$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' gagal dihapus!</div>');
+			redirect('administrator/project');
+		}
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');

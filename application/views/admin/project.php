@@ -41,6 +41,9 @@
 		                                  <td>
 		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Feature Home</a>
 		                                  	<a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
+		                                  	<button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
 		                                  </td>
 		                              </tr>
 	                            <?php
@@ -66,6 +69,26 @@
 	                        </div>
 	                  </div>
 	              </section>
+
+	              <!-- MODAL FOR DELETE -->
+                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="deleteModalLabel">Delete...</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h2 id="h2alert"></h2>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    <a id="deletelink" href="" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <!-- END MODAL FOR DELETE -->
 	          </div>
 	      </div>
 	      <!-- page end-->
@@ -73,7 +96,23 @@
 	</section>
 	<!--main content end-->
 
-    <!--script src="/assets/admin/js/jquery.js"></script-->
+    <script src="/assets/admin/js/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+	        	/*
+	         * modal for delete product
+	         */
+	        $('#deleteModal').on('show.bs.modal', function (event) {
+	            var button = $(event.relatedTarget)// Button that triggered the modal
+	            var title = button.data('title')
+	            var id = button.data('id')
+	            var modal = $(this)
+	            modal.find('.modal-title').text(title)
+	            modal.find('.modal-body h2#h2alert').text('Hapus Project ' +title+'?')
+	            modal.find('.modal-footer a#deletelink').attr("href", 'projectdelete/'+id)
+	        });
+        })
+    </script>
 
 <?php
     $this->load->view('admin/templates/footer_admin');

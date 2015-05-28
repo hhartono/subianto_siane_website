@@ -373,6 +373,40 @@ class Modelproject extends CI_Model {
 			);
 		$this->db->where('id', $ids);
 		$this->db->update('project', $field);
+	}
+
+	public function loadProject($field, $condition)
+	{
+		$this->db->where($field, $condition);
+		$query = $this->db->get('project');
+		if($query->num_rows()>0){
+			$data = $query->row();
+			return $data;
+		}
+	}
+
+	public function loadPhotoDetail($id){
+		$query = $this->db->query("
+				SELECT pa.photo
+				FROM project_album pa, project p
+				WHERE pa.id_project = '$id'
+				AND pa.id_project = p.id
+				ORDER BY pa.id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach($query->result() as $row){
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function deleteProject($id){
+		return $this->db->delete('project', array('id'=>$id));
+	}
+
+	public function deleteProjectDetail($id){
+		return $this->db->delete('project_album', array('id_project' => $id));
 	}	
 }
 
