@@ -253,7 +253,7 @@ class Modelproject extends CI_Model {
 	public function loadAllPhotoHome($id)
 	{
 		$query = $this->db->query("
-				SELECT project_album.*,  project.title as title
+				SELECT project_album.*,  project.title as title, project.id as idpro
 				from project_album, project 
 				where project.id = project_album.id_project AND project_album.id_project = '$id'
 			");
@@ -407,6 +407,30 @@ class Modelproject extends CI_Model {
 
 	public function deleteProjectDetail($id){
 		return $this->db->delete('project_album', array('id_project' => $id));
+	}
+
+	public function loadPhoto($id){
+		$query = $this->db->query("
+				SELECT *
+				FROM project_album 
+				WHERE id_project = '$id'
+				ORDER BY id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach($query->result() as $row){
+				$data[] = $row;
+			}
+			return $data;
+		}
+	}
+
+	public function deletePhoto($photo)
+	{
+		foreach($photo as $dp)
+		{
+			$this->db->where('id', $dp);
+			$this->db->delete('project_album');
+		}
 	}	
 }
 

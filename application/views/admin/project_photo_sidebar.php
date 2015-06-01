@@ -11,14 +11,14 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Project Photo About
-                    </header>
+                        Photo Sidebar
                     <div class="panel-body">
                     <p><?=$this->session->flashdata('message')?> </p>
 	                    <fieldset title="Step: finish photos of project" class="step" id="default-step-0">
 	                   			
 	                        <form action="/administrator/projectphotosidebarsubmit" method="POST">
-	                        	<?php 
+	                        	<?php
+	                        	if(isset($projectsidebar)){ 
 	                        		foreach ($projectsidebar as $project){ 
 	                        	?>
 	                        		<div class="col-lg-3">
@@ -34,6 +34,15 @@
 	                        		
 	                        	<?php
 	                        		}
+	                        	}else{
+	                        	?>
+	                        		<div class="col-lg-3">
+	                        		<section class="panel">
+	                        			Tidak Ada Data
+	                        		</section>
+	                        		</div>
+	                        	<?php
+	                        	}
 	                        	?>
 	                        	<div class="col-lg-12">
 	         	               		<input type="submit" class="finish btn btn-danger" value="Finish">

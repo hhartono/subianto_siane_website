@@ -11,44 +11,44 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Photo About
+                        Project Photo Home
                     </header>
                     <div class="panel-body">
                     <p><?=$this->session->flashdata('message')?> </p>
 	                    <fieldset title="Step: finish photos of project" class="step" id="default-step-0">
 	                   			
-	                        <form action="/administrator/projectphotoaboutsubmit" method="POST">
-	                        	<?php
-	                        	if(isset($projectabout)){ 
-	                        		foreach ($projectabout as $project){ 
+	                        <form action="/administrator/photodeletesubmit" method="POST">
+	                        	<?php 
+	                        		if(isset($projecthome)){ 
+	                        		foreach ($projecthome as $project){ 
 	                        	?>
 	                        		<div class="col-lg-3">
 	                        		<section class="panel">
 	                        			<img src="/uploads/project/<?php echo $project->photo; ?>" width="250" ></br>
-	                        			<?php if($project->status_about == 0) { ?>
-	                        			<input type="radio" id ="about" name="about" value="<?php echo $project->id;?>"> Pilih Untuk Tampilan About<br/>  
-	                        			<?php }else{ ?>
-	                        			<input type="radio" id ="about" name="about" value="<?php echo $project->id;?>" checked> Pilih Untuk Tampilan About<br/>
-	                        			<?php } ?>
+	                        			<input type="checkbox" name="photo[]" value="<?php echo $project->id;?>"> Pilih Untuk Dihapus<br/>
+	                        			<input type="hidden" name="id" value="<?php echo $project->id;?>">
+	                        			<input type="hidden" name="idproject" value="<?php echo $project->id_project;?>">
+	                        			<input type="hidden" name="title" value="<?php echo $project->title;?>">
 	                        		</section>
 	                        		</div>
-	                        		
-	                        	<?php
+	                        		<?php
 	                        		}
-	                        	}else{
+	                        		?>
+	                        	<div class="col-lg-11">
+	         	               		<input type="submit" class="finish btn btn-danger" value="Hapus">
+	         	               	</div>
+	         	               	<?php
+	         	               		}else{
 	                        	?>
 	                        		<div class="col-lg-3">
 	                        		<section class="panel">
 	                        			Tidak Ada Data
 	                        		</section>
-	                        		</div>
+	                        		</div>	                        	
 	                        	<?php
-	                        	}
+	                        		}
 	                        	?>
-	                        	<div class="col-lg-12">
-	         	               		<input type="submit" class="finish btn btn-danger" value="Finish">
-	         	               	</div>
-	                        </form>	
+	                        </form>
 	                    </fieldset>
                 </section>
             </div>

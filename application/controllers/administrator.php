@@ -503,6 +503,30 @@ class Administrator extends CI_Controller{
 		}
 	}
 
+	public function photoedit($id)
+	{
+		$data = array(
+				'title' => 'Project Edit Photo | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projecthome' => $this->modelproject->loadAllPhotoHome($id)
+		);
+		$this->load->view('admin/photo_edit', $data);
+	}
+
+	public function photodeletesubmit()
+	{
+		$photo = $this->input->post('photo');
+		$id = $this->input->post('id');
+			if(!empty($photo)){
+				$this->modelproject->deletePhoto($photo);
+				$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' telah berhasil dihapus!</div>');
+				redirect('administrator/project');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' telah gagal dihapus!</div>');
+				redirect('administrator/project');
+			}
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');
