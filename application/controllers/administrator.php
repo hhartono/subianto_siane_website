@@ -315,6 +315,7 @@ class Administrator extends CI_Controller{
 	{
 		$data = array(
 				'title' => 'Project About | Subianto & Siane Architecture',
+				'aboutactive' => 'active',
 				'username' => $this->tank_auth->get_username(),
 				'projectabout' => $this->modelproject->loadAllProjectAbout()
 		);
@@ -335,10 +336,11 @@ class Administrator extends CI_Controller{
 		}
 	}
 
-	public function projectphotosidebar()
+	public function randomsidebar()
 	{
 		$data = array(
 				'title' => 'Project Sidebar Random | Subianto & Siane Architecture',
+				'randomactive' => 'active',
 				'username' => $this->tank_auth->get_username(),
 				'projectsidebar' => $this->modelproject->loadAllProjectSidebar()
 		);
@@ -352,10 +354,10 @@ class Administrator extends CI_Controller{
 			$sidebar = $this->input->post('sidebar');
 			$this->modelproject->insertProjectSidebar($sidebar);
 			$this->session->set_flashdata("message", "<div class=\"alert alert-success\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Project photo sidebar berhasil ditambah</div>"); 
-			redirect('administrator/projectphotosidebar');	
+			redirect('administrator/randomsidebar');	
 		}else{
 			$this->session->set_flashdata("message", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-remove\"></i> Project photo sidebar gagal dipasang. Photo harus dipilih.</div>"); 
-			redirect('administrator/projectphotosidebar');
+			redirect('administrator/randomsidebar');
 		}
 	}
 

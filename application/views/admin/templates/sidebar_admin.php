@@ -34,20 +34,20 @@
             </li>
 
             <li>
-                <a class="<?php echo (isset($dashboardactive))? $dashboardactive: '' ;?>" href="/administrator/about">
+                <a class="<?php echo (isset($aboutactive))? $aboutactive: '' ;?>" href="/administrator/about">
                     <i class="fa fa-user"></i>
                     <span>About</span>
                 </a>
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="javascript:;" class="<?php echo (isset($randomactive))? 'active' : '' ;?>" >
                     <i class=" fa fa-picture-o"></i>
                     <span>Photo</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="/">Random Sidebar</a></li>
-                    <li><a href="">Inbox Details</a></li>
+                    <li class="<?php echo (isset($randomactive))? $randomactive : '' ;?>"><a href="/administrator/randomsidebar">Random Sidebar</a></li>
+                    
                 </ul>
             </li>
 
@@ -58,7 +58,7 @@
                 </a>
                 <ul class="sub">
                     <li><a href="messagecenter">Inbox</a></li>
-                    <li><a href="">Inbox Details</a></li>
+                    <!-- <li><a href="">Inbox Details</a></li> -->
                 </ul>
             </li>
                 
