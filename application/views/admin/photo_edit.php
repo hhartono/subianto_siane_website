@@ -15,7 +15,7 @@
                     </header>
                     <div class="panel-body">
                     <p><?=$this->session->flashdata('message')?> </p>
-	                    <fieldset title="Step: finish photos of project" class="step" id="default-step-0">
+                    	<fieldset title="Step: finish photos of project" class="step" id="default-step-0">
 	                   			
 	                        <form action="/administrator/photodeletesubmit" method="POST">
 	                        	<?php 
@@ -34,8 +34,8 @@
 	                        		<?php
 	                        		}
 	                        		?>
-	                        	<div class="col-lg-11">
-	         	               		<input type="submit" class="finish btn btn-danger" value="Hapus">
+	                        	<div class="col-lg-10">
+	         	               		<input type="submit" class="finish btn btn-danger" value="Hapus">	         	      
 	         	               	</div>
 	         	               	<?php
 	         	               		}else{
@@ -49,15 +49,53 @@
 	                        		}
 	                        	?>
 	                        </form>
+	                           	<button class="btn btn-primary" data-toggle="modal" data-target="#viewModal">
+              	                    <i class="fa fa-plus"></i> Tambah Photo
+                                </button>
 	                    </fieldset>
                 </section>
+
+                <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title" id="viewModalLabel">Tambah Photo</h4>
+                            </div>
+                            <div class="modal-body">
+                                <fieldset title="Step: upload photos of project" class="step" id="default-step-0">
+			                        <form action="/administrator/projectphotouploadsubmit" class="dropzone" id="projectphotoupload">
+			                        	<input type="hidden" name="idproject" name="idproject" value="<?php echo $idproject;?>">
+			                        </form>	
+			                    </fieldset>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
+                      </div>
+                    </div>
+                </div>  
+                    <!-- END MODAL FOR VIEW DETAIL -->
+
             </div>
         </div>
         <!-- page end-->
     </section>
 </section>
 <!--main content end-->
+ <script src="/assets/admin/js/jquery.js"></script>
+ <script src="/assets/admin/assets/dropzone/dropzone.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function(){
+		$('#viewModal').on('show.bs.modal', function (event) {
+    	});
 
+    	$('#viewModal').on('hidden.bs.modal',function(){
+        	location.reload();
+   		});
+   	})
+</script>
 <?php
     $this->load->view('admin/templates/footer_admin');
 ?>

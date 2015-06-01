@@ -424,6 +424,25 @@ class Modelproject extends CI_Model {
 		}
 	}
 
+	public function loadDeletePhoto($photo)
+	{
+		foreach($photo as $dp)
+		{
+			$query = $this->db->query("
+				SELECT *
+				FROM project_album 
+				WHERE id = '$dp'
+				ORDER BY id ASC
+			");
+		if($query->num_rows() > 0){
+			foreach($query->result() as $row){
+				$data[] = $row;
+			}
+			return $data;
+		}
+		}
+	}	
+
 	public function deletePhoto($photo)
 	{
 		foreach($photo as $dp)

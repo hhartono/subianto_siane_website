@@ -507,12 +507,14 @@ class Administrator extends CI_Controller{
 
 	public function photoedit($id)
 	{
-		$data = array(
+		$uri3 = $this->uri->segment(3);
+			$data = array(
 				'title' => 'Project Edit Photo | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
-				'projecthome' => $this->modelproject->loadAllPhotoHome($id)
-		);
-		$this->load->view('admin/photo_edit', $data);
+				'projecthome' => $this->modelproject->loadAllPhotoHome($id),
+				'idproject' => $uri3
+			);
+			$this->load->view('admin/photo_edit', $data);	
 	}
 
 	public function photodeletesubmit()
@@ -520,6 +522,14 @@ class Administrator extends CI_Controller{
 		$photo = $this->input->post('photo');
 		$id = $this->input->post('id');
 			if(!empty($photo)){
+				$detailproject = $this->modelproject->loadDeletePhoto($photo);
+				foreach($detailproject as $dp){
+					if($dp->photo != "" || $dp->photo != NULL){
+						if(file_exists('./uploads/project/' . $dp->photo)){
+							$do = unlink('./uploads/project/' . $dp->photo);
+						}
+					}
+				}
 				$this->modelproject->deletePhoto($photo);
 				$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' telah berhasil dihapus!</div>');
 				redirect('administrator/project');
