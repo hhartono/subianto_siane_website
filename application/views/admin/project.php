@@ -31,13 +31,15 @@
 	                            if(isset($loadallproject)){
 	                            	$no=1;
 	                            	foreach ($loadallproject as $lap) {
-	                            ?>
+	                            		//$prostory = htmlentities();
+	                            		//echo htmlentities($lap->project_story);
+	                            ?>		
 		                              <tr class="">
 		                                  <td><?php echo $no;?></td>
-		                                  <td><?php echo $lap->title;?> </td>
+		                                  <td><a data-toggle="modal" data-target="#viewModal" data-title="<?php echo $lap->title;?>" data-category="<?php echo $lap->category_name;?>" data-description="<?php echo $lap->description;?>" data-projectstory="<?php echo htmlentities($lap->project_story);?>" ><?php echo $lap->title;?></a> </td>
 		                                  <td><?php echo $lap->category_name;?></td>
 		                                  <td><?php echo $lap->description;?></td>
-		                                  <td><?php echo $lap->project_story;?></td>
+		                                  <td><?php echo html_entity_decode($lap->project_story);?></td>
 		                                  <td>
 		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Feature Home</a>
 		                                  	<a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
@@ -69,8 +71,44 @@
 	                        </div>
 	                  </div>
 	              </section>
-
-	              <!-- MODAL FOR DELETE -->
+					<!-- MODAL FOR VIEW -->
+					<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="viewModalLabel">View Project...</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <table>
+                                    	<tr class="tr-title">
+                                    		<td>Title</td>
+                                    		<td class="td-title"></td>
+                                    	</tr>
+                                    	<tr class="tr-category">
+                                    		<td>Category</td>
+                                    		<td class="td-category"></td>
+                                    	</tr>
+                                    	<tr class="tr-description">
+                                    		<td>Description</td>
+                                    		<td class="td-description"></td>
+                                    	</tr>
+                                    	<tr class="tr-projectstory">
+                                    		<td>Project Story</td>
+                                    		<td class="td-projectstory"></td>
+                                    	</tr>
+                                    </table>
+                                    <div class="prostory"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    <a id="deletelink" href="" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- END MODAL FOR VIEW -->
+	              	<!-- MODAL FOR DELETE -->
                     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -99,8 +137,26 @@
     <script src="/assets/admin/js/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-	        	/*
-	         * modal for delete product
+        	/*
+        	 * modal for view project
+        	 */
+        	$('#viewModal').on('show.bs.modal', function(event){
+        		var button = $(event.relatedTarget);
+        		var title = button.data('title');
+        		var category = button.data('category');
+        		var description = button.data('description');
+        		var projectstory = button.data('projectstory');
+        		var decode = $('</div>').html(projectstory).text();
+        		var modal = $(this);
+        		modal.find('.modal-title').text(title);
+        		modal.find('.modal-body table tbody tr td.td-title').text(title);
+        		modal.find('.modal-body table tbody tr td.td-category').text(category);
+        		modal.find('.modal-body table tbody tr td.td-description').text(description);
+        		modal.find('.modal-body table tbody tr td.td-projectstory').text(projectstory);
+        		
+        	});
+	       	/*
+	         * modal for delete project
 	         */
 	        $('#deleteModal').on('show.bs.modal', function (event) {
 	            var button = $(event.relatedTarget)// Button that triggered the modal

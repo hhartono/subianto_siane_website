@@ -194,7 +194,7 @@ class Administrator extends CI_Controller{
 			$title = $this->input->post('title');
 			$description = $this->input->post('description');
 			$category = $this->input->post('category');
-			$projectstory = $this->input->post('projectstory');
+			$projectstory = htmlentities($this->input->post('projectstory'));
 			$date = $this->input->post('date');
 			$client = $this->input->post('client');
 			$status = $this->input->post('status');
