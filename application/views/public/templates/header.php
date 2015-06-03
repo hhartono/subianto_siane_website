@@ -44,7 +44,7 @@
                                     </ul> -->
                                 </li>
                                 <li><a href="/contact" class="ajax <?php echo (isset($contactactlink))? $contactactlink: '' ;?>">Contact</a></li>
-                                <li><a href="#" class="ajax <?php echo (isset($portfolioactlink))? $portfolioactlink: '' ;?>">Portfolio</a></li>
+                                <li><a href="/portfolio" class="ajax <?php echo (isset($portfolioactlink))? $portfolioactlink: '' ;?>">Portfolio</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -375,10 +375,17 @@
                 <!-- wrapper inner end   -->
                 
                 <?php 
-                $sidebar = array(
-                    'sidebarphoto' => $loadrandomphoto->photo,
-                    'statussidebar' => $loadrandomphoto->status_sidebar_random
-                );
+                if(isset($loadrandomphoto)){
+                    $sidebar = array(
+                        'sidebarphoto' => $loadrandomphoto->photo,
+                        'statussidebar' => $loadrandomphoto->status_sidebar_random
+                    );   
+                }else{
+                    $sidebar = array(
+                        'sidebarphoto' => '',
+                        'statussidebar' => ''
+                        );
+                }
                 $this->load->view('public/templates/parallax_column', $sidebar);?>
 
                 <?php $this->load->view('public/templates/footer_block');?>
