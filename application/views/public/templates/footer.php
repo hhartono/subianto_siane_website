@@ -1,7 +1,16 @@
 		</div>
         <!-- Main end -->
+        
+        <?php 
+        $uri1 = $this->uri->segment(1);
+        if($uri1=='contact'){
+        ?>
         <!--=============== google map ===============-->
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>  
+        <?php
+        }
+        ?>
+        
         <!--=============== scripts  ===============-->
         <script type="text/javascript" src="/assets/public/js/jquery.min.js"></script>
 

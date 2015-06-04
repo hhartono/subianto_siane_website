@@ -75,9 +75,9 @@
                                 <!-- about text end -->
                                 <div class="content-nav">
                                     <ul>
-                                        <li><a href="portfolio-single2.html" class="ajax"><i class="fa fa-long-arrow-left"></i></a></li>
+                                        <li><a href="/project/detail/" class="ajax"><i class="fa fa-long-arrow-left"></i></a></li>
                                         <li><span>/</span></li>
-                                        <li><a href="portfolio-single3.html" class="ajax"><i class="fa fa-long-arrow-right"></i></a></li>
+                                        <li><a href="/project/detail/" class="ajax"><i class="fa fa-long-arrow-right"></i></a></li>
                                     </ul>
                                     <div class="p-all">
                                         <a href="/project" class="ajax"><i class="fa fa-th-large"></i></a>

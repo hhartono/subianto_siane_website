@@ -35,7 +35,41 @@ class Project extends CI_Controller {
 			);
 			$this->load->view('public/project_detail', $data);	
 		}
-		
+	}
+
+	function getprevproject($currentproject)
+	{
+		$prevpost = '';
+		$currentpost = 0;
+
+		$all = $this->modelproject->loadAllProject();
+
+		$sizeofAll = count($all);
+
+		$counter = 1;
+		foreach ($all as $a) {
+			$uriproject = $a->project_uri;
+ 			if($uriproject == $currentproject){
+ 				$currentpost = $counter;
+ 			}
+ 			$counter++;
+		}
+		// echo count($all);
+		// echo $currentpost;
+		if($currentpost == '1'){
+			$prevpost = '';
+		}else{
+			$currentinArray = $currentpost-1;
+			$prev = $currentinArray-1;
+			$prevpost = $all[$prev];
+		}
+		print_r($prevpost);
+	}
+
+	function getnextproject($currentproject)
+	{
+		$all = $this->modelproject->loadAllProject();
+
 	}
 }
 
