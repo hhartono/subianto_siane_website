@@ -18,7 +18,7 @@
 	                        <ul id="default-titles" class="stepy-titles clearfix">
 	                            <li id="default-title-0" class="current-step">
 	                                <div>Update Project</div>
-	                            </li>
+	                            </li>	     
 	                        </ul>
 	                    </div>
                         <form class="form-horizontal " id="projectadd-form" method="POST" action="/administrator/projectupdatesubmit">
@@ -110,9 +110,23 @@
                             ?>
 	                        </fieldset>
 	                        <!-- <button id="submitproject" class="finish btn btn-danger"/>Add Project</button> -->
-	                        <input type="submit" id="submitproject" class="finish btn btn-danger" value="Update Project">
+	                        <div class="form-group">
+                            	<div class="col-md-12">
+                                	<input type="submit" id="submitproject" class="finish btn btn-warning" value="Update Project">
+								</div>
+                            </div>
+
                         </form>
+                        
                 </section>
+                <section>
+                <div class="form-group">
+                	<div class="col-sm-12">
+                    	<a href="/administrator/photoedit/<?php echo $idproject;?>" class="finish btn btn-danger">Next</a>
+					</div>
+                </div>
+                </section>
+                
             </div>
         </div>
         <!-- page end-->
