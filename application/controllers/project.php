@@ -56,7 +56,7 @@ class Project extends CI_Controller {
 		}
 		// echo count($all);
 		// echo $currentpost;
-		if($currentpost == '1'){
+		if($currentpost == '1' || $sizeofAll == '1'){
 			$prevpost = '';
 		}else{
 			$currentinArray = $currentpost-1;
@@ -68,8 +68,28 @@ class Project extends CI_Controller {
 
 	function getnextproject($currentproject)
 	{
+		$nextpost = '';
+		$currentpost = 0;
+
 		$all = $this->modelproject->loadAllProject();
 
+		$sizeofAll = count($all);
+		$counter = 1;
+		foreach ($all as $a) {
+			$uriproject = $a->project_uri;
+ 			if($uriproject == $currentproject){
+ 				$currentpost = $counter;
+ 			}
+ 			$counter++;
+		}
+		if($currentpost == $sizeofAll || $sizeofAll == '1'){
+			$nextpost = '';
+		}else{
+			$currentinArray = $currentpost - 1;
+			$next = $currentinArray+1;
+			$nextpost = $all[$next];
+		}
+		print_r($nextpost);
 	}
 }
 
