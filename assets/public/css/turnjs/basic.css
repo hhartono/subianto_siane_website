@@ -21,15 +21,15 @@ body{
 }
 
 .flipbook-viewport .flipbook{
-	width:1024px;
-	height:200px;
+	width:1880px;
+	height:300px;
 	left:-461px;
-	top:-40px;
+	top:-140px;
 }
 
 .flipbook-viewport .page{
-	width:1024px;
-	height:226px;
+	width:940px;
+	height:300px;
 	background-color:white;
 	background-repeat:no-repeat;
 	background-size:100% 100%;
@@ -59,9 +59,9 @@ body{
 	-o-transition: -webkit-box-shadow 0.5s;
 	-ms-transition: -ms-box-shadow 0.5s;
 
-	-webkit-box-shadow:0 0 20px #ccc;
-	-moz-box-shadow:0 0 20px #ccc;
-	-o-box-shadow:0 0 20px #ccc;
-	-ms-box-shadow:0 0 20px #ccc;
-	box-shadow:0 0 20px #ccc;
+	-webkit-box-shadow:0 0 20px #000;
+	-moz-box-shadow:0 0 20px #000;
+	-o-box-shadow:0 0 20px #000;
+	-ms-box-shadow:0 0 20px #000;
+	box-shadow:0 0 20px #000;
 }

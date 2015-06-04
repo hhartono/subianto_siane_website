@@ -15,7 +15,7 @@
 
             $('.flipbook').turn({
                     // Width
-                    width:1024,
+                    width:940,
                     // Height
                     height:300,
                     // Elevation
