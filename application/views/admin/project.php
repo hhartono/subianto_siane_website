@@ -42,7 +42,7 @@
 		                                  <td><?php echo html_entity_decode($lap->project_story);?></td>
 		                                  <td>
 		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Feature Home</a>
-		                                  	<a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-warning"><i class="fa fa-edit"></i> Edit</a>
+		                                  	<a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
 		                                  	<button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>">
                                                     <i class="fa fa-trash-o"></i>
                                                 </button>
