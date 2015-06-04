@@ -11,12 +11,18 @@
             <div class="col-lg-12">
                 <section class="panel">
                     <header class="panel-heading">
-                        Project Photo Home
-                    </header>
+                        Project Photo Edit
+                    </header>                
                     <div class="panel-body">
                     <p><?=$this->session->flashdata('message')?> </p>
+
                     	<fieldset title="Step: finish photos of project" class="step" id="default-step-0">
-	                   			
+	                   		<div class="col-lg-11">
+		                    	<button class="btn btn-success btn-primary col-md-offset-12" data-toggle="modal" data-target="#viewModal">
+		      	                    <i class="fa fa-plus"></i> Tambah Photo
+		                        </button>
+                    		</div>
+
 	                        <form action="/administrator/photodeletesubmit" method="POST">
 	                        	<?php 
 	                        		if(isset($projecthome)){ 
@@ -24,6 +30,7 @@
 	                        	?>
 	                        		<div class="col-lg-3">
 	                        		<section class="panel">
+	                        			</br>
 	                        			<img src="/uploads/project/<?php echo $project->photo; ?>" width="250" ></br>
 	                        			<input type="checkbox" name="photo[]" value="<?php echo $project->id;?>"> Pilih Untuk Dihapus<br/>
 	                        			<input type="hidden" name="id" value="<?php echo $project->id;?>">
@@ -34,7 +41,7 @@
 	                        		<?php
 	                        		}
 	                        		?>
-	                        	<div class="col-lg-10">
+	                        	<div class="col-lg-12">
 	         	               		<input type="submit" class="finish btn btn-danger" value="Hapus">	         	      
 	         	               	</div>
 	         	               	<?php
@@ -49,11 +56,10 @@
 	                        		}
 	                        	?>
 	                        </form>
-	                           	<button class="btn btn-primary" data-toggle="modal" data-target="#viewModal">
-              	                    <i class="fa fa-plus"></i> Tambah Photo
-                                </button>
+	                     	                           	
 	                    </fieldset>
                 </section>
+
 
                 <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
