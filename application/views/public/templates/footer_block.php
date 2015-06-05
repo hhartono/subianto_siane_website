@@ -20,7 +20,7 @@
             <div class="col-md-4">
                 <ul class="footer-contact">
                     <li>+7(111)123456789</li>
-                    <li><a href="#">yourmail@domain.com</a></li>
+                    <li><a href="#">contact@subiantosiane.com</a></li>
                 </ul>
             </div>
         </div>

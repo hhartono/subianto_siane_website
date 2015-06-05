@@ -449,6 +449,11 @@ function contanimshow() {
             opacity: 1
         }, 1500);
     }, 550);
+    setTimeout(function(){
+        $('.flipbook-viewport').animate({
+            opacity: 1
+        }, 1500);
+    }, 550);
     setTimeout(function() {
         $("footer").animate({
             opacity: 1

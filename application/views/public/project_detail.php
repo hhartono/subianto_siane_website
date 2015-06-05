@@ -1,10 +1,10 @@
 <?php $this->load->view('public/templates/header'); ?>
-    <!--=============== wrapper ===============-->	
+            <!--=============== wrapper ===============-->	
             <div id="wrapper">
                 <div class="content-holder elem scale-bg2 transition3" >
                     <div class="content">
                         <!-- background animation  -->		
-                        <div class="bg-animate"><img src="images/body-bg.png"  class="respimg" alt=""></div>
+                        <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div>
                         <!-- wrapper inner -->	
                         <div class="wrapper-inner">
                             <section class="no-padding no-border">
@@ -75,9 +75,24 @@
                                 <!-- about text end -->
                                 <div class="content-nav">
                                     <ul>
-                                        <li><a href="/project/detail/" class="ajax"><i class="fa fa-long-arrow-left"></i></a></li>
+                                    <?php
+                                        if($prev==''){
+                                    ?>
+                                        <li><a href="/project/detail/<?php echo $next;?>" class="ajax"><i class="fa fa-long-arrow-right"></i></a></li>
+                                    <?php
+                                        }elseif($next==''){
+                                    ?>
+                                        <li><a href="/project/detail/<?php echo $prev;?>" class="ajax"><i class="fa fa-long-arrow-left"></i></a></li>
+                                    <?php
+                                        }else{
+                                    ?>
+                                        <li><a href="/project/detail/<?php echo $prev;?>" class="ajax"><i class="fa fa-long-arrow-left"></i></a></li>
                                         <li><span>/</span></li>
-                                        <li><a href="/project/detail/" class="ajax"><i class="fa fa-long-arrow-right"></i></a></li>
+                                        <li><a href="/project/detail/<?php echo $next;?>" class="ajax"><i class="fa fa-long-arrow-right"></i></a></li>
+                                    <?php
+                                        }
+                                    ?>
+                                        
                                     </ul>
                                     <div class="p-all">
                                         <a href="/project" class="ajax"><i class="fa fa-th-large"></i></a>

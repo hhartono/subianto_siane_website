@@ -27,11 +27,26 @@ class Project extends CI_Controller {
 		if($projecturi == ''){
 			redirect('project/');
 		}else{
+			$p = $this->getprevproject($projecturi);
+			$n = $this->getnextproject($projecturi);
+			if($p!=''){
+				$prev = $p->project_uri;
+			}else{
+				$prev = '';
+			}
+			if($n!=''){
+				$next = $n->project_uri;
+			}else{
+				$next = '';
+			}
+
 			$data = array(
 				'title' => 'Subianto & Siane Architecture - Project Detail',
 				'projectactlink' => 'act-link',
 				'loadoneproject' => $this->modelproject->loadOneProject($projecturi),
-				'loadallphotosdetailproject' => $this->modelproject->loadAllPhotosDetailProject($projecturi)
+				'loadallphotosdetailproject' => $this->modelproject->loadAllPhotosDetailProject($projecturi),
+				'prev' => $prev,
+				'next' => $next
 			);
 			$this->load->view('public/project_detail', $data);	
 		}
@@ -63,7 +78,8 @@ class Project extends CI_Controller {
 			$prev = $currentinArray-1;
 			$prevpost = $all[$prev];
 		}
-		print_r($prevpost);
+		// print_r($prevpost);
+		return $prevpost;
 	}
 
 	function getnextproject($currentproject)
@@ -89,7 +105,8 @@ class Project extends CI_Controller {
 			$next = $currentinArray+1;
 			$nextpost = $all[$next];
 		}
-		print_r($nextpost);
+		// print_r($nextpost);
+		return $nextpost;
 	}
 }
 

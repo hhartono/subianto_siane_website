@@ -14,6 +14,7 @@
         <link type="text/css" rel="stylesheet" href="/assets/public/css/style.css">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="/assets/public/images/favicon.ico">
+         
     </head>
     <body>
         <div class="loader"><i class="fa fa-refresh fa-spin"></i></div>
