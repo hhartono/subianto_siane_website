@@ -9,6 +9,7 @@ class Modelcontact extends CI_Model {
 			'email' => $email,
 			'message' => $message,
 			'date' => date("Y-m-d H:i:s"),
+			'status' => 'unread'
 		);
 		$this->db->insert('message_contact', $data);
 	}

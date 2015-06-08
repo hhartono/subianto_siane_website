@@ -539,6 +539,23 @@ class Administrator extends CI_Controller{
 			}
 	}
 
+	public function messagecenter()
+	{
+		$data = array(
+				'title' => 'Message Center | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'loadallmessage' => $this->modelproject->loadallmessage(),
+			);
+		$this->load->view('admin/messagecenter', $data);
+	}
+
+	public function messageupdateread($id)
+	{
+		$idcat = $id;
+		$this->modelproject->updateStatusMessage($idcat);
+		redirect('administrator/messagecenter');
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');
