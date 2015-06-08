@@ -467,9 +467,17 @@ class Modelproject extends CI_Model {
 		}
 	}
 
-	public function updateStatusMessage($id){
+	public function updateStatusRead($id){
 		$data = array(
 			'status' => 'read'
+			);
+		$this->db->where('id', $id);
+		$this->db->update('message_contact', $data);
+	}
+
+	public function updateStatusMessage($id){
+		$data = array(
+			'status' => 'replied'
 			);
 		$this->db->where('id', $id);
 		$this->db->update('message_contact', $data);

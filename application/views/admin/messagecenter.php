@@ -46,7 +46,10 @@
                                             <button class="btn btn-warning" data-toggle="modal" data-target="#viewModal" data-name="<?php echo $lam->name;?>" data-id="<?php echo $lam->id;?>" data-email="<?php echo $lam->email;?>" data-message="<?php echo $lam->message;?>" data-date="<?php echo $lam->date;?>">
                                                 <i class="fa fa-search"></i>
                                             </button>
-		                                  </td>
+                                            <button type="button" data-id="<?php echo $lam->id; ?>" data-name="<?php echo $lam->name;?>" data-email="<?php echo $lam->email; ?>" class="btn btn-danger" data-toggle="modal" data-target="#replyModal" >
+		                                        <i class="fa fa-mail-reply"></i>
+                                            </button>
+                                          </td>
 		                              </tr>
 	                            <?php
 	                            		$no++;	
@@ -72,6 +75,8 @@
 	                        </div>
 	                  </div>
 	              </section>
+
+
 					<!-- MODAL FOR VIEW -->
 					<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -107,6 +112,47 @@
                         </div>
                     </div>
 					<!-- END MODAL FOR VIEW -->
+                    <!-- modal reply-->
+                    <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                </div>
+                            <form action="/administrator/sendingmail" method="POST">
+                            <div class="modal-body">
+                                    <input type="hidden" name="id" id="idmessage">
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="control-label">Recipient:</label>
+                                        <input type="text" class="form-control" id="recipient-name" disabled>
+                                        <input type="hidden" id="recipient-name-hidden" name="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recipient-email" class="control-label">Email:</label>
+                                        <input type="text" class="form-control" id="recipient-email" disabled>
+                                        <input type="hidden" id="recipient-email-hidden"  name="recipient-email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subject" class="control-label">Subject: </label>
+                                        <input type="text" class="form-control" id="subject" name="subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="control-label">Message:</label>
+                                        <textarea class="form-control" id="message-text" name="message"></textarea>
+                                    </div>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-primary">Send message</button> -->
+                                <input type="submit" value="Send Message" class="btn btn-primary">
+                            </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- end modal reply -->
 	              	<!-- MODAL FOR DELETE -->
                     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
@@ -167,6 +213,23 @@
 	            modal.find('.modal-body h2#h2alert').text('Hapus Project ' +title+'?')
 	            modal.find('.modal-footer a#deletelink').attr("href", 'projectdelete/'+id)
 	        });
+
+            /*
+             * modal for reply message (message center)
+             */
+            $('#replyModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget); // Button that triggered the modal
+                var id = button.data('id');
+                var recipient = button.data('name') ;
+                var email = button.data('email');
+                var modal = $(this);
+                modal.find('.modal-title').text('New message to ' + recipient);
+                modal.find('.modal-body input#idmessage').val(id);
+                modal.find('.modal-body input#recipient-name').val(recipient);
+                modal.find('.modal-body input#recipient-name-hidden').val(recipient);
+                modal.find('.modal-body input#recipient-email').val(email);
+                modal.find('.modal-body input#recipient-email-hidden').val(email);
+            })
         })
     </script>
 
