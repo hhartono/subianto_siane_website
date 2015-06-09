@@ -15,6 +15,7 @@ class Portfolio extends CI_Controller {
 		$data = array(
 				'title' => 'Subianto & Siane Architecture - Project',
 				'portfolioactlink' => 'act-link'
+				
 			);
 		$this->load->view('public/portfolio', $data);
 	}

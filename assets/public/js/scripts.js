@@ -385,14 +385,10 @@ function initDomik() {
         $("#message").slideUp(1500);
     });
 	// IMPORTANT   INIT YOUR FUNCTIONS HERE ------------------
-	
-	
-	
-	
-	
-	
-	
-	//	
+    
+	//
+
+    	
 }
 // if mobile remove parallax and video  ------------------
 function initparallax() {
@@ -449,11 +445,11 @@ function contanimshow() {
             opacity: 1
         }, 1500);
     }, 550);
-    setTimeout(function(){
+    /*setTimeout(function(){
         $('.flipbook-viewport').animate({
             opacity: 1
         }, 1500);
-    }, 550);
+    }, 550);*/
     setTimeout(function() {
         $("footer").animate({
             opacity: 1
@@ -471,7 +467,7 @@ function contanimhide() {
 }
 // share ------------------
 $(".shareSelector").socialShare({
-    social: "facebook,twitter,google,tumblr",
+    social: "facebook,twitter,tumblr,pinterest",
     whenSelect: true,
     selectContainer: ".shareSelector",
     blur: false
@@ -551,9 +547,11 @@ $(function() {
             readyFunctions();
         }
     });
+
 });
 //=============== init all functions  ==============
 function readyFunctions() {
-     initDomik();
+    initDomik();
     initparallax();
 }
+

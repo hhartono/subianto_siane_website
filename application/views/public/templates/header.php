@@ -14,7 +14,6 @@
         <link type="text/css" rel="stylesheet" href="/assets/public/css/style.css">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="/assets/public/images/favicon.ico">
-         
     </head>
     <body>
         <div class="loader"><i class="fa fa-refresh fa-spin"></i></div>
@@ -33,9 +32,9 @@
                         <nav>
                             <ul>
                                 <li><a href="/" class="ajax <?php echo (isset($homeactlink))? $homeactlink : '';?>">Home</a></li>
-                                <li><a href="/project" class="ajax pp <?php echo (isset($projectactlink))? $projectactlink: '' ;?>">Projects</a></li>
+                                <li><a href="/project" class="ajax <?php echo (isset($projectactlink))? $projectactlink: '' ;?>">Projects</a></li>
                                 <li>
-                                    <a href="/about" class="ajax pa <?php echo (isset($aboutactlink))? $aboutactlink: '' ;?>">About us </a>
+                                    <a href="/about" class="ajax <?php echo (isset($aboutactlink))? $aboutactlink: '' ;?>">About us </a>
                                     <!-- Scroll navigation  -->
                                     <!-- <ul>
                                         <li><a href="about.html#sec1" class="ajax custom-scroll-link">About us </a></li>
