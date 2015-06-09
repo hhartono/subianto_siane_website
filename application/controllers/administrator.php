@@ -539,6 +539,72 @@ class Administrator extends CI_Controller{
 			}
 	}
 
+	public function messagecenter()
+	{
+		$data = array(
+				'title' => 'Message Center | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'loadallmessage' => $this->modelproject->loadallmessage(),
+			);
+		$this->load->view('admin/messagecenter', $data);
+	}
+
+	public function messageupdateread($id)
+	{
+		$idcat = $id;
+		$this->modelproject->updateStatusRead($idcat);
+		redirect('administrator/messagecenter');
+	}
+
+	public function sendingmail()
+	{
+		/*$configsmtpgmail = array(
+		 	'protocol' => 'smtp',
+		 	'smtp_host' => 'ssl://smtp.googlemail.com',
+		 	'smtp_port' => 465,
+		 	'smtp_user' => 'willi.ilmukomputer@gmail.com',
+		 	'smtp_pass' => '0s4pr1l!98g',
+		 	'smtp_timeout' => 5,
+		 	'wordwrap' => TRUE,
+		 	'crlf' => '\r\n',
+		 	'newline' => '\r\n'
+		);
+		$this->email->initialize($configsmtpgmail);*/
+		
+		$id = $this->input->post('id');
+		$name = $this->input->post('recipient-name');
+		$email = $this->input->post('recipient-email');
+		$subject = $this->input->post('subject');
+		$message = $this->input->post('message');
+		$configsendmail = array(
+			'useragent' => 'inerre website',
+			'protocol' => 'sendmail',
+		 	'mailpath' => '/usr/sbin/sendmail',
+		 	'smtp_host' => 'localhost',
+		 	'smtp_port' => 25,
+		 	'charset' => 'utf-8',
+		 	'wordwrap' => TRUE,
+		 	'crlf' => '\r\n',
+		 	'newline' => '\r\n'
+		);
+		$this->email->initialize($configsendmail);
+
+		$this->email->from('info@inerre.com', 'INERRE Interior');
+		$this->email->to($email);
+		//$this->email->cc('');
+		//$this->email->bcc('');
+		$this->email->subject($subject);
+		$this->email->message($message);
+		$this->email->send();
+		//if(! $this->email->send()){
+		//	echo 'email not send';
+		//}else{
+		//echo $this->email->print_debugger();	
+		//}
+		$this->modelproject->updateStatusMessage($id);
+		redirect('administrator/messagecenter');
+	}
+
 	// public function tosha1()
 	// {
 	// 	echo sha1('subiantosiane');
