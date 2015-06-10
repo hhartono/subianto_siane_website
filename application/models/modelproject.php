@@ -451,37 +451,6 @@ class Modelproject extends CI_Model {
 			$this->db->delete('project_album');
 		}
 	}
-
-	public function loadAllMessage()
-	{
-		$query = $this->db->query("
-				SELECT * 
-				FROM message_contact
-				ORDER BY id DESC
-			");
-		if($query->num_rows() > 0){
-			foreach ($query->result() as $row) {
-				$data[] = $row;
-			}
-			return $data;
-		}
-	}
-
-	public function updateStatusRead($id){
-		$data = array(
-			'status' => 'read'
-			);
-		$this->db->where('id', $id);
-		$this->db->update('message_contact', $data);
-	}
-
-	public function updateStatusMessage($id){
-		$data = array(
-			'status' => 'replied'
-			);
-		$this->db->where('id', $id);
-		$this->db->update('message_contact', $data);
-	}	
 }
 
 /* End of file modelcontact.php */

@@ -46,9 +46,19 @@
                                             <button class="btn btn-warning" data-toggle="modal" data-target="#viewModal" data-name="<?php echo $lam->name;?>" data-id="<?php echo $lam->id;?>" data-email="<?php echo $lam->email;?>" data-message="<?php echo $lam->message;?>" data-date="<?php echo $lam->date;?>">
                                                 <i class="fa fa-search"></i>
                                             </button>
-                                            <button type="button" data-id="<?php echo $lam->id; ?>" data-name="<?php echo $lam->name;?>" data-email="<?php echo $lam->email; ?>" class="btn btn-danger" data-toggle="modal" data-target="#replyModal" >
-		                                        <i class="fa fa-mail-reply"></i>
+                                            <?php if($lam->status == 'replied'){?>
+                                            <button type="button" data-id="<?php echo $lam->id; ?>" data-name="<?php echo $lam->name;?>" data-email="<?php echo $lam->email; ?>" class="btn btn-success" data-toggle="modal" data-target="#replyModal" disabled>
+		                                        <i class="fa fa-check"></i>
                                             </button>
+                                            <?php 
+                                            }else{
+                                            ?>
+                                            <button type="button" data-id="<?php echo $lam->id; ?>" data-name="<?php echo $lam->name;?>" data-email="<?php echo $lam->email; ?>" class="btn btn-danger" data-toggle="modal" data-target="#replyModal" >
+                                                <i class="fa fa-mail-reply"></i>
+                                            </button>
+                                            <?php
+                                            }
+                                            ?>
                                           </td>
 		                              </tr>
 	                            <?php
