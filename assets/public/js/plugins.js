@@ -403,7 +403,7 @@ if (typeof Object.create !== "function") {
     return new F();
   };
 }
-(function($, window, document) {
+(function($, window, document){
   var
     loadAPI = function loadAPI(callback) {
       var tag = document.createElement('script'),
@@ -619,4 +619,18 @@ if (typeof Object.create !== "function") {
       $.data(el, "ytPlayer", player);
     });
   };
+  /*$.fn.turnJS = function(){
+  	this.turn({
+  		// Width
+        width:940,
+        // Height
+        height:300,
+        // Elevation
+        elevation: 50,
+        // Enable gradients
+        gradients: true,
+        // Auto center this flipbook
+        autoCenter: true
+  	})
+  }*/
 })(jQuery, window, document);

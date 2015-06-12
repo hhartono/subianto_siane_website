@@ -5,11 +5,14 @@ $(window).load(function() {
             opacity: "1"
         }, 500);
         contanimshow();
+
     });
 });
+
 $("body").append('<div class="l-line"><span></span></div>');
 function initDomik() {
     "use strict";
+
 	// center content ------------------
     function a() {
         $(" .fullheight-carousel .item").css({
@@ -384,11 +387,29 @@ function initDomik() {
     $("#contactform input, #contactform textarea").keyup(function() {
         $("#message").slideUp(1500);
     });
-	// IMPORTANT   INIT YOUR FUNCTIONS HERE ------------------
-    
-	//
-
-    	
+	// IMPORTANT INIT YOUR FUNCTIONS HERE ------------------
+    var fb = $('.flipbook');
+    function loadApp() {
+        console.log("loadApp() called");
+       //"use strict";
+        // Create the flipbook
+        fb.turn({
+                // Width
+                width:940,
+                // Height
+                height:300,
+                // Elevation
+                elevation: 50,
+                // Enable gradients
+                gradients: true,
+                // Auto center this flipbook
+                autoCenter: true
+        });
+    }
+    loadApp();
+    //$(window).load(function() {
+       // loadApp();  
+    //});
 }
 // if mobile remove parallax and video  ------------------
 function initparallax() {
@@ -458,6 +479,7 @@ function contanimshow() {
             opacity: 0.6
         }, 1500);		
     }, 650);
+    
 }
 
 function contanimhide() {
@@ -532,15 +554,21 @@ function hideMenu() {
 nb.on("click", function() {
     if ($(this).hasClass("vis-m")) showMenu(); else hideMenu();
 });
+
+/*function loadApp() {
+    "use strict";
+    // Create the flipbook
+    $('.flipbook').turnJS();
+}*/
 //=============== init ajax  ==============
 $(function() {
-    $.coretemp({
+    /*$.coretemp({
         reloadbox: "#wrapper",
 		loadErrorMessage: "<h2>404</h2> <br> page not found.", // 404 error text 
         loadErrorBacklinkText: "Back to the last page", // 404 back button  text 
         outDuration: 250,
         inDuration: 150
-    });
+    });*/
     readyFunctions();
     $(document).on({
         ksctbCallback: function() {
@@ -553,5 +581,6 @@ $(function() {
 function readyFunctions() {
     initDomik();
     initparallax();
+    // loadApp();
 }
 
