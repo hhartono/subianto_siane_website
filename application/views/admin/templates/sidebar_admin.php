@@ -52,12 +52,12 @@
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" >
+                <a href="javascript:;" class="<?php echo (isset($messageactive))? 'active' : '' ;?>" >
                     <i class=" fa fa-envelope"></i>
                     <span>Message</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="messagecenter">Inbox</a></li>
+                    <li class="<?php echo (isset($messageactive))? $messageactive : '' ;?>"><a href="/administrator/messagecenter">Inbox</a></li>
                     <!-- <li><a href="">Inbox Details</a></li> -->
                 </ul>
             </li>

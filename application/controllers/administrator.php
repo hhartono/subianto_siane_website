@@ -11,6 +11,7 @@ class Administrator extends CI_Controller{
 		$this->is_logged_in();
 		$this->load->model('modelcategory');
 		$this->load->model('modelproject');
+		$this->load->model('modelmessagecenter');
 	}
 
 	public function index()
@@ -544,7 +545,8 @@ class Administrator extends CI_Controller{
 		$data = array(
 				'title' => 'Message Center | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
-				'loadallmessage' => $this->modelproject->loadallmessage(),
+				'messageactive' => 'active',
+				'loadallmessage' => $this->modelmessagecenter->loadallmessage(),
 			);
 		$this->load->view('admin/messagecenter', $data);
 	}
@@ -552,7 +554,7 @@ class Administrator extends CI_Controller{
 	public function messageupdateread($id)
 	{
 		$idcat = $id;
-		$this->modelproject->updateStatusRead($idcat);
+		$this->modelmessagecenter->updateStatusRead($idcat);
 		redirect('administrator/messagecenter');
 	}
 
@@ -601,7 +603,7 @@ class Administrator extends CI_Controller{
 		//}else{
 		//echo $this->email->print_debugger();	
 		//}
-		$this->modelproject->updateStatusMessage($id);
+		$this->modelmessagecenter->updateStatusMessage($id);
 		redirect('administrator/messagecenter');
 	}
 
