@@ -18,6 +18,7 @@
 						<div style="background-image:url(assets/public/images_example/turnjs_example/4.jpg)"></div>
 						<div style="background-image:url(assets/public/images_example/turnjs_example/5.jpg)"></div>
 						<div style="background-image:url(assets/public/images_example/turnjs_example/6.jpg)"></div>
+						<div style="background-image:url(assets/public/images_example/turnjs_example/7.jpg)"></div>
 					</div>
             	</div>
         	</div>

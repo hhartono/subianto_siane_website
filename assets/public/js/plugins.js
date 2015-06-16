@@ -619,7 +619,9 @@ if (typeof Object.create !== "function") {
       $.data(el, "ytPlayer", player);
     });
   };
-  /*$.fn.turnJS = function(){
+
+  /*
+  $.fn.turnJS = function(){
   	this.turn({
   		// Width
         width:940,
@@ -632,5 +634,6 @@ if (typeof Object.create !== "function") {
         // Auto center this flipbook
         autoCenter: true
   	})
-  }*/
+  }
+  */
 })(jQuery, window, document);
