@@ -388,12 +388,12 @@ function initDomik() {
         $("#message").slideUp(1500);
     });
 	// IMPORTANT INIT YOUR FUNCTIONS HERE ------------------
-    var fb = $('.flipbook');
-    function loadApp() {
-        console.log("loadApp() called");
-       //"use strict";
+    /*var fb = $('.flipbook');
+    function loadApp(){
+        // console.log("loadApp() called");
         // Create the flipbook
-        fb.turn({
+        $('.flipbook').turn({
+        // fb.turn({
                 // Width
                 width:940,
                 // Height
@@ -406,7 +406,7 @@ function initDomik() {
                 autoCenter: true
         });
     }
-    loadApp();
+    loadApp();*/
     //$(window).load(function() {
        // loadApp();  
     //});
@@ -555,11 +555,11 @@ nb.on("click", function() {
     if ($(this).hasClass("vis-m")) showMenu(); else hideMenu();
 });
 
-/*function loadApp() {
-    "use strict";
+var fb = $('.flipbook');
+function loadFlipbook(){
     // Create the flipbook
-    $('.flipbook').turnJS();
-}*/
+    fb.turnJS();
+}
 //=============== init ajax  ==============
 $(function() {
     /*$.coretemp({
@@ -579,8 +579,8 @@ $(function() {
 });
 //=============== init all functions  ==============
 function readyFunctions() {
+    //loadFlipbook();
     initDomik();
     initparallax();
-    // loadApp();
 }
 

@@ -14,7 +14,42 @@
         <link type="text/css" rel="stylesheet" href="/assets/public/css/style.css">
         <!--=============== favicons ===============-->
         <link rel="shortcut icon" href="/assets/public/images/favicon.ico">
-        <link rel="stylesheet" href="/assets/public/css/turnjs/basic.css">
+        <!--link rel="stylesheet" href="/assets/public/css/turnjs/basic.css"-->
+        <style>
+            .flipbook-viewport{
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+            .book-container{
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .rel{
+                position:relative;
+            }
+            .flipbook {
+                margin: 0 auto;
+                width: 90%;
+                height: 90%;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .flipbook .page {
+                width: 100%;
+            }
+
+            .flipbook .page img {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
     </head>
     <body>
         <div class="loader"><i class="fa fa-refresh fa-spin"></i></div>

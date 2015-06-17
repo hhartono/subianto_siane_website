@@ -4,6 +4,9 @@
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content">
+
+                
+
                 <!-- background animation  -->      
                 <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div>
                 <!-- wrapper inner -->  

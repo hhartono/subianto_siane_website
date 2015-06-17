@@ -619,10 +619,9 @@ if (typeof Object.create !== "function") {
       $.data(el, "ytPlayer", player);
     });
   };
-
-  /*
+ 
   $.fn.turnJS = function(){
-  	this.turn({
+  	return this.turn({
   		// Width
         width:940,
         // Height
@@ -635,5 +634,5 @@ if (typeof Object.create !== "function") {
         autoCenter: true
   	})
   }
-  */
+  
 })(jQuery, window, document);
