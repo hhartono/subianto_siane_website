@@ -43,9 +43,20 @@
 		                                  <td><?php echo $lam->date;?></td>
 		                                  <td><?php echo $lam->status;?></td>
                                           <td>
+                                            <?php if($lam->status == 'read' || $lam->status == 'replied'){?>
+                                            <button class="btn btn-warning" data-toggle="modal" data-target="#viewModal" data-name="<?php echo $lam->name;?>" data-id="<?php echo $lam->id;?>" data-email="<?php echo $lam->email;?>" data-message="<?php echo $lam->message;?>" data-date="<?php echo $lam->date;?>" disabled>
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                            <?php 
+                                            }else{
+                                            ?>
                                             <button class="btn btn-warning" data-toggle="modal" data-target="#viewModal" data-name="<?php echo $lam->name;?>" data-id="<?php echo $lam->id;?>" data-email="<?php echo $lam->email;?>" data-message="<?php echo $lam->message;?>" data-date="<?php echo $lam->date;?>">
                                                 <i class="fa fa-search"></i>
                                             </button>
+                                            <?php
+                                            }
+                                            ?>
+
                                             <?php if($lam->status == 'replied'){?>
                                             <button type="button" data-id="<?php echo $lam->id; ?>" data-name="<?php echo $lam->name;?>" data-email="<?php echo $lam->email; ?>" class="btn btn-success" data-toggle="modal" data-target="#replyModal" disabled>
 		                                        <i class="fa fa-check"></i>
@@ -116,7 +127,7 @@
                                     </table>
                                 </div>
                                 <div class="modal-footer">
-                                    <a id="viewlink" href="" class="btn btn-danger">Read</a>
+                                    <a id="viewlink" href="" class="btn btn-danger">Close</a>
                                 </div>
                             </div>
                         </div>

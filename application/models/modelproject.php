@@ -453,5 +453,5 @@ class Modelproject extends CI_Model {
 	}
 }
 
-/* End of file modelcontact.php */
-/* Location: ./application/models/modelcontact.php */
+/* End of file modelproject.php */
+/* Location: ./application/models/modelproject.php */
