@@ -436,9 +436,9 @@ section {
 .box-item a img {
 	position:relative;
 	z-index:1;
-	-webkit-transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
-  	-moz-transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
-  	transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
+	/* -webkit-transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
+	  	-moz-transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms;
+	  	transition: all 4000ms cubic-bezier(.19,1,.22,1) 0ms; */
 }
 .box-item a .overlay {
 	opacity:0;
@@ -453,9 +453,9 @@ section {
 	opacity:0.3;
 }
 .box-item a:hover img {
-	-webkit-transform: scale(1.05);
+	/* -webkit-transform: scale(1.05);
 	-moz-transform:scale(1.05);
-	transform: scale(1.05);
+	transform: scale(1.05); */
 }
 /*------ Header  ------------------------------------------------*/
 header{
@@ -741,10 +741,11 @@ nav li ul a.act-link {
 }
 .slide-title {
 	float:right;
-	top:50%;
+	top:67%;
 	position:relative;
 	border-right:10px solid #fff;
 	padding:50px 50px 50px 0;
+	text-shadow: 1px 1px 1px #000;
 }
 .slide-title h3{
 	position:relative;
@@ -752,7 +753,8 @@ nav li ul a.act-link {
 	top:50px;
 }
 .swiper-slide .overlay {
-	opacity:0.2;
+	/*opacity:0.2;*/
+	opacity: 0;
 }
 .swiper-slide-active   .slide-title h3{
 	opacity:1;
@@ -1452,7 +1454,7 @@ article {
 .grid-item-holder:hover:before   {
 	width:50px;
 }  
-.st-3 .grid-item-holder a img , .gallery-item img, .grid-sizer img ,  .grid-item-holder:before  {
+.st-3 .grid-item-holder a img , /* .gallery-item img, */ .grid-sizer img ,  .grid-item-holder:before  {
 	-webkit-transition: all 300ms linear;
     -moz-transition: all 300ms linear;
     -o-transition: all 300ms linear;

@@ -20,6 +20,7 @@
                 display: table;
                 width: 100%;
                 height: 100%;
+                z-index:4;
             }
             .book-container{
                 display: table-cell;

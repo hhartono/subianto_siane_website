@@ -38,6 +38,7 @@
             	</div>
         	</div>
 
+			<?php //$this->load->view('public/templates/footer_block');?>
                 
             </div>
         </div>
