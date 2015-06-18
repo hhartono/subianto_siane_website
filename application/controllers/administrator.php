@@ -204,6 +204,8 @@ class Administrator extends CI_Controller{
 			$location = $this->input->post('location');
 			// $projecturi = $this->create_slug($title);
 			$projecturi = $this->sluggify($title);
+			$duplicate_check = $this->modelproject->get_project_by_title($this->input->post('title'));
+			if(empty($duplicate_check)){
 			$this->modelproject->insertProject($title, $description, $category, $projectstory, $date, $client, $status, $location, $projecturi);
 			$id = mysql_insert_id();
 			$output = json_encode(
@@ -214,6 +216,15 @@ class Administrator extends CI_Controller{
 					)
 				);
 			die($output);
+			}else{
+				$output = json_encode(
+						array(
+							'type' => 'duplicate',
+							'text' => ucwords($title).' gagal disimpan, project sudah ada dalam sistem',
+						)
+					);
+				die($output);
+			}
 		}
 	}
 

@@ -192,6 +192,8 @@
                             }
                             $("input.form-error-focus:first").focus();
                             $("input.form-error-focus").removeClass('form-error-focus');
+						}else if(response.type == 'duplicate'){
+							output = '<div class="alert alert-block alert-danger fade in">'+ response.text +'. </div>';
 						}else{
 							output = '<div class="alert alert-block alert-success fade in">'+ response.text +'. Langkah berikutnya <a href="projectphotoupload/'+response.lastid+'">Unggah Foto Project</a></div>';
 							$('#title').val('');
