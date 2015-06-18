@@ -17,11 +17,13 @@ class Administrator extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-				'title' => 'Dashboard | Subianto & Siane Architecture',
+				'title' => 'Project | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
-				'dashboardactive' => 'active'
+				'projectactive' => 'active',
+				'loadallproject' => $this->modelproject->loadAllProject(),
+				'categoryall' => $this->modelproject->loadAllProjectCategory()
 			);
-		$this->load->view('admin/dashboard', $data);
+		$this->load->view('admin/project', $data);
 	}
 
 	/*
@@ -605,6 +607,17 @@ class Administrator extends CI_Controller{
 		//}
 		$this->modelmessagecenter->updateStatusMessage($id);
 		redirect('administrator/messagecenter');
+	}
+
+	public function photohome()
+	{
+		$data = array(
+				'title' => 'Photo Feature Home | Subianto & Siane Architecture',
+				'photohomeactive' => 'active',
+				'username' => $this->tank_auth->get_username(),
+				'projecthome' => $this->modelproject->loadFeaturedHome()
+		);
+		$this->load->view('admin/photo_featured_home', $data);
 	}
 
 	// public function tosha1()
