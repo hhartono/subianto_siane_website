@@ -451,6 +451,12 @@ class Modelproject extends CI_Model {
 			$this->db->delete('project_album');
 		}
 	}
+
+	public function get_project_by_title($title){
+        $query = $this->db->get_where('project', array('title' => $title));
+        return $query->row_array();
+    }
+
 }
 
 /* End of file modelproject.php */
