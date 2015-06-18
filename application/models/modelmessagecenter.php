@@ -25,10 +25,30 @@ class Modelmessagecenter extends CI_Model {
 	}
 
 	public function updateStatusMessage($id){
+		$id = $this->input->post('id');
+		$subject = $this->input->post('subject');
+		$message = $this->input->post('message');
+
+		$this->db->trans_start();
 		$data = array(
 			'status' => 'replied'
 			);
 		$this->db->where('id', $id);
 		$this->db->update('message_contact', $data);
+
+		$data = array(
+			'subject' => $subject,
+			'message' => $message,
+			'id_message' => $id
+			);
+		$this->db->insert('message_reply', $data);
+		$this->db->trans_complete();
+
+        // return false if something went wrong
+        if ($this->db->trans_status() === FALSE){
+            return FALSE;
+        }else{
+            return TRUE;
+        }
 	}
 }
