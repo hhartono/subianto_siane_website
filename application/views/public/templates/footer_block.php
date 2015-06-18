@@ -9,25 +9,27 @@
     <div class="footer-inner">
         <div class="row">
             <div class="col-md-5">
+                <!--
                 <a class="footer-logo ajax" href="index.html"><img src="/assets/public/images/logo37x30.png" alt=""></a>
+                -->
             </div>
             <div class="col-md-3">
                 <div class="footer-adress">
-                    <span>USA 27TH BROOKLYN NY</span>
+                    <span>Jl. Suka Mekar III No. 3, Bandung</span>
                     <a href="" target="_blank">View on map</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <ul class="footer-contact">
-                    <li>+7(111)123456789</li>
-                    <li><a href="#">contact@subiantosiane.com</a></li>
+                    <li>+62 22 2013973</li>
+                    <li><a href="#">subiantosiane@gmail.com</a></li>
                 </ul>
             </div>
         </div>
         <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-7">
-                <p> &#169; Subianto Siane  <?php echo date('Y');?>  All rights reserved.  </p>
+                <p> &#169; Subianto & Siane - <?php echo date('Y');?> - All rights reserved.  </p>
             </div>
         </div>
     </div>
