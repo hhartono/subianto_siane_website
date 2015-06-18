@@ -632,7 +632,7 @@ if (typeof Object.create !== "function") {
         gradients: true,
         // Auto center this flipbook
         autoCenter: true
-  	})
+  	});
   }
   
 })(jQuery, window, document);

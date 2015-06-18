@@ -25,12 +25,13 @@
                 display: table-cell;
                 vertical-align: middle;
                 text-align: center;
+                overflow: hidden;
             }
             .rel{
                 position:relative;
             }
             .flipbook {
-                margin: 0 auto;
+                margin: 0 auto 0;
                 width: 90%;
                 height: 90%;
                 -webkit-touch-callout: none;

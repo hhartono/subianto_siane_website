@@ -19,13 +19,10 @@
         <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
         
         <script type="text/javascript">
-            // js / jquery 
-            
             /*
              * Turn.js responsive book
              */
-
-            /*globals window, document, $*/
+            /* globals window, document, $*/
 
             (function () {
                 'use strict';
@@ -46,6 +43,16 @@
                             window.addEventListener('resize', function (e) {
                                 var size = me.resize();
                                 $(me.el).turn('size', size.width, size.height);
+                                /*$(me.el).turn({
+                                    width: size.width, 
+                                    height: size.height,
+                                    // Elevation
+                                    elevation: 50,
+                                    // Enable gradients
+                                    gradients: true,
+                                    // Auto center this flipbook
+                                    autoCenter: true
+                                });*/
                             });
                         }
                     },
@@ -85,7 +92,9 @@
                         // run the plugin
                         $(this.el).turn({
                             gradients: true,
-                            acceleration: true
+                            acceleration: true,
+                            elevation: 50,
+                            // autoCenter: true
                         });
                         // hide the body overflow
                         document.body.className = 'hide-overflow';
