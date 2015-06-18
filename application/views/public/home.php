@@ -13,12 +13,13 @@
                         <div class="swiper-slide">
                             <div class="bg" style="background-image:url(/uploads/project/<?php echo $lfh->photo;?>)"></div>
                             <div class="overlay"></div>
+                            <!--
                             <div class="slide-title-holder">
                                 <div class="slide-title">
                                     <h3 class="transition">  <a class="ajax transition2" href="project/detail/<?php echo $lfh->project_uri;?>"><?php echo ucwords($lfh->title);?></a>  </h3>
-                                    <!-- <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4> -->
                                 </div>
                             </div>
+                            -->
                         </div>
                     <?php        
                         }
