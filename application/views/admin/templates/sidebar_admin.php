@@ -4,12 +4,12 @@
     <div id="sidebar"  class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-            <li>
+            <!-- <li>
                 <a class="<?php echo (isset($dashboardactive))? $dashboardactive: '' ;?>" href="/administrator">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
-            </li>
+            </li> -->
 
             <li class="sub-menu">
                 <a href="javascript:;" class="<?php echo (isset($projectactive) || isset($projectaddactive))? 'active' : '' ;?>">
@@ -49,6 +49,13 @@
                     <li class="<?php echo (isset($randomactive))? $randomactive : '' ;?>"><a href="/administrator/randomsidebar">Random Sidebar</a></li>
                     
                 </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a class="<?php echo (isset($photohomeactive))? 'active' : '' ;?>" href="/administrator/photohome">
+                    <i class=" fa fa-picture-o"></i>
+                    <span>Photo Home</span>
+                </a>
             </li>
 
             <li class="sub-menu">

@@ -122,7 +122,7 @@
                 <section>
                 <div class="form-group">
                 	<div class="col-sm-12">
-                    	<a href="/administrator/photoedit/<?php echo $idproject;?>" class="finish btn btn-danger">Next</a>
+                    	<a href="/administrator/photoedit/<?php echo $idproject;?>" class="finish btn btn-danger">Photo</a>
 					</div>
                 </div>
                 </section>

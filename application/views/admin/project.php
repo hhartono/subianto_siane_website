@@ -10,7 +10,7 @@
 	          <div class="col-lg-12">
 	              <section class="panel">
 	                  <header class="panel-heading">
-	                      Dynamic Table
+	                      All Project
 	                  </header>
 	                  <div class="panel-body">
 	                  <p><?=$this->session->flashdata('message')?> </p>
@@ -35,16 +35,16 @@
 	                            		//echo htmlentities($lap->project_story);
 	                            ?>		
 		                              <tr class="">
-		                                  <td><?php echo $no;?></td>
-		                                  <td><a data-toggle="modal" data-target="#viewModal" data-title="<?php echo $lap->title;?>" data-category="<?php echo $lap->category_name;?>" data-description="<?php echo $lap->description;?>" data-projectstory="<?php echo htmlentities($lap->project_story);?>" ><?php echo $lap->title;?></a> </td>
-		                                  <td><?php echo $lap->category_name;?></td>
-		                                  <td><?php echo $lap->description;?></td>
-		                                  <td><?php echo html_entity_decode($lap->project_story);?></td>
-		                                  <td>
-		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger">Feature Home</a>
-		                                  	<a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-primary"><i class="fa fa-edit"></i> Edit</a>
-		                                  	<button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>">
-                                                    <i class="fa fa-trash-o"></i>
+		                                  <td style="text-align: center; vertical-align: middle;"><?php echo $no;?></td>
+		                                  <td style="text-align: center; vertical-align: middle;"><a data-toggle="modal" data-target="#viewModal" data-title="<?php echo $lap->title;?>" data-category="<?php echo $lap->category_name;?>" data-description="<?php echo $lap->description;?>" data-projectstory="<?php echo htmlentities($lap->project_story);?>" ><?php echo $lap->title;?></a> </td>
+		                                  <td style="text-align: center; vertical-align: middle;"><?php echo $lap->category_name;?></td>
+		                                  <td style="text-align: center; vertical-align: middle;"><?php echo $lap->description;?></td>
+		                                  <td style="vertical-align: middle;"><?php echo html_entity_decode($lap->project_story);?></td>
+		                                  <td style="text-align: center; vertical-align: middle;">
+		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger" style="height: 35px; width: 120px; ">Feature Home</a><br>
+                                            <a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-primary" style="height: 35px; width: 120px; "><i class="fa fa-edit"></i> Edit</a>
+		                                  	<button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; ">
+                                                    <i class="fa fa-trash-o"></i> Delete
                                                 </button>
 		                                  </td>
 		                              </tr>

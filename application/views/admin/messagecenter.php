@@ -161,8 +161,7 @@
                                     <div class="form-group">
                                         <label for="message-text" class="control-label">Message:</label>
                                         <textarea class="form-control" id="message-text" name="message"></textarea>
-                                    </div>
-                                
+                                    </div>                                
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
