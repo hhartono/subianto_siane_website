@@ -152,7 +152,7 @@
                 proceed = false;
             }
             if(category == ""){
-                $('select#category').css('border-color', '#FF0000 !important').addClass('form-error-focus');
+                $('select[name=category]').css('border-color', '#FF0000').addClass('form-error-focus');
                 proceed = false;
             }
             if(date == ""){
@@ -223,7 +223,7 @@
                 $("input.form-error-focus").css('border-color', '');
         });*/
 		$("input#title, input#description, input#projectstory, input#date, input#client, input#status, input#location").keyup(function(){
-            $("input#title, input#description, select#category, input#projectstory, input#date, input#client, input#status, input#location").css('border-color', '');
+            $("input#title, input#description, select[name=category], input#projectstory, input#date, input#client, select[name=status], input#location").css('border-color', '');
             // $("#message_result").slideUp();
         });
 	}
