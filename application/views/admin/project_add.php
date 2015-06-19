@@ -192,6 +192,7 @@
                             }
                             $("input.form-error-focus:first").focus();
                             $("input.form-error-focus").removeClass('form-error-focus');
+
 						}else if(response.type == 'duplicate'){
 							output = '<div class="alert alert-block alert-danger fade in">'+ response.text +'. </div>';
 						}else{
@@ -199,7 +200,8 @@
 							$('#title').val('');
 							$('#description').val('');
 							$('#category').val('');
-							$('#projectstory').val('');
+							//$('#projectstory').val('');
+							projectstory = CKEDITOR.instances.projectstory.setData('');
 							$('#date').val('');
 							$('#client').val('');
 							$('#status').val('');
@@ -213,10 +215,13 @@
 			}
 			return false;
 		})
-		/*$("input#title, input#description, input#projectstory, input#date, input#client, input#status, input#location").keyup(function(){
-            $("input#title, input#description, select#category, input#projectstory, input#date, input#client, input#status, input#location").css('border-color', '');
-            $("#message_result").slideUp();
+		/*$("input.form-error-focus:first").keyup(function(){
+                $("input.form-error-focus").css('border-color', '');
         });*/
+		$("input#title, input#description, input#projectstory, input#date, input#client, input#status, input#location").keyup(function(){
+            $("input#title, input#description, select#category, input#projectstory, input#date, input#client, input#status, input#location").css('border-color', '');
+            // $("#message_result").slideUp();
+        });
 	}
 
 </script>
