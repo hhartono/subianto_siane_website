@@ -38,11 +38,12 @@
                             this.el = document.getElementById(id);
                             this.resize();
                             this.plugins();
-
+                            
                             // on window resize, update the plugin size
                             window.addEventListener('resize', function (e) {
                                 var size = me.resize();
                                 $(me.el).turn('size', size.width, size.height);
+                                
                                 /*$(me.el).turn({
                                     width: size.width, 
                                     height: size.height,
@@ -63,29 +64,41 @@
 
                         var width = this.el.clientWidth,
                             height = Math.round(width / this.ratio),
-                            padded = Math.round(document.body.clientHeight * 0.8);
+                            padded = Math.round(document.body.clientHeight * 0.8),
+                            ownHeight = parseInt(height * 0.96),
+                            coverPadding = parseInt((height-ownHeight)/2),
+                            ownWidth = parseInt((width/2)-coverPadding);
 
-                        console.log('clientWidth:' + this.el.clientWidth);
+                        /*console.log('clientWidth:' + this.el.clientWidth);
                         console.log('width: ' + width);
                         console.log('height:' + height);
                         console.log('padded:' + padded);
                         console.log('clientHeight:' + this.el.clientHeight);
+                        console.log(ownWidth);
+                        console.log(ownHeight);*/
 
                         // if the height is too big for the window, constrain it
                         if (height > padded) {
                             height = padded;
                             width = Math.round(height * this.ratio);
-                            console.log('height:' + height);
-                            console.log('width:' + width);
+                            // console.log('height:' + height);
+                            // console.log('width:' + width);
+                            ownHeight = parseInt(height * 0.96);
+                            coverPadding = parseInt((height-ownHeight)/2);
+                            ownWidth = parseInt((width/2)-coverPadding);
                         }
 
                         // set the width and height matching the aspect ratio
                         this.el.style.width = width + 'px';
                         this.el.style.height = height + 'px';
-
+                        
+                        $('.flipbook .own-size').width(ownWidth);
+                        $('.flipbook .own-size').height(ownHeight);
                         return {
                             width: width,
-                            height: height
+                            height: height,
+                            ownWidth: ownWidth,
+                            ownHeight: ownHeight
                         };
                     },
                     plugins: function () {

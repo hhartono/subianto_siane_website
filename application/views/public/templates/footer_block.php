@@ -13,13 +13,13 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-adress">
-                    <span>USA 27TH BROOKLYN NY</span>
+                    <span>Jl. Suka Mekar III No. 7, Bandung, Indonesia</span>
                     <a href="" target="_blank">View on map</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <ul class="footer-contact">
-                    <li>+7(111)123456789</li>
+                    <li>+62 22 2013973</li>
                     <li><a href="#">contact@subiantosiane.com</a></li>
                 </ul>
             </div>

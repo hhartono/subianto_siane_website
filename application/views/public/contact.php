@@ -31,9 +31,9 @@
                                     <div class="col-md-3">
                                         <h4>Office in New York</h4>
                                         <ul>
-                                            <li><a href="#">27th Brooklyn New York, NY 10065</a></li>
-                                            <li><a href="#">+7(111)123456789</a></li>
-                                            <li><a href="#">yourmail@domain.com</a></li>
+                                            <li><a href="#">Jl. Suka Mekar III No. 7, Bandung, Indonesia</a></li>
+                                            <li><a href="#">+62 22 2013973</a></li>
+                                            <li><a href="#">contact@subiantosiane.com</a></li>
                                         </ul>
                                     </div>
                                     <div class="col-md-3">

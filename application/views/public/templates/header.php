@@ -51,6 +51,38 @@
                 width: 100%;
                 height: 100%;
             }
+            #flipbook .page-wrapper{
+               -webkit-perspective:2000px;
+               -moz-perspective: 2000px;
+               -ms-perspective: 2000px;
+               perspective: 2000px;
+            }
+             .flipbook .shadow, .flipbook.shadow{
+                -webkit-transition: -webkit-box-shadow 0.5s;
+                -moz-transition: -moz-box-shadow 0.5s;
+                -o-transition: -webkit-box-shadow 0.5s;
+                -ms-transition: -ms-box-shadow 0.5s;
+            
+                -webkit-box-shadow:0 0 2px #000;
+                -moz-box-shadow:0 0 2px #000;
+                -o-box-shadow:0 0 2px #000;
+                -ms-box-shadow:0 0 2px #000;
+                box-shadow:0 0 2px #000;
+            } 
+            .flipbook .depth{
+                background-image:url(assets/public/images/pages-depth.png);
+                position:absolute;
+                top:7px;
+                width:16px;
+                height:590px;
+            }
+            .flipbook .turn-page{
+                -moz-box-shadow: inset 0 0 1px red;
+                -webkit-box-shadow: inset 0 0 1px red;
+                box-shadow: inset 0 0 1px red;  
+            }
+            
+
         </style>
     </head>
     <body>

@@ -10,30 +10,29 @@
             <div class="flipbook-viewport">
         		<div class="book-container rel">
         			<div class="flipbook" id="flipbook">
-        				<!-- <div class="hard"> Subianto & Siane </div>
-						<div class="hard"></div> -->
-						<div class="page" style="background-image:url()">
+        				<!-- <div class="hard"> Subianto & Siane </div> -->
+						<div class="" style="background:#ccc;"> <div class="side"></div> </div>
+						<div class=" front-side" style="background:#fff;"> </div>
+						<div class="page own-size" depth="5">
 							<img src="assets/public/images_example/turnjs_example/1.jpg" alt="">
 						</div>
-						<div class="page"  style="background-image:url()">
+						<div class="page own-size" depth="5">
 							<img src="assets/public/images_example/turnjs_example/2.jpg" alt="">
 						</div>
-						<div class="page"  style="background-image:url()">
+						<div class="page own-size">
 							<img src="assets/public/images_example/turnjs_example/3.jpg" alt="">
 						</div>
-						<div class="page"  style="background-image:url()">
+						<div class="page own-size">
 							<img src="assets/public/images_example/turnjs_example/4.jpg" alt="">
 						</div>
-						<div class="page"  style="background-image:url()">
+						<div class="page own-size">
 							<img src="assets/public/images_example/turnjs_example/5.jpg" alt="">
 						</div>
-						<div class="page"  style="background-image:url()">
+						<div class="page own-size">
 							<img src="assets/public/images_example/turnjs_example/6.jpg" alt="">
 						</div>
-						<div class="page"  style="background-image:url()">
-							<img src="assets/public/images_example/turnjs_example/7.jpg" alt="">
-						</div>
-						<div class="page"  class="" style="background: #ccc;"></div>
+						<div class="hard back-side" style="background:#fff;"> </div>
+						<div class="page hard" style="background: #ccc;"></div>
 					</div>
             	</div>
         	</div>
@@ -46,3 +45,5 @@
     <!-- wrapper end -->
 
  <?php $this->load->view('public/templates/footer'); ?>
+
+
