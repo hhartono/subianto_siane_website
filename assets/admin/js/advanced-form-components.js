@@ -11,7 +11,14 @@
         // $('.dateform-date-picker').datepicker({
         //     format: 'yyyy-mm-dd'
         // });
-        $('.dpYears').datepicker();
+        $('.dpYears').datepicker()
+            .on('changeDate', function(){
+                // console.log('datepicker-days show');
+                $('.datepicker-days table tbody').on('click', ' tr td.day', function(e){
+                    // e.preventDefault();
+                    $('.datepicker').css('display', 'none');
+                });
+            });
         $('.dpMonths').datepicker();
 
 
