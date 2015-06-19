@@ -33,6 +33,7 @@
 	                        <form action="/administrator/projectphotofinishsubmit" method="POST">
 	                        	<input type="hidden" name="idproject" value="<?php echo $idproject;?>">
 	                        	<?php 
+	                        	if(isset($projectalbum)){
 	                        		foreach ($projectalbum as $project){ 
 	                        	?>
 	                        		<div class="col-lg-3">
@@ -45,6 +46,9 @@
 	                        		
 	                        	<?php
 	                        		}
+	                        	}else{
+	                        		echo "";
+	                        	}
 	                        	?>
 	                        	<div class="col-lg-12">
 	         	               		<input type="submit" class="finish btn btn-danger" value="Finish">

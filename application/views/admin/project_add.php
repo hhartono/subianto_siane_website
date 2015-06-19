@@ -97,7 +97,11 @@
                                 <div class="form-group">
                                 	<label for="status" class="col-sm-2 control-label col-sm-2">Status</label>
                                 	<div class="col-md-4 col-xs-12">
-	                                    <input type="text" name="status" id="status" class="form-control" placeholder="Status">
+	                                    <select name="status" id="status" class="form-control m-bot15">
+	                                    	<option value="">Select Status</option>
+	                                    	<option value="in_progress">In Progress</option>
+	                                    	<option value="completed">Completed</option>
+	                                    </select>
 	                                </div>
                                 </div>
                                 <div class="form-group">
@@ -136,34 +140,34 @@
 			var projectstory = CKEDITOR.instances.projectstory.getData();
 			var date = $('input[name=date]').val();
 			var client = $('input[name=client]').val();
-			var status = $('input[name=status]').val();
+			var status = $('select[name=status]').val();
 			var location = $('input[name=location]').val();
 
 			if(title == ""){
-                $('input[name=title]').css('border-color', '#8A6D3B').addClass('form-error-focus');
+                $('input[name=title]').css('border-color', '#FF0000').addClass('form-error-focus');
                 proceed = false;
             }
             if(description == ""){
-                $('input[name=description]').css('border-color', '#8A6D3B').addClass('form-error-focus');
+                $('input[name=description]').css('border-color', '#FF0000').addClass('form-error-focus');
                 proceed = false;
             }
             if(category == ""){
-                $('select#category').css('border-color', '#8A6D3B !important').addClass('form-error-focus');
+                $('select#category').css('border-color', '#FF0000 !important').addClass('form-error-focus');
                 proceed = false;
             }
             if(date == ""){
-                $('input[name=date]').css('border-color', '#8A6D3B').addClass('form-error-focus');
+                $('input[name=date]').css('border-color', '#FF0000').addClass('form-error-focus');
                 proceed = false;
             }
             if(status == ""){
-                $('input[name=status]').css('border-color', '#8A6D3B').addClass('form-error-focus');
+                $('select[name=status]').css('border-color', '#FF0000').addClass('form-error-focus');
                 proceed = false;
             }
             if(location == ""){
-                $('input[name=location]').css('border-color', '#8A6D3B').addClass('form-error-focus');
+                $('input[name=location]').css('border-color', '#FF0000').addClass('form-error-focus');
                 proceed = false;
             }
-            $("input.form-error-focus:first").focus()
+            $("input.form-error-focus:first").focus();
             $("input.form-error-focus").removeClass('form-error-focus');
             $("#message_result").hide().html(output).slideDown();
 			if(proceed){

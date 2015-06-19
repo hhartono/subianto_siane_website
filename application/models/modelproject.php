@@ -457,6 +457,20 @@ class Modelproject extends CI_Model {
         return $query->row_array();
     }
 
+    public function loadAddProject()
+	{
+		$query = $this->db->query("
+				SELECT p.*, pc.category_name, 
+				    (SELECT pa.photo
+				        FROM project_album pa 
+				         WHERE p.id = pa.id_project AND pa.status_cover_project = 1 limit 0,1) as photo
+				FROM project p, project_category pc
+				WHERE p.id_category = pc.id
+				ORDER BY p.id DESC
+			");
+		return $query->row();
+	}
+
 }
 
 /* End of file modelproject.php */

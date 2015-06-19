@@ -427,7 +427,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
     Dropzone.prototype.defaultOptions = {
       url: null,
       parallelUploads: 2,
-      maxFilesize: 256,
+      maxFilesize: 1024,
       paramName: "file",
       createImageThumbnails: true,
       maxThumbnailFilesize: 2,
@@ -708,8 +708,8 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
     };
 
     Dropzone.prototype.accept = function(file, done) {
-      if (file.size > this.options.maxFilesize * 1024 * 1024) {
-        return done("File is too big (" + (Math.round(file.size / 1024 / 10.24) / 100) + "MB). Max filesize: " + this.options.maxFilesize + "MB");
+      if (file.size > this.options.maxFilesize) {
+        return done("File is too big (" + (Math.round(file.size / 1024 / 10.24) / 100) + "MB). Max filesize: " + this.options.maxFilesize + "KB");
       } else {
         return this.options.accept.call(this, file, done);
       }
