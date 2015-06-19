@@ -17,8 +17,8 @@
                     <p><?=$this->session->flashdata('message')?> </p>
 
                     	<fieldset title="Step: finish photos of project" class="step" id="default-step-0">
-	                   		<div class="col-lg-11">
-		                    	<button class="btn btn-success btn-primary col-md-offset-12" data-toggle="modal" data-target="#viewModal">
+	                   		<div>
+		                    	<button class="btn btn-success" data-toggle="modal" data-target="#viewModal">
 		      	                    <i class="fa fa-plus"></i> Tambah Photo
 		                        </button>
                     		</div>
@@ -71,7 +71,7 @@
                             <div class="modal-body">
                                 <fieldset title="Step: upload photos of project" class="step" id="default-step-0">
 			                        <form action="/administrator/projectphotouploadsubmit" class="dropzone" id="projectphotoupload">
-			                        	<input type="hidden" name="idproject" name="idproject" value="<?php echo $idproject;?>">
+			                        	<input type="hidden" name="idproject" id="idproject" value="<?php echo $idproject;?>">
 			                        </form>	
 			                    </fieldset>
                             </div>

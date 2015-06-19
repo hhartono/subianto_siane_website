@@ -5,7 +5,7 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
             <!-- <li>
-                <a class="<?php echo (isset($dashboardactive))? $dashboardactive: '' ;?>" href="/administrator">
+                <a class="<?php //echo (isset($dashboardactive))? $dashboardactive: '' ;?>" href="/administrator">
                     <i class="fa fa-dashboard"></i>
                     <span>Dashboard</span>
                 </a>
@@ -41,14 +41,10 @@
             </li>
 
             <li class="sub-menu">
-                <a href="javascript:;" class="<?php echo (isset($randomactive))? 'active' : '' ;?>" >
+                <a href="/administrator/randomsidebar" class="<?php echo (isset($randomactive))? 'active' : '' ;?>" >
                     <i class=" fa fa-picture-o"></i>
-                    <span>Photo</span>
+                    <span>Random Sidebar</span>
                 </a>
-                <ul class="sub">
-                    <li class="<?php echo (isset($randomactive))? $randomactive : '' ;?>"><a href="/administrator/randomsidebar">Random Sidebar</a></li>
-                    
-                </ul>
             </li>
 
             <li class="sub-menu">

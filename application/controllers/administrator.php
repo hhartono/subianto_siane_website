@@ -145,6 +145,7 @@ class Administrator extends CI_Controller{
 				'username' => $this->tank_auth->get_username(),
 				'projectactive' => 'active',
 				'loadallproject' => $this->modelproject->loadAllProject(),
+				'loadaddproject' => $this->modelproject->loadAddProject(),
 				'categoryall' => $this->modelproject->loadAllProjectCategory()
 			);
 		$this->load->view('admin/project', $data);

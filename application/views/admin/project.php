@@ -45,6 +45,9 @@
                                             </br><a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-primary" style="height: 35px; width: 120px; "><i class="fa fa-edit"></i> Edit</a><br>
 		                                  	</br><button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; ">
                                                     <i class="fa fa-trash-o"></i> Delete
+                                                </button><br>
+                                            </br><button class="btn btn-success" data-toggle="modal" data-target="#addPhotoModal" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; ">
+                                                    <i class="fa fa-plus"></i> Tambah Photo
                                                 </button>
 		                                  </td>
 		                              </tr>
@@ -127,6 +130,28 @@
                         </div>
                     </div>  
                     <!-- END MODAL FOR DELETE -->
+
+                    <div class="modal fade" id="addPhotoModal" tabindex="-1" role="dialog" aria-labelledby="addPhotoModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title" id="addPhotoModalLabel">Tambah Photo</h4>
+                            </div>
+                            <div class="modal-body">
+                                <fieldset title="Step: upload photos of project" class="step" id="default-step-0">
+                                    <form action="/administrator/projectphotouploadsubmit" class="dropzone" id="projectphotoupload">
+                                        <input type="hidden" name="idproject" id="idproject" value="<?php echo $loadaddproject->id;?>">
+                                    </form> 
+                                </fieldset>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                            </div>
+                      </div>
+                    </div>
+                </div>  
 	          </div>
 	      </div>
 	      <!-- page end-->
@@ -135,6 +160,7 @@
 	<!--main content end-->
 
     <script src="/assets/admin/js/jquery.js"></script>
+    <script src="/assets/admin/assets/dropzone/dropzone.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
         	/*
@@ -167,6 +193,13 @@
 	            modal.find('.modal-body h2#h2alert').text('Hapus Project ' +title+'?')
 	            modal.find('.modal-footer a#deletelink').attr("href", 'projectdelete/'+id)
 	        });
+
+            $('#addPhotoModal').on('show.bs.modal', function (event) {
+            });
+
+            $('#addPhotoModal').on('hidden.bs.modal',function(){
+                location.reload();
+            });
         })
     </script>
 
