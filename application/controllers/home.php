@@ -12,10 +12,21 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data = array(
-				'title' => 'Subianto & Siane Architecture - Home',
-				'homeactlink' => 'act-link',
-				'loadfeaturedhome' => $this->modelproject->loadFeaturedHome()
-			);
+			'title' => 'Subianto & Siane Architecture - Home',
+			'homeactlink' => 'act-link',
+			// 'loadfeaturedhome' => $this->modelproject->loadFeaturedHome()
+		);
+		$this->load->view('public/home', $data);
+	}
+	
+	public function intro()
+	{
+		$data = array(
+			'title' => 'Subianto & Siane Architecture - Home',
+			'homeactlink' => 'act-link',
+			// 'loadfeaturedhome' => $this->modelproject->loadFeaturedHome()
+			'hometoplayer' => 'hometoplayer'
+		);
 		$this->load->view('public/home', $data);
 	}
 }

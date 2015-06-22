@@ -463,8 +463,9 @@ header{
 	top:0;
 	left:0;
 	z-index:20;
-	padding:20px 0;
-	width:70%;
+	padding:10px 0;
+	/*width:70%;*/
+	width:100%;
 	background:#fff;
 	-webkit-transform: translate3d(0,0,0);
 }
@@ -473,23 +474,33 @@ header{
 	position:relative;
 	max-width: 1024px;
 	width:92%;
-	padding-right:90px;
+	/*padding-right:90px;*/
 }
 .logo-holder {
-	float:left;
+	/*float:left;*/
+	float:center;
 	position:relative;
-	max-width:200px;
+	max-width:260px;
 	z-index:21;
+	margin: 0 auto 30px;
+	/*margin-bottom: 30px;*/
 }
 /*------ navigation  ------------------------------------------------*/ 
 .nav-holder {
-	float:right;
+	/*float:right;*/
+	float:center;
 	position:relative;
+	width: 1000px;
+
 }
 nav {
 	position:relative;
-	float:left;
-	width:100%;
+	float:right;
+	left:-25%;
+	/*width:100%;*/
+}
+nav ul{
+	
 }
 nav li{
 	float:left;
@@ -2389,5 +2400,6 @@ section {
 }
 }
 .ss-logo {
-    max-height: 70px;
+    /*max-height: 70px;*/
+    max-height: 110px;
 }

@@ -19,6 +19,41 @@
         <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
         
         <script type="text/javascript">
+            
+
+            $(document).ready(function(){
+                $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
+
+                $(".introword").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
+                $(".introword").animate({opacity:0})
+                $(".introword").eq(0).delay(600).animate({
+                    opacity:1,
+                    paddingTop: "155px"
+                }, 900 );
+                $(".introword").eq(1).delay(1000).animate({
+                    opacity:1
+                }, 900 );
+                $(".introword").eq(2).delay(1400).animate({
+                    opacity:1
+                }, 900 );
+                $(".introword").eq(3).delay(1800).animate({
+                    opacity:1
+                }, 900, function(){
+                    $("a#explore").click(function(){
+                        $("#masklayer").fadeOut(function(){
+                            $(".introword").eq(3).delay(50).animate({opacity:0},900, function(){
+                                    $("#hometoplayer").fadeOut();
+                                });
+                            $(".introword").eq(2).delay(75).animate({opacity:0});
+                            $(".introword").eq(1).delay(100).animate({opacity:0});
+                            $(".introword").eq(0).delay(125).animate({opacity:0});
+
+                        });
+                        return false;
+                    })
+                });
+            });
+
             /*
              * Turn.js responsive book
              */

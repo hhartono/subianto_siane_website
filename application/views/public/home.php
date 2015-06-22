@@ -3,16 +3,34 @@
     <!--=============== wrapper ===============-->	
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
-            <div class="content full-height">
-                <div class="swiper-container" id="horizontal-slider" data-mwc="1">
-                    <div class="swiper-wrapper">
+            <div class="content full-height" style="">
+                <div class="contentcenter" style="padding-top:221px; margin:0px auto;width:100%; max-width:1024px; height:100%">
+                    <a href="">
+                        <div class="longbox box-left" style="margin-left:10%; float:left; width:20%; height:60%;background:#ccc;">
+                            
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="longbox box-center" style="margin-left:10%; margin-right:10%;float:left; width:20%; height:60%;background:#ccc;">
+                            
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="longbox box-right" style="margin-right:10%;float:left; width:20%; height:60%;background:#ccc;">
+                            
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- <div class="swiper-container" id="horizontal-slider" data-mwc="1"> -->
+                    <!-- <div class="swiper-wrapper"> -->
                     <?php
-                    if(isset($loadfeaturedhome)){
-                        foreach ($loadfeaturedhome as $lfh){
+                    // if(isset($loadfeaturedhome)){
+                        // foreach ($loadfeaturedhome as $lfh){
                     ?>
-                        <div class="swiper-slide">
-                            <div class="bg" style="background-image:url(/uploads/project/<?php echo $lfh->photo;?>)"></div>
-                            <div class="overlay"></div>
+                        <!-- <div class="swiper-slide"> -->
+                            <!-- <div class="bg" style="background-image:url(/uploads/project/<?php echo $lfh->photo;?>)"></div> -->
+                            <!-- <div class="overlay"></div> -->
                             <!--
                             <div class="slide-title-holder">
                                 <div class="slide-title">
@@ -24,10 +42,10 @@
                             -->
                         </div>
                     <?php        
-                        }
-                    }else{
+                        // }
+                    // }else{
                     ?>
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <div class="bg" style="background-image:url(/assets/public/images/bg/1.jpg)"></div>
                             <div class="overlay"></div>
                             <div class="slide-title-holder">
@@ -36,18 +54,19 @@
                                     <h4>Ut wisi enim ad minim veniam, quis nostrud exerci</h4>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     <?php
-                    }
+                    // }
                     ?>
                         
-                    </div>
-                    <div class="swiper-nav-holder hor">
+                    <!-- </div> -->
+                    <!-- <div class="swiper-nav-holder hor">
                         <a class="swiper-nav arrow-left transition " href="#"><i class="fa fa-long-arrow-left"></i></a>
                         <a class="swiper-nav  arrow-right transition" href="#"><i class="fa fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="pagination"></div>
+                    </div> -->
+                <!-- </div> -->
+                <!-- <div class="pagination"></div> -->
+
             </div>
         </div>
     </div>

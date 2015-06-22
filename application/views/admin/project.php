@@ -41,12 +41,12 @@
 		                                  <td style="text-align: center; vertical-align: middle;"><?php echo $lap->description;?></td>
 		                                  <td style="vertical-align: middle;"><?php echo html_entity_decode($lap->project_story);?></td>
 		                                  <td style="text-align: center; vertical-align: middle;">
-		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger" style="height: 35px; width: 120px; ">Feature Home</a><br>
-                                            </br><a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-primary" style="height: 35px; width: 120px; "><i class="fa fa-edit"></i> Edit</a><br>
-		                                  	</br><button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; ">
+		                                  	<a href="/administrator/projectphotohomeview/<?php echo $lap->id; ?>" class="btn btn-danger" style="height: 35px; width: 120px; " title="Feature Home">Feature Home</a><br>
+                                            </br><a href="/administrator/projectupdate/<?php echo $lap->id; ?>" class="btn btn-primary" style="height: 35px; width: 120px; "><i class="fa fa-edit" title="Edit Project"></i> Edit</a><br>
+		                                  	</br><button class="btn btn-warning" data-toggle="modal" data-target="#deleteModal" data-title="<?php echo $lap->title;?>" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; " title="Delete Project">
                                                     <i class="fa fa-trash-o"></i> Delete
                                                 </button><br>
-                                            </br><button class="btn btn-success" data-toggle="modal" data-target="#addPhotoModal" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; ">
+                                            </br><button class="btn btn-success" data-toggle="modal" data-target="#addPhotoModal" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; " title="Add Project Photo">
                                                     <i class="fa fa-plus"></i> Tambah Photo
                                                 </button>
 		                                  </td>

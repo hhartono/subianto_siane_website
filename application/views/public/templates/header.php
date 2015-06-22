@@ -81,7 +81,13 @@
                 -webkit-box-shadow: inset 0 0 1px red;
                 box-shadow: inset 0 0 1px red;  
             }
-            
+            a#explore, a#gotocontact{
+                color: #fff !important;
+                opacity: 0.5;
+            }
+            a#explore:hover, a#gotocontact:hover{
+                opacity: 0.9;
+            }
 
         </style>
     </head>
@@ -89,11 +95,45 @@
         <div class="loader"><i class="fa fa-refresh fa-spin"></i></div>
         <!--================= main start ================-->
         <div id="main">
+            <?php 
+            if(isset($hometoplayer)){
+            ?>
+                <div id="masklayer" style="background:#4b4842;position:fixed;z-index:90;"></div>
+                <div id="hometoplayer" style="position:relative;z-index:100;">
+                    <div class="introword" style="width:460px;">
+                        <img style="" src="/assets/public/images/intro_subianto_white.png" alt="">
+                    </div>
+                    <div class="introword" style="width:460px;">
+                        <img style="" src="/assets/public/images/intro_siane_white.png" alt="">
+                    </div>
+                    <div class="introword" style="width:460px;">
+                        <img style="" src="/assets/public/images/intro_architect_white.png" alt="">
+                    </div>
+                    <div class="introword" style="width:460px; margin-top:165px;">
+                        <div style="float:left;width:230px;">
+                            <a href="#" id="explore">
+                                EXPLORE OUR PROJECTS
+                            </a>
+                        </div>
+                        <div style="float:left;width:230px;">
+                            <a href="/contact" id="gotocontact">
+                                CONTACT US
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            <?php
+            }else{
+                // echo nothing
+            }
+            ?>
+            
             <!--=============== header ===============-->   
             <header>
                 <div class="header-inner">
                     <div class="logo-holder">
-                        <a href="/" class="ajax"><img class="ss-logo" src="/assets/public/images/ss_logo.png" alt=""></a>
+                        <a href="/home" class="ajax"><img class="ss-logo" src="/assets/public/images/ss_logo.png" alt=""></a>
                     </div>
                     <div class="nav-button-holder">
                         <div class="nav-button vis-m"><span></span><span></span><span></span></div>
@@ -101,7 +141,7 @@
                     <div class="nav-holder">
                         <nav>
                             <ul>
-                                <li><a href="/" class="ajax <?php echo (isset($homeactlink))? $homeactlink : '';?>">Home</a></li>
+                                <li><a id="navhome" href="/home" class="ajax <?php echo (isset($homeactlink))? $homeactlink : '';?>">Home</a></li>
                                 <li><a href="/project" class="ajax <?php echo (isset($projectactlink))? $projectactlink: '' ;?>">Projects</a></li>
                                 <li>
                                     <a href="/about" class="ajax <?php echo (isset($aboutactlink))? $aboutactlink: '' ;?>">About us </a>
