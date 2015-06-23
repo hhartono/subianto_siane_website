@@ -15,7 +15,7 @@
                                     <div class="gallery-item <?php echo $lap->category_name;?>">
                                         <div class="grid-item-holder">
                                             <div class="box-item">
-                                                <a href="project/detail/<?php echo $lap->project_uri;?>" class="ajax">
+                                                <a href="/project/detail/<?php echo $lap->project_uri;?>" class="ajax">
                                                 <span class="overlay"></span> 
                                             <?php
                                                 if($lap->photo == "" || $lap->photo == '0'){
@@ -57,9 +57,23 @@
                         if(isset($loadcategorycount)){
                             foreach($loadcategorycount as $lcc){
                                 if($lcc->count_category > 0){
+
+                                    if(isset($filter)){
+                                        $f = ucwords($filter);
+                                        if($f == $lcc->category_name){
+                        ?>
+                                            <a href="#" class="gallery-filter " data-filteractive=".<?php echo $f;?>" data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>    
+                        <?php                
+                                        }else{
+                        ?>
+                                            <a href="#" class="gallery-filter " data-filteractive="" data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>    
+                        <?php
+                                        }
+                                    }else{
                         ?>
                                 <a href="#" class="gallery-filter " data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>
                         <?php
+                                    }
                                 }else{
                                     echo '';
                                 }

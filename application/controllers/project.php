@@ -21,6 +21,23 @@ class Project extends CI_Controller {
 		$this->load->view('public/project', $data);
 	}
 
+	public function filter()
+	{
+		$uri = $this->uri->segment(3);
+		if($uri == ''){
+			redirect('project/');
+		}else{
+			$data = array(
+				'title' => 'Subianto & Siane Architecture - Project',
+				'projectactlink' => 'act-link',
+				'loadcategorycount' => $this->modelcategory->loadCategoryCount(),
+				'loadallproject' => $this->modelproject->loadAllProject(),
+				'filter' => strtolower($uri)
+			);
+			$this->load->view('public/project', $data);
+		}
+	}
+
 	public function detail()
 	{
 		$projecturi = $this->uri->segment(3);

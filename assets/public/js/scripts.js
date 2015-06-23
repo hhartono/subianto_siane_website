@@ -230,7 +230,8 @@ function initDomik() {
             var a = $(".gallery-items").isotope({
                 singleMode: true,
                 columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
-                itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three"
+                itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
+                //filter: '.Interior'
             });
             a.imagesLoaded(function() {
                 a.isotope("layout");
@@ -388,6 +389,30 @@ function initDomik() {
         $("#message").slideUp(1500);
     });
 	// IMPORTANT INIT YOUR FUNCTIONS HERE ------------------
+    function projectfilter(){
+        $(".gallery-filter").each(function(i){
+            var fa = $(this).attr("data-filteractive");
+            //console.log(i);
+            if(fa != ""){
+                var pf = $(".gallery-items").isotope({
+                    singleMode: true,
+                    columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
+                    itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
+                    filter: fa
+                });
+                console.log(fa);
+                pf.imagesLoaded(function() {
+                    pf.isotope("layout");
+                });
+                $(this).addClass("gallery-filter-active");
+            }
+        })
+    }
+    // projectfilter();
+    $(window).load(function() {
+       projectfilter();
+    });
+
     /*var fb = $('.flipbook');
     function loadApp(){
         // console.log("loadApp() called");

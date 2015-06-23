@@ -22,7 +22,7 @@
                         <div class="category-intro-item <?php echo $bp;?> ">
                             <div class="category-item-holder ">
                                 <div class="category-box-item ">
-                                    <a href="" class="ajax">
+                                    <a href="/project/filter/<?php echo strtolower($category->category_name);?>" class="ajax">
                                     <span class="overlay"></span> 
                                     <?php
                                     if($c==1){
