@@ -26,17 +26,17 @@
 
                 $(".introword").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
                 $(".introword").animate({opacity:0})
-                $(".introword").eq(0).delay(600).animate({
+                $(".introword").eq(0).delay(1000).animate({
                     opacity:1,
                     paddingTop: "155px"
                 }, 900 );
-                $(".introword").eq(1).delay(1000).animate({
+                $(".introword").eq(1).delay(1500).animate({
                     opacity:1
                 }, 900 );
-                $(".introword").eq(2).delay(1400).animate({
+                $(".introword").eq(2).delay(2000).animate({
                     opacity:1
                 }, 900 );
-                $(".introword").eq(3).delay(1800).animate({
+                $(".introword").eq(3).delay(2500).animate({
                     opacity:1
                 }, 900, function(){
                     $("a#explore").click(function(){

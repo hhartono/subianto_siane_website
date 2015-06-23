@@ -157,7 +157,7 @@
             .category-box-item a img{
                 position: relative;
                 z-index: 1;
-                width:150%;
+                width:135%;
                 height: auto;
                 margin:0 auto;
             }

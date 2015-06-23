@@ -191,7 +191,7 @@
 	            var modal = $(this)
 	            modal.find('.modal-title').text(title)
 	            modal.find('.modal-body h2#h2alert').text('Hapus Project ' +title+'?')
-	            modal.find('.modal-footer a#deletelink').attr("href", 'projectdelete/'+id)
+	            modal.find('.modal-footer a#deletelink').attr("href", '/administrator/projectdelete/'+id)
 	        });
 
             $('#addPhotoModal').on('show.bs.modal', function (event) {
