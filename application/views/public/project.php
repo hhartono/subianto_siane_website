@@ -6,7 +6,7 @@
             <div class="content  mm">
                 <div class="filter-holder fixed-filter">
                     <div class="gallery-filters vis-filter">
-                        <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*">All</a>       
+                        <!-- <a href="#" class="gallery-filter gallery-filter-active"  data-filter="*">All</a>        -->
                     <?php 
                         if(isset($loadcategorycount)){
                             foreach($loadcategorycount as $lcc){

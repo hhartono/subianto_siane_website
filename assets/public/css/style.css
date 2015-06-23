@@ -1432,7 +1432,7 @@ article {
     -ms-transition: all 500ms linear;
     transition: all 500ms linear;
 }
-.hid-port-info .grid-item-holder:hover .grid-item  {
+.hid-port-info .grid-item-holder:hover .grid-item, .hid-port-info .category-item-holder:hover .category-item {
 	bottom:0;
 }
 .grid-item h3 {
@@ -1451,7 +1451,7 @@ article {
 	opacity:0.6;
 	margin-top:6px;
 }
- .grid-item-holder:before {
+.grid-item-holder:before {
 	content:'';
 	position:absolute;
 	right:20px;
@@ -2206,7 +2206,7 @@ footer:before {
 	-webkit-transform:rotate3d(0,0,1,180deg)}
 }
 /*------  Responsive ------------------------------------------------------*/
-@media only screen and  (max-width: 1036px) {
+@media only screen and  (max-width: 1023px) {
 .mob-bg {
 	display:block;
 }

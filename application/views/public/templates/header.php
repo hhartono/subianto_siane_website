@@ -88,6 +88,125 @@
             a#explore:hover, a#gotocontact:hover{
                 opacity: 0.9;
             }
+            /*
+            .category-intro-items{
+
+            }*/
+            .category-intro-item{
+                width:20%;
+                float:left;
+            }
+            .category-item-holder{
+                /*overflow: hidden;*/
+                float: left;
+                width:100%;
+                height: auto;
+                position: relative;
+            }
+            .hid-port-info .category-item-holder{
+                overflow: hidden;
+            }
+            .category-item-holder:before {
+                content:'';
+                position:absolute;
+                right:20px;
+                bottom:10px;
+                background:#000;
+            }
+            .category-item-holder:before {
+                width:0;
+                height:6px;
+            }
+            .category-item-holder:hover:before   {
+                width:50px;
+            }  
+            .category-item-holder a img, .category-item-holder:before  {
+                -webkit-transition: all 300ms linear;
+                -moz-transition: all 300ms linear;
+                -o-transition: all 300ms linear;
+                -ms-transition: all 300ms linear;
+                transition: all 300ms linear;
+            }
+            .category-box-item{
+                float:left;
+                width:100%;
+            }
+            .category-box-item a{
+                float:left;
+                width:100%;
+                height:100%;
+                position:relative;
+                overflow: hidden;
+            }
+
+            .category-box-item a .overlay{
+                opacity: 0;
+                z-index: 2;
+                -webkit-transition: all 200ms linear;
+                -moz-transition: all 200ms linear;
+                -o-transition: all 200ms linear;
+                -ms-transition: all 200ms linear;
+                transition: all 200ms linear;
+            }
+            .category-box-item a:hover .overlay {
+                opacity:0.3;
+            }
+            .category-intro-item .overlay{
+                background: #fff;
+            }
+            .category-box-item a img{
+                position: relative;
+                z-index: 1;
+                width:150%;
+                height: auto;
+                margin:0 auto;
+            }
+            .category-item{
+                position: relative;
+                float: left;
+                width:100%;
+                z-index: 3;
+                margin-top:10px;
+                padding-bottom: 10px;
+            }
+            .hid-port-info .category-item{
+                position: absolute;
+                bottom:-100%;
+                left:0px;
+                margin:0px;
+                padding:10px 20px;
+                background: #fff;
+                -webkit-transition: all 500ms linear;
+                -moz-transition: all 500ms linear;
+                -o-transition: all 500ms linear;
+                -ms-transition: all 500ms linear;
+                transition: all 500ms linear;
+            }
+            .category-item h3{
+                font-size:12px;
+                text-transform: uppercase;
+                font-weight: 700;
+                position:relative;
+                float: left;
+                font-family:'futurastd-bold';
+            }
+            .longbox{
+                float:left;
+                width:20%;
+                height: 60%;
+                background: #ccc;
+                overflow: hidden;
+            }
+            .box-right{
+                margin-right: 15%;
+            }
+            .box-left{
+                margin-left:15%;
+            }
+            .box-center{
+                margin-right:5%;
+                margin-left:5%;
+            }
 
         </style>
     </head>

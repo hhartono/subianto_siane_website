@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+		$this->load->model('modelcategory');
 		$this->load->model('modelproject');
 	}
 
@@ -15,6 +16,7 @@ class Home extends CI_Controller {
 			'title' => 'Subianto & Siane Architecture - Home',
 			'homeactlink' => 'act-link',
 			// 'loadfeaturedhome' => $this->modelproject->loadFeaturedHome()
+			'loadcategorycount' => $this->modelcategory->loadCategoryCount()
 		);
 		$this->load->view('public/home', $data);
 	}
@@ -25,6 +27,7 @@ class Home extends CI_Controller {
 			'title' => 'Subianto & Siane Architecture - Home',
 			'homeactlink' => 'act-link',
 			// 'loadfeaturedhome' => $this->modelproject->loadFeaturedHome()
+			'loadcategorycount' => $this->modelcategory->loadCategoryCount(),
 			'hometoplayer' => 'hometoplayer'
 		);
 		$this->load->view('public/home', $data);

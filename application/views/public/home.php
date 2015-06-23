@@ -4,22 +4,123 @@
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content full-height" style="">
-                <div class="contentcenter" style="padding-top:221px; margin:0px auto;width:100%; max-width:1024px; height:100%">
+                <div class="contentcenter  hid-port-info" style="padding-top:221px; margin:0px auto;width:100%; max-width:1024px; height:100%">
+                <?php 
+                if(isset($loadcategorycount)){
+                    $c = 1;
+                    foreach ($loadcategorycount as $category) {
+                        if($c==1){
+                            $bp = 'box-left';
+                        }
+                        if($c==2){
+                            $bp = 'box-center';
+                        }
+                        if($c==3){
+                            $bp = 'box-right';
+                        }
+                ?>   
+                        <div class="category-intro-item <?php echo $bp;?> ">
+                            <div class="category-item-holder ">
+                                <div class="category-box-item ">
+                                    <a href="" class="ajax">
+                                    <span class="overlay"></span> 
+                                    <?php
+                                    if($c==1){
+                                    ?>
+                                        <img  src="/assets/public/images_example/011903-8R.jpg"   alt="">
+                                    <?php
+                                    }
+                                    if($c==2){
+                                    ?>
+                                        <img  src="/assets/public/images_example/045189-8R.jpg"   alt="">
+                                    <?php      
+                                    }
+                                    if($c==3){
+                                    ?>
+                                        <img  src="/assets/public/images_example/015512-8R.jpg"   alt="">
+                                    <?php
+                                    }
+                                    ?>
+                                    </a>
+                                </div>
+                                <div class="category-item grid-item ">
+                                    <h3>
+                                        <a href="" class=""><?php echo $category->category_name;?></a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                <?php     
+                        $c++;
+                    }
+                }else{
+                    // echo nothing
+                }
+                ?>
+                    <!-- <div class="category-intro-item box-left">
+                        <div class="category-item-holder ">
+                            <div class="category-box-item ">
+                                <a href="" class="ajax">
+                                <span class="overlay"></span> 
+                                <img  src="/assets/public/images_example/011903-8R.jpg"   alt="">
+                                </a>
+                            </div>
+                            <div class="category-item grid-item ">
+                                <h3>
+                                    <a href="" class="">Houses</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-intro-item box-center">
+                        <div class="category-item-holder ">
+                            <div class="category-box-item ">
+                                <a href="" class="ajax">
+                                <span class="overlay"></span> 
+                                <img  src="/assets/public/images_example/045189-8R.jpg"   alt="">
+                                </a>
+                            </div>
+                            <div class="category-item grid-item ">
+                                <h3>
+                                    <a href="" class="">Interior</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-intro-item box-right">
+                        <div class="category-item-holder ">
+                            <div class="category-box-item ">
+                                <a href="" class="ajax">
+                                <span class="overlay"></span> 
+                                <img  src="/assets/public/images_example/015512-8R.jpg"   alt="">
+                                </a>
+                            </div>
+                            <div class="category-item grid-item ">
+                                <h3>
+                                    <a href="" class="">Industrial</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- 
                     <a href="">
-                        <div class="longbox box-left" style="margin-left:10%; float:left; width:20%; height:60%;background:#ccc;">
+                        <div class="longbox box-left">
                             
                         </div>
                     </a>
                     <a href="">
-                        <div class="longbox box-center" style="margin-left:10%; margin-right:10%;float:left; width:20%; height:60%;background:#ccc;">
+                        <div class="longbox box-center">
                             
                         </div>
                     </a>
                     <a href="">
-                        <div class="longbox box-right" style="margin-right:10%;float:left; width:20%; height:60%;background:#ccc;">
+                        <div class="longbox box-right">
                             
                         </div>
-                    </a>
+                    </a> -->
                 </div>
                 
                 <!-- <div class="swiper-container" id="horizontal-slider" data-mwc="1"> -->
