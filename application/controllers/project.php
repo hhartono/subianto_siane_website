@@ -6,6 +6,7 @@ class Project extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+		$this->load->helper(array('url'));
 		$this->load->model('modelcategory');
 		$this->load->model('modelproject');
 	}
@@ -23,27 +24,28 @@ class Project extends CI_Controller {
 
 	public function filter()
 	{
-		$uri = $this->uri->segment(3);
-		if($uri == ''){
-			redirect('project/');
-		}else{
+		$uri3 = $this->uri->segment(3);
+		$checkcategory = $this->modelproject->checkProjectbyFilter($uri3);
+		if($checkcategory->num_rows() > 0){
 			$data = array(
 				'title' => 'Subianto & Siane Architecture - Project',
 				'projectactlink' => 'act-link',
 				'loadcategorycount' => $this->modelcategory->loadCategoryCount(),
 				'loadallproject' => $this->modelproject->loadAllProject(),
-				'filter' => strtolower($uri)
+				'filter' => strtolower($uri3)
 			);
 			$this->load->view('public/project', $data);
+		}else{
+			redirect('project/');
+			// echo 'error';
 		}
 	}
 
 	public function detail()
 	{
 		$projecturi = $this->uri->segment(3);
-		if($projecturi == ''){
-			redirect('project/');
-		}else{
+		$checkprojectdetail = $this->modelproject->checkProjectDetail($projecturi);
+		if($checkprojectdetail->num_rows() > 0){
 			$p = $this->getprevproject($projecturi);
 			$n = $this->getnextproject($projecturi);
 			if($p!=''){
@@ -66,6 +68,8 @@ class Project extends CI_Controller {
 				'next' => $next
 			);
 			$this->load->view('public/project_detail', $data);	
+		}else{
+			redirect('project/');
 		}
 	}
 

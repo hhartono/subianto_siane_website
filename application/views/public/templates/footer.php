@@ -19,13 +19,8 @@
         <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
         
         <script type="text/javascript">
-                
-
             $(document).ready(function(){
-
-
                 $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
-
                 $(".introword").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
                 $(".introword").animate({opacity:0})
                 $(".introword").eq(0).delay(1000).animate({
@@ -54,6 +49,8 @@
                         return false;
                     })
                 });
+
+                $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
             });
 
             /*

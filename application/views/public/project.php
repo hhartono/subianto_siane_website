@@ -62,11 +62,11 @@
                                         $f = ucwords($filter);
                                         if($f == $lcc->category_name){
                         ?>
-                                            <a href="#" class="gallery-filter " data-filteractive=".<?php echo $f;?>" data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>    
+                                            <a href="#" class="gallery-filter " data-url="<?php echo $lcc->category_name;?>" data-filteractive=".<?php echo $f;?>" data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>    
                         <?php                
                                         }else{
                         ?>
-                                            <a href="#" class="gallery-filter " data-filteractive="" data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>    
+                                            <a href="#" class="gallery-filter " data-url="<?php echo $lcc->category_name;?>" data-filteractive="" data-filter=".<?php echo $lcc->category_name;?>"><?php echo ucwords($lcc->category_name);?></a>    
                         <?php
                                         }
                                     }else{

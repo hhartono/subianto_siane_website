@@ -471,6 +471,27 @@ class Modelproject extends CI_Model {
 		return $query->row();
 	}
 
+	public function checkProjectbyFilter($category)
+	{
+		$query = $this->db->query("
+				SELECT p.id, pc.category_name 
+				FROM project p, project_category pc 
+				WHERE p.id_category = pc.id 
+				AND pc.category_name='$category';
+			");
+		return $query;
+	}
+
+	public function checkProjectDetail($projecturi)
+	{
+		$query = $this->db->query("
+				SELECT p.id, p.title
+                FROM project p
+                WHERE p.project_uri = '$projecturi'
+			");
+		return $query;
+	}
+
 }
 
 /* End of file modelproject.php */
