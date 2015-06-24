@@ -17,6 +17,8 @@
         <script type="text/javascript" src="/assets/public/js/scripts.js"></script>
         
         <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
+
+        <script type="text/javascript" src="/assets/public/js/fotorama.js"></script>
         
         <script type="text/javascript">
             $(document).ready(function(){
@@ -51,7 +53,10 @@
                 });
 
                 $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
+                $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
             });
+
+
 
             /*
              * Turn.js responsive book

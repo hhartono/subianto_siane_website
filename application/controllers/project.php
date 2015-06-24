@@ -37,7 +37,7 @@ class Project extends CI_Controller {
 			$this->load->view('public/project', $data);
 		}else{
 			redirect('project/');
-			// echo 'error';
+			// echo '404 not found';
 		}
 	}
 

@@ -3,7 +3,7 @@
     <!--=============== wrapper ===============-->	
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
-            <div class="content  mm">
+            <div class="content mm">
                 <div class="contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; height:100%">
                     
                     <div class="gallery-items hid-port-info">
