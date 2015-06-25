@@ -27,7 +27,12 @@
                                 <?php
                                     if(isset($loadallphotosdetailproject)){
                                 ?>
-                                    <div class="fotorama" data-nav="thumbs" data-width="670" data-maxwidth="100%">
+                                    <div class="fotorama" 
+                                        data-nav="thumbs" 
+                                        data-height="400" 
+                                        data-maxwidth="100%" 
+                                        data-transition="crossfade" 
+                                        data-keyboard="true">
                                 <?php
                                         foreach ($loadallphotosdetailproject as $lad) {
                                 ?>

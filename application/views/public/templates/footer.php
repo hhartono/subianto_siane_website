@@ -54,6 +54,19 @@
 
                 $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
                 $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
+                
+                /*
+                 * show / hide scroll top arrow
+                 */
+                $(".to-top").hide();
+                $(window).scroll(function(){
+                    if($(window).scrollTop() > 120){
+                        $(".to-top").fadeIn();
+                    }else{
+                        $(".to-top").fadeOut();
+                    } 
+                })
+                /* end scroll top */
             });
 
 
