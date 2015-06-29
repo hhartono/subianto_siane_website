@@ -16,6 +16,7 @@
         <link rel="shortcut icon" href="/assets/public/images/favicon.ico">
         <!--link rel="stylesheet" href="/assets/public/css/turnjs/basic.css"-->
         <link rel="stylesheet" href="/assets/public/css/fotorama.css">
+
         <style>
             .flipbook-viewport{
                 display: table;

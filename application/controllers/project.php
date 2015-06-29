@@ -129,6 +129,7 @@ class Project extends CI_Controller {
 		// print_r($nextpost);
 		return $nextpost;
 	}
+
 }
 
 /* End of file project.php */

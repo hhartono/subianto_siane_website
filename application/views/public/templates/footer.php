@@ -13,13 +13,10 @@
         ?>
         <script type="text/javascript" src="/assets/public/js/core.js"></script>
         <script type="text/javascript" src="/assets/public/js/plugins.js"></script>
-        
         <script type="text/javascript" src="/assets/public/js/scripts.js"></script>
-        
         <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
-
         <script type="text/javascript" src="/assets/public/js/fotorama.js"></script>
-        
+
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
@@ -67,6 +64,74 @@
                     } 
                 })
                 /* end scroll top */
+
+                // var giItemHeight = $()
+                $('.gallery-item').css("top", $(".gallery-item img").height()+"px");
+                // height of container gallery
+                $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+                var gSize = $(".gallery-item").size();
+                // var gSize = 12;
+                var rSize = 4;
+                var cSize = 8;
+                var firstRow = 1;
+                var lastRow;
+                var nRow = parseInt(gSize/cSize); 
+                var modRow = gSize % cSize;
+                if(modRow == 0){
+                    lastRow = nRow;
+                    // console.log(lastRow);
+                }else{
+                    lastRow = nRow+1;
+                    // console.log(lastRow);
+                }
+                var rowPosition = 1;
+                // var firstItem = 
+                if((gSize < 8) || (gSize == 8)){
+                    // $(".pagination-nav").hide();
+                    $(".pagination-nav a.prev").addClass("not-active");
+                    $(".pagination-nav a.next").addClass("not-active");
+                    lastRow = 1;
+                }else{
+                    if(rowPosition == firstRow){
+                        $(".pagination-nav a.prev").addClass("not-active");
+                        $(".pagination-nav a.next").removeClass("not-active");
+                    }
+                    $(".pagination-nav a.next").click(function(){
+                        $(".gallery-items").animate({ 'top': (-(rowPosition * parseInt($(".container-gallery").height())) )});
+                        //$(".gallery-items").animate({ 'top': (-(rowPosition * 340.8))});
+                        console.log("top (next button):" +(-(rowPosition * parseInt($(".container-gallery").height()))));
+                        rowPosition = rowPosition+1;
+                        // console.log(rowPosition);
+                        // console.log(lastRow);
+                        if(rowPosition == lastRow){
+                            $(".pagination-nav a.next").addClass("not-active");
+                            $(".pagination-nav a.prev").removeClass("not-active");
+                        }
+                        if((rowPosition!=firstRow)&&(rowPosition!=lastRow)){
+                            $(".pagination-nav a.prev").removeClass("not-active");
+                            $(".pagination-nav a.next").removeClass("not-active");
+                        }
+                        return false;
+                    })
+                    $(".pagination-nav a.prev").click(function(){
+                        var top = parseInt($(".gallery-items").css("top"));
+                        var nextTop = top + $(".container-gallery").height();
+                        $(".gallery-items").animate({ 'top': nextTop});
+                        console.log("top (prev button):" + nextTop);
+                        rowPosition = rowPosition-1;
+                        // console.log(rowPosition);
+                        // console.log(lastRow);
+                        if(rowPosition == firstRow){
+                            $(".pagination-nav a.prev").addClass("not-active");
+                            $(".pagination-nav a.next").removeClass("not-active");
+                        }
+                        if((rowPosition!=firstRow)&&(rowPosition!=lastRow)){
+                            $(".pagination-nav a.prev").removeClass("not-active");
+                            $(".pagination-nav a.next").removeClass("not-active");
+                        }
+                        return false;
+                    })
+                }
             });
 
 

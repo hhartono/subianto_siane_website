@@ -234,7 +234,7 @@ function initDomik() {
                 //filter: '.Interior'
             });
             a.imagesLoaded(function() {
-                a.isotope("layout");
+                //a.isotope("layout");
             });
             $(".gallery-filters").on("click", "a.gallery-filter", function(b) {
                 b.preventDefault();
@@ -244,6 +244,7 @@ function initDomik() {
                 });
                 $(".gallery-filters a.gallery-filter").removeClass("gallery-filter-active");
                 $(this).addClass("gallery-filter-active");
+                $(".gallery-items").animate({ 'top': 0});
 				return false;
             });
         }
@@ -400,9 +401,9 @@ function initDomik() {
                     itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
                     filter: fa
                 });
-                console.log(fa);
+                // console.log(fa);
                 pf.imagesLoaded(function() {
-                    pf.isotope("layout");
+                    // pf.isotope("layout");
                 });
                 $(this).addClass("gallery-filter-active");
             }

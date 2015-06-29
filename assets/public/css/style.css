@@ -2405,3 +2405,9 @@ section {
     /*max-height: 70px;*/
     max-height: 110px;
 }
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+   color:#fff;
+}
