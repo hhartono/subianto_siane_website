@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content mm">
-                <div class="track my-track contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; ">
+                <div class=" contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; ">
                         <div class="pagination-nav" style="right:0;">
                             <a href="#" class="prev">Prev</a>
                         </div>

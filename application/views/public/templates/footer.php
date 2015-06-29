@@ -66,7 +66,7 @@
                 /* end scroll top */
 
                 // var giItemHeight = $()
-                $('.gallery-item').css("top", $(".gallery-item img").height()+"px");
+
                 // height of container gallery
                 $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
                 var gSize = $(".gallery-item").size();

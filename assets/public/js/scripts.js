@@ -227,6 +227,7 @@ function initDomik() {
 	// isotope ------------------
     function n() {
         if ($(".gallery-items").length) {
+            $(".gallery-item").css("height", parseInt(0.6640625 * $(".gallery-item").width()) +"px");
             var a = $(".gallery-items").isotope({
                 singleMode: true,
                 columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
@@ -234,7 +235,7 @@ function initDomik() {
                 //filter: '.Interior'
             });
             a.imagesLoaded(function() {
-                //a.isotope("layout");
+                a.isotope("layout");
             });
             $(".gallery-filters").on("click", "a.gallery-filter", function(b) {
                 b.preventDefault();
@@ -395,6 +396,7 @@ function initDomik() {
             var fa = $(this).attr("data-filteractive");
             //console.log(i);
             if(fa != ""){
+                $(".gallery-item").css("height", parseInt(0.6640625 * $(".gallery-item").width()) +"px");
                 var pf = $(".gallery-items").isotope({
                     singleMode: true,
                     columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
@@ -403,7 +405,7 @@ function initDomik() {
                 });
                 // console.log(fa);
                 pf.imagesLoaded(function() {
-                    // pf.isotope("layout");
+                    pf.isotope("layout");
                 });
                 $(this).addClass("gallery-filter-active");
             }
