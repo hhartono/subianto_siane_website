@@ -2411,3 +2411,15 @@ section {
    cursor: default;
    color:#fff;
 }
+.not-active img{
+	opacity: 0;
+	filter: alpha(opacity=40);
+}
+.pagination-nav a.next img{
+	margin-top:4px;
+	width:40px;
+}
+.pagination-nav a.prev img{
+	margin-bottom: 4px;
+	width:40px;
+}

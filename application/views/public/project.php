@@ -6,7 +6,9 @@
             <div class="content mm">
                 <div class=" contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; ">
                         <div class="pagination-nav" style="right:0;">
-                            <a href="#" class="prev">Prev</a>
+                            <a href="#" class="prev">
+                                <img src="/assets/public/images/arrow_prev.png" alt="">
+                            </a>
                         </div>
                     <div class="container-gallery" style="width:100%; overflow:hidden;">
                         <!-- gallery items -->
@@ -347,7 +349,9 @@
                     </div>
 
                         <div class="pagination-nav" style="right:0;">
-                            <a href="#" class="next">Next</a>
+                            <a href="#" class="next">
+                                <img src="/assets/public/images/arrow_next.png" alt="">
+                            </a>
                         </div>
 
                 </div>

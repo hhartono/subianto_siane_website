@@ -227,7 +227,8 @@ function initDomik() {
 	// isotope ------------------
     function n() {
         if ($(".gallery-items").length) {
-            $(".gallery-item").css("height", parseInt(0.6640625 * $(".gallery-item").width()) +"px");
+            var ratio = 0.6640625;
+            $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
             var a = $(".gallery-items").isotope({
                 singleMode: true,
                 columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
@@ -349,7 +350,7 @@ function initDomik() {
             }
         }
     });
-// map ------------------	
+    // map ------------------	
     var q = $(".map").attr("data-latitude"), r = $(".map").attr("data-longitude"), s = $(".map").attr("data-location");
     $("#map_addresses").gMap({
         latitude: q,
@@ -394,9 +395,10 @@ function initDomik() {
     function projectfilter(){
         $(".gallery-filter").each(function(i){
             var fa = $(this).attr("data-filteractive");
+            var ratio = 0.6640625; 
             //console.log(i);
             if(fa != ""){
-                $(".gallery-item").css("height", parseInt(0.6640625 * $(".gallery-item").width()) +"px");
+                $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
                 var pf = $(".gallery-items").isotope({
                     singleMode: true,
                     columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",

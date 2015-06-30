@@ -27,7 +27,7 @@
                                 <?php
                                     if(isset($loadallphotosdetailproject)){
                                 ?>
-                                    <div class="fotorama" 
+                                    <div id="fotorama" class="fotorama"
                                         data-nav="thumbs" 
                                         data-height="400" 
                                         data-maxwidth="100%" 
@@ -47,32 +47,11 @@
                                         echo '';
                                     }
                                     ?>
-
-                                    <!-- <div class="gallery-items three-coulms grid-small-pad popup-gallery"> -->
-                                    <?php
-                                    // if(isset($loadallphotosdetailproject)){
-                                        // foreach ($loadallphotosdetailproject as $lad) {
-                                    ?>
-                                        <!-- <div class="gallery-item">
-                                            <div class="grid-item-holder">
-                                                <div class="box-item"> -->
-                                                    <!-- <a href="/uploads/project/<?php //echo $lad->photo;?>" title=""> -->
-                                                    <!-- <span class="overlay"></span>  -->
-                                                    <!-- <img  src="/uploads/project/<?php//echo $lad->photo;?>" alt=""> -->
-                                                   <!--  </a>
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                    <?php
-                                        // }
-                                    ?>
-                                    <?php
-                                    // }else{
-                                        // echo nothing
-                                        // echo '';
-                                    // }
-                                    ?>
-                                    <!-- </div> -->
+                                    
+                                    <div id="playpause">
+                                        <a href="#" id="play">play</a>
+                                        <a href="#" id="pause">pause</a>
+                                    </div>
                                     <!-- end gallery items -->  
 
                                     <div class="row" style="background:#fff;">
@@ -126,6 +105,7 @@
                                         <a href="/project" class="ajax"><i class="fa fa-th-large"></i></a>
                                     </div>
                                 </div>
+                            
                             </div>
 
 
