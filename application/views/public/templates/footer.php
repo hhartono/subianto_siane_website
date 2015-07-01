@@ -19,146 +19,14 @@
 
         <script type="text/javascript">
             $(document).ready(function(){
-                homeintro();
-
                 $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
                 $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
-                
-                scrollTopPage();
-                simcarousel();
-            });
-
-            /*
-             * function homeintro
-             * show intro 
-             */
-            function homeintro(){
-                $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
-                $(".introword").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
-                $(".introword").animate({opacity:0})
-                $(".introword").eq(0).delay(1000).animate({
-                    opacity:1,
-                    paddingTop: "155px"
-                    
-                }, 900 );
-                $(".introword").eq(1).delay(1500).animate({
-                    opacity:1
-                }, 900 );
-                $(".introword").eq(2).delay(2000).animate({
-                    opacity:1
-                }, 900 );
-                $(".introword").eq(3).delay(2500).animate({
-                    opacity:1
-                }, 900, function(){
-                    $("a#explore").click(function(){
-                        $(".introword").eq(3).delay(50).animate({opacity:0},900, function(){
-                            $("#hometoplayer").fadeOut();
-                        });
-                        $(".introword").eq(2).delay(75).animate({opacity:0});
-                        $(".introword").eq(1).delay(100).animate({opacity:0});
-                        $(".introword").eq(0).delay(125).animate({opacity:0}, 900, function(){
-                            $("#masklayer").fadeOut();
-                        });
-                        return false;
-                    })
-                });
-            }
-
-
-            /*
-             * function scrollTopPage
-             * show & hide scroll top arrow
-             */
-            function scrollTopPage(){
-                /*
-                 * show / hide scroll top arrow
-                 */
-                $(".to-top").hide();
-                $(window).scroll(function(){
-                    if($(window).scrollTop() > 120){
-                        $(".to-top").fadeIn();
-                    }else{
-                        $(".to-top").fadeOut();
-                    } 
+                $(window).resize(function(){
+                    $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
                 })
-                /* end scroll top */
-            }
-
-            /*
-             * function simcarousel
-             * simple vertical carousel in project page
-             */
-            function simcarousel(){
-                /* note : filter category bug */
-
-                // height of container gallery
-                $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
-                var gSize = $(".gallery-item").size();
-                var rSize = 4;
-                var cSize = 8;
-                var firstRow = 1;
-                var lastRow;
-                var nRow = parseInt(gSize/cSize); 
-                var modRow = gSize % cSize;
-                if(modRow == 0){
-                    lastRow = nRow;
-                }else{
-                    lastRow = nRow+1;
-                }
-                var rowPosition = 1;
-                if((gSize < 8) || (gSize == 8)){
-                    $(".pagination-nav a.prev").addClass("not-active");
-                    $(".pagination-nav a.next").addClass("not-active");
-                    lastRow = 1;
-                }else{
-                    if(rowPosition == firstRow){
-                        $(".pagination-nav a.prev").addClass("not-active");
-                        $(".pagination-nav a.next").removeClass("not-active");
-                    }
-                    $(".pagination-nav a.next").click(function(){
-                        $(".gallery-items").animate({ 
-                            'top': (-(rowPosition * parseInt($(".container-gallery").height())) )
-                            },{
-                                duration: 'slow',
-                                easing: 'easeOutCubic'
-                            });
-                        console.log("top (next button):" +(-(rowPosition * parseInt($(".container-gallery").height()))));
-                        rowPosition = rowPosition+1;
-                        if(rowPosition == lastRow){
-                            $(".pagination-nav a.next").addClass("not-active");
-                            $(".pagination-nav a.prev").removeClass("not-active");
-                        }
-                        if((rowPosition!=firstRow)&&(rowPosition!=lastRow)){
-                            $(".pagination-nav a.prev").removeClass("not-active");
-                            $(".pagination-nav a.next").removeClass("not-active");
-                        }
-                        return false;
-                    })
-                    $(".pagination-nav a.prev").click(function(){
-                        var top = parseInt($(".gallery-items").css("top"));
-                        var nextTop = top + $(".container-gallery").height();
-                        $(".gallery-items").animate({
-                            'top': nextTop
-                            }, {
-                                duration: 'slow',
-                                easing: 'easeOutCubic'
-                            });
-                        console.log("top (prev button):" + nextTop);
-                        rowPosition = rowPosition-1;
-                        if(rowPosition == firstRow){
-                            $(".pagination-nav a.prev").addClass("not-active");
-                            $(".pagination-nav a.next").removeClass("not-active");
-                        }
-                        if((rowPosition!=firstRow)&&(rowPosition!=lastRow)){
-                            $(".pagination-nav a.prev").removeClass("not-active");
-                            $(".pagination-nav a.next").removeClass("not-active");
-                        }
-                        return false;
-                    })
-                }
-            }
-
-             $(function () {
+            });
+            
+            $(function () {
                 // 1. Initialize fotorama manually.
                 var $fotoramaDiv = $('.fotorama').fotorama();
                 // 2. Get the API object.
@@ -171,7 +39,7 @@
                     fotorama.stopAutoplay();
                     return false;
                 })
-              });
+            });
 
             /*
              * Turn.js responsive book

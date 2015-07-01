@@ -2412,14 +2412,19 @@ section {
    color:#fff;
 }
 .not-active img{
-	opacity: 0;
-	filter: alpha(opacity=40);
+	opacity: 0 !important;
+	filter: alpha(opacity=0) !important;
 }
 .pagination-nav a.next img{
 	margin-top:4px;
-	width:40px;
+	width:27px;
+	opacity: 0.7;
 }
 .pagination-nav a.prev img{
 	margin-bottom: 4px;
-	width:40px;
+	width:27px;
+	opacity: 0.7;	
+}
+.pagination-nav a.next img:hover, .pagination-nav a.prev img:hover{
+	opacity: 1;
 }

@@ -225,20 +225,118 @@ function initDomik() {
         }
     });
 	// isotope ------------------
+    var galleryLength;
+    var filterActiveLength;
+    function setGalleryLength(a){
+        galleryLength = a;
+    }
+    function getGalleryLength(){
+        return galleryLength;
+    }
+    function setFilterActiveLength(b){
+        filterActiveLength = b;
+    }
+    function getFilterActiveLength(){
+        return filterActiveLength;
+    }
+    function checkFilter(){
+        $(".gallery-filter").each(function(){
+            var fa = $(this).attr("data-filteractive");
+            if(fa != ""){
+                $(this).addClass("gallery-filter-active");
+            }
+        })
+    }
+    function getFilterActive(){
+        var active;
+        $(".gallery-filter").each(function(){
+            var fa = $(this).attr("data-filteractive");
+            if(fa != ""){
+                active = fa;
+                return false;
+            }
+        })
+        return active;
+    }
+
+    function setHeightGallery(){
+        var ratio = 0.6640625; // ratio for get height of gallery item
+        $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
+        $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+    }
+    setHeightGallery();
+    $(window).resize(function(){
+        setHeightGallery();
+    });
     function n() {
         if ($(".gallery-items").length) {
-            var ratio = 0.6640625;
-            $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
-            var a = $(".gallery-items").isotope({
-                singleMode: true,
-                columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
-                itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
-                //filter: '.Interior'
-            });
-            a.imagesLoaded(function() {
-                a.isotope("layout");
-            });
+            checkFilter(); // check filter active
+
+            var a;
+            var dataFilterActive = getFilterActive();
+            var faLength = $(".gallery-filter-active").length;
+            setFilterActiveLength(faLength);
+
+            console.log("filter active:" + dataFilterActive);
+            console.log("filter length:" + faLength);
+
+            var ratio = 0.6640625; // ratio for get height of gallery item
+            var length;
+
+            // setHeightGallery();
+        
+            if(faLength == 1){
+                // projectWithFilter(dataFilterActive, ratio, a, length);
+                a = $(".gallery-items").isotope({
+                    singleMode: true,
+                    columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
+                    itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
+                    filter: dataFilterActive
+                });
+                a.imagesLoaded(function() {
+                    a.isotope("layout");
+                });
+                length = a.data('isotope');
+                setGalleryLength(length.filteredItems.length)
+                console.log("[with filter page] length: " +length.filteredItems.length);
+                
+                if((getGalleryLength() < 8) || (getGalleryLength() == 8)){
+                    $(".pagination-nav a.prev").addClass("not-active");
+                    $(".pagination-nav a.next").addClass("not-active");
+                    setLastRow(1);
+                }else{
+                    if(getRowPosition() == getFirstRow()){
+                        $(".pagination-nav a.prev").addClass("not-active");
+                        $(".pagination-nav a.next").removeClass("not-active");
+                    }
+                }
+            }else{
+                a = $(".gallery-items").isotope({
+                    singleMode: true,
+                    columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
+                    itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
+                    // filter: fa
+                });
+                a.imagesLoaded(function() {
+                    a.isotope("layout");
+                });
+                length = a.data('isotope');
+                setGalleryLength(length.filteredItems.length);
+                console.log("[without filter / all] length: "+length.filteredItems.length);
+                
+                if((getGalleryLength() < 8) || (getGalleryLength() == 8)){
+                    $(".pagination-nav a.prev").addClass("not-active");
+                    $(".pagination-nav a.next").addClass("not-active");
+                    setLastRow(1);
+                }else{
+                    if(getRowPosition() == getFirstRow()){
+                        $(".pagination-nav a.prev").addClass("not-active");
+                        $(".pagination-nav a.next").removeClass("not-active");
+                    }
+                }
+            }
             $(".gallery-filters").on("click", "a.gallery-filter", function(b) {
+                $(".gallery-items").animate({ 'top': 0});
                 b.preventDefault();
                 var c = $(this).attr("data-filter");
                 a.isotope({
@@ -246,14 +344,27 @@ function initDomik() {
                 });
                 $(".gallery-filters a.gallery-filter").removeClass("gallery-filter-active");
                 $(this).addClass("gallery-filter-active");
-                $(".gallery-items").animate({ 'top': 0});
+                setGalleryLength(length.filteredItems.length);
+                console.log("[with filter click] length : " +length.filteredItems.length);
+                
+                if((getGalleryLength() < 8) || (getGalleryLength() == 8)){
+                    $(".pagination-nav a.prev").addClass("not-active");
+                    $(".pagination-nav a.next").addClass("not-active");
+                    setLastRow(1);
+                }else{
+                    setRowPosition(1);
+                    if(getRowPosition() == getFirstRow()){
+                        $(".pagination-nav a.prev").addClass("not-active");
+                        $(".pagination-nav a.next").removeClass("not-active");
+                    }
+                }
 				return false;
             });
         }
     }
     n();
     $(window).load(function() {
-        n();
+        // n();
     });
 	$('.slide-title a , .box-item a.ajax , .carousel-link-holder').on('click',function(){
 		$('nav a').removeClass('act-link');
@@ -392,31 +503,158 @@ function initDomik() {
         $("#message").slideUp(1500);
     });
 	// IMPORTANT INIT YOUR FUNCTIONS HERE ------------------
-    function projectfilter(){
-        $(".gallery-filter").each(function(i){
-            var fa = $(this).attr("data-filteractive");
-            var ratio = 0.6640625; 
-            //console.log(i);
-            if(fa != ""){
-                $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
-                var pf = $(".gallery-items").isotope({
-                    singleMode: true,
-                    columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
-                    itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
-                    filter: fa
+    /*
+     * function homeintro
+     * show intro 
+     */
+    function homeintro(){
+        $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
+        $(".introword").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
+        $(".introword").animate({opacity:0})
+        $(".introword").eq(0).delay(1000).animate({
+            opacity:1,
+            paddingTop: "155px"
+            
+        }, 900 );
+        $(".introword").eq(1).delay(1500).animate({
+            opacity:1
+        }, 900 );
+        $(".introword").eq(2).delay(2000).animate({
+            opacity:1
+        }, 900 );
+        $(".introword").eq(3).delay(2500).animate({
+            opacity:1
+        }, 900, function(){
+            $("a#explore").click(function(){
+                $(".introword").eq(3).delay(50).animate({opacity:0},900, function(){
+                    $("#hometoplayer").fadeOut();
                 });
-                // console.log(fa);
-                pf.imagesLoaded(function() {
-                    pf.isotope("layout");
+                $(".introword").eq(2).delay(75).animate({opacity:0});
+                $(".introword").eq(1).delay(100).animate({opacity:0});
+                $(".introword").eq(0).delay(125).animate({opacity:0}, 900, function(){
+                    $("#masklayer").fadeOut();
                 });
-                $(this).addClass("gallery-filter-active");
-            }
-        })
+                return false;
+            })
+        });
     }
-    // projectfilter();
-    $(window).load(function() {
-       projectfilter();
-    });
+    homeintro();
+  
+    var firstRow = 1 , lastRow, rowPosition = 1;
+    function getFirstRow(){
+        return firstRow;
+    }
+    function setLastRow(lr){
+        lastRow = lr;
+    }
+    function getLastRow(){
+        return lastRow;
+    }
+    function setRowPosition(rp){
+        rowPosition = rp;
+    }
+    function getRowPosition(){
+        return rowPosition;
+    }
+    /*
+     * function simcarousel
+     * simple vertical carousel in project page
+     */
+    function simcarousel(){
+        console.log("[carousel] length: " + getGalleryLength());
+        var rSize = 4;
+        var cSize = 8;
+    
+        $(".pagination-nav a.next").click(function(){
+            //rowPosition = 1;
+            var gl =  getGalleryLength();
+            var nRow = parseInt(gl/cSize); 
+            var modRow = gl % cSize;
+            if(modRow == 0){
+                setLastRow(nRow);
+            }else{
+                setLastRow(nRow+1);
+            }
+            $(".gallery-items").animate({ 
+                'top': (-(getRowPosition() * parseInt($(".container-gallery").height())) )
+                },{
+                    duration: 'slow',
+                    easing: 'easeOutCubic'
+                });
+            console.log("[next click] row position before: "+getRowPosition());
+            console.log("[next click] gallery position top:" +(-(getRowPosition() * parseInt($(".container-gallery").height()))));
+            setRowPosition(getRowPosition()+1)
+            console.log("[next click] row position after: "+getRowPosition());
+            if(getRowPosition() == getLastRow()){
+                $(".pagination-nav a.next").addClass("not-active");
+                $(".pagination-nav a.prev").removeClass("not-active");
+            }
+            if((getRowPosition() != getFirstRow())&&(getRowPosition() != getLastRow())){
+                $(".pagination-nav a.prev").removeClass("not-active");
+                $(".pagination-nav a.next").removeClass("not-active");
+            }
+            console.log("[next click] gallery length: " + getGalleryLength());
+            return false;
+        })
+
+        $(".pagination-nav a.prev").click(function(){
+            // rowPosition = 1;
+            var gl =  getGalleryLength();
+            var nRow = parseInt(gl/cSize); 
+            var modRow = gl % cSize;
+            if(modRow == 0){
+                setLastRow(nRow);
+            }else{
+                setLastRow(nRow+1);
+            }
+            var top = parseInt($(".gallery-items").css("top"));
+            var nextTop = top + $(".container-gallery").height();
+            $(".gallery-items").animate({
+                'top': nextTop
+                }, {
+                    duration: 'slow',
+                    easing: 'easeOutCubic'
+                });
+            console.log("[prev click] row position before: "+getRowPosition());
+            console.log("[prev click] gallery position top:" + nextTop);
+            setRowPosition(getRowPosition()-1);
+            console.log("[prev click] row position after: "+ getRowPosition());
+            if(getRowPosition() == getFirstRow()){
+                $(".pagination-nav a.prev").addClass("not-active");
+                $(".pagination-nav a.next").removeClass("not-active");
+            }
+            if((getRowPosition() != getFirstRow())&&(getRowPosition()!= getLastRow())){
+                $(".pagination-nav a.prev").removeClass("not-active");
+                $(".pagination-nav a.next").removeClass("not-active");
+            }
+            console.log("[prev click] gallery length: " +getGalleryLength());
+            return false;
+        })
+
+        
+    }
+    simcarousel();
+
+    /*
+     * function scrollTopPage
+     * show & hide scroll top arrow
+     */
+    function scrollTopPage(){
+        /*
+         * show / hide scroll top arrow
+         */
+        $(".to-top").hide();
+        $(window).scroll(function(){
+            if($(window).scrollTop() > 120){
+                $(".to-top").fadeIn();
+            }else{
+                $(".to-top").fadeOut();
+            } 
+        })
+        /* end scroll top */
+    }
+    scrollTopPage();
+
 
     /*var fb = $('.flipbook');
     function loadApp(){
