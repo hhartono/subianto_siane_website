@@ -13,10 +13,10 @@
                             <section class="no-padding no-border">
                                 <!-- page title -->     
                                 <div class="container">
-                                    <div class="page-title no-border">
-                                        <h2><?php echo $loadoneproject->title;?></h2>
-                                        <h3><span><?php echo $loadoneproject->description;?></span></h3>
-                                    </div>
+                                    <!-- <div class="page-title no-border">
+                                        <h2><?php //echo $loadoneproject->title;?></h2>
+                                        <h3><span><?php //echo $loadoneproject->description;?></span></h3>
+                                    </div> -->
                                 </div>
                             </section>
                             <div class="clearfix"></div>
@@ -32,7 +32,8 @@
                                         data-height="400" 
                                         data-maxwidth="100%" 
                                         data-transition="crossfade" 
-                                        data-keyboard="true">
+                                        data-keyboard="true"
+                                        data-arrow="false">
                                 <?php
                                         foreach ($loadallphotosdetailproject as $lad) {
                                 ?>
@@ -50,13 +51,14 @@
                                     
                                     <div id="playpause">
                                         <a href="#" id="play">play</a>
-                                        <a href="#" id="pause">pause</a>
+                                        <!-- <a href="#" id="pause">pause</a> -->
                                     </div>
                                     <!-- end gallery items -->  
 
                                     <div class="row" style="background:#fff;">
                                         <div class="col-md-10">
                                             <div class="project-details">
+                                                <p>Project: <?php echo $loadoneproject->title;?></p>
                                                 <!-- <h3><span>Internet tend to repeat predefined chunks as necessary, making this the first true</span></h3> -->
                                                 <p><?php echo html_entity_decode($loadoneproject->project_story);?></p>
                                                 <ul class="descr">

@@ -31,13 +31,17 @@
                 var $fotoramaDiv = $('.fotorama').fotorama();
                 // 2. Get the API object.
                 var fotorama = $fotoramaDiv.data('fotorama');
+                fotorama.startAutoplay(1500);
                 $("#playpause #play").click(function(){
                     fotorama.startAutoplay(1500);    
                     return false;
                 })
-                $("#playpause #pause").click(function(){
+                /*$("#playpause #pause").click(function(){
                     fotorama.stopAutoplay();
                     return false;
+                })*/
+                fotorama.setOptions({
+                    arrows: false
                 })
             });
 

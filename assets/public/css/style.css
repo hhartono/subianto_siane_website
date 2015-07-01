@@ -1440,7 +1440,7 @@ article {
 .grid-item h3 {
 	font-size:12px;
 	text-transform:uppercase;
-	font-weight: 700;
+	font-weight: 100;
 	position:relative;
 	float:left;
 	font-family:'futurastd-bold';

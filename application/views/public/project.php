@@ -3,7 +3,7 @@
     <!--=============== wrapper ===============-->	
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
-            <div class="content mm">
+            <div class="content mm contentproject">
                 <div class=" contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; ">
                         <div class="pagination-nav" style="right:0;">
                             <a href="#" class="prev">
@@ -226,8 +226,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
 
                             <div class="gallery-item Industrial">
                                 <div class="grid-item-holder">
