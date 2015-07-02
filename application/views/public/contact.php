@@ -4,44 +4,39 @@
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content">
+            <div class="contentcenter hid-port-info" style="padding-top:221px; margin:0px auto;width:100%; max-width:1024px; height:100%">
                 <!-- background animation  -->      
                 <div class="bg-animate"><img src="assets/public/images/body-bg.png"  class="respimg" alt=""></div>
                 <!-- wrapper-inner -->
-                <div class="wrapper-inner">
+                <div class="contact-inner">
                     <div class="container">
-                        <div class="page-title no-border">
-                            <h2>Want to order a project ? Contact with us</h2>
-                            <h3><span>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true .</span></h3>
-                        </div>
-                        <!-- map  -->
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" class="map" data-latitude="-6.900160" data-longitude="107.603317" data-location="Subianto & Siane">
+                                <div id="map_addresses" style="height:250px;" class="map" data-latitude="-6.900160" data-longitude="107.603317" data-location="Subianto & Siane">
                                 </div>
                             </div>
-                        </section>
-                        <!-- map  end-->
-                        <!-- contact info  -->
-                        <section class="no-border">
+                        
                             <div class="contact-details">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <!-- <div class="col-md-6">
                                         <h3>Contact  details : </h3>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h4>Office in New York</h4>
+                                    </div> -->
+
+                                    <div class="col-md-12">
+                                        <h4>Main Office</h4>
                                         <ul>
-                                            <li><a href="#">Jl. Suka Mekar III No. 7, Bandung, Indonesia</a></li>
+                                            <li><a href="https://www.google.co.id/maps/place/INERRE+Interior/@-6.900453,107.603322,17z/data=!3m1!4b1!4m2!3m1!1s0x2e68e64383f4eda3:0x420267de73972b84?hl=en" target="blank">Jl. Suka Mekar III No. 7, Bandung, Indonesia</a></li>
                                             <li><a href="#">+62 22 2013973</a></li>
-                                            <li><a href="#">contact@subiantosiane.com</a></li>
+                                            <li><a href="mailto:contact@subiantosiane.com">contact@subiantosiane.com</a></li>
                                         </ul>
+                                        
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-12" style="padding-top:20px;">
                                         <h4>Find Us On : </h4>
                                         <ul>
-                                            <li><a href="#">Facebook</a></li>
-                                            <li><a href="#">Twitter </a></li>
-                                            <li><a href="#">Instagram</a></li>
+                                            <li><a href="https://www.facebook.com/inerre.interior">Facebook</a></li>
+                                            <li><a href="https://twitter.com/inerre_interior">Twitter </a></li>
+                                            <li><a href="https://instagram.com/inerre_interior">Instagram</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -68,7 +63,7 @@
                 <!-- wrapper inner end   -->
                 
                 <?php 
-                if(isset($loadrandomphoto)){
+               /* if(isset($loadrandomphoto)){
                     $sidebar = array(
                         'sidebarphoto' => $loadrandomphoto->photo,
                         'statussidebar' => $loadrandomphoto->status_sidebar_random
@@ -79,9 +74,9 @@
                         'statussidebar' => ''
                         );
                 }
-                $this->load->view('public/templates/parallax_column', $sidebar);?>
-
-                <?php $this->load->view('public/templates/footer_block');?>
+                $this->load->view('public/templates/parallax_column', $sidebar);*/?>
+                </div>
+                <?php //$this->load->view('public/templates/footer_block');?>
             </div>
             <!-- content  end  -->
         </div>
