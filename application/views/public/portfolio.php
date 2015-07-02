@@ -9,7 +9,7 @@
             
             <div class="flipbook-viewport">
         		<div class="book-container rel">
-        			<div class="flipbook" id="flipbook">
+        			<div class="flipbook" id="flipbook" style="margin-top:100px;">
         				<!-- <div class="hard"> Subianto & Siane </div> -->
 						<div class="" style="background:#ccc;"> <div class="side"></div> </div>
 						<div class=" front-side" style="background:#fff;"> </div>
