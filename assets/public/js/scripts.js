@@ -282,6 +282,17 @@ function initDomik() {
 
             var ratio = 0.6640625; // ratio for get height of gallery item
             var length;
+            var gLength;
+
+            if($(window).width() <= 1023){
+                if($(window).width() >= 768){
+                    gLength = 4;
+                    setCSize(4);
+                }
+            }else{
+                gLength = 8;
+                setCSize(8);
+            }
 
             // setHeightGallery();
         
@@ -300,7 +311,7 @@ function initDomik() {
                 setGalleryLength(length.filteredItems.length)
                 console.log("[with filter page] length: " +length.filteredItems.length);
                 
-                if((getGalleryLength() < 8) || (getGalleryLength() == 8)){
+                if((getGalleryLength() < gLength) || (getGalleryLength() == gLength)){
                     $(".pagination-nav a.prev").addClass("not-active");
                     $(".pagination-nav a.next").addClass("not-active");
                     setLastRow(1);
@@ -324,7 +335,7 @@ function initDomik() {
                 setGalleryLength(length.filteredItems.length);
                 console.log("[without filter / all] length: "+length.filteredItems.length);
                 
-                if((getGalleryLength() < 8) || (getGalleryLength() == 8)){
+                if((getGalleryLength() < gLength) || (getGalleryLength() == gLength)){
                     $(".pagination-nav a.prev").addClass("not-active");
                     $(".pagination-nav a.next").addClass("not-active");
                     setLastRow(1);
@@ -347,7 +358,7 @@ function initDomik() {
                 setGalleryLength(length.filteredItems.length);
                 console.log("[with filter click] length : " +length.filteredItems.length);
                 
-                if((getGalleryLength() < 8) || (getGalleryLength() == 8)){
+                if((getGalleryLength() < gLength) || (getGalleryLength() == gLength)){
                     $(".pagination-nav a.prev").addClass("not-active");
                     $(".pagination-nav a.next").addClass("not-active");
                     setLastRow(1);
@@ -540,7 +551,7 @@ function initDomik() {
     }
     homeintro();
   
-    var firstRow = 1 , lastRow, rowPosition = 1;
+    var firstRow = 1 , lastRow, rowPosition = 1, cSize;
     function getFirstRow(){
         return firstRow;
     }
@@ -556,20 +567,26 @@ function initDomik() {
     function getRowPosition(){
         return rowPosition;
     }
+    function setCSize(c){
+        cSize = c;
+    }
+    function getCSize(){
+        return cSize;
+    }
     /*
      * function simcarousel
      * simple vertical carousel in project page
      */
     function simcarousel(){
         console.log("[carousel] length: " + getGalleryLength());
-        var rSize = 4;
-        var cSize = 8;
+        // var rSize = 4;
+        var cSize = getCSize();
     
         $(".pagination-nav a.next").click(function(){
             //rowPosition = 1;
             var gl =  getGalleryLength();
-            var nRow = parseInt(gl/cSize); 
-            var modRow = gl % cSize;
+            var nRow = parseInt(gl/getCSize()); 
+            var modRow = gl % getCSize();
             if(modRow == 0){
                 setLastRow(nRow);
             }else{
@@ -600,8 +617,8 @@ function initDomik() {
         $(".pagination-nav a.prev").click(function(){
             // rowPosition = 1;
             var gl =  getGalleryLength();
-            var nRow = parseInt(gl/cSize); 
-            var modRow = gl % cSize;
+            var nRow = parseInt(gl/getCSize()); 
+            var modRow = gl % getCSize();
             if(modRow == 0){
                 setLastRow(nRow);
             }else{
