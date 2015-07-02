@@ -3,7 +3,7 @@
     <!--=============== wrapper ===============-->	
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
-            <div class="content mm">
+            <div class="content mm contentproject">
                 <div class=" contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; ">
                         <div class="pagination-nav" style="right:0;">
                             <a href="#" class="prev">
@@ -15,6 +15,88 @@
                         <div class="gallery-items hid-port-info">
 
                             <!-- <div class="container-row" style="height:170px;"> -->
+
+                            <div class="gallery-item Industrial">
+                                <div class="grid-item-holder">
+                                    <div class="box-item">
+                                        <a href="/project/detail/" class="ajax">
+                                        <span class="overlay"></span> 
+                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
+                                            <img  src="/uploads/project/011883-8R.jpg"   alt="">   
+                                        </a>
+                                    </div>
+                                    <div class="grid-item Interior ">
+                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
+                                        <!-- <span>Hoses Design</span> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item Industrial">
+                                <div class="grid-item-holder">
+                                    <div class="box-item">
+                                        <a href="/project/detail/" class="ajax">
+                                        <span class="overlay"></span> 
+                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
+                                            <img  src="/uploads/project/012012-8R.jpg"   alt="">   
+                                        </a>
+                                    </div>
+                                    <div class="grid-item Houses">
+                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
+                                        <!-- <span>Hoses Design</span> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item Industrial">
+                                <div class="grid-item-holder">
+                                    <div class="box-item">
+                                        <a href="/project/detail/" class="ajax">
+                                        <span class="overlay"></span> 
+                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
+                                            <img  src="/uploads/project/012045-8R.jpg"   alt="">   
+                                        </a>
+                                    </div>
+                                    <div class="grid-item ">
+                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
+                                        <!-- <span>Hoses Design</span> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="gallery-item Industrial">
+                                <div class="grid-item-holder">
+                                    <div class="box-item">
+                                        <a href="/project/detail/" class="ajax">
+                                        <span class="overlay"></span> 
+                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
+                                            <img  src="/uploads/project/012054-8R.jpg"   alt="">   
+                                        </a>
+                                    </div>
+                                    <div class="grid-item ">
+                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
+                                        <!-- <span>Hoses Design</span> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="gallery-item Industrial">
+                                <div class="grid-item-holder">
+                                    <div class="box-item">
+                                        <a href="/project/detail/" class="ajax">
+                                        <span class="overlay"></span> 
+                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
+                                            <img  src="/uploads/project/012069-8R.jpg"   alt="">   
+                                        </a>
+                                    </div>
+                                    <div class="grid-item ">
+                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
+                                        <!-- <span>Hoses Design</span> -->
+                                    </div>
+                                </div>
+                            </div>
+
 
                             <div class="gallery-item Houses">
                                 <div class="grid-item-holder">
@@ -144,8 +226,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
 
                             <div class="gallery-item Industrial">
                                 <div class="grid-item-holder">
