@@ -1441,10 +1441,11 @@ article {
 .grid-item h3 {
 	font-size:12px;
 	text-transform:uppercase;
-	font-weight: 100;
+	/*font-weight: 100;*/
 	position:relative;
 	float:left;
-	font-family:'futurastd-bold';
+	/*font-family:'futurastd-bold';*/
+	font-family: 'FuturaPT-Book';
 } 
 .grid-item span {
 	width:100%;

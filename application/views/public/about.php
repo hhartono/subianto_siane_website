@@ -24,8 +24,12 @@
 
                         <!-- team -->
                         <section id="sec2"  style="padding:0 0 10px 0; background:#fff;">
-                            <div class="section-title" style="margin-bottom:10px;">
-                                <!-- <h3 style="width:50%; margin:0 auto;">Our team</h3> -->
+                            <div class="section-title row" style="margin-bottom:10px;">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <h3 style="width:50%; margin:0 auto;">Our team</h3>    
+                                </div>
+                                <div class="col-md-2"></div>
                             </div>
                             <ul class="team-holder">
                                 <!-- 1 -->
