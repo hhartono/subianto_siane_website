@@ -34,9 +34,9 @@
                                     <div class="col-md-12" style="padding-top:20px;">
                                         <h4>Find Us On : </h4>
                                         <ul>
-                                            <li><a href="https://www.facebook.com/inerre.interior">Facebook</a></li>
-                                            <li><a href="https://twitter.com/inerre_interior">Twitter </a></li>
-                                            <li><a href="https://instagram.com/inerre_interior">Instagram</a></li>
+                                            <a href="https://www.facebook.com/inerre.interior">Facebook</a>|
+                                                <a href="https://twitter.com/inerre_interior">Twitter </a>|
+                                                <a href="https://instagram.com/inerre_interior">Instagram</a>
                                         </ul>
                                     </div>
                                 </div>
