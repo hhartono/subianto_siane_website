@@ -1787,9 +1787,7 @@ footer:before {
 }
 .contact-details ul li a {
 	padding:2px 0;
-	float:left;
 	font-size:13px;
-	width:1500%;
 }
 .contact-details ul li a:hover {
 	text-decoration:underline;
