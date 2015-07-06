@@ -891,11 +891,12 @@ article {
 	margin-bottom:20px;
 }
 .section-title h3 {
-	text-align:left;
+	text-align:center;
 	font-size:28px;
 	position:relative;
 	float:left;
-	font-family:'futurastd-bold';
+	/*font-family:'futurastd-bold';*/
+	font-family: 'FuturaPT-Book';
 	text-transform:uppercase;
 	padding-bottom:20px;
 }
@@ -905,8 +906,8 @@ article {
 	bottom:0;
 	left:0;
 	width:60px;
-	height:6px;
-	background:#000;
+	/*height:6px;*/
+	/*background:#000;*/
 }
 /*------ services  ------------------------------------------------*/
 .services-info {
@@ -1017,14 +1018,14 @@ article {
 	bottom:0;
 	background:#000;
 }
-.team-box:before {
+/*.team-box:before {
 	width:0;
 	height:6px;
 }
 .team-box:after {
 	width:6px;
 	height:0;
-}
+}*/
 .team-box:hover:before {
 	width:50px;
 }
@@ -2529,7 +2530,7 @@ a#explore:hover, a#gotocontact:hover{
 .category-intro-item{
     width:70%;
     float:left;
-    margin:0 15% 40px 15%;
+    margin:0 15% 20px 15%;
 }
 .category-item-holder{
     /*overflow: hidden;*/

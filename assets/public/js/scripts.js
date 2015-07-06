@@ -386,31 +386,31 @@ function initDomik() {
 		$('.pa').addClass('act-link');
 	});
 	// content functions ------------------
-    $(".team-box").hover(function() {
-        $(this).find("ul.team-social").fadeIn();
-        $(this).find(".team-social a").each(function(a) {
-            var b = $(this);
-            setTimeout(function() {
-                b.animate({
-                    opacity: 1,
-                    top: "0"
-                }, 400);
-            }, 150 * a);
-        });
-    }, function() {
-        $(this).find(".team-social a").each(function(a) {
-            var b = $(this);
-            setTimeout(function() {
-                b.animate({
-                    opacity: 0,
-                    top: "50px"
-                }, 400);
-            }, 150 * a);
-        });
-        setTimeout(function() {
-            $(this).find("ul.team-social").fadeOut();
-        }, 150);
-    });
+    // $(".team-box").hover(function() {
+    //     $(this).find("ul.team-social").fadeIn();
+    //     // $(this).find(".team-social a").each(function(a) {
+    //     //     var b = $(this);
+    //     //     setTimeout(function() {
+    //     //         b.animate({
+    //     //             opacity: 1,
+    //     //             top: "0"
+    //     //         }, 400);
+    //     //     }, 150 * a);
+    //     // });
+    // }, function() {
+    //     // $(this).find(".team-social a").each(function(a) {
+    //     //     var b = $(this);
+    //     //     setTimeout(function() {
+    //     //         b.animate({
+    //     //             opacity: 0,
+    //     //             top: "50px"
+    //     //         }, 400);
+    //     //     }, 150 * a);
+    //     // });
+    //     setTimeout(function() {
+    //         $(this).find("ul.team-social").fadeOut();
+    //     }, 150);
+    // });
     $(".to-top").click(function() {
         $("html, body").animate({
             scrollTop: 0

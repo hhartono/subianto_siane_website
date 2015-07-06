@@ -23,13 +23,13 @@
                         <!-- about text end -->
 
                         <!-- team -->
-                        <section id="sec2"  style="padding:0 0 10px 0; background:#fff;">
-                            <div class="section-title row" style="margin-bottom:10px;">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-8">
-                                    <h3 style="width:50%; margin:0 auto;">Our team</h3>    
+                        <section id="sec2"  style="padding:0 0 30px 0; background:#fff;">
+                            <div class="section-title row" style="margin:0 0 -20px 0;">
+                                <!-- <div class="col-md-2"></div> -->
+                                <div class="col-md-12">
+                                    <h3 style="width:100%; margin:0 auto;">team</h3>    
                                 </div>
-                                <div class="col-md-2"></div>
+                                <!-- <div class="col-md-2"></div> -->
                             </div>
                             <ul class="team-holder">
                                 <!-- 1 -->
@@ -37,13 +37,14 @@
                                     <div class="team-box">
                                         <div class="team-photo">
                                             <div class="overlay"></div>
-                                            <ul class="team-social">
+                                            <!-- <ul class="team-social">
                                                 <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
-                                            </ul>
-                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
+                                            </ul> -->
+                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg">
+                                            <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
                                             <h3>David Gray</h3>
@@ -56,13 +57,14 @@
                                     <div class="team-box">
                                         <div class="team-photo">
                                             <div class="overlay"></div>
-                                            <ul class="team-social">
+                                            <!-- <ul class="team-social">
                                                 <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
-                                            </ul>
-                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
+                                            </ul> -->
+                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg">
+                                            <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
                                             <h3>Austin Evon</h3>
@@ -75,13 +77,14 @@
                                     <div class="team-box">
                                         <div class="team-photo">
                                             <div class="overlay"></div>
-                                            <ul class="team-social">
+                                            <!-- <ul class="team-social">
                                                 <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
-                                            </ul>
-                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg"><span>Find on</span>                                      
+                                            </ul> -->
+                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg">
+                                            <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
                                             <h3>Taylor Roberts</h3>
@@ -117,7 +120,7 @@
                 // $this->load->view('public/templates/parallax_column', $sidebar);
                 ?>
 
-                <?php $this->load->view('public/templates/footer_block');?>
+                <?php //$this->load->view('public/templates/footer_block');?>
 
             </div>
             <!-- content  end  -->
