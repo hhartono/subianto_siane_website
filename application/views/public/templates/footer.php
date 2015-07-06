@@ -19,10 +19,14 @@
 
         <script type="text/javascript">
             $(document).ready(function(){
-                $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
+
+                $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width())  +"px");
+                console.log("gallery filter width 0:" + $(".gallery-filter").eq(0).width());
+                console.log("gallery filter width 1:" + $(".gallery-filter").eq(1).width());
+                console.log("gallery filter width 2:" + $(".gallery-filter").eq(2).width());
                 $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
                 $(window).resize(function(){
-                    $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
+                    $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()) +"px");
                 })
             });
             
