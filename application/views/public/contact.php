@@ -12,7 +12,7 @@
                     <div class="container">
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" style="height:375px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane">
+                                <div id="map_addresses" style="height:400px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane">
                                 </div>
                             </div>
                         
@@ -25,7 +25,7 @@
                                        <div class="col-md-8">
                                            <h4>Main Office</h4>
                                            <ul>
-                                               <li><a href="https://www.google.co.id/maps/place/INERRE+Interior/@-6.900453,107.603322,17z/data=!3m1!4b1!4m2!3m1!1s0x2e68e64383f4eda3:0x420267de73972b84?hl=en" target="_blank">Jl. Suka Mekar III No. 7, Bandung, Indonesia</a></li>
+                                               <li><a href="https://www.google.co.id/maps/place/6%C2%B053%2716.1%22S+107%C2%B034%2749.1%22E/@-6.887796,107.580303,17z/data=!4m2!3m1!1s0x0:0x0" target="_blank">Jl. Suka Mekar III No. 7, Bandung, Indonesia</a></li>
                                                <li><a href="#">+62 22 2013973</a></li>
                                                <li><a href="mailto:contact@subiantosiane.com">contact@subiantosiane.com</a></li>
                                            </ul>
@@ -34,7 +34,7 @@
                                    </div>
                                    <div class="col-md-12" style="padding-top:20px;">
                                        <div class="col-md-8">
-                                           <h4>Find Us On : </h4>
+                                           <h4>Find Us On </h4>
                                            <ul>
                                                 <li>
                                                     <a href="https://www.facebook.com/inerre.interior" target="_blank">Facebook</a> |
@@ -47,17 +47,18 @@
                                    </div>
                                    <div class="col-md-12" style="padding-top:20px;">
                                        <div class="col-md-8">
+                                       <h4>Send Us Message  </h4>
                                            <div class="contact-form-holder">
-                                <div id="contact-form">
-                                    <div id="message"></div>
-                                    <form method="post" action="contact/submitmessage2" name="contactform" id="contactform">
-                                        <input name="name" type="text" id="name" onClick="this.select()" placeholder="Name" >
-                                        <input name="email" type="text" id="email" onClick="this.select()"  placeholder="E-mail" >            
-                                        <textarea name="comments"  id="comments" onClick="this.select()" placeholder="Message"></textarea>  
-                                        <button id="submit"><span>Send </span> <i class="fa fa-long-arrow-right"></i></button>                                                                                                   
-                                    </form>
-                                </div>
-                            </div>
+                                                <div id="contact-form">
+                                                    <div id="message"></div>
+                                                    <form method="post" action="contact/submitmessage2" name="contactform" id="contactform">
+                                                        <input name="name" type="text" id="name" onClick="this.select()" placeholder="Name" >
+                                                        <input name="email" type="text" id="email" onClick="this.select()"  placeholder="E-mail" >            
+                                                        <textarea name="comments"  id="comments" onClick="this.select()" placeholder="Message"></textarea>  
+                                                        <button id="submit"><span>Send </span></button>                                                                                                   
+                                                    </form>
+                                                </div>
+                                            </div>
                                        </div>
                                        <div class="col-md-4"></div>
                                    </div>  

@@ -1795,7 +1795,7 @@ footer:before {
 }
 .contact-form-holder {
 	max-width:500px;
-	border-top:2px solid #000;
+	border-top:2px solid #ccc;
 	margin: 0 auto;
 }
 #contact-form  , #comment-form{
@@ -1814,6 +1814,7 @@ footer:before {
 	position:relative;
 	z-index:20;
 	padding-left:8px;
+	padding-bottom: 10px;
 	color:#000;
 	border:0;
 	border-bottom:2px solid #ccc;
@@ -1831,14 +1832,14 @@ footer:before {
 #submit	{
 	float:left;
 	border:none;
-	background:none;
-	padding:15px 30px 15px 0;
+	background:#000;
+	padding: 4px;
 	line-height:17px;
 	cursor:pointer;
 	letter-spacing:2px;
 	font-weight:800;
 	font-size:16px;
-	color:#000;
+	color:#fff;
 	letter-spacing:2px;
 	-webkit-appearance: none;
 	font-family: 'FuturaPT-Book';
@@ -1847,6 +1848,7 @@ footer:before {
     -o-transition: all 200ms linear;
     -ms-transition: all 200ms linear;
     transition: all 200ms linear;
+    width: 100%;
 }
 #submit:hover {
 	 color:#ccc;

@@ -477,7 +477,7 @@ function initDomik() {
     $("#map_addresses").gMap({
         latitude: q,
         longitude: r,
-        zoom: 17,
+        zoom: 16,
         maptype: "ROADMAP",
         markers: [ {
             latitude: q,
