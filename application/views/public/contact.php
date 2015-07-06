@@ -12,7 +12,7 @@
                     <div class="container">
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" style="height:250px;" class="map" data-latitude="-6.900160" data-longitude="107.603317" data-location="Subianto & Siane">
+                                <div id="map_addresses" style="height:375px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane">
                                 </div>
                             </div>
                         
@@ -21,7 +21,6 @@
                                     <!-- <div class="col-md-6">
                                         <h3>Contact  details : </h3>
                                     </div> -->
-
                                     <div class="col-md-12">
                                        <div class="col-md-8">
                                            <h4>Main Office</h4>
@@ -32,14 +31,12 @@
                                            </ul>
                                        </div>
                                        <div class="col-md-4"></div>
-                                       
-                                       
                                    </div>
                                    <div class="col-md-12" style="padding-top:20px;">
                                        <div class="col-md-8">
                                            <h4>Find Us On : </h4>
                                            <ul>
-                                               <li>
+                                                <li>
                                                     <a href="https://www.facebook.com/inerre.interior" target="_blank">Facebook</a> |
                                                     <a href="https://twitter.com/inerre_interior" target="_blank">Twitter</a> |
                                                     <a href="https://instagram.com/inerre_interior" target="_blank">Instagram</a>
@@ -47,14 +44,10 @@
                                            </ul>
                                        </div>
                                        <div class="col-md-4"></div>
-                                   </div> 
-                                </div>
-                            </div>
-                        </section>
-                        <!-- contact info  end-->
-                        <!-- contact form -->
-                        <section>
-                            <div class="contact-form-holder">
+                                   </div>
+                                   <div class="col-md-12" style="padding-top:20px;">
+                                       <div class="col-md-8">
+                                           <div class="contact-form-holder">
                                 <div id="contact-form">
                                     <div id="message"></div>
                                     <form method="post" action="contact/submitmessage2" name="contactform" id="contactform">
@@ -65,7 +58,14 @@
                                     </form>
                                 </div>
                             </div>
+                                       </div>
+                                       <div class="col-md-4"></div>
+                                   </div>  
+                                </div>
+                            </div>
                         </section>
+                        <!-- contact info  end-->
+                        <!-- contact form -->
                         <!-- contact form  end-->
                     </div>
                 </div>
@@ -94,4 +94,3 @@
     <!-- wrapper end -->
 
 <?php $this->load->view('public/templates/footer'); ?>
-        

@@ -291,7 +291,6 @@ section {
 	float:left;
 	width:100%;
 	position:relative;
-	padding:50px 0;
 	border-bottom:6px solid #eee;
 }
 .parallax-section {
@@ -1766,7 +1765,7 @@ footer:before {
 .contact-details {
 	float:left;
 	width:50%;
-	padding-top:10px;
+	padding-top:0px;
 	text-align:left;
 }
 .contact-details h3 {
@@ -1800,15 +1799,15 @@ footer:before {
 #contact-form  , #comment-form{
 	width:100%;
 	float:left;
-	margin-top:30px;
+	margin-top:10px;
 }	
 #contact-form input[type="text"] , #contact-form textarea , #comment-form input[type="text"]  , #comment-form textarea{
 	float:left;
 	width: 100%;
 	background:none;
-	margin-bottom:20px;
+	margin-bottom:10px;
 	font-size: 12px;
-	height:40px;
+	height:20px;
 	border-radius: none;
 	position:relative;
 	z-index:20;
@@ -1820,7 +1819,7 @@ footer:before {
 	font-family: 'FuturaPT-Book';
 }		
 #contact-form textarea  , #comment-form textarea {
-	height:150px;
+	height:50px;
 	resize:none;
 	overflow: auto;
 	background:none;
