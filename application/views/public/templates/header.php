@@ -95,8 +95,9 @@
 
             }*/
             .category-intro-item{
-                width:20%;
+                width:70%;
                 float:left;
+                margin:0 15% 40px 15%;
             }
             .category-item-holder{
                 /*overflow: hidden;*/
@@ -132,6 +133,8 @@
             .category-box-item{
                 float:left;
                 width:100%;
+                height:130px;
+                overflow: hidden;
             }
             .category-box-item a{
                 float:left;
@@ -159,8 +162,7 @@
             .category-box-item a img{
                 position: relative;
                 z-index: 1;
-                width:135%;
-                height: auto;
+                width:100%;
                 margin:0 auto;
             }
             .category-item{
@@ -170,6 +172,13 @@
                 z-index: 3;
                 margin-top:10px;
                 padding-bottom: 10px;
+            }
+            span.category-title{
+                position:absolute; 
+                top:0; 
+                z-index:3;
+                font-size: 20px;
+                color:#fff;
             }
             .hid-port-info .category-item{
                 position: absolute;
@@ -184,6 +193,7 @@
                 -ms-transition: all 500ms linear;
                 transition: all 500ms linear;
             }
+
             .category-item h3{
                 font-size:12px;
                 text-transform: uppercase;

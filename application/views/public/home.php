@@ -19,10 +19,12 @@
                             $bp = 'box-right';
                         }
                 ?>   
-                        <div class="category-intro-item <?php echo $bp;?> ">
+                        <div class="category-intro-item " >
                             <div class="category-item-holder ">
                                 <div class="category-box-item ">
                                     <a href="/project/filter/<?php echo strtolower($category->category_name);?>" class="ajax">
+                                    <span class="category-title" 
+                                        style=" "><?php echo $category->category_name;?></span>
                                     <span class="overlay"></span> 
                                     <?php
                                     if($c==1){
@@ -43,13 +45,15 @@
                                     ?>
                                     </a>
                                 </div>
-                                <div class="category-item grid-item ">
+                                <!-- <div class="category-item grid-item ">
                                     <h3>
                                         <a href="" class=""><?php echo $category->category_name;?></a>
                                     </h3>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
+
+
                 <?php     
                         $c++;
                     }
