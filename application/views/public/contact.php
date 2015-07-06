@@ -40,8 +40,8 @@
                                            <h4>Find Us On : </h4>
                                            <ul>
                                                <li>
-                                                    <a href="https://www.facebook.com/inerre.interior" target="_blank">Facebook</a>|
-                                                    <a href="https://twitter.com/inerre_interior" target="_blank">Twitter </a>|
+                                                    <a href="https://www.facebook.com/inerre.interior" target="_blank">Facebook</a> |
+                                                    <a href="https://twitter.com/inerre_interior" target="_blank">Twitter</a> |
                                                     <a href="https://instagram.com/inerre_interior" target="_blank">Instagram</a>
                                                 </li>
                                            </ul>
