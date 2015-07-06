@@ -1810,7 +1810,7 @@ footer:before {
 	background:none;
 	margin-bottom:10px;
 	font-size: 12px;
-	height:20px;
+	height:30px;
 	border-radius: none;
 	position:relative;
 	z-index:20;
@@ -1823,7 +1823,7 @@ footer:before {
 	font-family: 'FuturaPT-Book';
 }		
 #contact-form textarea  , #comment-form textarea {
-	height:50px;
+	height:60px;
 	resize:none;
 	overflow: auto;
 	background:none;
@@ -1834,12 +1834,12 @@ footer:before {
 	float:left;
 	border:none;
 	background:#000;
-	padding: 4px;
+	padding: 10px;
 	line-height:17px;
 	cursor:pointer;
 	letter-spacing:2px;
 	font-weight:800;
-	font-size:16px;
+	font-size:14px;
 	color:#fff;
 	letter-spacing:2px;
 	-webkit-appearance: none;
