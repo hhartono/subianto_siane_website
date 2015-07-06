@@ -196,6 +196,7 @@ blockquote p {
 	right:0;
 	z-index:2;
 	width:100%; 
+	background: #fff;
 }
 .content-holder{
 	vertical-align: top;
