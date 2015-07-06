@@ -12,7 +12,7 @@
                     <div class="container">
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" style="height:400px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane">
+                                <div id="map_addresses" style="height:440px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane">
                                 </div>
                             </div>
                         
@@ -55,7 +55,7 @@
                                                         <input name="name" type="text" id="name" onClick="this.select()" placeholder="Name" >
                                                         <input name="email" type="text" id="email" onClick="this.select()"  placeholder="E-mail" >            
                                                         <textarea name="comments"  id="comments" onClick="this.select()" placeholder="Message"></textarea>  
-                                                        <button id="submit"><span>Send </span></button>                                                                                                   
+                                                        <button id="submit"><span>SEND</span></button>                                                                                                   
                                                     </form>
                                                 </div>
                                             </div>
