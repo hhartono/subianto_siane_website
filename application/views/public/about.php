@@ -5,7 +5,7 @@
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content">
                 <!-- background animation  -->      
-                <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div>
+                <!-- <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div> -->
                 <!-- wrapper inner -->  
                 <div class="contentcenter mm"  style=" margin:0px auto;width:100%; max-width:1024px; ">
                     
