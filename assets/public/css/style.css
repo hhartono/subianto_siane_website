@@ -1348,7 +1348,8 @@ article {
 	margin:20px 0 0 0;
 }
 .fixed-filter a {
-	margin-right:20px;
+	/*margin-right:20px;*/
+	margin:0 10px 0 10px;
 	line-height: 1;
 	font-size: 11px;
 	text-transform: uppercase;
