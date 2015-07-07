@@ -2219,6 +2219,11 @@ footer:before {
 	100%{transform:rotate3d(0,0,1,180deg);
 	-webkit-transform:rotate3d(0,0,1,180deg)}
 }
+.contentcenter{
+	 margin:0px auto;
+	 width:100%; 
+	 max-width:1024px; 
+}
 /*------  Responsive ------------------------------------------------------*/
 @media only screen and  (max-width: 1023px) {
 	.ss-logo {
@@ -2357,11 +2362,18 @@ footer:before {
 	.fw .zoomimage {
 		top:150px;
 	}
+
 	.contentproject{
-		padding-top:60px;
+		padding-top:60px !important;
+	}
+	#about-text p{
+		font-size: 13px;
+	}
+	.pagination nav{
+		position:fixed;
 	}
 }
-@media only screen and  (max-width: 756px) {
+@media only screen and  (max-width: 768px) {
 	.selectMe {
 		display:none;
 	}
@@ -2371,6 +2383,9 @@ footer:before {
 	.team-holder li {
 		float:left;
 		width:50%;
+	}
+	.contentcenter{
+		width:80%;
 	}
 }
 @media only screen and  (max-width: 540px) {
@@ -2420,9 +2435,48 @@ footer:before {
 		background-position:center;
 	}
 }
-@media only screen and (max-width: 640px){
-	
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+	nav{
+		left:2%;
+	}
+	.logo-holder{
+		margin:0 auto 0px;
+	}
+	.contentcenter{
+		padding-top:110px !important;
+		margin-bottom:60px;
+	}
+	.contentproject{
+		padding-top: 0px !important;
+	}
 }	
+@media only screen and (min-width: 360px) and (max-width: 479px){
+	nav{
+		left:3%;
+	}
+	.nav-holder{
+		height:240px;
+	}
+	.logo-holder{
+		margin:0 auto 0px;
+	}
+	.contentcenter{
+		padding-top:110px !important;
+		margin-bottom:60px;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 359px){
+	nav{
+		left:5%;
+	}
+	.logo-holder{
+		margin:0 auto 0px;
+	}
+	.contentcenter{
+		padding-top:110px !important;
+	}
+}
+
 
 .ss-logo {
     /*max-height: 70px;*/

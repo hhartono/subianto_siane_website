@@ -6,7 +6,7 @@
                         <!-- background animation  -->		
                         <!-- <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div> -->
 
-                        <div class="contentcenter hid-port-info" style="background:#fff; margin:0px auto;width:100%; max-width:1024px; height:100%; z-index:4;">
+                        <div class="contentcenter hid-port-info" style="background:#fff; height:100%; z-index:4;">
                             
 
                             

@@ -3,8 +3,8 @@
     <!--=============== wrapper ===============-->	
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
-            <div class="content mm contentproject">
-                <div class=" contentcenter hid-port-info" style=" margin:0px auto;width:100%; max-width:1024px; ">
+            <div class="content ">
+                <div class=" contentcenter hid-port-info" style="padding-top:221px;">
                     <div class="pagination-nav" style="right:0;">
                         <a href="#" class="prev">
                             <img src="/assets/public/images/arrow_prev.png" alt="">
@@ -16,7 +16,7 @@
 
                             <!-- <div class="container-row" style="height:170px;"> -->
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -48,7 +48,7 @@
                                 </div>
                             </div>
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -81,7 +81,7 @@
                             </div>
 
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -146,7 +146,7 @@
                                 </div>
                             </div>
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -163,7 +163,7 @@
                             </div>
 
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -227,7 +227,7 @@
                                 </div>
                             </div>
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -292,7 +292,7 @@
                             </div>
 
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">
@@ -356,7 +356,7 @@
                                 </div>
                             </div>
 
-                            <div class="gallery-item Industrial">
+                            <div class="gallery-item Commercial">
                                 <div class="grid-item-holder">
                                     <div class="box-item">
                                         <a href="/project/detail/" class="ajax">

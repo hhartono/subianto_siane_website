@@ -7,7 +7,7 @@
                 <!-- background animation  -->      
                 <!-- <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div> -->
                 <!-- wrapper inner -->  
-                <div class="contentcenter mm"  style=" margin:0px auto;width:100%; max-width:1024px; ">
+                <div class="contentcenter mm"  style="">
                     
                     <div class="container">
                         <section style="padding:10px 0 10px 0;">
