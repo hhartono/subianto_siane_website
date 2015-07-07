@@ -2221,198 +2221,209 @@ footer:before {
 }
 /*------  Responsive ------------------------------------------------------*/
 @media only screen and  (max-width: 1023px) {
-.mob-bg {
-	display:block;
-}
-.wrapper-inner  , header , footer , .fixed-filter{
-	width:100%;
-}
-.wrapper-inner {
-	padding:90px 0;
-} 
-.inline-facts-holder:before , .show-info , .hide-column  , .img-wrap  , .bg-animate{
-	display:none;
-}
-.inline-facts h6 {
-	float: none;
-	font-size:16px;
-	text-align:center;
-}
-.num{
-	float: none;
-	text-align:center;
-}
-.nav-button-holder  {
-	display:block;
-}
-.nav-holder {
-	position:absolute;
-	top:60px;
-	left:0;
-	width:100%;
-	background:#fff;
-	padding:30px 0;
-	display:none;
-	height:300px;
-	overflow:auto;
-}
-nav ul li  , nav ul li ul li , nav li ul li > ul    {
-	float:left;
-	width:100%;
-	margin-bottom:10px;
-	text-align:left;
-	left:0;
-	opacity:1;
-	right: 0;
-}
- nav ul li ul li , nav li ul li > ul li {
-	 list-style:circle;
-}
-nav li ul {
-	margin: 0;
-	padding-left:20px;
-	opacity: 1;
-	visibility: hidden;
-	position: relative;
-	width:100%;
-	display:none;
-	top:0;
-	left: 0;
-	z-index: 1;    	
-	border-bottom:none;  
-}
-nav li:hover > ul {
-	display: block;
-} 
-nav li ul li:hover ul  {
-	display: block;
-}
-nav li a.act-link:before , nav li a.act-link:after {
-	left:7px;
-}
-.slide-title-holder {
-	width:100%;
-}
-.slide-title {
-	top:45%;
-	float:none;
-	margin: 0 auto;
-	border-right:none;
-	padding:50px;
-}
-.slide-title h3 {
-	 font-size:22px;
-}
-.slide-title h4 {
-	  font-size:12px
-}
-.height-emulator  , .to-top{
-	display:none;
-}
-footer {
-	position:relative;
-	float:left;
-}
-.page-title {
-	padding-bottom:20px;
-}
-.page-title h2 {
-	font-size:30px;	
-} 
-section {
-	padding:30px 0;
-}
-.gallery-item {
-	width:50% !important;
-}
-.fixed-column {
-	float:left;
-	position:relative;
-	width:100%;
-	height:auto;
-	right:0;
-	left:0;
-	top:0;
-}
-.fixed-column  section {
-	padding:110px 0 20px;
-	border: none !important;
-}
-.media-container {
-	float:left;
-	position:relative;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	overflow:auto;
-} 
-.colum-w {
-	padding-top:0 !important
-} 
-.fw .zoomimage {
-	top:150px;
-}
+	.ss-logo {
+	    height: 80px;
+	}
+	.mob-bg {
+		display:block;
+	}
+	.wrapper-inner  , header , footer , .fixed-filter{
+		width:100%;
+	}
+	.wrapper-inner {
+		padding:90px 0;
+	} 
+	.inline-facts-holder:before , .show-info , .hide-column  , .img-wrap  , .bg-animate{
+		display:none;
+	}
+	.inline-facts h6 {
+		float: none;
+		font-size:16px;
+		text-align:center;
+	}
+	.num{
+		float: none;
+		text-align:center;
+	}
+	.nav-button-holder  {
+		display:block;
+		margin:-74px 0 0 10px;
+	}
+	.nav-holder {
+		position:absolute;
+		top:62px;
+		left:0;
+		width:100%;
+		background:#fff;
+		padding:30px 0;
+		display:none;
+		height:300px;
+		overflow:auto;
+	}
+	nav ul li  , nav ul li ul li , nav li ul li > ul    {
+		float:left;
+		width:100%;
+		margin-bottom:10px;
+		text-align:left;
+		left:0;
+		opacity:1;
+		right: 0;
+	}
+	 nav ul li ul li , nav li ul li > ul li {
+		 list-style:circle;
+	}
+	nav li ul {
+		margin: 0;
+		padding-left:20px;
+		opacity: 1;
+		visibility: hidden;
+		position: relative;
+		width:100%;
+		display:none;
+		top:0;
+		left: 0;
+		z-index: 1;    	
+		border-bottom:none;  
+	}
+	nav li:hover > ul {
+		display: block;
+	} 
+	nav li ul li:hover ul  {
+		display: block;
+	}
+	nav li a.act-link:before , nav li a.act-link:after {
+		left:7px;
+	}
+	.slide-title-holder {
+		width:100%;
+	}
+	.slide-title {
+		top:45%;
+		float:none;
+		margin: 0 auto;
+		border-right:none;
+		padding:50px;
+	}
+	.slide-title h3 {
+		 font-size:22px;
+	}
+	.slide-title h4 {
+		  font-size:12px
+	}
+	.height-emulator  , .to-top{
+		display:none;
+	}
+	footer {
+		position:relative;
+		float:left;
+	}
+	.page-title {
+		padding-bottom:20px;
+	}
+	.page-title h2 {
+		font-size:30px;	
+	} 
+	section {
+		padding:30px 0;
+	}
+	.gallery-item {
+		width:50% !important;
+	}
+	.fixed-column {
+		float:left;
+		position:relative;
+		width:100%;
+		height:auto;
+		right:0;
+		left:0;
+		top:0;
+	}
+	.fixed-column  section {
+		padding:110px 0 20px;
+		border: none !important;
+	}
+	.media-container {
+		float:left;
+		position:relative;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		overflow:auto;
+	} 
+	.colum-w {
+		padding-top:0 !important
+	} 
+	.fw .zoomimage {
+		top:150px;
+	}
+	.contentproject{
+		padding-top:60px;
+	}
 }
 @media only screen and  (max-width: 756px) {
-.selectMe {
-	display:none;
-}
-.header-inner {
-	padding-right:0;
-}
-.team-holder li {
-	float:left;
-	width:50%;
-}
+	.selectMe {
+		display:none;
+	}
+	.header-inner {
+		padding-right:0;
+	}
+	.team-holder li {
+		float:left;
+		width:50%;
+	}
 }
 @media only screen and  (max-width: 540px) {
-.num{
-	font-size:62px; 
-}
-.page-title h2 {
-	font-size:20px;
-}
-.resume-head h3 {
-	font-size:30px;
-} 
-.team-holder li {
-	float:left;
-	width:100%;
-	padding:20px 0;
-}
-.gallery-item {
-	width:100%!important;
-}
-.grid-small-pad  .grid-item-holder , .grid-big-pad  .grid-item-holder{
-	padding:20px 0 !important;
-}
-.gallery-filters {
-	margin-top:50px;
-}
-.gallery-filters  a {
-	width:100%;
-	text-align:left;
-	padding-bottom:10px;
-}
-.fixed-filter a {
-	width: auto !important;
-}
-.gallery-filters  a:before {
-	height:1px;
-	width:0; 
-}
-.gallery-filters  a.gallery-filter-active:before {
-	width:40px;
-}
+	.num{
+		font-size:62px; 
+	}
+	.page-title h2 {
+		font-size:20px;
+	}
+	.resume-head h3 {
+		font-size:30px;
+	} 
+	.team-holder li {
+		float:left;
+		width:100%;
+		padding:20px 0;
+	}
+	.gallery-item {
+		width:100%!important;
+	}
+	.grid-small-pad  .grid-item-holder , .grid-big-pad  .grid-item-holder{
+		padding:20px 0 !important;
+	}
+	.gallery-filters {
+		margin-top:50px;
+	}
+	.gallery-filters  a {
+		width:100%;
+		text-align:left;
+		padding-bottom:10px;
+	}
+	.fixed-filter a {
+		width: auto !important;
+	}
+	.gallery-filters  a:before {
+		height:1px;
+		width:0; 
+	}
+	.gallery-filters  a.gallery-filter-active:before {
+		width:40px;
+	}
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-.bg {
-	background-attachment: scroll !important;
-	-webkit-background-size:cover;
-	background-position:center;
+	.bg {
+		background-attachment: scroll !important;
+		-webkit-background-size:cover;
+		background-position:center;
+	}
 }
-}
+@media only screen and (max-width: 640px){
+	
+}	
+
 .ss-logo {
     /*max-height: 70px;*/
     max-height: 110px;
@@ -2655,5 +2666,5 @@ span.category-title{
     margin-left:5%;
 }
 .contentproject{
-    padding-top:211px !important;
+    padding-top:211px;
 }
