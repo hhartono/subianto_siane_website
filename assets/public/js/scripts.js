@@ -263,6 +263,15 @@ function initDomik() {
         var ratio = 0.6640625; // ratio for get height of gallery item
         $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
         $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+        if($(window).width() < 768){
+            if($(window).innerHeight() > $(window).innerWidth()){
+                $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+            }else{
+                $(".container-gallery").css("height", 1 * parseInt($(".gallery-item").height()) +"px");
+            }
+        }else{
+            $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+        }
     }
     setHeightGallery();
     $(window).resize(function(){
@@ -288,6 +297,16 @@ function initDomik() {
                 if($(window).width() >= 768){
                     gLength = 4;
                     setCSize(4);
+                }else if($(window).width() < 768){
+                    if($(window).innerHeight() > $(window).innerWidth()){
+                        // portrait
+                        gLength = 2;
+                        setCSize(1);
+                    }else{
+                        // landscape
+                        gLength = 2;
+                        setCSize(2);
+                    }
                 }
             }else{
                 gLength = 8;

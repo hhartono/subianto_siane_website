@@ -53,6 +53,7 @@
                 fotorama.setOptions({
                     arrows: false
                 })
+
             });
 
             /*
