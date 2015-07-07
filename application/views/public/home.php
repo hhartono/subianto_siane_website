@@ -24,7 +24,7 @@
                                 <div class="category-box-item ">
                                     <a href="/project/filter/<?php echo strtolower($category->category_name);?>" class="ajax">
                                     <span class="category-title" 
-                                        style=" "><?php echo $category->category_name;?></span>
+                                        style=" "><?php echo $category->category_name;?> > </span>
                                     <span class="overlay"></span> 
                                     <?php
                                     if($c==1){
