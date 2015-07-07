@@ -12,7 +12,7 @@
                     <div class="container">
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" style="height:440px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane">
+                                <div id="map_addresses" style="height:440px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane <br> <a href='https://www.google.co.id/maps/place/6%C2%B053%2716.1%22S+107%C2%B034%2749.1%22E/@-6.887796,107.580303,17z/data=!4m2!3m1!1s0x0:0x0'>View on google maps</a> " >
                                 </div>
                             </div>
                         
@@ -52,8 +52,8 @@
                                                 <div id="contact-form">
                                                     <div id="message"></div>
                                                     <form method="post" action="contact/submitmessage2" name="contactform" id="contactform">
-                                                        <input name="name" type="text" id="name" onClick="this.select()" placeholder="Name" >
-                                                        <input name="email" type="text" id="email" onClick="this.select()"  placeholder="E-mail" >            
+                                                        <input name="name" type="text" id="name" onClick="this.select()" placeholder="Name" autocomplete="off">
+                                                        <input name="email" type="text" id="email" onClick="this.select()"  placeholder="E-mail" autocomplete="off">            
                                                         <textarea name="comments"  id="comments" onClick="this.select()" placeholder="Message"></textarea>  
                                                         <button id="submit"><span>SEND</span></button>                                                                                                   
                                                     </form>
