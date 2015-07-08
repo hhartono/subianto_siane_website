@@ -259,23 +259,43 @@ function initDomik() {
         return active;
     }
 
-    function setHeightGallery(){
+    function setHeightGallery(row){
         var ratio = 0.6640625; // ratio for get height of gallery item
         $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
-        $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+        $(".container-gallery").css("height", row * parseInt($(".gallery-item").height()) +"px");
+        
+    }
+    if($(window).width() < 768){
+        if($(window).innerHeight() > $(window).innerWidth()){
+            setHeightGallery(2);
+            console.log("orientation: portrait");
+            console.log("gallery height: "+$(".container-gallery").height());
+        }else{
+            setHeightGallery(1);
+            console.log("orientation: landscape");
+            console.log("gallery height: "+$(".container-gallery").height());
+        }
+    }else{
+        setHeightGallery(2);
+        console.log("gallery height: "+$(".container-gallery").height());
+    }
+    // console.log("gallery height: "+$(".container-gallery").height());
+    $(window).resize(function(){
         if($(window).width() < 768){
             if($(window).innerHeight() > $(window).innerWidth()){
-                $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+                setHeightGallery(2);
+                console.log("orientation: portrait");
+                console.log("gallery height: "+$(".container-gallery").height());
             }else{
-                $(".container-gallery").css("height", 1 * parseInt($(".gallery-item").height()) +"px");
+                setHeightGallery(1);
+                console.log("orientation: landscape");
+                console.log("gallery height: "+$(".container-gallery").height());
             }
         }else{
-            $(".container-gallery").css("height", 2 * parseInt($(".gallery-item").height()) +"px");
+            setHeightGallery(2);
+            console.log("gallery height: "+$(".container-gallery").height());
         }
-    }
-    setHeightGallery();
-    $(window).resize(function(){
-        setHeightGallery();
+        // setHeightGallery();
     });
     function n() {
         if ($(".gallery-items").length) {
