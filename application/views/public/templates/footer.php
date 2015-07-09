@@ -18,12 +18,13 @@
         <?php
         //}
         ?>
+        
         <script type="text/javascript" src="/assets/public/js/core.js"></script>
         <script type="text/javascript" src="/assets/public/js/plugins.js"></script>
         <script type="text/javascript" src="/assets/public/js/scripts.js"></script>
-        <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
         <script type="text/javascript" src="/assets/public/js/fotorama.js"></script>
-
+        <script type="text/javascript" src="/assets/public/js/modernizr.2.5.3.min.js"></script>
+        
         <script type="text/javascript">
             $(document).ready(function(){
 
@@ -31,10 +32,41 @@
                 $("span.category-title").css('margin-top', ($(".category-box-item").height()-$("span.category-title").height())/2 + "px");
                 $("span.category-title").css('margin-left', ($(".category-box-item").height()-$("span.category-title").height())/2 + "px");
                 $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
+
                 $(window).resize(function(){
                     $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()) +"px");
                 })
+                setFotoramaHeight();
             });
+
+            $(window).resize(function(){
+                setFotoramaHeight();
+            })
+
+            function setFotoramaHeight(){
+                var $fotoramaDiv = $('.fotorama').fotorama();
+                var fotorama = $fotoramaDiv.data('fotorama');
+                var heightFotorama;
+                if($(window).width() < 768){
+                    if($(window).innerHeight() > $(window).innerWidth()){
+                        console.log("orientation: portrait");
+                        heightFotorama = 245;
+                    }else{
+                        console.log("orientation: landscape");
+                        heightFotorama = $(window).height()-parseInt($(".contentcenter").css("padding-top"))-10;
+                        console.log("fotorama height: " + heightFotorama );
+                    }
+                }else{
+                    console.log("gallery height: "+$(".container-gallery").height());
+                    heightFotorama = 400;
+                }    
+                fotorama.setOptions({
+                    arrows: false,
+                    height: heightFotorama
+                })
+            }
+
+            
             
             $(function () {
                 // 1. Initialize fotorama manually.
@@ -51,10 +83,12 @@
                     return false;
                 })*/
                 fotorama.setOptions({
-                    arrows: false
+                    arrows: false,
                 })
 
             });
+
+            
 
             /*
              * Turn.js responsive book

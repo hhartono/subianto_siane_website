@@ -2,27 +2,26 @@
             <!--=============== wrapper ===============-->	
             <div id="wrapper">
                 <div class="content-holder elem scale-bg2 transition3" >
-                    <div class="content mm">
+                    <div class="content">
                         <!-- background animation  -->		
                         <!-- <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div> -->
 
-                        <div class="contentcenter hid-port-info" style="background:#fff; height:100%; z-index:4;">
+                        <div class="contentcenter hid-port-info" style="">
                             
-
-                            
-                            <section class="no-padding no-border">
+                            <!-- <section class="no-padding no-border"> -->
                                 <!-- page title -->     
-                                <div class="container">
+                                <!-- <div class="container"> -->
                                     <!-- <div class="page-title no-border">
                                         <h2><?php //echo $loadoneproject->title;?></h2>
                                         <h3><span><?php //echo $loadoneproject->description;?></span></h3>
                                     </div> -->
-                                </div>
-                            </section>
+                                <!-- </div> -->
+                            <!-- </section> -->
+                            
                             <div class="clearfix"></div>
+                            
                             <div class="container" style="background:#fff;">
                                 <section style="padding:0;">
-
                                 <!-- 2. Add images to <div class="fotorama"></div>. -->
                                 <?php
                                     if(isset($loadallphotosdetailproject)){
@@ -122,7 +121,7 @@
                         // $this->load->view('public/templates/parallax_column', $sidebar);
                    ?>
 
-                    <?php $this->load->view('public/templates/footer_block');?>
+                    <?php //$this->load->view('public/templates/footer_block');?>
 	
 
                     </div>

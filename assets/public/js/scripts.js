@@ -265,22 +265,8 @@ function initDomik() {
         $(".container-gallery").css("height", row * parseInt($(".gallery-item").height()) +"px");
         
     }
-    if($(window).width() < 768){
-        if($(window).innerHeight() > $(window).innerWidth()){
-            setHeightGallery(2);
-            console.log("orientation: portrait");
-            console.log("gallery height: "+$(".container-gallery").height());
-        }else{
-            setHeightGallery(1);
-            console.log("orientation: landscape");
-            console.log("gallery height: "+$(".container-gallery").height());
-        }
-    }else{
-        setHeightGallery(2);
-        console.log("gallery height: "+$(".container-gallery").height());
-    }
-    // console.log("gallery height: "+$(".container-gallery").height());
-    $(window).resize(function(){
+
+    function setOrientation(){
         if($(window).width() < 768){
             if($(window).innerHeight() > $(window).innerWidth()){
                 setHeightGallery(2);
@@ -294,8 +280,13 @@ function initDomik() {
         }else{
             setHeightGallery(2);
             console.log("gallery height: "+$(".container-gallery").height());
-        }
-        // setHeightGallery();
+            $(".contentcenter").css("padding-top", 200+"px");
+        }    
+    }
+    
+    setOrientation();
+    $(window).resize(function(){
+        setOrientation();
     });
     function n() {
         if ($(".gallery-items").length) {
