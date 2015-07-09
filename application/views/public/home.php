@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content full-height" style="">
-                <div class="contentcenter hid-port-info" style="padding-top:221px; height:100%">
+                <div id="content-home" class="contentcenter hid-port-info" style="padding-top:221px; height:100%">
                 <?php 
                 if(isset($loadcategorycount)){
                     $c = 1;
@@ -23,9 +23,12 @@
                             <div class="category-item-holder ">
                                 <div class="category-box-item ">
                                     <a href="/project/filter/<?php echo strtolower($category->category_name);?>" class="ajax">
-                                    <span class="category-title" 
-                                        style=" "><?php echo $category->category_name;?> > </span>
-                                    <span class="overlay"></span> 
+                                    <span class="category-box-text">
+                                        <span class="category-title"><?php echo $category->category_name;?></span>
+                                        <span class="category-arrow"> > </span>
+                                    </span>
+                                    <span class="overlay"></span>    
+                                    
                                     <?php
                                     if($c==1){
                                     ?>

@@ -594,6 +594,7 @@ nav li ul a.act-link {
 	margin:-110px 0 0 10px;
 	padding-left:22px;
 	display:none;
+
 }
 .nav-button {
 	float:right;
@@ -2253,6 +2254,7 @@ footer:before {
 	.nav-button-holder  {
 		display:block;
 		margin:-74px 0 0 10px;
+		z-index: 23;
 	}
 	.nav-holder {
 		position:absolute;
@@ -2387,6 +2389,19 @@ footer:before {
 	.contentcenter{
 		width:80%;
 	}
+	#content-home.contentcenter{
+		width:96%;	
+	}
+	#content-home .category-intro-item{
+		width:100%;
+		margin: 0 0 10px;
+	}
+	.category-title,.category-arrow{
+		font-size: 13px !important;
+	}
+	.category-box-item{
+		height: 100px !important;
+	}
 	.fotorama__nav-wrap, #playpause{
 		display: none;
 	}
@@ -2452,6 +2467,7 @@ footer:before {
 	.contentproject{
 		padding-top: 0px !important;
 	}
+
 }	
 @media only screen and (min-width: 360px) and (max-width: 479px){
 	nav{
@@ -2473,6 +2489,7 @@ footer:before {
 		left:5%;
 	}
 	.logo-holder{
+		max-width: 250px;
 		margin:0 auto 0px;
 	}
 	.contentcenter{
@@ -2674,10 +2691,18 @@ a#explore:hover, a#gotocontact:hover{
     margin-top:10px;
     padding-bottom: 10px;
 }
-span.category-title{
-    position:absolute; 
-    top:0; 
-    z-index:3;
+.category-box-text{
+	position:absolute;
+	top:0;
+	z-index: 3;
+}
+.category-title{
+	float:left;
+}
+.category-arrow{
+	float:right;
+}
+.category-title, .category-arrow{
     font-size: 20px;
     color:#fff;
     font-family: 'FuturaPT-Book';

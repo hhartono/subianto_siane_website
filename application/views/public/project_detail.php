@@ -48,10 +48,10 @@
                                     }
                                     ?>
                                     
-                                    <div id="playpause">
-                                        <a href="#" id="play">play</a>
+                                    <!-- <div id="playpause"> -->
+                                        <!-- <a href="#" id="play">play</a> -->
                                         <!-- <a href="#" id="pause">pause</a> -->
-                                    </div>
+                                    <!-- </div> -->
                                     <!-- end gallery items -->  
 
                                     <div class="row" style="background:#fff;">
