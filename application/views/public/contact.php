@@ -12,7 +12,7 @@
                     <div class="container">
                         <section class="no-border">
                             <div class="map-box">
-                                <div id="map_addresses" style="height:440px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane <br> <a href='https://www.google.co.id/maps/place/6%C2%B053%2716.1%22S+107%C2%B034%2749.1%22E/@-6.887796,107.580303,17z/data=!4m2!3m1!1s0x0:0x0'><font style=color:red;>View on google maps</font></a> " >
+                                <div id="map_addresses" style="height:440px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane <br> <a href='https://www.google.co.id/maps/place/INERRE+Interior/@-6.900453,107.603322,17z/data=!3m1!4b1!4m2!3m1!1s0x2e68e64383f4eda3:0x420267de73972b84'><font style=color:#808000;>View on google maps</font></a> " >
                                 </div>
                             </div>
                         
