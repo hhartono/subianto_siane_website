@@ -11,419 +11,50 @@
                         </a>
                     </div>
                     <div class="container-gallery" style="width:100%; overflow:hidden;">
+                        
+
                         <!-- gallery items -->
                         <div class="gallery-items hid-port-info">
+                        <?php
+                            if(isset($loadallproject)){
+                                foreach ($loadallproject as $lap) {
+                        ?>
+                                    <div class="gallery-item <?php echo $lap->category_name;?>">
+                                        <div class="grid-item-holder">
+                                            <div class="box-item">
+                                                <a href="/project/detail/<?php echo $lap->project_uri;?>" class="ajax">
+                                                <span class="overlay"></span> 
+                                            <?php
+                                                if($lap->photo == "" || $lap->photo == '0'){
+                                            ?>
+                                                    <img  src="/assets/public/images/default.jpg"   alt="">
+                                            <?php
+                                                }else{
+                                            ?>
+                                                    <img  src="/uploads/project/<?php echo $lap->photo;?>"   alt="">    
+                                            <?php
+                                                }
+                                            ?>                                                        
+                                                </a>
+                                            </div>
+                                            <div class="grid-item ">
+                                                <h3><a href="project/detail/<?php echo $lap->project_uri;?>" class="ajax portfolio-link"><?php echo $lap->title;?></a></h3>
+                                                <!-- <span>Hoses Design</span> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                        <?php   
+                                }
+                        ?>
 
-                            <!-- <div class="container-row" style="height:170px;"> -->
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/011883-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item Interior ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012012-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item Houses">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012045-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012054-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012069-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/011883-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item Interior ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Interior">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012012-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item Houses">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Interior">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012045-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012054-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/012069-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/015435-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/043417-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046078-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046185-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046073-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/059620-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/051382-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046185-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046073-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/059620-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/051382-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Commercial">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046185-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/046073-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/059620-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="gallery-item Houses">
-                                <div class="grid-item-holder">
-                                    <div class="box-item">
-                                        <a href="/project/detail/" class="ajax">
-                                        <span class="overlay"></span> 
-                                            <!-- <img  src="/assets/public/images/default.jpg"   alt=""> -->
-                                            <img  src="/uploads/project/051382-8R.jpg"   alt="">   
-                                        </a>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <h3><a href="project/detail/" class="ajax portfolio-link">Title</a></h3>
-                                        <!-- <span>Hoses Design</span> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- </div> -->
-
-                        </div>
-                        <!-- end gallery items --> 
+                        <?php
+                            }else{
+                                // echo nothing
+                                echo '';
+                            }
+                        ?>
+                    </div>
+                    <!-- end gallery items --> 
                     </div>
 
                     <div class="pagination-nav" style="right:0;">

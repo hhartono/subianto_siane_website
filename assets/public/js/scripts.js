@@ -291,9 +291,11 @@ function initDomik() {
 
     function setOrientation(){
         var top = 0;
+        var mapboxWidth = $(".container").width()/2;
         if($(window).width() < 768){
             if($(window).innerHeight() > $(window).innerWidth()){
                 // mobile portrait
+                // project grid
                 var movePost = -2;
                 setHeightGallery(2);
                 console.log("orientation: portrait");
@@ -313,8 +315,15 @@ function initDomik() {
                 });
                 console.log("move: " + top + ": " +(movePost * parseInt($(".gallery-item").height())));
                 console.log(getRowPosition()-1)
+
+                // contact page -> map box
+                $(".map-box").css('width', 2 * mapboxWidth +"px");
+                $(".map-box").css('height', $(".map-box").width()+"px");
+                // $(".map-box").css('margin-bottom', 20+"px");
+                $("#map_addresses").css('height', $(".map-box").width()+"px");
             }else{
                 // mobile landscape
+                // project grid
                 var movePost = -1;
                 setHeightGallery(1);
                 console.log("orientation: landscape");
@@ -335,16 +344,27 @@ function initDomik() {
                 });
                 console.log("move: " + top + ": " +(movePost * parseInt($(".gallery-item").height())));
                 console.log(getRowPosition()-1)
+
+                // contact page -> map box
+                $(".map-box").css('width', 2 * mapboxWidth +"px");
+                $(".map-box").css('height', $(".map-box").width()+"px");
+                $("#map_addresses").css('height', $(".map-box").width()+"px");
             }
         }else{
+            // large screen
+            // project grid
             setHeightGallery(2);
             console.log("gallery height: "+$(".container-gallery").height());
             $(".contentcenter").css("padding-top", 200+"px");
+
+            // contact page -> map box
+            $(".map-box").css('width', mapboxWidth +"px");
+            $(".map-box").css('height', 400+"px");
+            $("#map_addresses").css('height', $(".contact-details").height()+"px");
         }    
     }
 
     setOrientation();
-    
     $(window).resize(function(){
         setOrientation();
     });
