@@ -288,30 +288,30 @@ function initDomik() {
         if($(window).width() < 768){
             if($(window).innerHeight() > $(window).innerWidth()){
                 console.log("orientation: portrait");
-                $(".map-box").css("width", 100+"%");
-                $(".map-box").css("height", 280+"px");
-                $(".map").css("height", 250+"px");
-                $(".map").css("width", 100+"%");
-                $(".contact-details").css("width", 100+"%");  
+                $(".map-box").css("width", 100 + "%");
+                $(".map-box").css("height", 280 + "px");
+                $(".map").css("height", 250 + "px");
+                $(".map").css("width", 100 + "%");
+                $(".contact-details").css("width", 100 + "%");  
             }else{
                 console.log("orientation: landscape");
-                $(".map-box").css("width", 100+"%");
-                $(".map-box").css("height", 280+"px");
-                $(".map").css("height", 250+"px");
-                $(".map").css("width", 100+"%");
-                $(".contact-details").css("width", 100+"%"); 
+                $(".map-box").css("width", 100 + "%");
+                $(".map-box").css("height", 280 + "px");
+                $(".map").css("height", 250 + "px");
+                $(".map").css("width", 100 + "%");
+                $(".contact-details").css("width", 100 + "%"); 
             }
         }else{
-            $(".map-box").css("width", 50+"%");
-            $(".map").css("height", 440+"px");
-        }    
+            $(".map-box").css("width", 50 + "%");
+            $(".map").css("height", 440 + "px");
+        }
     }
     
     setOrientation();
-    setOrientation2()
+    setOrientation2();
     $(window).resize(function(){
         setOrientation();
-        setOrientation2()
+        setOrientation2();
     });
     function n() {
         if ($(".gallery-items").length) {
