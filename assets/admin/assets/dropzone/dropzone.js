@@ -709,7 +709,7 @@ require.register("dropzone/lib/dropzone.js", function(exports, require, module){
 
     Dropzone.prototype.accept = function(file, done) {
       if (Math.round(file.size / 1024 / 10.24) / 100 > this.options.maxFilesize / 1024) {
-        return done("File is too big (" + (Math.round(file.size / 1024 / 10.24) / 100) + "MB). Max filesize: " + this.options.maxFilesize + "KB");
+        return done("File is too big (" + (Math.round(file.size / 1024 / 10.24) / 100) + "MB). Max filesize: " + this.options.maxFilesize / 1024 + "MB");
       } else {
         return this.options.accept.call(this, file, done);
       }

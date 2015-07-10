@@ -47,7 +47,7 @@
                                                     <i class="fa fa-trash-o"></i> Delete
                                                 </button><br>
                                             </br><button class="btn btn-success" data-toggle="modal" data-target="#addPhotoModal" data-id="<?php echo $lap->id;?>" style="height: 35px; width: 120px; " title="Add Project Photo">
-                                                    <i class="fa fa-plus"></i> Tambah Photo
+                                                    <i class="fa fa-plus"></i> Photo
                                                 </button>
 		                                  </td>
 		                              </tr>
