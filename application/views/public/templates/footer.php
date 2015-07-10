@@ -27,16 +27,15 @@
         
         <script type="text/javascript">
             $(document).ready(function(){
+
                 $(".category-box-text").css('margin-top', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-left', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-right', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('width', $(".category-box-item").width()-($(".category-box-item").height()-$(".category-title").height()) +"px");
 
-                $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
-
-                $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width())  +"px");
-                console.log("gallery filter margin left" + (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()) );
-                setFotoramaHeight();
+                $(".gallery-filters").css('margin-left', parseInt((($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()))  +"px");
+                //console.log("gallery filter margin left" + parseInt((($(".fixed-filter").width() - $(".gallery-filter").eq(1).width())/2) - 30 + $(".gallery-filter").eq(0).width()));
+                //contactResponsive();
             });
 
             $(window).resize(function(){
@@ -45,8 +44,62 @@
                 $(".category-box-text").css('margin-right', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('width', $(".category-box-item").width()-($(".category-box-item").height()-$(".category-title").height()) +"px");
                 $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()) +"px");
-                setFotoramaHeight();
+           
+                //contactResponsive();
             })
+            function contactResponsive(){
+                if($(window).width() < 768){
+                    if($(window).innerHeight() > $(window).innerWidth()){
+                        console.log("orientation: portrait");
+                        $(".map-box").css("width", 100 +"%");
+                        $(".map-box").css("height", 280 +"px");
+                        $(".map").css("height", 250 +"px");
+                        $(".map").css("width", 100 +"%");
+                        $(".contact-details").css("width", 100 +"%");  
+                    }else{
+                        console.log("orientation: landscape");
+                        $(".map-box").css("width", 100 +"%");
+                        $(".map-box").css("height", 280 +"px");
+                        $(".map").css("height", 250 +"px");
+                        $(".map").css("width", 100 +"%");
+                        $(".contact-details").css("width", 100 +"%"); 
+                    }
+                }else{
+                    console.log("normal view");
+                    $(".map-box").css("width", $(".map-box").width() +"px");
+                    $(".map").css("height", 440 +"px");
+                }    
+            }
+        </script>
+
+         <?php 
+        // load fotorama
+        $uri = $this->uri->segment(2);
+        if($uri == 'detail'){
+
+        ?>
+        <script type="text/javascript">
+            /*
+             * fotorama gallery (project detail page)
+             */
+            $(function () {
+                // 1. Initialize fotorama manually.
+                var $fotoramaDiv = $('.fotorama').fotorama();
+                // 2. Get the API object.
+                var fotorama = $fotoramaDiv.data('fotorama');
+                fotorama.startAutoplay(1500);
+                /*$("#playpause #play").click(function(){
+                    fotorama.startAutoplay(1500);    
+                    return false;
+                })*/
+                /*$("#playpause #pause").click(function(){
+                    fotorama.stopAutoplay();
+                    return false;
+                })*/
+                fotorama.setOptions({
+                    arrows: false,
+                })
+            });
 
             function setFotoramaHeight(){
                 var $fotoramaDiv = $('.fotorama').fotorama();
@@ -71,30 +124,22 @@
                 })
             }
 
-            
-            
-            $(function () {
-                // 1. Initialize fotorama manually.
-                var $fotoramaDiv = $('.fotorama').fotorama();
-                // 2. Get the API object.
-                var fotorama = $fotoramaDiv.data('fotorama');
-                fotorama.startAutoplay(1500);
-                // $("#playpause #play").click(function(){
-                //     fotorama.startAutoplay(1500);    
-                //     return false;
-                // })
-                /*$("#playpause #pause").click(function(){
-                    fotorama.stopAutoplay();
-                    return false;
-                })*/
-                fotorama.setOptions({
-                    arrows: false,
-                })
-
+            $(document).ready(function(){
+                $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
+                setFotoramaHeight();
             });
 
-            
+            $(window).resize(function(){
+                setFotoramaHeight();
+            });
 
+        </script>
+        <?php
+        }else{
+            // echo nothing
+        }
+        ?>
+        <script type="text/javascript">
             /*
              * Turn.js responsive book
              */
@@ -192,5 +237,8 @@
                 module.init('flipbook');
             }());
         </script>
+
+       
+
     </body>
 </html>

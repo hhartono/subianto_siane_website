@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div class="content-holder elem scale-bg2 transition3" >
             <div class="content ">
-                <div class=" contentcenter hid-port-info" style="padding-top:221px;">
+                <div id="project-page" class=" contentcenter hid-port-info" style="padding-top:221px;">
                     <div class="pagination-nav" style="right:0;">
                         <a href="#" class="prev">
                             <img src="/assets/public/images/arrow_prev.png" alt="">
