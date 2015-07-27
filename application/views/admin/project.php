@@ -141,7 +141,7 @@
                             <div class="modal-body">
                                 <fieldset title="Step: upload photos of project" class="step" id="default-step-0">
                                     <form action="/administrator/projectphotouploadsubmit" class="dropzone" id="projectphotoupload">
-                                        <input type="hidden" name="idproject" id="idproject" value="<?php echo $loadaddproject->id;?>">
+                                        <input type="hidden" name="idproject" id="idproject" value="">
                                     </form> 
                                 </fieldset>
                             </div>
@@ -195,6 +195,10 @@
 	        });
 
             $('#addPhotoModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+                var id = button.data('id')
+                var modal = $(this)
+                modal.find('.modal-body input#idproject').attr("value", id)
             });
 
             $('#addPhotoModal').on('hidden.bs.modal',function(){
