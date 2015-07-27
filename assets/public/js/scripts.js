@@ -356,7 +356,6 @@ function initDomik() {
             setHeightGallery(2);
             console.log("gallery height: "+$(".container-gallery").height());
             $(".contentcenter").css("padding-top", 200+"px");
-
             // contact page -> map box
             $(".map-box").css('width', mapboxWidth +"px");
             $(".map-box").css('height', 400+"px");

@@ -323,7 +323,10 @@ class Administrator extends CI_Controller{
 			$sidebar = $this->input->post('sidebar');
 			$this->modelproject->insertProjectAlbum($idproject, $id, $cover, $sidebar);
 			redirect('administrator/project');	
+		}else{
+			redirect('administrator/projectadd');
 		}
+
 	}
 
 	public function about()
