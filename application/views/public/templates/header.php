@@ -29,22 +29,22 @@
             ?>
                 <div id="masklayer" style="background:#4b4842;position:fixed;z-index:90;"></div>
                 <div id="hometoplayer" style="position:relative;z-index:100;">
-                    <div class="introword" style="width:460px;">
-                        <img style="" src="/assets/public/images/intro_subianto_white.png" alt="">
+                    <div class="introword" style="">
+                        <img style="" src="/assets/public/images/ss_logo_subianto.png" alt="">
                     </div>
-                    <div class="introword" style="width:460px;">
-                        <img style="" src="/assets/public/images/intro_siane_white.png" alt="">
+                    <div class="introword" style="">
+                        <img style="" src="/assets/public/images/ss_logo_siane.png" alt="">
                     </div>
-                    <div class="introword" style="width:460px;">
-                        <img style="" src="/assets/public/images/intro_architect_white.png" alt="">
+                    <div class="introword" style="">
+                        <img style="" src="/assets/public/images/ss_logo_architect.png" alt="">
                     </div>
-                    <div class="introword" style="width:460px; margin-top:165px;">
-                        <div style="float:left;width:230px;">
+                    <div class="introword" style="margin-top:165px; height:20px;">
+                        <div style="float:left;">
                             <a href="#" id="explore">
                                 EXPLORE OUR PROJECTS
                             </a>
                         </div>
-                        <div style="float:left;width:230px;">
+                        <div style="float:left;">
                             <a href="/contact" id="gotocontact">
                                 CONTACT US
                             </a>

@@ -632,13 +632,11 @@ function initDomik() {
      * show intro 
      */
     function homeintro(){
-        $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
-        $(".introword").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
+        homeIntroSizing();
         $(".introword").animate({opacity:0})
         $(".introword").eq(0).delay(1000).animate({
             opacity:1,
-            paddingTop: "155px"
-            
+            //paddingTop: "155px"
         }, 900 );
         $(".introword").eq(1).delay(1500).animate({
             opacity:1
@@ -662,8 +660,35 @@ function initDomik() {
             })
         });
     }
+    function homeIntroSizing(){
+        $(".introword").css("width", 50+"%");
+        if($(window).width()<1024){
+            $(".introword img").css("width", $(".introword").width()+"px");   
+            $("#masklayer").css('width', $(document).width()+"px").animate({opacity:1});
+            $("#masklayer").css('height', $(window).height()+"px").animate({opacity:1});
+            $(".introword").css('margin-left', ($(document).width()-$('.introword').width())/2 +"px");
+            if($(window).width()<$(window).height()){ // portrait
+                $(".introword").eq(0).css('padding-top', 40+"%");
+                $(".introword").eq(3).css('margin-top', 30+"%");
+                $(".introword:eq(3) div").css("width", ($(".introword").width()/2-2) +"px");
+            }else{ // landscape
+                $(".introword").eq(0).css('padding-top', 5+"%");
+                $(".introword").eq(3).css('margin-top', 10+"%");
+                $(".introword:eq(3) div").css("width", ($(".introword").width()/2-2) +"px");
+            }
+        }else{
+            $(".introword img").css("width", 57+"%");   
+            $("#masklayer").css('width', $(document).width()+"px").css('height', $(document).height()+"px").animate({opacity:1});
+            $(".introword").css('margin-left', ($(document).width()-$('.introword').width())/2 +"px");
+            $(".introword").eq(0).css('padding-top', 155+"px");
+            $(".introword").eq(3).css('margin-top', 165+"px");
+            $(".introword:eq(3) div").css("width", ($(".introword").width()/2-2 )+"px");
+        }
+    }
     homeintro();
-  
+    $(window).resize(function(){
+        homeIntroSizing();
+    })
     /*
      * function simcarousel
      * simple vertical carousel in project page

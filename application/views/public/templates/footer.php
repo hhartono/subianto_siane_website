@@ -27,7 +27,7 @@
         
         <script type="text/javascript">
             $(document).ready(function(){
-
+               
                 $(".category-box-text").css('margin-top', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-left', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-right', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
