@@ -239,6 +239,30 @@ function initDomik() {
     function getFilterActiveLength(){
         return filterActiveLength;
     }
+
+    var firstRow = 1 , lastRow, rowPosition = 1, cSize;
+    function getFirstRow(){
+        return firstRow;
+    }
+    function setLastRow(lr){
+        lastRow = lr;
+    }
+    function getLastRow(){
+        return lastRow;
+    }
+    function setRowPosition(rp){
+        rowPosition = rp;
+    }
+    function getRowPosition(){
+        return rowPosition;
+    }
+    function setCSize(c){
+        cSize = c;
+    }
+    function getCSize(){
+        return cSize;
+    }
+
     function checkFilter(){
         $(".gallery-filter").each(function(){
             var fa = $(this).attr("data-filteractive");
@@ -262,57 +286,88 @@ function initDomik() {
     function setHeightGallery(row){
         var ratio = 0.6640625; // ratio for get height of gallery item
         $(".gallery-item").css("height", parseInt(ratio * $(".gallery-item").width()) +"px");
-        $(".container-gallery").css("height", row * parseInt($(".gallery-item").height()) +"px");
-        
+        $(".container-gallery").css("height", row * parseInt($(".gallery-item").height()) +"px"); 
     }
 
     function setOrientation(){
+        var top = 0;
+        var mapboxWidth = $(".container").width()/2;
         if($(window).width() < 768){
             if($(window).innerHeight() > $(window).innerWidth()){
+                // mobile portrait
+                // project grid
+                var movePost = -2;
                 setHeightGallery(2);
                 console.log("orientation: portrait");
                 console.log("gallery height: "+$(".container-gallery").height());
+                if(getRowPosition() == 1){
+                    top = 0;
+                }else{
+                    console.log("rowPosition: " + getRowPosition());
+                    top = ((getRowPosition()-1) * (movePost * parseInt($(".gallery-item").height())));
+                }
+                //$(".gallery-items").css("top", top +"px");
+                $(".gallery-items").animate({ 
+                    'top': top
+                },{
+                    duration: 'fast',
+                    easing: 'easeInCirc'
+                });
+                console.log("move: " + top + ": " +(movePost * parseInt($(".gallery-item").height())));
+                console.log(getRowPosition()-1)
+
+                // contact page -> map box
+                $(".map-box").css('width', 2 * mapboxWidth +"px");
+                $(".map-box").css('height', $(".map-box").width()+"px");
+                // $(".map-box").css('margin-bottom', 20+"px");
+                $("#map_addresses").css('height', $(".map-box").width()+"px");
             }else{
+                // mobile landscape
+                // project grid
+                var movePost = -1;
                 setHeightGallery(1);
                 console.log("orientation: landscape");
                 console.log("gallery height: "+$(".container-gallery").height());
+                if(getRowPosition() == 1){
+                    top = 0;
+                    console.log("rowPosition is NaN");
+                }else{
+                    console.log("rowPosition: " + getRowPosition());
+                    top = ((getRowPosition()-1) * (movePost * parseInt($(".gallery-item").height())));
+                }
+                //$(".gallery-items").css("top", top +"px");
+                $(".gallery-items").animate({ 
+                    'top': top
+                },{
+                    duration: 'fast',
+                    easing: 'easeInCirc'
+                });
+                console.log("move: " + top + ": " +(movePost * parseInt($(".gallery-item").height())));
+                console.log(getRowPosition()-1)
+
+                // contact page -> map box
+                $(".map-box").css('width', 2 * mapboxWidth +"px");
+                $(".map-box").css('height', $(".map-box").width()+"px");
+                $("#map_addresses").css('height', $(".map-box").width()+"px");
             }
         }else{
+            // large screen
+            // project grid
             setHeightGallery(2);
             console.log("gallery height: "+$(".container-gallery").height());
             $(".contentcenter").css("padding-top", 200+"px");
+            // contact page -> map box
+            $(".map-box").css('width', mapboxWidth +"px");
+            $(".map-box").css('height', 400+"px");
+            $("#map_addresses").css('height', $(".contact-details").height()+"px");
         }    
     }
 
-    function setOrientation2(){
-        if($(window).width() < 768){
-            if($(window).innerHeight() > $(window).innerWidth()){
-                console.log("orientation: portrait");
-                $(".map-box").css("width", 100 + "%");
-                $(".map-box").css("height", 280 + "px");
-                $(".map").css("height", 250 + "px");
-                $(".map").css("width", 100 + "%");
-                $(".contact-details").css("width", 100 + "%");  
-            }else{
-                console.log("orientation: landscape");
-                $(".map-box").css("width", 100 + "%");
-                $(".map-box").css("height", 280 + "px");
-                $(".map").css("height", 250 + "px");
-                $(".map").css("width", 100 + "%");
-                $(".contact-details").css("width", 100 + "%"); 
-            }
-        }else{
-            $(".map-box").css("width", 50 + "%");
-            $(".map").css("height", 440 + "px");
-        }
-    }
-    
     setOrientation();
-    setOrientation2();
     $(window).resize(function(){
         setOrientation();
-        setOrientation2();
     });
+
     function n() {
         if ($(".gallery-items").length) {
             checkFilter(); // check filter active
@@ -352,7 +407,7 @@ function initDomik() {
             // setHeightGallery();
         
             if(faLength == 1){
-                // projectWithFilter(dataFilterActive, ratio, a, length);
+                // one filter selected
                 a = $(".gallery-items").isotope({
                     singleMode: true,
                     columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
@@ -377,6 +432,7 @@ function initDomik() {
                     }
                 }
             }else{
+                // all filter selected
                 a = $(".gallery-items").isotope({
                     singleMode: true,
                     columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
@@ -401,6 +457,7 @@ function initDomik() {
                     }
                 }
             }
+            // filter click!
             $(".gallery-filters").on("click", "a.gallery-filter", function(b) {
                 $(".gallery-items").animate({ 'top': 0});
                 b.preventDefault();
@@ -606,28 +663,6 @@ function initDomik() {
     }
     homeintro();
   
-    var firstRow = 1 , lastRow, rowPosition = 1, cSize;
-    function getFirstRow(){
-        return firstRow;
-    }
-    function setLastRow(lr){
-        lastRow = lr;
-    }
-    function getLastRow(){
-        return lastRow;
-    }
-    function setRowPosition(rp){
-        rowPosition = rp;
-    }
-    function getRowPosition(){
-        return rowPosition;
-    }
-    function setCSize(c){
-        cSize = c;
-    }
-    function getCSize(){
-        return cSize;
-    }
     /*
      * function simcarousel
      * simple vertical carousel in project page
@@ -639,8 +674,8 @@ function initDomik() {
     
         $(".pagination-nav a.next").click(function(){
             //rowPosition = 1;
-            var gl =  getGalleryLength();
-            var nRow = parseInt(gl/getCSize()); 
+            var gl =  getGalleryLength(); // gallery length
+            var nRow = parseInt(gl/getCSize()); // row
             var modRow = gl % getCSize();
             if(modRow == 0){
                 setLastRow(nRow);
