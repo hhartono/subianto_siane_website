@@ -119,8 +119,8 @@ blockquote p {
 /* ---------Page preload--------------------------------------*/
 .loader {
 	position:fixed;
-	top:50% !important;
-	left:50%;
+	/*top:50% !important;*/
+	/*left:50%;*/
 	width:50px;
 	height:50px;
 	z-index:100;

@@ -5,7 +5,6 @@ $(window).load(function() {
             opacity: "1"
         }, 500);
         contanimshow();
-
     });
 });
 
@@ -324,6 +323,10 @@ function initDomik() {
                 $(".map-box").css('height', $(".map-box").width()+"px");
                 // $(".map-box").css('margin-bottom', 20+"px");
                 $("#map_addresses").css('height', $(".map-box").width()+"px");
+
+                // loader center position
+                $(".loader").css("top", ($(window).height()-$(".loader").height())/2+"px");
+                $(".loader").css("left", ($(window).width()-$(".loader").width())/2+"px");
             }else{
                 // mobile landscape
                 // project grid
@@ -352,6 +355,10 @@ function initDomik() {
                 $(".map-box").css('width', 2 * mapboxWidth +"px");
                 $(".map-box").css('height', $(".map-box").width()+"px");
                 $("#map_addresses").css('height', $(".map-box").width()+"px");
+
+                // loader center position
+                $(".loader").css("top", ($(window).height()-$(".loader").height())/2+"px");
+                $(".loader").css("left", ($(window).width()-$(".loader").width())/2+"px");
             }
         }else{
             // large screen
@@ -364,6 +371,10 @@ function initDomik() {
             $(".map-box").css('width', mapboxWidth +"px");
             $(".map-box").css('height', 400+"px");
             $("#map_addresses").css('height', $(".contact-details").height()+"px");
+
+            // loader center position
+            $(".loader").css("top", ($(window).height()-$(".loader").height())/2+"px");
+            $(".loader").css("left", ($(window).width()-$(".loader").width())/2+"px");
         }    
         if($(window).width() <= 1023){
             if($(window).width() >= 768){
