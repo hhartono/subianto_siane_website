@@ -39,12 +39,12 @@
                         <img style="" src="/assets/public/images/ss_logo_architect.png" alt="">
                     </div>
                     <div class="introword" style="margin-top:165px; height:20px;">
-                        <div style="float:left;">
+                        <div id="" style="float:left;">
                             <a href="#" id="explore">
                                 EXPLORE OUR PROJECTS
                             </a>
                         </div>
-                        <div style="float:left;">
+                        <div  id="" style="float:left;">
                             <a href="/contact" id="gotocontact">
                                 CONTACT US
                             </a>

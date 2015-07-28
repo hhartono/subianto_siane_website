@@ -271,6 +271,7 @@ function initDomik() {
             }
         })
     }
+
     function getFilterActive(){
         var active;
         $(".gallery-filter").each(function(){
@@ -291,7 +292,8 @@ function initDomik() {
 
     function setOrientation(){
         var top = 0;
-        var mapboxWidth = $(".container").width()/2;
+        var mapboxWidth = $(".container").width()/2; // map box width
+
         if($(window).width() < 768){
             if($(window).innerHeight() > $(window).innerWidth()){
                 // mobile portrait
@@ -302,18 +304,19 @@ function initDomik() {
                 console.log("gallery height: "+$(".container-gallery").height());
                 if(getRowPosition() == 1){
                     top = 0;
+                    console.log("rowPosition is :" + getRowPosition());
                 }else{
                     console.log("rowPosition: " + getRowPosition());
                     top = ((getRowPosition()-1) * (movePost * parseInt($(".gallery-item").height())));
                 }
                 //$(".gallery-items").css("top", top +"px");
-                $(".gallery-items").animate({ 
+                $(".gallery-items").animate({
                     'top': top
                 },{
                     duration: 'fast',
                     easing: 'easeInCirc'
                 });
-                console.log("move: " + top + ": " +(movePost * parseInt($(".gallery-item").height())));
+                console.log("move from: " + top + " to: " +(movePost * parseInt($(".gallery-item").height())));
                 console.log(getRowPosition()-1)
 
                 // contact page -> map box
@@ -330,7 +333,7 @@ function initDomik() {
                 console.log("gallery height: "+$(".container-gallery").height());
                 if(getRowPosition() == 1){
                     top = 0;
-                    console.log("rowPosition is NaN");
+                    console.log("rowPosition is :" + getRowPosition());
                 }else{
                     console.log("rowPosition: " + getRowPosition());
                     top = ((getRowPosition()-1) * (movePost * parseInt($(".gallery-item").height())));
@@ -342,7 +345,7 @@ function initDomik() {
                     duration: 'fast',
                     easing: 'easeInCirc'
                 });
-                console.log("move: " + top + ": " +(movePost * parseInt($(".gallery-item").height())));
+                console.log("move from: " + top + " to: " +(movePost * parseInt($(".gallery-item").height())));
                 console.log(getRowPosition()-1)
 
                 // contact page -> map box
@@ -356,11 +359,27 @@ function initDomik() {
             setHeightGallery(2);
             console.log("gallery height: "+$(".container-gallery").height());
             $(".contentcenter").css("padding-top", 200+"px");
+
             // contact page -> map box
             $(".map-box").css('width', mapboxWidth +"px");
             $(".map-box").css('height', 400+"px");
             $("#map_addresses").css('height', $(".contact-details").height()+"px");
         }    
+        if($(window).width() <= 1023){
+            if($(window).width() >= 768){
+                setCSize(4);
+            }else if($(window).width() < 768){
+                if($(window).innerHeight() > $(window).innerWidth()){
+                    // portrait
+                    setCSize(1);
+                }else{
+                    // landscape
+                    setCSize(2);
+                }
+            }
+        }else{
+            setCSize(8);
+        }
     }
 
     setOrientation();
@@ -445,7 +464,8 @@ function initDomik() {
                 length = a.data('isotope');
                 setGalleryLength(length.filteredItems.length);
                 console.log("[without filter / all] length: "+length.filteredItems.length);
-                
+                console.log("getGalleryLength() : " + getGalleryLength());
+                console.log("gLength : " + gLength);
                 if((getGalleryLength() < gLength) || (getGalleryLength() == gLength)){
                     $(".pagination-nav a.prev").addClass("not-active");
                     $(".pagination-nav a.next").addClass("not-active");
@@ -455,6 +475,8 @@ function initDomik() {
                         $(".pagination-nav a.prev").addClass("not-active");
                         $(".pagination-nav a.next").removeClass("not-active");
                     }
+                    console.log("getFirstRow: " + getFirstRow());
+                    console.log("getLastRow: " + getLastRow());
                 }
             }
             // filter click!
@@ -626,6 +648,7 @@ function initDomik() {
         $("#message").slideUp(1500);
     });
 	// IMPORTANT INIT YOUR FUNCTIONS HERE ------------------
+
     /*
      * function homeintro
      * show intro 
@@ -659,6 +682,10 @@ function initDomik() {
             })
         });
     }
+    /*
+     * function homeIntroSizing
+     * resize home intro logo
+     */
     function homeIntroSizing(){
         $(".introword").css("width", 50+"%");
         if($(window).width()<1024){
@@ -702,8 +729,20 @@ function initDomik() {
         $(".pagination-nav a.next").click(function(){
             //rowPosition = 1;
             var gl =  getGalleryLength(); // gallery length
-            var nRow = parseInt(gl/getCSize()); // row
-            var modRow = gl % getCSize();
+            console.log("gl: " + getGalleryLength());
+            if(cSize == 1){
+                var nRow = parseInt(gl / (2 * cSize)); // row
+                console.log("nRow: " + gl / (2 * cSize));
+                console.log("parseInt nRow: " + nRow);
+                var modRow = gl % (2* cSize);
+                console.log("modRow: " + modRow);
+            }else{
+                var nRow = parseInt(gl / cSize); // row
+                console.log("nRow: " + gl / cSize);
+                console.log("parseInt nRow: " + nRow);
+                var modRow = gl % cSize;
+                console.log("modRow: " + modRow);
+            }
             if(modRow == 0){
                 setLastRow(nRow);
             }else{
