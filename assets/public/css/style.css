@@ -2513,6 +2513,9 @@ footer:before {
 	.contentcenter{
 		padding-top:110px !important;
 	}
+	#project-page.contentcenter{
+		width:67%;
+	}
 }
 
 
