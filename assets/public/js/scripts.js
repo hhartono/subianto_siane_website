@@ -379,15 +379,32 @@ function initDomik() {
         if($(window).width() <= 1023){
             if($(window).width() >= 768){
                 setCSize(4);
+                $("#portfolio-page-alert").css("display", "none");
+                $(".flipbook-viewport").show();
             }else if($(window).width() < 768){
                 if($(window).innerHeight() > $(window).innerWidth()){
                     // portrait
                     setCSize(1);
+                    if($(window).width() <= 480){
+                        $(".pagination-nav").css("display", "inherit");
+                        $(".gallery-items ").css("display", "inherit");
+                        $("#alert-bestview").css("display", "none");
+                    }
+                    $("#portfolio-page-alert").css("display", "inherit");
+                    $(".flipbook-viewport").css("display", "none");
                 }else{
                     // landscape
                     setCSize(2);
+                    if($(window).width() <= 480){
+                        $(".pagination-nav").css("display", "none");
+                        $(".gallery-items ").css("display", "none");
+                        $("#alert-bestview").css("display", "inherit");
+                    }
+                    $("#portfolio-page-alert").css("display", "none");
+                    $(".flipbook-viewport").show();
                 }
             }
+            
         }else{
             setCSize(8);
         }

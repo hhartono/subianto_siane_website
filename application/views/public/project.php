@@ -11,7 +11,9 @@
                         </a>
                     </div>
                     <div class="container-gallery" style="width:100%; overflow:hidden;">
-                        
+                        <div id="alert-bestview" style="display:none;">
+                            best view on portrait orientation or larger devices
+                        </div>
 
                         <!-- gallery items -->
                         <div class="gallery-items hid-port-info">
@@ -53,8 +55,8 @@
                                 echo '';
                             }
                         ?>
-                    </div>
-                    <!-- end gallery items --> 
+                        </div>
+                        <!-- end gallery items --> 
                     </div>
 
                     <div class="pagination-nav" style="right:0;">
