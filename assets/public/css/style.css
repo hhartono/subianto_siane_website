@@ -2396,16 +2396,16 @@ footer:before {
  	#project-page{
 		padding-top:50px !important;
 	}
-	header{
+	header.header-project {
 		height:0px;
 	}
-	.logo-holder a img{
+	.header-project .logo-holder a img{
 		display: none;
 	}
-	.nav-button-holder{
+	.header-project .nav-button-holder{
 		margin-top:0px;
 	}
-	.nav-holder{
+	.header-project .nav-holder{
 		top:30px;
 	}
 }
@@ -2425,16 +2425,16 @@ footer:before {
 	#project-page{
 		padding-top:50px !important;
 	}
-	header{
+	header.header-project{
 		height:0px;
 	}
-	.logo-holder a img{
+	.header-project .logo-holder a img{
 		display: none;
 	}
-	.nav-button-holder{
+	.header-project .nav-button-holder{
 		margin-top:0px;
 	}
-	.nav-holder{
+	.header-project .nav-holder{
 		top:30px;
 	}
 }
