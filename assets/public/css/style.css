@@ -119,8 +119,8 @@ blockquote p {
 /* ---------Page preload--------------------------------------*/
 .loader {
 	position:fixed;
-	top:50% !important;
-	left:50%;
+	/*top:50% !important;*/
+	/*left:50%;*/
 	width:50px;
 	height:50px;
 	z-index:100;
@@ -2376,6 +2376,38 @@ footer:before {
 		position:fixed;
 	}
 }
+/*#project-page{
+	padding-top:221px;
+}*/
+/* ----------- iPhone 6+ ----------- */
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+/* Portrait */
+@media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) { 
+	#project-page.contentcenter{
+		width:70%;
+	}
+}
+/* Landscape */
+@media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) { 
+	#project-page{
+		padding-top:100px !important;
+	}
+	header{
+		height:0px;
+	}
+	.logo-holder a img{
+		display: none;
+	}
+	.nav-button-holder{
+		margin-top:0px;
+	}
+	.nav-holder{
+		top:30px;
+	}
+}
 @media only screen and  (max-width: 768px) {
 	.selectMe {
 		display:none;
@@ -2420,7 +2452,17 @@ footer:before {
 	.contact-details{
 		width:100%;
 	}
+
 }
+/*@media only screen and  (max-width: 736px) {
+	
+}*/
+/* @media only screen and (min-width: 641px)  and  (max-width: 768px) {
+	.contentcenter{
+		padding-top:110px !important;
+		margin-bottom:60px;
+	}
+} */
 @media only screen and  (max-width: 540px) {
 	.num{
 		font-size:62px; 
@@ -2512,6 +2554,9 @@ footer:before {
 	}
 	.contentcenter{
 		padding-top:110px !important;
+	}
+	#project-page.contentcenter{
+		width:64%;
 	}
 }
 
