@@ -2463,10 +2463,6 @@ footer:before {
 		margin-bottom:60px;
 	}
 } */
-
-
-
-
 @media only screen and  (max-width: 540px) {
 	.num{
 		font-size:62px; 
@@ -2560,7 +2556,7 @@ footer:before {
 		padding-top:110px !important;
 	}
 	#project-page.contentcenter{
-		width:67%;
+		width:64%;
 	}
 }
 
