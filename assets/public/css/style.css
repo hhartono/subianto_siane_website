@@ -2379,10 +2379,40 @@ footer:before {
 /*#project-page{
 	padding-top:221px;
 }*/
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen and (min-width: 320px) and (max-width: 568px) and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen and (min-width: 320px) and (max-width: 568px) and (orientation: landscape) {
+ 	#project-page{
+		padding-top:50px !important;
+	}
+	header{
+		height:0px;
+	}
+	.logo-holder a img{
+		display: none;
+	}
+	.nav-button-holder{
+		margin-top:0px;
+	}
+	.nav-holder{
+		top:30px;
+	}
+}
 /* ----------- iPhone 6+ ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
-
+	
 }
 /* Portrait */
 @media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: portrait) { 
@@ -2527,8 +2557,12 @@ footer:before {
 	.contentproject{
 		padding-top: 0px !important;
 	}
-
 }	
+@media only screen and (min-width: 480px) and (max-width: 640px) and (orientation: landscape){
+	#project-page.contentcenter{
+		padding-top:50px !important;
+	}
+}
 @media only screen and (min-width: 360px) and (max-width: 479px){
 	nav{
 		left:3%;
