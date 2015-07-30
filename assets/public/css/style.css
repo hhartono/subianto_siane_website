@@ -2393,7 +2393,7 @@ footer:before {
 /* Landscape */
 @media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) { 
 	#project-page{
-		padding-top:100px !important;
+		padding-top:50px !important;
 	}
 	header{
 		height:0px;
@@ -2556,7 +2556,8 @@ footer:before {
 		padding-top:110px !important;
 	}
 	#project-page.contentcenter{
-		width:64%;
+		/*width:64%;*/
+		width:55%;
 	}
 }
 
