@@ -351,6 +351,8 @@ function initDomik() {
                 console.log("move from: " + top + " to: " +(movePost * parseInt($(".gallery-item").height())));
                 console.log(getRowPosition()-1)
 
+
+
                 // contact page -> map box
                 $(".map-box").css('width', 2 * mapboxWidth +"px");
                 $(".map-box").css('height', $(".map-box").width()+"px");
@@ -395,6 +397,7 @@ function initDomik() {
                 }else{
                     // landscape
                     setCSize(2);
+
                     if($(window).width() <= 480){
                         $(".pagination-nav").css("display", "none");
                         $(".gallery-items ").css("display", "none");
