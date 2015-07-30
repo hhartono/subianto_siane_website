@@ -11,10 +11,10 @@
                 <div class="contact-inner">
                     <div class="container">
                         <section class="no-border">
-                            <div class="map-box">
+                            <!-- <div class="map-box">
                                 <div id="map_addresses" style="height:440px;" class="map" data-latitude="-6.887796" data-longitude="107.580303" data-location="Subianto & Siane <br> <a href='https://www.google.co.id/maps/place/6%C2%B053%2716.1%22S+107%C2%B034%2749.1%22E/@-6.887796,107.580303,17z/data=!4m2!3m1!1s0x0:0x0' target='_blank'><font style=color:#808000;>View on google maps</font></a>">
                                 </div>
-                            </div>
+                            </div> -->
                         
                             <div class="contact-details">
                                 <div class="row">
@@ -22,18 +22,18 @@
                                         <h3>Contact  details : </h3>
                                     </div> -->
                                     <div class="col-md-12">
-                                       <div class="col-md-8">
+                                       <!-- <div class="col-md-8"> -->
                                            <h4>Main Office</h4>
                                            <ul>
-                                               <li><a href="https://www.google.co.id/maps/place/6%C2%B053%2716.1%22S+107%C2%B034%2749.1%22E/@-6.887796,107.580303,17z/data=!4m2!3m1!1s0x0:0x0" target="_blank">Jl. Suka Mekar III No. 7, Bandung, Indonesia</a></li>
+                                               <li>By Appoinment Only</li>
                                                <li><a href="#">+62 22 2013973</a></li>
                                                <li><a href="mailto:contact@subiantosiane.com">contact@subiantosiane.com</a></li>
                                            </ul>
-                                       </div>
-                                       <div class="col-md-4"></div>
+                                       <!-- </div>
+                                       <div class="col-md-4"></div> -->
                                    </div>
                                    <div class="col-md-12" style="padding-top:20px;">
-                                       <div class="col-md-8">
+                                       <!-- <div class="col-md-8"> -->
                                            <h4>Find Us On </h4>
                                            <ul>
                                                 <li>
@@ -42,11 +42,11 @@
                                                     <a href="https://instagram.com/inerre_interior" target="_blank">Instagram</a>
                                                 </li>
                                            </ul>
-                                       </div>
-                                       <div class="col-md-4"></div>
+                                       <!-- </div>
+                                       <div class="col-md-4"></div> -->
                                    </div>
                                    <div class="col-md-12" style="padding-top:20px;">
-                                       <div class="col-md-8">
+                                       <!-- <div class="col-md-8"> -->
                                        <h4>Send Us Message  </h4>
                                            <div class="contact-form-holder">
                                                 <div id="contact-form">
@@ -59,8 +59,8 @@
                                                     </form>
                                                 </div>
                                             </div>
-                                       </div>
-                                       <div class="col-md-4"></div>
+                                       <!-- </div>
+                                       <div class="col-md-4"></div> -->
                                    </div>  
                                 </div>
                             </div>

@@ -1769,9 +1769,9 @@ footer:before {
 /*------ Contact  ------------------------------------------------*/ 
 .contact-details {
 	float:left;
-	width:50%;
+	width:100%;
 	padding-top:0px;
-	text-align:left;
+	text-align:center;
 }
 .contact-details h3 {
 	font-size:24px;
@@ -1797,7 +1797,7 @@ footer:before {
 	text-decoration:underline;
 }
 .contact-form-holder {
-	max-width:500px;
+	max-width:250px;
 	border-top:2px solid #ccc;
 	margin: 0 auto;
 }
