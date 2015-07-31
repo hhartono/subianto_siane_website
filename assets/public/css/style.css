@@ -2539,6 +2539,9 @@ footer:before {
 	.logo-holder{
 		margin:0 auto 0px;
 	}
+	#content-home.contentcenter, #about-page.contentcenter, #contact-page.contentcenter{
+		padding-top:100px !important;
+	}
 	.contentcenter{
 		padding-top:10px !important;
 		margin-bottom:60px;
