@@ -6,7 +6,7 @@
                         <!-- background animation  -->		
                         <!-- <div class="bg-animate"><img src="/assets/public/images/body-bg.png"  class="respimg" alt=""></div> -->
 
-                        <div class="contentcenter hid-port-info" style="">
+                        <div id="projectdetail-page" class="contentcenter hid-port-info" style="">
                             
                             <!-- <section class="no-padding no-border"> -->
                                 <!-- page title -->     

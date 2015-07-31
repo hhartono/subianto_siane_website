@@ -2484,15 +2484,7 @@ footer:before {
 	}
 
 }
-/*@media only screen and  (max-width: 736px) {
-	
-}*/
-/* @media only screen and (min-width: 641px)  and  (max-width: 768px) {
-	.contentcenter{
-		padding-top:110px !important;
-		margin-bottom:60px;
-	}
-} */
+
 @media only screen and  (max-width: 540px) {
 	.num{
 		font-size:62px; 
@@ -2548,7 +2540,7 @@ footer:before {
 		margin:0 auto 0px;
 	}
 	.contentcenter{
-		padding-top:110px !important;
+		padding-top:10px !important;
 		margin-bottom:60px;
 	}
 	#project-page.contentcenter{
