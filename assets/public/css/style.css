@@ -2425,17 +2425,20 @@ footer:before {
 	#project-page{
 		padding-top:50px !important;
 	}
-	header.header-project{
+	header.header-project, header.header-portfolio{
 		height:0px;
 	}
-	.header-project .logo-holder a img{
+	.header-project .logo-holder a img, .header-portfolio .logo-holder a img{
 		display: none;
 	}
-	.header-project .nav-button-holder{
+	.header-project .nav-button-holder, .header-portfolio .nav-button-holder{
 		margin-top:0px;
 	}
-	.header-project .nav-holder{
+	.header-project .nav-holder, .header-portfolio .nav-holder{
 		top:30px;
+	}
+	#flipbook{
+		margin-top:25px !important;
 	}
 }
 @media only screen and  (max-width: 768px) {

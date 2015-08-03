@@ -59,7 +59,7 @@
             ?>
             
             <!--=============== header ===============-->   
-            <header class="<?php echo (isset($projectactlink))? "header-project":"";?>">
+            <header class="<?php echo (isset($projectactlink))? "header-project":"";?> <?php echo (isset($portfolioactlink))? "header-portfolio":"";?>">
                 <div class="header-inner">
                     <div class="logo-holder">
                         <a href="/home" class="ajax"><img class="ss-logo" src="/assets/public/images/ss_logo.png" alt=""></a>
