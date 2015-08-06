@@ -691,13 +691,13 @@ function initDomik() {
             opacity:1,
             //paddingTop: "155px"
         }, 900 );
-        $(".introword").eq(1).delay(1500).animate({
+        $(".introword").eq(1).delay(2200).animate({
             opacity:1
         }, 900 );
-        $(".introword").eq(2).delay(2000).animate({
+        $(".introword").eq(2).delay(3400).animate({
             opacity:1
         }, 900 );
-        $(".introword").eq(3).delay(2500).animate({
+        $(".introword").eq(3).delay(4600).animate({
             opacity:1
         }, 900, function(){
             $("a#explore").click(function(){

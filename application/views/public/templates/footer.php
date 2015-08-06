@@ -87,7 +87,7 @@
                 var $fotoramaDiv = $('.fotorama').fotorama();
                 // 2. Get the API object.
                 var fotorama = $fotoramaDiv.data('fotorama');
-                fotorama.startAutoplay(2000);
+                fotorama.startAutoplay(2700);
                 /*$("#playpause #play").click(function(){
                     fotorama.startAutoplay(1500);    
                     return false;
@@ -98,6 +98,7 @@
                 })*/
                 fotorama.setOptions({
                     arrows: false,
+                    transitionduration:750, // images transition
                 })
             });
 
@@ -107,14 +108,17 @@
                 var heightFotorama;
                 if($(window).width() < 768){
                     if($(window).innerHeight() > $(window).innerWidth()){
+                        // orientation portrait
                         console.log("orientation: portrait");
                         heightFotorama = 245;
                     }else{
+                        // orientation landscape
                         console.log("orientation: landscape");
                         heightFotorama = $(window).height()-parseInt($(".contentcenter").css("padding-top"))-10;
                         console.log("fotorama height: " + heightFotorama );
                     }
                 }else{
+                    // orientation portrait & landscape, large screen, screen > 768
                     console.log("gallery height: "+$(".container-gallery").height());
                     heightFotorama = 400;
                 }    
@@ -139,6 +143,7 @@
             // echo nothing
         }
         ?>
+
         <script type="text/javascript">
             /*
              * Turn.js responsive book
@@ -233,12 +238,8 @@
                         document.body.className = 'hide-overflow';
                     }
                 };
-
                 module.init('flipbook');
             }());
         </script>
-
-       
-
     </body>
 </html>
