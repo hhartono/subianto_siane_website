@@ -36,7 +36,7 @@
                                 <li>
                                     <div class="team-box">
                                         <div class="team-photo">
-                                            <div class="overlay"></div>
+                                            <!-- <div class="overlay"></div> -->
                                             <!-- <ul class="team-social">
                                                 <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -47,8 +47,8 @@
                                             <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
-                                            <h3>David Gray</h3>
-                                            <h4>Co-manager associated</h4>
+                                            <h3>Subianto Hartono</h3>
+                                            <h4>Principal</h4>
                                         </div>
                                     </div>
                                 </li>
@@ -56,7 +56,7 @@
                                 <li>
                                     <div class="team-box">
                                         <div class="team-photo">
-                                            <div class="overlay"></div>
+                                            <!-- <div class="overlay"></div> -->
                                             <!-- <ul class="team-social">
                                                 <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -67,8 +67,8 @@
                                             <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
-                                            <h3>Austin Evon</h3>
-                                            <h4>Co-manager associated</h4>
+                                            <h3>Siane Kurnia</h3>
+                                            <h4>Principal</h4>
                                         </div>
                                     </div>
                                 </li>
@@ -76,7 +76,7 @@
                                 <li>
                                     <div class="team-box">
                                         <div class="team-photo">
-                                            <div class="overlay"></div>
+                                            <!-- <div class="overlay"></div> -->
                                             <!-- <ul class="team-social">
                                                 <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -87,8 +87,8 @@
                                             <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
-                                            <h3>Taylor Roberts</h3>
-                                            <h4>Co-manager associated</h4>
+                                            <h3>Cindy Hartono</h3>
+                                            <h4>Architect</h4>
                                         </div>
                                     </div>
                                 </li>
