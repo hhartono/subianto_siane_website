@@ -293,7 +293,7 @@ section {
 	float:left;
 	width:100%;
 	position:relative;
-	border-bottom:6px solid #eee;
+	border-bottom:6px solid #fff;
 }
 .parallax-section {
 	float:left;
@@ -2861,3 +2861,9 @@ a#explore:hover, a#gotocontact:hover{
 .contentproject{
     padding-top:211px;
 }
+blockquote{
+	content:"“" "”" "‘" "’";
+}
+blockquote p:before { content: open-quote !important; }
+blockquote p:after { content: close-quote !important; }
+/*blockquote:before{content}*/

@@ -32,17 +32,17 @@
                                     <?php
                                     if($c==1){
                                     ?>
-                                        <img  src="/assets/public/images_example/011903-8R.jpg"   alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_3.jpg" alt="">
                                     <?php
                                     }
                                     if($c==2){
                                     ?>
-                                        <img  src="/assets/public/images_example/045189-8R.jpg"   alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_2.jpg" alt="">
                                     <?php      
                                     }
                                     if($c==3){
                                     ?>
-                                        <img  src="/assets/public/images_example/015512-8R.jpg"   alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_4.jpg" alt="">
                                     <?php
                                     }
                                     ?>

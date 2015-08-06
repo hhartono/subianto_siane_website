@@ -14,8 +14,22 @@
                             <div class="row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-8" id="about-text">
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words</p>
-                                    <p>  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words</p>
+                                    
+                                    <blockquote style="font-size:100%;">
+                                        <p style="text-align:center;font-family:aria; font-size: 99%;">
+                                        <!-- <span style="font-family:aria ;font-size:700%; color:#666;">“</span> -->
+                                        Dalam berkarya, kami selalu menggunakan pendekatan kertas kosong. Kami menolak terpaku pada pola, pada kebiasaan yang telah mendarah daging, ataupun pada konvensi yang membosankan dan mudah ditebak. Kami merangkul permasalahan yang ada dan mengupayakan solusinya dengan pikiran yang selalu terbuka.
+                                        <!-- <span style="font-family:aria ;font-size:700%; color:#666;">”</span> -->
+                                        </p>
+                                        — Subianto Hartono
+                                    </blockquote>
+                                    <blockquote style="font-size:100%;">
+                                        <p style="text-align:center;font-family:aria; font-size:99%;">
+                                            Arsitektur pada hakikatnya menantang diam dan menentang kemonotonan. Seiring berjalannya waktu, arsitektur juga dituntut untuk terus bergerak seiring dengan zaman, menghadirkan solusi demi solusi spasial yang kreatif juga inovatif.    
+                                        </p>
+                                        — Siane Kurnia
+                                    </blockquote>
+                                    
                                 </div>
                                 <div class="col-md-2"></div>
                             </div>
