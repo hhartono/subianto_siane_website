@@ -98,7 +98,7 @@
                 })*/
                 fotorama.setOptions({
                     arrows: false,
-                    transitionduration:750, // images transition
+                    transitionduration:2000, // images transition
                 })
             });
 
