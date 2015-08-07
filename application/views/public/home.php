@@ -42,7 +42,7 @@
                                     }
                                     if($c==3){
                                     ?>
-                                        <img  src="/assets/public/images/categories_bar/category_4.jpg" alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_5.jpg" alt="">
                                     <?php
                                     }
                                     ?>
