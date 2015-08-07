@@ -32,7 +32,7 @@
                                     <?php
                                     if($c==1){
                                     ?>
-                                        <img  src="/assets/public/images/categories_bar/category_3.jpg" alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_9.jpg" alt="">
                                     <?php
                                     }
                                     if($c==2){
@@ -50,7 +50,7 @@
                                 </div>
                                 <!-- <div class="category-item grid-item ">
                                     <h3>
-                                        <a href="" class=""><?php echo $category->category_name;?></a>
+                                        <a href="" class=""><?php // echo $category->category_name;?></a>
                                     </h3>
                                 </div> -->
                             </div>
