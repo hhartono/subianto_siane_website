@@ -2376,9 +2376,13 @@ footer:before {
 		position:fixed;
 	}
 }
-/*#project-page{
-	padding-top:221px;
-}*/
+
+#openbooktext{
+	padding-top:450px;
+	margin-left: -450px;
+	margin-bottom: -450px;
+	position: relative;
+}
 /* ----------- iPhone 5 and 5S ----------- */
 
 /* Portrait and Landscape */
@@ -2408,6 +2412,12 @@ footer:before {
 	.header-project .nav-holder{
 		top:30px;
 	}
+	#openbooktext{
+		padding-top:450px;
+		margin-left: -450px;
+		margin-bottom: -450px;
+		position: relative;
+	}
 }
 /* ----------- iPhone 6+ ----------- */
 /* Portrait and Landscape */
@@ -2419,6 +2429,7 @@ footer:before {
 	#project-page.contentcenter{
 		width:70%;
 	}
+
 }
 /* Landscape */
 @media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) { 
@@ -2439,6 +2450,12 @@ footer:before {
 	}
 	#flipbook{
 		margin-top:25px !important;
+	}
+	#openbooktext{
+		padding-top:230px;
+		margin-left: -300px;
+		margin-bottom: -230px;
+		position: relative;
 	}
 }
 @media only screen and  (max-width: 768px) {
@@ -2560,6 +2577,12 @@ footer:before {
 	#project-page.contentcenter{
 		padding-top:50px !important;
 	}
+	#openbooktext{
+		padding-top:200px;
+		margin-left: -300px;
+		margin-bottom: -200px;
+		position: relative;
+	}
 }
 @media only screen and (min-width: 360px) and (max-width: 480px){
 	nav{
@@ -2585,6 +2608,12 @@ footer:before {
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape){
 	.container-gallery{
 		height:255px !important;
+	}
+	#openbooktext{
+		padding-top:175px;
+		margin-left: -240px;
+		margin-bottom: -175px;
+		position: relative;
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 359px){

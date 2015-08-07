@@ -11,6 +11,10 @@
 			            best view on landscape orientation or larger devices
 			        </div>
             	</div>
+            	<div id="openbooktext" class="" style="">
+            		open this virtual book
+            	</div>
+
             
             <div class="flipbook-viewport">
         		<div class="book-container rel">
