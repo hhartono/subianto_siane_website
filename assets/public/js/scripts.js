@@ -462,7 +462,8 @@ function initDomik() {
                     singleMode: true,
                     columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
                     itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
-                    filter: dataFilterActive
+                    filter: dataFilterActive, 
+                    transitionDuration: '0.8s'
                 });
                 a.imagesLoaded(function() {
                     a.isotope("layout");
@@ -488,6 +489,7 @@ function initDomik() {
                     columnWidth: ".grid-sizer, .grid-sizer-second, .grid-sizer-three",
                     itemSelector: ".gallery-item, .gallery-item-second, .gallery-item-three",
                     // filter: fa
+                    transitionDuration: '0.8s'
                 });
                 a.imagesLoaded(function() {
                     a.isotope("layout");
@@ -516,7 +518,8 @@ function initDomik() {
                 b.preventDefault();
                 var c = $(this).attr("data-filter");
                 a.isotope({
-                    filter: c
+                    filter: c,
+                    transitionDuration: '0.8s'
                 });
                 $(".gallery-filters a.gallery-filter").removeClass("gallery-filter-active");
                 $(this).addClass("gallery-filter-active");
