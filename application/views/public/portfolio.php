@@ -29,25 +29,105 @@
 							
 						</div>
 						<div class="page own-size" depth="5">
-							<img src="assets/public/images_example/turnjs_example/1.jpg" alt="">
+							<img src="assets/public/book/SS kalkir.jpg" alt="">
+						</div>
+						<div class="page own-size" depth="5" style="background:#fff;">
 						</div>
 						<div class="page own-size" depth="5">
-							<img src="assets/public/images_example/turnjs_example/2.jpg" alt="">
+							<img src="assets/public/book/SS 1.jpg" alt="">
 						</div>
 						<div class="page own-size">
-							<img src="assets/public/images_example/turnjs_example/3.jpg" alt="">
+							<img src="assets/public/book/SS 2.jpg" alt="">
 						</div>
 						<div class="page own-size">
-							<img src="assets/public/images_example/turnjs_example/4.jpg" alt="">
+							<img src="assets/public/book/SS 3.jpg" alt="">
 						</div>
 						<div class="page own-size">
-							<img src="assets/public/images_example/turnjs_example/5.jpg" alt="">
+							<img src="assets/public/book/SS 4.jpg" alt="">
 						</div>
 						<div class="page own-size">
-							<img src="assets/public/images_example/turnjs_example/6.jpg" alt="">
+							<img src="assets/public/book/SS 5.jpg" alt="">
 						</div>
-						<div class="hard back-side" style="background:#fff;"> </div>
-						<div class="page hard" style="background: #ccc;"></div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 6.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 7.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 8.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 9.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 10.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 11.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 12.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 13.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 14.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 15.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 16.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 17.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 18.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 19.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 20.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 21.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 22.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 23.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 24.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 25.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 26.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 27.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 28.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 29.jpg" alt="">
+						</div>
+						<div class="page own-size">
+							<img src="assets/public/book/SS 30.jpg" alt="">
+						</div>
+
+						<div class="hard back-side" style="background:#000;"> </div>
+						<div class="page hard" style="background: #000;">
+							<img src="assets/public/book/SS Cover back.jpg" alt="">
+						</div>
 					</div>
             	</div>
         	</div>
