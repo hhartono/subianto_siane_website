@@ -21,8 +21,13 @@
 
         			<div class="flipbook" id="flipbook" style="margin-top:100px;">
         				<!-- <div class="hard"> Subianto & Siane </div> -->
-						<div class="" style="background:#ccc;"> <div class="side"></div> </div>
-						<div class=" front-side" style="background:#fff;"> </div>
+						<div class="" style="background:#ccc;"> 
+							<div class="side"></div> 
+							<img src="assets/public/book/SS Cover.jpg" alt="">
+						</div>
+						<div class="hard front-side" style="background:#000;">
+							
+						</div>
 						<div class="page own-size" depth="5">
 							<img src="assets/public/images_example/turnjs_example/1.jpg" alt="">
 						</div>
