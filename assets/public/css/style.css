@@ -116,6 +116,9 @@ blockquote p {
 	font-style:italic;
 	color:#494949;
 }
+#about-text blockquote{
+	border-left:15px solid #fff;
+}
 /* ---------Page preload--------------------------------------*/
 .loader {
 	position:fixed;
