@@ -2460,6 +2460,9 @@ footer:before {
 		margin-bottom: -230px;
 		position: relative;
 	}
+	nav{
+		left:-15%;
+	}
 }
 @media only screen and  (max-width: 768px) {
 	.selectMe {
@@ -2602,10 +2605,16 @@ footer:before {
 		margin-bottom:60px;
 	}
 	#portfolio-page-alert{
-		padding-top:300px !important;
+		padding-top:250px !important;
+	}
+	#portfolio-page-alert div img{
+		width:150px;
 	}
 	#alert-bestview{
-		padding-top:80px !important;
+		padding-top:40px !important;
+	}
+	#alert-bestview img{
+		width:140px;
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape){
@@ -2635,7 +2644,10 @@ footer:before {
 		width:55%;
 	}
 	#portfolio-page-alert{
-		padding-top:250px !important;
+		padding-top:180px !important;
+	}
+	#portfolio-page-alert div img{
+		width:150px;
 	}
 
 }
@@ -2720,7 +2732,7 @@ footer:before {
    -ms-perspective: 2000px;
    perspective: 2000px;
 }
- .flipbook .shadow, .flipbook.shadow{
+.flipbook .shadow, .flipbook.shadow{
     -webkit-transition: -webkit-box-shadow 0.5s;
     -moz-transition: -moz-box-shadow 0.5s;
     -o-transition: -webkit-box-shadow 0.5s;

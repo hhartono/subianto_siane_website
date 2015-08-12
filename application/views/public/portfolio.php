@@ -9,6 +9,7 @@
             	<div id="portfolio-page-alert" class="contentcenter" style="padding-top:221px; display:none;">
         			<div id="alert-bestview-portfolio">
 			            best view on landscape orientation or larger devices
+			            <img src="/assets/public/images/ptol-200.png" alt="">
 			        </div>
             	</div>
             	<div id="openbooktext" class="" style="">

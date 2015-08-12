@@ -12,7 +12,8 @@
                     </div>
                     <div class="container-gallery" style="width:100%; overflow:hidden;">
                         <div id="alert-bestview" style="display:none;">
-                            best view on portrait orientation or larger devices
+                            best view on portrait orientation or larger devices <br>
+                            <img src="/assets/public/images/ltop-200.png" alt="">
                         </div>
 
                         <!-- gallery items -->

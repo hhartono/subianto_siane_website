@@ -149,12 +149,13 @@
              * Turn.js responsive book
              */
             /* globals window, document, $*/
+
             (function () {
                 'use strict';
 
                 var module = {
                     // ratio: 1.38,
-                    ratio: 3.6,
+                    ratio: 3.1,
                     init: function (id) {
                         var me = this;
 
@@ -168,19 +169,20 @@
                             window.addEventListener('resize', function (e) {
                                 var size = me.resize();
                                 $(me.el).turn('size', size.width, size.height);
-                                
-                                /*$(me.el).turn({
-                                    width: size.width, 
-                                    height: size.height,
-                                    // Elevation
-                                    elevation: 50,
-                                    // Enable gradients
-                                    gradients: true,
-                                    // Auto center this flipbook
-                                    autoCenter: true
-                                });*/
+                                console.log(size.width);
+                                // $(me.el).turn({
+                                //     width: size.width, 
+                                //     height: size.height,
+                                //     // Elevation
+                                //     elevation: 50,
+                                //     // Enable gradients
+                                //     gradients: true,
+                                //     // Auto center this flipbook
+                                //     autoCenter: true
+                                // });
                             });
                         }
+
                     },
                     resize: function () {
                         // reset the width and height to the css defaults
@@ -193,6 +195,7 @@
                             ownHeight = parseInt(height * 0.96),
                             coverPadding = parseInt((height-ownHeight)/2),
                             ownWidth = parseInt((width/2)-coverPadding);
+                        console.log(this.el.clientWidth);
 
                         /*console.log('clientWidth:' + this.el.clientWidth);
                         console.log('width: ' + width);
@@ -229,6 +232,8 @@
                     plugins: function () {
                         // run the plugin
                         $(this.el).turn({
+                            // width:200,
+                            // height:80,
                             gradients: true,
                             acceleration: true,
                             elevation: 50,

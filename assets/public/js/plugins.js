@@ -620,19 +620,19 @@ if (typeof Object.create !== "function") {
     });
   };
  
-  $.fn.turnJS = function(){
-  	return this.turn({
-  		// Width
-        width:940,
-        // Height
-        height:300,
-        // Elevation
-        elevation: 50,
-        // Enable gradients
-        gradients: true,
-        // Auto center this flipbook
-        autoCenter: true
-  	});
-  }
+  // $.fn.turnJS = function(){
+  // 	return this.turn({
+  // 		// Width
+  //       width:940,
+  //       // Height
+  //       height:300,
+  //       // Elevation
+  //       elevation: 50,
+  //       // Enable gradients
+  //       gradients: true,
+  //       // Auto center this flipbook
+  //       autoCenter: true
+  // 	});
+  // }
   
 })(jQuery, window, document);
