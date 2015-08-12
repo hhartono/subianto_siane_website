@@ -2512,7 +2512,11 @@ footer:before {
 		padding-top:120px !important;
 	}
 }
-
+@media only screen and (max-width: 768px) and (orientation: portrait){
+	#portfolio-page-alert{
+		padding-top:320px !important;
+	}
+}
 @media only screen and  (max-width: 540px) {
 	.num{
 		font-size:62px; 

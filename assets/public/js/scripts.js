@@ -379,8 +379,10 @@ function initDomik() {
         if($(window).width() <= 1023){
             if($(window).width() >= 768){
                 setCSize(4);
-                $("#portfolio-page-alert").css("display", "none");
-                $(".flipbook-viewport").show();
+                $("#portfolio-page-alert").css("display", "inherit");
+                // $(".flipbook-viewport").show();
+                $(".flipbook-viewport").css("display", "none");
+                $("#openbooktext").css("display", "none");
             }else if($(window).width() < 768){
                 if($(window).innerHeight() > $(window).innerWidth()){
                     // portrait
@@ -392,6 +394,7 @@ function initDomik() {
                     }
                     $("#portfolio-page-alert").css("display", "inherit");
                     $(".flipbook-viewport").css("display", "none");
+                    $("#openbooktext").css("display", "none");
                 }else{
                     // landscape
                     setCSize(2);
@@ -404,13 +407,22 @@ function initDomik() {
                     $("#portfolio-page-alert").css("display", "inherit");
                     // $(".flipbook-viewport").show();
                     $(".flipbook-viewport").css("display", "none");
+                    $("#openbooktext").css("display", "none");
                 }
             }
             
         }else{
+            if($(window).width() <= 1170){
+                $("#portfolio-page-alert").css("display", "inherit");
+                $("#portfolio-page-alert").css("padding-top", 300+"px");
+                $(".flipbook-viewport").css("display", "none");
+                $("#openbooktext").css("display", "none");
+            }else{
+                $("#portfolio-page-alert").css("display", "none");
+                $(".flipbook-viewport").show();
+                $("#openbooktext").show();
+            }
             setCSize(8);
-            $("#portfolio-page-alert").css("display", "none");
-            $(".flipbook-viewport").show();
         }
     }
 
