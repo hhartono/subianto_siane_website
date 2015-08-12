@@ -33,7 +33,8 @@
                 $(".category-box-text").css('margin-right', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('width', $(".category-box-item").width()-($(".category-box-item").height()-$(".category-title").height()) +"px");
 
-                $(".gallery-filters").css('margin-left', parseInt((($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()))  +"px");
+                // $(".gallery-filters").css('margin-left', parseInt((($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()))  +"px");
+                $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
                 //console.log("gallery filter margin left" + parseInt((($(".fixed-filter").width() - $(".gallery-filter").eq(1).width())/2) - 30 + $(".gallery-filter").eq(0).width()));
                 //contactResponsive();
             });
@@ -43,8 +44,8 @@
                 $(".category-box-text").css('margin-left', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-right', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('width', $(".category-box-item").width()-($(".category-box-item").height()-$(".category-title").height()) +"px");
-                $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()) +"px");
-           
+                // $(".gallery-filters").css('margin-left', (($(".fixed-filter").width()-$(".gallery-filter").eq(1).width())/2)-(30 + $(".gallery-filter").eq(0).width()) +"px");
+                $(".gallery-filters").css('margin-left', ($(".fixed-filter").width()-$(".gallery-filters").width())/2 +"px");
                 //contactResponsive();
             })
             function contactResponsive(){
