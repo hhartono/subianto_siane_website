@@ -401,13 +401,16 @@ function initDomik() {
                         $(".gallery-items ").css("display", "none");
                         $("#alert-bestview").css("display", "inherit");
                     }
-                    $("#portfolio-page-alert").css("display", "none");
-                    $(".flipbook-viewport").show();
+                    $("#portfolio-page-alert").css("display", "inherit");
+                    // $(".flipbook-viewport").show();
+                    $(".flipbook-viewport").css("display", "none");
                 }
             }
             
         }else{
             setCSize(8);
+            $("#portfolio-page-alert").css("display", "none");
+            $(".flipbook-viewport").show();
         }
     }
 

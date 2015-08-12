@@ -2508,7 +2508,9 @@ footer:before {
 	.contact-details{
 		width:100%;
 	}
-
+	#portfolio-page-alert{
+		padding-top:120px !important;
+	}
 }
 
 @media only screen and  (max-width: 540px) {
@@ -2578,6 +2580,9 @@ footer:before {
 	.contentproject{
 		padding-top: 0px !important;
 	}
+	#portfolio-page-alert{
+		padding-top:80px !important;
+	}
 }	
 @media only screen and (min-width: 480px) and (max-width: 640px) and (orientation: landscape){
 	#project-page.contentcenter{
@@ -2626,6 +2631,9 @@ footer:before {
 		margin-left: -240px;
 		margin-bottom: -175px;
 		position: relative;
+	}
+	#portfolio-page-alert{
+		padding-top:80px !important;
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 359px){
