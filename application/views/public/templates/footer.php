@@ -88,7 +88,7 @@
                 var $fotoramaDiv = $('.fotorama').fotorama();
                 // 2. Get the API object.
                 var fotorama = $fotoramaDiv.data('fotorama');
-                fotorama.startAutoplay(2700);
+                // fotorama.startAutoplay(2700);
                 /*$("#playpause #play").click(function(){
                     fotorama.startAutoplay(1500);    
                     return false;
@@ -132,6 +132,10 @@
             $(document).ready(function(){
                 $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
                 setFotoramaHeight();
+
+                var $fotoramaDiv = $('.fotorama').fotorama();
+                var fotorama = $fotoramaDiv.data('fotorama');
+                fotorama.startAutoplay(2700);
             });
 
             $(window).resize(function(){
