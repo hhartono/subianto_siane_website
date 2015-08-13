@@ -49,17 +49,17 @@
                                     }
                                     ?>
 
-                                    <div class="">
-                                        Log file name:
-                                        <ol style="list-style-type: decimal;">
-                                        <?php foreach ($loadallphotosdetailproject as $l){
+                                    <!-- <div class=""> -->
+                                        <!-- Log file name: -->
+                                        <!-- <ol style="list-style-type: decimal;"> -->
+                                        <?php //foreach ($loadallphotosdetailproject as $l){
                                         ?>
-                                            <li>name file: <?php echo $l->photo;?></li>
+                                            <!-- <li>name file: <?php // echo $l->photo;?></li> -->
                                         <?php
-                                        }
+                                        // }
                                         ?>
-                                        </ol>
-                                    </div>
+                                        <!-- </ol> -->
+                                    <!-- </div> -->
                                     
                                     <!-- <div id="playpause"> -->
                                         <!-- <a href="#" id="play">play</a> -->
