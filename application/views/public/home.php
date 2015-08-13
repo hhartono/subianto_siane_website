@@ -32,12 +32,12 @@
                                     <?php
                                     if($c==1){
                                     ?>
-                                        <img  src="/assets/public/images/categories_bar/category_8.jpg" alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_11.jpg" alt="">
                                     <?php
                                     }
                                     if($c==2){
                                     ?>
-                                        <img  src="/assets/public/images/categories_bar/category_9.jpg" alt="">
+                                        <img  src="/assets/public/images/categories_bar/category_13.jpg" alt="">
                                     <?php      
                                     }
                                     if($c==3){
