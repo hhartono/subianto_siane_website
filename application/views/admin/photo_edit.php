@@ -32,7 +32,7 @@
 	                        		<section class="panel">
 	                        			</br>
 	                        			<img src="/uploads/project/<?php echo $project->photo; ?>" width="250" ></br>
-	                        			<input type="checkbox" name="photo[]" value="<?php echo $project->id;?>"> Pilih Untuk Dihapus<br/>
+	                        			<input type="checkbox" name="photo[]" value="<?php echo $project->id;?>"> Pilih Untuk Dihapus<br/> <?php echo $project->photo;?>
 	                        			<input type="hidden" name="id" value="<?php echo $project->id;?>">
 	                        			<input type="hidden" name="idproject" value="<?php echo $project->id_project;?>">
 	                        			<input type="hidden" name="title" value="<?php echo $project->title;?>">
