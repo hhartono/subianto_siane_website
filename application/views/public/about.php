@@ -57,7 +57,7 @@
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
                                             </ul> -->
-                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg">
+                                            <img src="/assets/public/images/team/team-1.jpg" alt="" class="respimg">
                                             <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
@@ -77,7 +77,7 @@
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
                                             </ul> -->
-                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg">
+                                            <img src="/assets/public/images/team/team-2.jpg" alt="" class="respimg">
                                             <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
@@ -97,7 +97,7 @@
                                                 <li><a href="#" target="_blank"><i class="fa fa-tumblr"></i></a></li>
                                                 <li><a href="#" target="_blank"><i class="fa fa-behance"></i></a></li>
                                             </ul> -->
-                                            <img src="/assets/public/images/team/small/1.jpg" alt="" class="respimg">
+                                            <img src="/assets/public/images/team/team-3.jpg" alt="" class="respimg">
                                             <!-- <span>Find on</span>                                       -->
                                         </div>
                                         <div class="team-info">
