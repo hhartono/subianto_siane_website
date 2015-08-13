@@ -133,9 +133,12 @@
                 $(".fotorama__wrap").css('margin-left', ($(".container").width()-$(".fotorama__wrap").width())/2 +"px");
                 setFotoramaHeight();
 
-                var $fotoramaDiv = $('.fotorama').fotorama();
-                var fotorama = $fotoramaDiv.data('fotorama');
-                fotorama.startAutoplay(2700);
+                $(window).load(function(){
+                    var $fotoramaDiv = $('.fotorama').fotorama();
+                    var fotorama = $fotoramaDiv.data('fotorama');
+                    fotorama.startAutoplay(2700);
+                })
+                
             });
 
             $(window).resize(function(){

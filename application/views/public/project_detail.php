@@ -47,6 +47,18 @@
                                         echo '';
                                     }
                                     ?>
+
+                                    <div class="">
+                                        Log file name:
+                                        <ol style="list-style-type: decimal;">
+                                        <?php foreach ($loadallphotosdetailproject as $l){
+                                        ?>
+                                            <li>name file: <?php echo $l->photo;?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        </ol>
+                                    </div>
                                     
                                     <!-- <div id="playpause"> -->
                                         <!-- <a href="#" id="play">play</a> -->
