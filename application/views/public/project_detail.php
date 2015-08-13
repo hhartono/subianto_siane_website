@@ -32,7 +32,8 @@
                                         data-maxwidth="100%" 
                                         data-transition="crossfade" 
                                         data-keyboard="true"
-                                        data-arrow="false">
+                                        data-arrow="false"
+                                        data-stopautoplayontouch="false">
                                 <?php
                                         foreach ($loadallphotosdetailproject as $lad) {
                                 ?>
