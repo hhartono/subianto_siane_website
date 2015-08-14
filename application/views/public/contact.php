@@ -27,7 +27,7 @@
                                            <ul>
                                                <li>By Appoinment Only</li>
                                                <li><a href="#">+62 22 2013973</a></li>
-                                               <li><a href="mailto:contact@subiantosiane.com">contact@subiantosiane.com</a></li>
+                                               <li><a href="mailto:subiantosiane@gmail.com">subiantosiane@gmail.com</a></li>
                                            </ul>
                                        <!-- </div>
                                        <div class="col-md-4"></div> -->
