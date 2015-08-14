@@ -2421,6 +2421,9 @@ footer:before {
 		margin-bottom: -450px;
 		position: relative;
 	}
+	#project-page.contentcenter{
+		width:70%;
+	}
 }
 /* ----------- iPhone 6 ----------- */
 
