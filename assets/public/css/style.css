@@ -2434,7 +2434,7 @@ footer:before {
 /* Portrait */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) { 
 	#project-page.contentcenter{
-		width:65%;
+		width:65% !important;
 	}
 }
 
