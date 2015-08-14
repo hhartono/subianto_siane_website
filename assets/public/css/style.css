@@ -2428,18 +2428,18 @@ footer:before {
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px){ 
+@media only screen and (min-width: 375px) and (max-width: 667px){ 
 }
 
 /* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) { 
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: portrait) { 
 	#project-page.contentcenter{
 		width:65% !important;
 	}
 }
 
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) { 
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) { 
 
 }
 
