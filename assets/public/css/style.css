@@ -2439,7 +2439,7 @@ footer:before {
 }
 
 /* Landscape */
-@media only screen and (mi-nwidth: 375px) and (max-width: 667px) and (orientation: landscape) { 
+@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) { 
 	#content-home.contentcenter{
 		padding-top:130px !important;
 	}
