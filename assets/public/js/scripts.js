@@ -760,9 +760,24 @@ function initDomik() {
             $(".introword:eq(3)").css('margin-left', ($(document).width()-$('.introword img').width())/2 +"px");
         }
     }
+
+    function categorybox(){
+        var categorybox = $(".category-box-item");
+        var categoryBoxImg = $(".category-box-item a img");
+        var heightImg = categoryBoxImg.height();
+        var categoryBoxHeight = categorybox.height();
+        console.log("margin-top: " +  (categoryBoxHeight-heightImg)/2 );
+        /*categoryBoxImg.animate({
+            marginTop: (categoryBoxHeight-heightImg)/2+'px'
+        }, 100);*/
+        categoryBoxImg.css("margin-top", (categoryBoxHeight-heightImg)/2 +"px");
+    }
+    categorybox();
+
     homeintro();
     $(window).resize(function(){
         homeIntroSizing();
+        categorybox();
     })
     /*
      * function simcarousel
