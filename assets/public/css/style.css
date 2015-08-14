@@ -2439,13 +2439,15 @@ footer:before {
 }
 
 /* Landscape */
-@media only screen and (min-width: 375px) and (max-width: 667px) and (orientation: landscape) { 
-
+@media only screen and (mi-nwidth: 375px) and (max-width: 667px) and (orientation: landscape) { 
+	#content-home.contentcenter{
+		padding-top:130px !important;
+	}
 }
 
 /* ----------- iPhone 6+ ----------- */
 /* Portrait and Landscape */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
+@media only screen and (min-width: 414px) and (max-width: 736px){ 
 	
 }
 /* Portrait */
