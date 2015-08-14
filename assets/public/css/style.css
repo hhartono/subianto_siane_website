@@ -2422,6 +2422,24 @@ footer:before {
 		position: relative;
 	}
 }
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px){ 
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) { 
+	#project-page.contentcenter{
+		width:65%;
+	}
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) { 
+
+}
+
 /* ----------- iPhone 6+ ----------- */
 /* Portrait and Landscape */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) { 
@@ -2432,7 +2450,6 @@ footer:before {
 	#project-page.contentcenter{
 		width:70%;
 	}
-
 }
 /* Landscape */
 @media only screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) { 
