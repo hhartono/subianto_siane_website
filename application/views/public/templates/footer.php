@@ -158,13 +158,9 @@
              * Turn.js responsive book
              */
             /* globals window, document, $*/
-
-            (function () {
+            function portfolioBook(){
                 'use strict';
-                if($(window).width() <= 1170){
-                    // nothing
-                }else{
-                    var module = {
+                var module = {
                         // ratio: 1.38,
                         ratio: 3.1,
                         init: function (id) {
@@ -254,6 +250,16 @@
                         }
                     };
                     module.init('flipbook');
+            }
+            
+            (function () {
+                // 'use strict';
+                if($(window).width() <= 1170){
+                    // nothing
+                    // console.log("book: ")
+                }else{
+                    // console.log("book: load");
+                    portfolioBook();
                 }
             }());
         </script>
