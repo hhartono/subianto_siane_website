@@ -180,7 +180,8 @@
                         dataType:"json",
                         success: function(response){
                             console.log(response.message);
-                            element.html(response.page_img);
+                            var imgOutput = '<img src="assets/public/book/'+ response.page_img +'"/>';
+                            element.html(imgOutput);
                         }
                     })/*.done(function(data) {
                         console.log(data.message);

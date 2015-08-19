@@ -23,7 +23,7 @@ class Portfolio extends CI_Controller {
 		$outputPage = $this->modelportfolio->loadBookPage($requestPage);
 		$output;
 		if(isset($outputPage)){
-			$output = json_encode(array('message'=> 'page load', 'page_number'=> $outputPage->page_number, 'page_img'=> '<img src="assets/public/book/'.$outputPage->page_img.'"/>' ));
+			$output = json_encode(array('message'=> 'page load', 'page_number'=> $outputPage->page_number, 'page_img'=> $outputPage->page_img ));
 		}else{
 			$output = json_encode(array('message'=> 'no page available' ));
 		}

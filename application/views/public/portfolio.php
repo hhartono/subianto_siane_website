@@ -15,7 +15,7 @@
 			        </div>
             	</div>
             	<div id="openbooktext" class="" style="">
-            		<img src="/assets/public/images/papercurl_landscape_large.png" alt=""><br>
+            		<img src="/assets/public/images/papercurl_landscape_large.png" alt=""><br><br>
             		open this virtual book
 
             	</div>
