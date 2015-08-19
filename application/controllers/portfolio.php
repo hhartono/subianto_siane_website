@@ -6,8 +6,7 @@ class Portfolio extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
-		$this->load->model('modelcategory');
-		$this->load->model('modelproject');
+		$this->load->model('modelportfolio');
 	}
 
 	public function index()
@@ -17,6 +16,18 @@ class Portfolio extends CI_Controller {
 				'portfolioactlink' => 'act-link'
 			);
 		$this->load->view('public/portfolio', $data);
+	}
+
+	public function book($page){
+		$requestPage = $page;
+		$outputPage = $this->modelportfolio->loadBookPage($requestPage);
+		$output;
+		if(isset($outputPage)){
+			$output = json_encode(array('message'=> 'page load', 'page_number'=> $outputPage->page_number, 'page_img'=> '<img src="assets/public/book/'.$outputPage->page_img.'"/>' ));
+		}else{
+			$output = json_encode(array('message'=> 'no page available' ));
+		}
+		die($output);
 	}
 
 }

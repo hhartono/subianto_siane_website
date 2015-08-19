@@ -154,10 +154,41 @@
         
 
         <script type="text/javascript">
+
+            
             /*
              * Turn.js responsive book
              */
             /* globals window, document, $*/
+            function initBook(){
+
+            }
+            function resize(){
+
+            }
+            function addPage(page, book) {
+               // Check if the page is not in the book
+                if (!book.turn('hasPage', page)) {
+                    // Create an element for this page
+                    var element = $('<div />').html('Loading…');
+                    // Add the page
+                    book.turn('addPage', element, page);
+                    // Get the data for this page   
+                    // $.ajax({url: "app?method=get-page-content&page="+page)
+                    $.ajax({
+                        url: '/portfolio/book/'+page,
+                        dataType:"json",
+                        success: function(response){
+                            console.log(response.message);
+                            element.html(response.page_img);
+                        }
+                    })/*.done(function(data) {
+                        console.log(data.message);
+                        element.html(data);
+                    });*/
+                }
+            }
+
             function portfolioBook(){
                 'use strict';
                 var module = {
@@ -165,7 +196,6 @@
                         ratio: 3.1,
                         init: function (id) {
                             var me = this;
-
                             // if older browser then don't run javascript
                             if (document.addEventListener) {
                                 this.el = document.getElementById(id);
@@ -176,6 +206,7 @@
                                 window.addEventListener('resize', function (e) {
                                     var size = me.resize();
                                     $(me.el).turn('size', size.width, size.height);
+
                                     console.log(size.width);
                                     // $(me.el).turn({
                                     //     width: size.width, 
@@ -215,8 +246,6 @@
                             if (height > padded) {
                                 height = padded;
                                 width = Math.round(height * this.ratio);
-                                // console.log('height:' + height);
-                                // console.log('width:' + width);
                                 ownHeight = parseInt(height * 0.96);
                                 coverPadding = parseInt((height-ownHeight)/2);
                                 ownWidth = parseInt((width/2)-coverPadding);
@@ -244,12 +273,41 @@
                                 acceleration: true,
                                 elevation: 50,
                                 // autoCenter: true
+                                pages:120
                             });
+
+                            $("#flipbook").bind('turning', function(e, page){
+                                console.log("book turning");
+                                var range = $("#flipbook").turn('range', page);
+                                console.log("page:" + page);
+                                console.log("range: " + range);
+                                for(page = range[0]; page <= range[1]; page++){
+                                    console.log();
+                                    addPage(page, $("#flipbook"));
+                                }
+                            });
+
                             // hide the body overflow
                             document.body.className = 'hide-overflow';
-                        }
+                        }//,
+                        // addPage: function(page, book){
+                        //     // Check if the page is not in the book
+                        //     if (!book.turn('hasPage', page)) {
+                        //         // Create an element for this page
+                        //         var element = $('<div />').html('Loading…');
+                        //         // Add the page
+                        //         book.turn('addPage', element, page);
+                        //         // Get the data for this page   
+                        //         // $.ajax({url: "app?method=get-page-content&page="+page)
+                        //         $.ajax({url: '/portfolio/book'})
+                        //             .done(function(data) {
+                        //                 console.log("output book: " + data);
+                        //                 element.html(data);
+                        //             });
+                        //    }
+                        // }
                     };
-                    module.init('flipbook');
+                module.init('flipbook');
             }
             
             (function () {
@@ -262,6 +320,8 @@
                     portfolioBook();
                 }
             }());
+
+
         </script>
     </body>
 </html>
