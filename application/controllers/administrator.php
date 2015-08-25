@@ -334,18 +334,39 @@ class Administrator extends CI_Controller{
 		if($uri3 == ''){
 			redirect('administrator/project');
 		}else{
+			$cover = $this->modelproject->loadCoverProject($uri3);
+			if($cover->num_rows() > 0){
+				$datacover = $cover->row();
+			}else{
+				$datacover = "";
+			}
 			$data = array(
 				'title' => 'Project Update | Subianto & Siane Architecture',
 				'username' => $this->tank_auth->get_username(),
 				'projectactive' => 'active',
 				'idproject' => $uri3,
 				'loadproject' => $this->modelproject->loadOnlyOneProject($uri3),
-				'loadphotos' => $this->modelproject->loadPhoto($uri3)
+				'loadphotos' => $this->modelproject->loadPhoto($uri3),
+				'datacover' => $datacover
 			);
 			$this->load->view('admin/project_view_detail', $data);
 		}	
 	}
 
+	public function projectsetascover($idphoto, $idproject)
+	{
+		$uri5 = $this->uri->segment(5);
+		if($uri5 == ''){
+			$this->modelproject->setCoverProject($idphoto);
+			$this->session->set_flashdata('message', '<div class="alert alert-success">cover berhasil dipasang!</div>');
+			redirect('administrator/projectviewdetail/'.$idproject);
+		}else{
+			$this->modelproject->resetCoverProject($idproject);
+			$this->modelproject->setCoverProject($idphoto);
+			$this->session->set_flashdata('message', '<div class="alert alert-success">cover berhasil diganti!</div>');
+			redirect('administrator/projectviewdetail/'.$idproject);
+		}
+	}
 
 
 	public function about()

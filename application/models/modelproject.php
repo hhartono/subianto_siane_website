@@ -339,6 +339,24 @@ class Modelproject extends CI_Model {
 		$this->db->update('project_album', $field);
 	}
 
+	public function resetCoverProject($idproject)
+	{
+		$field = array(
+				'status_cover_project' => '0'
+			);
+		$this->db->where('id_project', $idproject);
+		$this->db->update('project_album', $field);
+	}
+
+	public function setCoverProject($idphoto)
+	{
+		$field = array(
+				'status_cover_project' => '1'
+			);
+		$this->db->where('id', $idphoto);
+		$this->db->update('project_album', $field);
+	}
+
 	public function loadAllProjectUpdate($id)
 	{
 		$query = $this->db->query("
@@ -471,6 +489,17 @@ class Modelproject extends CI_Model {
 	}
 	public function deleteOnePhoto($id){
 		return $this->db->delete('project_album', array('id'=>$id));
+	}
+
+	public function loadCoverProject($idproject)
+	{
+		$query = $this->db->query("
+				SELECT pa.id, pa.photo, pa.id_project, pa.status_cover_project
+				FROM project_album pa
+				WHERE pa.id_project = '$idproject'
+				AND pa.status_cover_project = '1'
+			");
+		return $query;
 	}
 
 	public function deletePhoto($photo)

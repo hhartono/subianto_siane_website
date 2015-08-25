@@ -74,6 +74,37 @@
 											data-idproject="<?php echo $loadproject->id;?>" >
 											delete
 										</a>
+									<?php
+									if($datacover != ""){
+										if($lp->photo == $datacover->photo){
+										?>
+											 | cover
+										<?php
+										}else{
+										?>
+											 | <a style="cursor:pointer;" data-toggle="modal"
+												data-target="#coverModal"
+												data-foto="<?php echo $lp->photo;?>"
+												data-id="<?php echo $lp->id;?>"
+												data-idproject="<?php echo $loadproject->id;?>"
+												data-cover="<?php echo $datacover->id;?>">
+												set as cover
+											</a>
+										<?php		
+										}		
+									}else{
+									?>
+										 | <a style="cursor:pointer;" data-toggle="modal"
+												data-target="#coverModal"
+												data-foto="<?php echo $lp->photo;?>"
+												data-id="<?php echo $lp->id;?>"
+												data-idproject="<?php echo $loadproject->id;?>"
+												data-cover="">
+												set as cover
+											</a>
+									<?php	
+									}
+									?>
 									</figure>
 								</li>
 									
@@ -117,6 +148,26 @@
                         </div>
                     </div>  
                     <!-- END MODAL FOR DELETE -->
+
+                    <!-- MODAL FOR SET AS COVER -->
+                    <div class="modal fade" id="coverModal" tabindex="-1" role="dialog" aria-labelledby="coverModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="coverModalLabel">Set as Cover...</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h2 id="h2alert"></h2>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    <a id="coverlink" href="" class="btn btn-danger">Set as Cover</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    <!-- END MODAL FOR DELETE -->
 </section>
 <!--main content end-->
  <script src="/assets/admin/js/jquery.js"></script>
@@ -135,6 +186,20 @@
             modal.find('.modal-title').text(foto)
             modal.find('.modal-body h2#h2alert').text('Hapus Foto ' +foto+'?')
             modal.find('.modal-footer a#deletelink').attr("href", '/administrator/projectphotodelete/'+id+'/'+idproject)
+        });
+
+        /*
+         * modal for set as cover project
+         */
+        $('#coverModal').on('show.bs.modal', function(event){
+        	var button = $(event.relatedTarget)
+        	var foto = button.data('foto')
+        	var id = button.data('id')
+        	var idproject = button.data('idproject')
+        	var datacover = button.data('cover')
+        	var modal = $(this)
+        	modal.find('.modal-body h2#h2alert').text('Jadikan '+foto+' Cover Project ?')
+        	modal.find('.modal-footer a#coverlink').attr("href", '/administrator/projectsetascover/'+id+'/'+idproject+'/'+datacover)
         });
    	})
 </script>
