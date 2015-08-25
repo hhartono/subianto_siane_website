@@ -424,6 +424,20 @@ class Modelproject extends CI_Model {
 		}
 	}
 
+	public function loadOnlyOneProject($id)
+	{
+		$query = $this->db->query("
+				SELECT p.*, pc.category_name
+				FROM project p, project_category pc
+				WHERE p.id = '$id'
+				AND p.id_category = pc.id
+			");
+		if($query->num_rows()>0){
+			$data = $query->row();
+			return $data;
+		}
+	}
+
 	public function loadDeletePhoto($photo)
 	{
 		foreach($photo as $dp)
@@ -434,14 +448,30 @@ class Modelproject extends CI_Model {
 				WHERE id = '$dp'
 				ORDER BY id ASC
 			");
-		if($query->num_rows() > 0){
-			foreach($query->result() as $row){
-				$data[] = $row;
+			if($query->num_rows() > 0){
+				foreach($query->result() as $row){
+					$data[] = $row;
+				}
+				return $data;
 			}
-			return $data;
-		}
 		}
 	}	
+
+	public function loadProjectAlbum($id)
+	{
+		$query = $this->db->query("
+				SELECT *
+				FROM project_album
+				WHERE id = '$id'
+			");
+		if($query->num_rows() > 0){
+			$data = $query->row();
+			return $data;
+		}
+	}
+	public function deleteOnePhoto($id){
+		return $this->db->delete('project_album', array('id'=>$id));
+	}
 
 	public function deletePhoto($photo)
 	{

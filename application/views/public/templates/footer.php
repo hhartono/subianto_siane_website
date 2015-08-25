@@ -18,6 +18,31 @@
         <?php
         //}
         ?>
+
+        <?php
+        // if homepage
+        if (isset($homeactlink)) {
+        ?>
+            <script type="text/javascript">
+            function categorybox(){
+                var categorybox = $(".category-box-item");
+                var categoryBoxImg = $(".category-box-item a img");
+                var heightImg = categoryBoxImg.height();
+                var categoryBoxHeight = categorybox.height();
+                // console.log("margin-top: " +  (categoryBoxHeight-heightImg)/2 );
+                /*categoryBoxImg.animate({
+                    marginTop: (categoryBoxHeight-heightImg)/2+'px'
+                }, 100);*/
+                categoryBoxImg.css("margin-top", (categoryBoxHeight-heightImg)/2 +"px");
+            }
+            categorybox();
+            $(window).resize(function(){
+                categorybox();
+            })
+            </script>
+        <?php  
+        }
+        ?>
         
         <script type="text/javascript" src="/assets/public/js/core.js"></script>
         <script type="text/javascript" src="/assets/public/js/plugins.js"></script>
@@ -27,7 +52,6 @@
         
         <script type="text/javascript">
             $(document).ready(function(){
-
                 $(".category-box-text").css('margin-top', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-left', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");
                 $(".category-box-text").css('margin-right', ($(".category-box-item").height()-$(".category-title").height())/2 + "px");

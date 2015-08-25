@@ -33,26 +33,26 @@
                 </ul>
             </li>
 
-            <li>
-                <a class="<?php echo (isset($aboutactive))? $aboutactive: '' ;?>" href="/administrator/about">
-                    <i class="fa fa-user"></i>
-                    <span>About</span>
-                </a>
-            </li>
+            <!-- <li> -->
+                <!-- <a class="<?php //echo (isset($aboutactive))? $aboutactive: '' ;?>" href="/administrator/about"> -->
+                    <!-- <i class="fa fa-user"></i> -->
+                    <!-- <span>About</span> -->
+                <!-- </a> -->
+            <!-- </li> -->
 
-            <li class="sub-menu">
-                <a href="/administrator/randomsidebar" class="<?php echo (isset($randomactive))? 'active' : '' ;?>" >
-                    <i class=" fa fa-picture-o"></i>
-                    <span>Random Sidebar</span>
-                </a>
-            </li>
+            <!-- <li class="sub-menu"> -->
+                <!-- <a href="/administrator/randomsidebar" class="<?php // echo (isset($randomactive))? 'active' : '' ;?>" > -->
+                    <!-- <i class=" fa fa-picture-o"></i> -->
+                    <!-- <span>Random Sidebar</span> -->
+                <!-- </a> -->
+            <!-- </li> -->
 
-            <li class="sub-menu">
-                <a class="<?php echo (isset($photohomeactive))? 'active' : '' ;?>" href="/administrator/photohome">
-                    <i class=" fa fa-picture-o"></i>
-                    <span>Photo Home</span>
-                </a>
-            </li>
+            <!-- <li class="sub-menu"> -->
+                <!-- <a class="<?php // echo (isset($photohomeactive))? 'active' : '' ;?>" href="/administrator/photohome"> -->
+                    <!-- <i class=" fa fa-picture-o"></i> -->
+                    <!-- <span>Photo Home</span> -->
+                <!-- </a> -->
+            <!-- </li> -->
 
             <li class="sub-menu">
                 <a href="javascript:;" class="<?php echo (isset($messageactive))? 'active' : '' ;?>" >

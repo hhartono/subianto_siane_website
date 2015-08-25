@@ -18,6 +18,8 @@
     <!-- Custom styles for this template -->
     <link href="/assets/admin/css/style.css" rel="stylesheet">
     <link href="/assets/admin/css/style-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/admin/css/gallery.css">
+    <link rel="stylesheet" href="/assets/admin/assets/fancybox/source/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css" href="/assets/admin/assets/bootstrap-datepicker/css/datepicker.css" />
     <link href="/assets/admin/assets/dropzone/css/dropzone.css" rel="stylesheet"/>
 

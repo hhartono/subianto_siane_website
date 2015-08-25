@@ -761,23 +761,26 @@ function initDomik() {
         }
     }
 
-    function categorybox(){
-        var categorybox = $(".category-box-item");
-        var categoryBoxImg = $(".category-box-item a img");
-        var heightImg = categoryBoxImg.height();
-        var categoryBoxHeight = categorybox.height();
-        console.log("margin-top: " +  (categoryBoxHeight-heightImg)/2 );
-        /*categoryBoxImg.animate({
-            marginTop: (categoryBoxHeight-heightImg)/2+'px'
-        }, 100);*/
-        categoryBoxImg.css("margin-top", (categoryBoxHeight-heightImg)/2 +"px");
-    }
-    categorybox();
+    /*
+     * function dipindahkan ke footer.
+     */
+    // function categorybox(){
+    //     var categorybox = $(".category-box-item");
+    //     var categoryBoxImg = $(".category-box-item a img");
+    //     var heightImg = categoryBoxImg.height();
+    //     var categoryBoxHeight = categorybox.height();
+    //     console.log("margin-top: " +  (categoryBoxHeight-heightImg)/2 );
+    //     /*categoryBoxImg.animate({
+    //         marginTop: (categoryBoxHeight-heightImg)/2+'px'
+    //     }, 100);*/
+    //     categoryBoxImg.css("margin-top", (categoryBoxHeight-heightImg)/2 +"px");
+    // }
+    // categorybox();
 
     homeintro();
     $(window).resize(function(){
         homeIntroSizing();
-        categorybox();
+        // categorybox();
     })
     /*
      * function simcarousel
@@ -969,11 +972,6 @@ function contanimshow() {
             opacity: 1
         }, 1500);
     }, 550);
-    /*setTimeout(function(){
-        $('.flipbook-viewport').animate({
-            opacity: 1
-        }, 1500);
-    }, 550);*/
     setTimeout(function() {
         $("footer").animate({
             opacity: 1

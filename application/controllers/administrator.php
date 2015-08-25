@@ -326,8 +326,27 @@ class Administrator extends CI_Controller{
 		}else{
 			redirect('administrator/projectadd');
 		}
-
 	}
+
+	public function projectviewdetail()
+	{
+		$uri3 = $this->uri->segment(3);
+		if($uri3 == ''){
+			redirect('administrator/project');
+		}else{
+			$data = array(
+				'title' => 'Project Update | Subianto & Siane Architecture',
+				'username' => $this->tank_auth->get_username(),
+				'projectactive' => 'active',
+				'idproject' => $uri3,
+				'loadproject' => $this->modelproject->loadOnlyOneProject($uri3),
+				'loadphotos' => $this->modelproject->loadPhoto($uri3)
+			);
+			$this->load->view('admin/project_view_detail', $data);
+		}	
+	}
+
+
 
 	public function about()
 	{
@@ -520,6 +539,25 @@ class Administrator extends CI_Controller{
 		}else{
 			$this->session->set_flashdata('message', '<div class="alert alert-success">'.ucwords($project).' gagal dihapus!</div>');
 			redirect('administrator/project');
+		}
+	}
+
+	public function projectphotodelete($idphoto, $idproject)
+	{
+		$idp = $idphoto;
+		$projectalbum = $this->modelproject->loadProjectAlbum($idp);
+		if(!empty($projectalbum)){
+			if($projectalbum->photo != "" || $projectalbum->photo != NULL){
+				if(file_exists('./uploads/project/' . $projectalbum->photo)){
+					$do = unlink('./uploads/project/' . $projectalbum->photo);
+				}
+			}
+			$this->modelproject->deleteOnePhoto($idp);
+			$this->session->set_flashdata('message', '<div class="alert alert-success">foto telah berhasil dihapus!</div>');
+			redirect('administrator/projectviewdetail/'.$idproject);
+		}else{
+			$this->session->set_flashdata('message', '<div class="alert alert-success">foto gagal dihapus!</div>');
+			redirect('administrator/projectviewdetail/'.$idproject);
 		}
 	}
 
