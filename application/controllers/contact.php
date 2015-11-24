@@ -64,7 +64,7 @@ class Contact extends CI_Controller {
 		// Example $address = "joe.doe@yourdomain.com";
 
 		//$address = "example@themeforest.net";
-		$address = "willi.ilmukomputer@gmail.com";
+		$address = "info@inerre.com";
 
 
 		// Configuration option.
@@ -104,9 +104,7 @@ class Contact extends CI_Controller {
 			echo "</fieldset>";
 			$insertmessage = $this->modelcontact->insertContact($name, $email, $comments);
 		} else {
-
 			echo 'ERROR!';
-
 		}
 
 	}
